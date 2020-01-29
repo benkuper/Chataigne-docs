@@ -53,6 +53,7 @@
   * [Augmenta Simulator](modules/custom-modules/augmenta-simulator.md)
   * [Lighttoys FT](modules/custom-modules/lighttoys-ft.md)
   * [TPLink SmartHome](modules/custom-modules/tplink-smarthome.md)
+* [Special Modules](modules/special-modules.md)
 * [The Module Router](modules/the-module-router.md)
 
 ## The State Machine
@@ -76,8 +77,14 @@
 * [Module Scripts](scripting/module-scripts.md)
 * [Condition Scripts](scripting/condition-scripts.md)
 * [Filter Scripts](scripting/filter-scripts.md)
+* [Scripting Reference](scripting/scripting-reference.md)
 
 ## Custom Variables
 
-* [Untitled](custom-variables/untitled.md)
+* [Introduction to Custom Variables](custom-variables/untitled.md)
+* [The Morpher : 2D interpolations made fun](custom-variables/the-morpher-2d-interpolations-made-fun.md)
+
+## Dashboard
+
+* [Introduction to the Dashboard](dashboard/introduction-to-the-dashboard.md)
 

@@ -20,7 +20,8 @@ Each time a condition is validated, it will turned green. It will turn back to g
 
 Consequences are the "then" part of your action.
 
-Each time an action is validated, it will trigger all the commands contained in the "Consequences : TRUE" section. Each time an action is invalidated, it will trigger all the commands contained in the "Consequence : FALSE" section.
+* Each time an action is validated, it will trigger all the commands contained in the "**Consequences : TRUE"** section. 
+* Each time an action is invalidated, it will trigger all the commands contained in the **"Consequence : FALSE"** section.
 
 For each action, you can create as many consequences as you want, and it will trigger them all at once, allowing for synchronized control of different softwares.  
 You have also options to delay the trigger after the action is validated, as well as staggering the trigger of each consequences, resulting in a regularly timed triggering of each consequence.

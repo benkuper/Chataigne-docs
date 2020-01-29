@@ -30,6 +30,10 @@ The command tester is a handy tool to be able to test the functionality of your 
 
 ![](../.gitbook/assets/command-tester.png)
 
+{% hint style="info" %}
+When testing commands, first set your parameters and then hit the "Trigger" buttons. If you want to send the command every time a parameter of this command has changed, you can check the **"Auto Trigger"** option.
+{% endhint %}
+
 ### Templates
 
 The templates are a good way to customize a module for a specific use without having to create your own custom module.  

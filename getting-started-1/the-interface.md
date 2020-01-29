@@ -1,10 +1,6 @@
----
-description: >-
-  The interface can be frightening at first, but worry not, it will quickly make
-  sense as we dissect it together. Here it goes.
----
-
 # The Interface
+
+The interface can be frightening at first, but worry not, it will quickly make sense as we dissect it together. Here it goes.
 
 ![](../.gitbook/assets/interface_notes.png)
 
@@ -28,7 +24,8 @@ This panel will let you create timeline-based sequences and create triggers and 
 
 ### 3. The Inspector
 
-The Inspector is your main editing panel, you'll spend a lot of time there ! Anything you can select in the software will be showed in detail in this panel. You can then edit all the properties of this item. If you select another item, then the elements in this panel will change to show the newly selected item.
+The Inspector is your main editing panel, you'll spend a lot of time there ! Anything you can select in the software will be showed in detail in this panel. You can then edit all the properties of this item.  
+If you select another item, then the elements in this panel will change to show the newly selected item.
 
 ### 4. The Logger
 
@@ -37,6 +34,10 @@ The Logger is your verbose friend. It will tell you if something wend well or fa
 ### 5. The Help
 
 The help is a good starter panel, showing you useful hotkeys and how to use the item you're hovering.
+
+### 6. The Warnings
+
+The Warnings panel is handy when loading a file and checking if there are anything that has been broken, files missing, scripts error, broken links, etc.
 
 ## Next
 
