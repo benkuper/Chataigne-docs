@@ -6,9 +6,7 @@ They are divided in main categories representing different types of interfaces. 
 
 ## Anatomy of a Module
 
-Here is the inspector view of an Procol::OSC Module
-
-![](../.gitbook/assets/module.png)
+![The Inspector view of an OSC Module](../.gitbook/assets/osc.png)
 
 ### Header
 
@@ -22,33 +20,24 @@ This section provides all the needed parameters to configure the modules, such a
 
 This is an important part of the module. The values are all the elements that you will be able to use when creating interactions. Each module has its own set of values, and some modules don't have any if they're not supposed to receive anything or if the Input parameter is deactivated \(for network module for instance\).
 
-### The Scripts
+### Scripts
 
 The script section allows you to create more complex logic for this module. You can find more about scripts in the dedicated Scripts page.
 
-### The Command Tester
+### Command Tester
 
-The command tester is a handy tool to be able to test the functionality of your module by sending commands manually. It is not affecting the rest of the software, and allows you to just verify that the communication between Chataigne and your software or device is functionning properly.
+The command tester is a handy tool to be able to test the functionality of your module by sending commands manually. It is not affecting the rest of the software, and allows you to just verify that the communication between Chataigne and your software or device is functioning properly.
 
-## The Categories
+![](../.gitbook/assets/command-tester.png)
 
-### Protocol
+### Templates
 
-The Protocol category contains all the general purpose modules, so you can configure yourself all the control you need and not be limited to the existing supported softwares and devices.
+The templates are a good way to customize a module for a specific use without having to create your own custom module.  
+You can create your own custom commands, by creating a new Template and choosing a base command to derive from. Then you can customize it, and choose which fields are editable, which are not, and setup default mapping behaviors.
 
-### Hardware
+![](../.gitbook/assets/template.png)
 
-The Hardware category contains different devices you may want to connect to.
 
-### Software
 
-The Software category contains different softwares already supported that you can already easily use with premade commands
 
-### Generator
-
-The Generator category contains simple signal and trigger generators for general purpose.
-
-### System
-
-The System category contains useful modules for controlling your OS, waking up computers or checking the time of day, the current OS, etc.
 

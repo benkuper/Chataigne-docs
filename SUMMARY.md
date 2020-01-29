@@ -53,6 +53,7 @@
   * [Augmenta Simulator](modules/custom-modules/augmenta-simulator.md)
   * [Lighttoys FT](modules/custom-modules/lighttoys-ft.md)
   * [TPLink SmartHome](modules/custom-modules/tplink-smarthome.md)
+* [The Module Router](modules/the-module-router.md)
 
 ## The State Machine
 
@@ -75,4 +76,8 @@
 * [Module Scripts](scripting/module-scripts.md)
 * [Condition Scripts](scripting/condition-scripts.md)
 * [Filter Scripts](scripting/filter-scripts.md)
+
+## Custom Variables
+
+* [Untitled](custom-variables/untitled.md)
 
