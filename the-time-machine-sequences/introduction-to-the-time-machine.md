@@ -8,7 +8,7 @@ You can create as many sequences as you want from the Sequence panel, and contro
 
 A sequence can contains multiple of types of layers.
 
-![](http://benjamin.kuperberg.fr/chataigne/docs/wiki/images/sequence.gif)
+![](../.gitbook/assets/sequence.gif)
 
 
 

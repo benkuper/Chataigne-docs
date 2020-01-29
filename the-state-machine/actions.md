@@ -2,7 +2,7 @@
 
 Actions are "one-time" conditionnal triggers. You will want to use them if you have an "if-then" scenario, like "If the volume of the microphone is more than 50%, then launch a video in Resolume"
 
-![](http://benjamin.kuperberg.fr/chataigne/docs/wiki/images/action.gif)
+![](../.gitbook/assets/action.gif)
 
 #### Conditions
 

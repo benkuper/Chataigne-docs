@@ -8,7 +8,7 @@ They are divided in main categories representing different types of interfaces. 
 
 Here is the inspector view of an Procol::OSC Module
 
-![](http://benjamin.kuperberg.fr/chataigne/docs/wiki/images/module.png)
+![](../.gitbook/assets/module.png)
 
 ### Header
 

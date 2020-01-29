@@ -10,11 +10,11 @@ You can also choose to pause the timeline when it hits a cue, which can be conve
 
 
 
-![](http://benjamin.kuperberg.fr/chataigne/docs/wiki/images/cues.png)
+![](../.gitbook/assets/cues.png)
 
 ### Zooming and scrolling
 
 By clicking and dragging up/down and left/right the blue rectangle on top of the sequence's timeline, you will be able to navigate and zoom.
 
-![](http://benjamin.kuperberg.fr/chataigne/docs/wiki/images/sequencezoom.gif)
+![](../.gitbook/assets/sequencezoom.gif)
 

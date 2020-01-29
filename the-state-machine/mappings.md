@@ -4,7 +4,7 @@
 
 Mappings will allow you to create a continuous relationship between a module's value and the parameter of a command, like "The volume of my voice will be continuously controlling the opacity of a video"
 
-![](http://benjamin.kuperberg.fr/chataigne/docs/wiki/images/mapping.gif)
+![](../.gitbook/assets/mapping.gif)
 
 #### Input
 

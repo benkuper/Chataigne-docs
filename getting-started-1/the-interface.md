@@ -6,7 +6,7 @@ description: >-
 
 # The Interface
 
-![](http://benjamin.kuperberg.fr/chataigne/docs/wiki/images/interface_notes.png)
+![](../.gitbook/assets/interface_notes.png)
 
 ### Global notes
 
