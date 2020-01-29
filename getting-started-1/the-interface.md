@@ -16,15 +16,15 @@ Basically, this means that you can change the panel layout as much as you want, 
 
 ### 1. The Module Panel
 
-This first panel is you starting point. This is where you can create the different modules, each one being a connection to another software or device. When creating a project, you will start by listing all the software and devices you want to interact with, and add them here. You can find more infos about the modules in the [Module Page](http://benjamin.kuperberg.fr/chataigne/docs/?c=Getting%20Started&p=The_Modules.md)
+This first panel is you starting point. This is where you can create the different modules, each one being a connection to another software or device. When creating a project, you will start by listing all the software and devices you want to interact with, and add them here. You can find more infos about the modules in the [Module Page](the-modules.md)
 
 ### 2. The State Machine
 
-This panel will let you create your own interaction rules to do realtime control of all your system. As the name says, it's a state machine, which means you can create different states, each one being a group of rules that you can activate or deactivate as you wish. You can also create transitions between them, allowing for creating evolving interactions. You can find more infos in the [State Machine Page]()\([http://benjamin.kuperberg.fr/chataigne/docs/?c=The State Machine&p=The\_State\_Machine.md](http://benjamin.kuperberg.fr/chataigne/docs/?c=The%20State%20Machine&p=The_State_Machine.md)\)
+This panel will let you create your own interaction rules to do realtime control of all your system. As the name says, it's a state machine, which means you can create different states, each one being a group of rules that you can activate or deactivate as you wish. You can also create transitions between them, allowing for creating evolving interactions. You can find more infos in the [State Machine Page](../the-state-machine/introduction-to-the-state-machine.md)
 
 ### 2. The Time Machine \(or Sequence Editor\)
 
-This panel will let you create timeline-based sequeunce and create triggers and parameter animations over time. You can find more infos in the [Time Machine Page]()\([http://benjamin.kuperberg.fr/chataigne/docs/?c=The Time Machine&p=The\_Time\_Machine.md](http://benjamin.kuperberg.fr/chataigne/docs/?c=The%20Time%20Machine&p=The_Time_Machine.md)\)
+This panel will let you create timeline-based sequences and create triggers and parameter animations over time. You can find more infos in the [Time Machine Page](../the-time-machine-sequences/introduction-to-the-time-machine.md)
 
 ### 3. The Inspector
 
@@ -40,5 +40,5 @@ The help is a good starter panel, showing you useful hotkeys and how to use the 
 
 ## Next
 
-Interface, check. Now let's go and play with some [Modules](http://benjamin.kuperberg.fr/chataigne/docs/?c=Getting%20Started&p=The_Modules.md) !
+Interface, check. Now let's go and play with some Modules !
 

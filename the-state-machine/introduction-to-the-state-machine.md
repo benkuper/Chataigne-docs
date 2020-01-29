@@ -8,9 +8,9 @@ When creating an interaction, you will first have to create a state that will co
 
 States are containers that will contains different interaction rules. They can be activated and deactivate manually or automatically, and you can create transition between them.
 
-Currently, you can 2 type of rules : **Actions and Mappings.**  
+Currently, you can 2 type of rules : [**Actions**](actions.md) **and** [**Mappings**](mappings.md)**.**  
   
-When creating an interaction, you will want either punctual control to trigger commands : these are **Actions,** or continuous control to link input values to parameters : those are **Mappings.**
+When creating an interaction, you will want either punctual control to trigger commands : these are [**Actions**](actions.md)**,** or continuous control to link input values to parameters : those are [**Mappings**](mappings.md)**.**
 
 ### 
 
