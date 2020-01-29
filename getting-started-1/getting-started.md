@@ -1,4 +1,4 @@
-# Getting Started
+# History and Philosophy of Chataigne
 
 ## The History
 
