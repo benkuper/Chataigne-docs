@@ -16,11 +16,11 @@ Chataigne means "Chestnut" in french, the real story behind this name involves a
 
 ### What exactly is Chataigne ?
 
-In most of artistic projects involving technology, creators are going to use multiple softwares and devices for different purposes : one to control audio, one to generate video, another to handle the video mapping and maybe one to control lights, or arduino boards to control motors, who knows..
+In most of artistic projects involving technology, creators are going to use multiple softwares and devices for different purposes : one to control audio, one to generate video, another to handle the video mapping and maybe one to control lights, or Arduino boards to control motors, who knows..
 
 In these setups, the communication and synchronization between those softwares can be challenging and therefore rapidly escalate to an overly complex setup. Also, those softwares and devices may require technical experience to be able to understand how they work and what's their best practices.
 
-Chataigne aims to be the "conductor" of this technologic orchestra : while it will barely do anything visible to the public on it's own, it will be the one seeing the big picture and make sure that everyine gets what it needs. I'm trying hard to make the interface understandable for both technician and artists, so hopefully Chataigne would be the common workplace for artists and technician to work together.
+Chataigne aims to be the "conductor" of this technologic orchestra : while it will barely do anything visible to the public on it's own, it will be the one seeing the big picture and make sure that everyone gets what it needs. I'm trying hard to make the interface understandable for both technician and artists, so hopefully Chataigne would be the common workplace for artists and technician to work together.
 
 ### Why and when should i use it ?
 
@@ -30,11 +30,11 @@ First of all, because Chataigne is a conductor and doesn't "play an instrument",
 
 If you have a project involving multiple softwares and / or devices, you may want to synchronize everything from a unique place dedicated to that and not have intricate relationship between all your tools.
 
-#### Chataigne is both "interactive" realtime and timeline based
+#### Chataigne is both "interactive" real-time and timeline based
 
 Chataigne is working around two core concepts : the State Machine and the Time Machine.
 
-The State Machine will handle all realtime interaction with rules that can be very basic but can get fairly complex if needed.
+The State Machine will handle all real-time interaction with rules that can be very basic but can get fairly complex if needed.
 
 The Time Machine will handle all time based control, with classic timelines that can trigger controls at precise moments, or animate parameters and colors along time. It features a basic audio timeline if you need to play audio in sync, but if you need complex audio handling, you should definitely use a dedicated software for that, and control it from Chataigne.
 
@@ -44,5 +44,5 @@ Chataigne contains a lot of "hidden gems" and tools that integrate with the glob
 
 ## Next
 
-Now that you have some context, let's dive into it ! Learn all about The Interface
+Now that you have some context, let's dive into it ! Learn all about [The Interface](the-interface.md)
 

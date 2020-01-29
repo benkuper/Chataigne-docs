@@ -6,3 +6,5 @@ You can find those modules under the "Get more modules..." menu when creating a 
 
 If you want to make your own module, you can go the the next page [Making your own module](making-your-own-module.md)
 
+![](../../.gitbook/assets/community.png)
+

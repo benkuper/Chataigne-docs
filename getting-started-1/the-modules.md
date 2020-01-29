@@ -10,7 +10,9 @@ They are divided in main categories representing different types of interfaces. 
 
 ### Header
 
-When selecting a module, you can find at the very top a header with some controls. You can here choose to enable/disable the module. When a module is disabled, it will not update or send anything. Depending on whether the module is able to receive and/or send data, you can choose to activate/deactivate the logging of all data received and/or sent from this module. If enabled, you'll be able to check in the Logger panel what's going on with this module.
+When selecting a module, you can find at the very top a header with some controls. You can here choose to enable/disable the module.   
+When a module is disabled, it will not update or send anything.   
+Depending on whether the module is able to receive and/or send data, you can choose to activate/deactivate the logging of all data received and/or sent from this module with the **Log Incoming / Log Outgoing** buttons. If enabled, you'll be able to check in the Logger panel what's going on with this module.
 
 ### Parameters
 
@@ -20,9 +22,13 @@ This section provides all the needed parameters to configure the modules, such a
 
 This is an important part of the module. The values are all the elements that you will be able to use when creating interactions. Each module has its own set of values, and some modules don't have any if they're not supposed to receive anything or if the Input parameter is deactivated \(for network module for instance\).
 
+![](../.gitbook/assets/osc_values.png)
+
 ### Scripts
 
-The script section allows you to create more complex logic for this module. You can find more about scripts in the dedicated Scripts page.
+The script section allows you to create more complex logic for this module. You can find more about scripts in the dedicated [Scripts ](../scripting/untitled.md)page.
+
+![](../.gitbook/assets/module_scripts.png)
 
 ### Command Tester
 

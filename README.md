@@ -1,4 +1,4 @@
-# Welcome to the Chataigne wiki!
+# Welcome to the Chataigne wiki !
 
 You can start by going to the[ Introduction page](getting-started-1/getting-started.md)
 
