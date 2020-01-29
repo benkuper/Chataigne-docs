@@ -13,7 +13,7 @@ The OSC Module will receive any OSC message and convert them automatically into 
 * **OSC Input :** OSC Input allows you to receive OSC messages. It's good practice to disable it if your module is supposed to only send OSC messages and not receiving any. You will see in the Module list that the "Incoming data" icon is automatically hidden when disabling the OSC Input.
   * **Local Port :** This is the port on which your external software will send the OSC messages. 
 * **OSC Outputs :** OSC Outputs allows sending OSC messages. It's good practice to disable it if your module is supposed to only receive OSC messages and not sending any. You will see in the Module list that the "Outgoing data" icon is automatically hidden when disabling the OSC Outputs. You can create as many outputs you want, each one will send the exact same messages at the same time whenever a command will be triggered.
-  * **Local :** if checked, this will force this output to send to the same computer. It's handy to quickly switch between a remote computer and the computer, to test.
+  * **Local :** if checked, this will force this output to send to the same computer. It's handy to quickly switch between a remote computer and this computer, to test.
   * **Remote host :** This is the IP address of the computer to send messages to. You need to uncheck _Local_ if you want to specify another address.
   * **Remote port :** This is the port to send the messages to.
   * **Auto-set :** This is a handy tool to auto discover through Bonjour/Zeroconf  apps that support OSC. This may not work on every computer, especially if you don't have the Bonjour services installed. 

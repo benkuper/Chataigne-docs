@@ -4,7 +4,7 @@ The MIDI Module will receive any MIDI note and CC from an input device, and allo
 
 ![](../../.gitbook/assets/midi.png)
 
-* **Auto-Add :** This will automatically add values when OSC messages are received. Keep it checked if you want to receive every MIDI note and controlChange and convert it to value, otherwise if you want to only receive some of them, uncheck it when you don't wan't to automatically add more values anymore. 
+* **Auto-Add :** This will automatically add values when MIDI events are received. Keep it checked if you want to receive every MIDI note and controlChange and convert it to value, otherwise if you want to only receive some of them, uncheck it when you don't wan't to automatically add more values anymore. 
 * **Auto Feedback :** When checked, every change of value in the Values container will be automatically sent to the MIDI Output. This is useful when you want to test out or only change those values without having to create commands to send MIDI events. 
 * **Devices :** This is where you choose which device to connect to. The top line is input and the bottom one is output. You don't need to select both, only the ones that you want to use. If you only want to receive informations from a MIDI controller, then you only need to choosing the MIDI Input device. 
 * **Is connected :** Whether the device is connected or not. If at least one of the devices, input or output is connected, it will be checked.
