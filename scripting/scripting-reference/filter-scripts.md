@@ -65,11 +65,11 @@ function filter(inputValue, min, max)
 }
 ```
 
-This filter script returns the input value **value**, multiplied by the custom variable masterVolume.
+This filter script returns the input value _**inputValue**_, multiplied by the custom variable masterVolume.
 
 Reminder : You can quickly get the Script address of any variable in Chataigne by right-clicking on it and selecting **Copy Script Control Address**, then you can use the function get\(\) to get the current value of this variable in a script.
 
-We just have to assign this script as a filter script in our fade sequences mappings to get what we want : fading sequences that fade between 0 and the current masterVolume value.
+We just have to assign this script as a filter script in our fade sequences mappings to get what we want : fading sequences that fade between 0 and the current _masterVolume_ value.
 
 ![](../../.gitbook/assets/filterscript_mastervolumeexample_withfilterscript.gif)
 

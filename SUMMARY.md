@@ -76,7 +76,7 @@
 * [Introduction to Scripts](scripting/untitled.md)
 * [Scripting Reference](scripting/scripting-reference.md)
   * [Module Scripts](scripting/module-scripts.md)
-  * [Condition Scripts](scripting/scripting-reference/condition-scripts.md)
+  * [Condition Scripts](scripting/condition-scripts.md)
   * [Filter Scripts](scripting/scripting-reference/filter-scripts.md)
 
 ## Custom Variables
