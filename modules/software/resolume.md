@@ -2,7 +2,7 @@
 
 Resolume is a popular video mapping software, you can find more informations [here](https://resolume.com/)
 
-The Resolume module is based on the OSC module, with premade commands that reflect Resolume's OSC API. You can find out about this API by activate "OSC Mapping" in Resolume and clicking on the parameter you want to control.
+The Resolume module is based on the OSC module, with premade commands that reflect Resolume's OSC API. You can find out about this API by activating "_Shortcuts &gt; Edit OSC_" in Resolume and clicking on the parameter you want to control.
 
 {% hint style="warning" %}
 Because Resolume changed multiple times their OSC API, when using the Resolume module, be sure to select the right version corresponding to your Resolume's version in the module's parameters, otherwise commands may not work.
