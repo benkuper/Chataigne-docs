@@ -19,3 +19,11 @@ The OSC Module will receive any OSC message and convert them automatically into 
   * **Auto-set :** This is a handy tool to auto discover through Bonjour/Zeroconf  apps that support OSC. This may not work on every computer, especially if you don't have the Bonjour services installed. 
 * **Pass-through :** This section allows you to directly transfer the incoming OSC messages to other OSC modules. This allow for fast, optimized data transfer through modules, even for messages that are not handled by Chataigne.
 
+### Commands
+
+![OSC Module&apos;s only command : custom message](../../.gitbook/assets/custommessage.png)
+
+Because the OSC Module doesn't know about the target software \(it's an _open_ module\), you can and have to create your own commands.
+
+You can then choose the OSC address, and add as many OSC arguments you want using the small green '**+**' icon on the right.
+
