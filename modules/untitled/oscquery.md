@@ -4,7 +4,7 @@ Control any OSCQuery-compatible application, retrieve all the parameters from th
 
 ![](../../.gitbook/assets/oscquery.png)
 
-
+## Parameters
 
 * **Sync Data :** When connected to an OSCQuery app, this will resync the data. There is currently not support for live syncing, so it needs to be manual. 
 * **Output :** This is where you setup the OSCQuery parameters.

@@ -4,7 +4,7 @@ Bi-directionnal communication with a UDP server/client
 
 ![](../../.gitbook/assets/udp.png)
 
-
+## Parameters
 
 * **Protocol :** This is a way to easily parse incoming messages depending on the protocol you chose.
   * **Lines :** This will consider new data every time a new line character is received. Most Arduino users use new lines as messages split, so it's the default. 

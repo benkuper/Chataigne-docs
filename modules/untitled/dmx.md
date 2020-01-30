@@ -4,7 +4,7 @@ The DMX Module allows to control DMX device such as Enttec OpenDMX, Enttec DMX P
 
 ![](../../.gitbook/assets/dmx.png)
 
-
+## Parameters
 
 * **DMX Type :** This is type of DMX to use. It depends on the hardware you're using. 
 * **Connected :** Whether the device is connected or not. If at least one of the devices, input or output is connected, it will be checked.

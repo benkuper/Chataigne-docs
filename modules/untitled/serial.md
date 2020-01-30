@@ -4,6 +4,8 @@ Connect any serial device like Arduino and communicate with it
 
 ![](../../.gitbook/assets/serial.png)
 
+## Parameters
+
 * **Protocol :** This is a way to easily parse incoming messages depending on the protocol you chose.
   * **Lines :** This will consider new data every time a new line character is received. Most Arduino users use new lines as messages split, so it's the default. 
   * **Raw :** If you want to get every byte separately, you can choose _Raw_, which won't do any parsing of incoming data.

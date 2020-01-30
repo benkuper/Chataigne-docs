@@ -4,6 +4,8 @@ PJLink is an overlay of the TCP protocol, used to communicate with video project
 
 ![The parameters for this module are almost the same as the TCP Client.](../../.gitbook/assets/pjlink.png)
 
+## Parameters
+
 Because it's a slightly modified TCP Client module, you can check the docs for the parameters on the [TCP Client](tcp-client.md) page.
 
 **Password :** You can here specify if need be the password that is set up in the projector's PJLink settings.
