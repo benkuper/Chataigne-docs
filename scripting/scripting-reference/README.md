@@ -25,7 +25,8 @@ If you don't need them, don't add them in your script as Chataigne will optimize
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">init()</td>
+      <td style="text-align:left"><b>init()</b>
+      </td>
       <td style="text-align:left">If present, this function will be called right after the script is loaded.</td>
       <td
       style="text-align:left">
@@ -43,8 +44,8 @@ If you don't need them, don't add them in your script as Chataigne will optimize
       <td style="text-align:left">If present, this function will be called regularly at rate specified by
         the &quot;Update rate&quot; script parameter. This parameter is only visible
         when the function is present in the script. You can also change the rate
-        from the script by calling <em>script.updateRate(rate). </em>see below for
-        more informations.</td>
+        from the script by calling <b>script.updateRate</b><em>(rate). </em>see
+        below for more informations.</td>
       <td style="text-align:left">
         <p><code>function update(deltaTime)</code>
         </p>
@@ -358,41 +359,46 @@ The util object provides helpers and utility functions like time or conversion.
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">getTime()</td>
+      <td style="text-align:left"><b>getTime()</b>
+      </td>
       <td style="text-align:left">Returns the time since system start in seconds</td>
       <td style="text-align:left"><code>var time = util.getTime();</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">getTimestamp()</td>
+      <td style="text-align:left"><b>getTimestamp()</b>
+      </td>
       <td style="text-align:left">Returns the time since January 1st 1970 in seconds</td>
       <td style="text-align:left"><code>var timestamp = util.getTimestamp();</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">getFloatFromBytes(byte1, byte2, byte3, byte4)</td>
+      <td style="text-align:left"><b>getFloatFromBytes(</b><em>byte1, byte2, byte3, byte4</em><b>)</b>
+      </td>
       <td style="text-align:left">Returns a float from 4 bytes (big endian, byte1 is most significant)</td>
       <td
       style="text-align:left"><code>var value = util.getFloatFromBytes(0, 0, 2, 10);</code>
         </td>
     </tr>
     <tr>
-      <td style="text-align:left">getInt32FromBytes(byte1, byte2, byte3, byte4)</td>
+      <td style="text-align:left"><b>getInt32FromBytes(</b><em>byte1, byte2, byte3, byte4</em><b>)</b>
+      </td>
       <td style="text-align:left">Returns a 32-bit integer from 4 bytes (big endian, byte1 is most significant)</td>
       <td
       style="text-align:left"><code>var value = util.getInt32FromBytes(0, 0, 2, 10);</code>
         </td>
     </tr>
     <tr>
-      <td style="text-align:left">getInt64FromBytes(byte1, byte2, byte3, byte4, byte5, byte6, byte7, byte8)</td>
+      <td style="text-align:left"><b>getInt64FromBytes(</b><em>byte1, byte2, byte3, byte4,  byte5,  byte6, byte7, byte8</em><b>)</b>
+      </td>
+      <td style="text-align:left">Returns a 64-bit integer from 8 bytes (big endian, byte1 is most significant)</td>
       <td
-      style="text-align:left">Returns a 64-bit integer from 8 bytes (big endian, byte1 is most significant)</td>
-        <td
-        style="text-align:left"><code>var value = util.getInt64FromBytes(0, 5, 7, 22, 0, 0, 2, 10);</code>
-          </td>
+      style="text-align:left"><code>var value = util.getInt64FromBytes(0, 5, 7, 22, 0, 0, 2, 10);</code>
+        </td>
     </tr>
     <tr>
-      <td style="text-align:left">getIPs()</td>
+      <td style="text-align:left"><b>getIPs()</b>
+      </td>
       <td style="text-align:left">Returns an array of all IP addresses found</td>
       <td style="text-align:left">
         <p><code>var ips = util.getIPs();</code>
@@ -402,13 +408,15 @@ The util object provides helpers and utility functions like time or conversion.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">encodeHMAC_SHA1(text, key)</td>
+      <td style="text-align:left"><b>encodeHMAC_SHA1(</b><em>text, key</em><b>)</b>
+      </td>
       <td style="text-align:left">Returns a HMAC-SHA1 encoded string</td>
       <td style="text-align:left"><code>var encoded = util.encodeHMAC_SHA1(&quot;my text&quot;, &quot;my key&quot;);</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">toBase64(value);</td>
+      <td style="text-align:left"><b>toBase64(</b><em>value</em><b>);</b>
+      </td>
       <td style="text-align:left">Returns a converted base-64 string from an utf8 string.</td>
       <td style="text-align:left"><code>var str64 = util.toBase64(&quot;cool&quot;);</code>
       </td>
@@ -418,6 +426,4 @@ The util object provides helpers and utility functions like time or conversion.
 
 The root object refers to Chataigne's engine, which is the root object of all parent.  
 It allows you to access any object in Chataigne's hierarchy.  The best way to access them is to right click on a parameter's UI and select "Copy Script control address". Then you can past the address in your script and you will be able to control this parameter.
-
-
 
