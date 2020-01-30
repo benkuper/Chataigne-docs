@@ -79,14 +79,25 @@ All scripts running inside a module will have a common set of functions that can
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left"><b>ccEvent(</b><em>channel, number, value</em><b>)</b>
+      </td>
+      <td style="text-align:left">
+        <p>This function will be called each time a noteOff event is received.</p>
+        <p>The parameters are respectively the channel, number and value of this
+          event.</p>
+      </td>
+      <td style="text-align:left"><code>function ccEvent(channel, number, value) { <br />script.log(&quot;ControlChange received &quot;+channel+&quot;, &quot;+number+&quot;, &quot;+value); <br />}</code>
+      </td>
     </tr>
     <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left"><b>sysExEvent(</b><em>data</em><b>)</b>
+      </td>
+      <td style="text-align:left">
+        <p>This function will be called each time a sysEx event is received.</p>
+        <p>The parameter is an array of bytes containing the sysEx data.</p>
+      </td>
+      <td style="text-align:left"><code>function sysExEvent(data) { script.log(&quot;Sysex Message received, &quot;+data.length+&quot; bytes :&quot;); <br />for(var i=0; i &lt; data.length; i++) { <br />script.log(&quot; &gt; &quot;+data[i]);<br />}<br />}</code>
+      </td>
     </tr>
   </tbody>
 </table>
