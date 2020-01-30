@@ -1,8 +1,5 @@
 # Sound Card
 
-* \*\*\*\*
-  * \*\*\*\*
-
 The Sound Card module will allow you to have sound detection and playback. It has basic pitch detection and an FFT analysis module that allows to create frequency based volume detection.
 
 {% hint style="info" %}
