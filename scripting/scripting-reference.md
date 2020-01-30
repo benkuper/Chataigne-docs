@@ -6,7 +6,57 @@ Here you can find an almost exhaustive reference on Chataigne specific functions
 Scripts in Chataigne are based on a simplified version of Javascript. Most functions are available, but some might be missing. If you're missing some functions, please contact me and consider [donating](https://github.com/sponsors/benkuper) so I can spend more time improving Chataigne !
 {% endhint %}
 
-## Standard objects
+## Common Functions
+
+There are few common functions that you can use, no matter the type of script.
+
+{% hint style="info" %}
+None of the functions below are needed when making a script, they are just helper functions.  
+If you don't need them, don't add them in your script as Chataigne will optimize your script depending on the available functions in it.
+{% endhint %}
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">init()</td>
+      <td style="text-align:left">If present, this function will be called right after the script is loaded.</td>
+      <td
+      style="text-align:left">
+        <p><code>function init() {</code>
+        </p>
+        <p><code>  //init your values, log things and assign variables</code>
+        </p>
+        <p><code>}</code>
+        </p>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">update(deltaTime)</td>
+      <td style="text-align:left">If present, this function will be called regularly at rate specified by
+        the &quot;Update rate&quot; script parameter. This parameter is only visible
+        when the function is present in the script. You can also change the rate
+        from the script by calling <em>script.updateRate(rate). </em>see below for
+        more informations.</td>
+      <td style="text-align:left">
+        <p><code>function update(deltaTime)</code>
+        </p>
+        <p><code>{</code>
+        </p>
+        <p><code>  script.log(&quot;Delta time : &quot; + deltaTime);</code>
+        </p>
+        <p><code>}</code>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>## Standard objects
 
 ### Parameters and triggers
 
@@ -244,22 +294,26 @@ The script object refers to the script container. You can add your own custom pa
       <td style="text-align:left">log(message);</td>
       <td style="text-align:left">Logs a message (must activate &quot;Log&quot; in the script parameters)</td>
       <td
-      style="text-align:left">script.log(&quot;This is a message&quot;);</td>
+      style="text-align:left"><code>script.log(&quot;This is a message&quot;);</code>
+        </td>
     </tr>
     <tr>
       <td style="text-align:left">logWarning(message)</td>
       <td style="text-align:left">Logs a message as a warning</td>
-      <td style="text-align:left">script.logWarning(&quot;This is a warning&quot;);</td>
+      <td style="text-align:left"><code>script.logWarning(&quot;This is a warning&quot;);</code>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">logError(message)</td>
       <td style="text-align:left">Logs a message as an error</td>
-      <td style="text-align:left">script.logError(&quot;This is an error&quot;);</td>
+      <td style="text-align:left"><code>script.logError(&quot;This is an error&quot;);</code>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">setUpdateRate</td>
       <td style="text-align:left">Sets the rate at which the update() function is called</td>
-      <td style="text-align:left">script.setUpdateRate(50);</td>
+      <td style="text-align:left"><code>script.setUpdateRate(50);</code>
+      </td>
     </tr>
   </tbody>
 </table>### Local object
