@@ -1,23 +1,5 @@
 # Module Scripts
 
-{% tabs %}
-{% tab title="OSC" %}
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p></p>
-        <p><em><b>arg1...argN</b></em><b> </b>are the arguments to add to the message.
-          You can add as many as you want.</p>
-      </th>
-      <th style="text-align:left">local.send(&quot;/myAddress&quot;,1,.5f,&quot;cool&quot;);</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
-{% endtab %}
-{% endtabs %}
-
 Module Scripts allows you to add more complex and specific handling of values, help parsing data from network or serial streams that are following a specific API. 
 
 It's also the way to create [Custom Modules](../../modules/custom-modules/), where you can define your own values and parameters, and have scripts run the main logic.
