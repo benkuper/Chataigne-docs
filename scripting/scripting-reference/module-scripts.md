@@ -214,8 +214,8 @@ Some modules have specific methods that are useful if you want to have specific 
 {% tab title="Serial/UDP/TCP" %}
 | Method | Description | Example |
 | :--- | :--- | :--- |
-| **local.send\(**_message_**\)** | This will send the string passed in as ASCII characters | `local.send("This is my message");` |
-| **local.sendBytes\(**_byte1, byte2, byte3, ..._**\)** | This will send all the bytes passed in as they are | `local.sendBytes(30, 210, 46, 255, 10);`  |
+| **send\(**_message_**\)** | This will send the string passed in as ASCII characters | `local.send("This is my message");` |
+| **sendBytes\(**_byte1, byte2, byte3, ..._**\)** | This will send all the bytes passed in as they are | `local.sendBytes(30, 210, 46, 255, 10);`  |
 {% endtab %}
 
 {% tab title="HTTP" %}
@@ -231,7 +231,7 @@ Some modules have specific methods that are useful if you want to have specific 
     <tr>
       <td style="text-align:left">
         <p>&lt;b&gt;&lt;/b&gt;</p>
-        <p><b>local.sendGET(</b><em>url</em><b>)</b>
+        <p><b>sendGET(</b><em>url</em><b>)</b>
         </p>
       </td>
       <td style="text-align:left">This will send an HTTP GET request. You can add parameters at the end
@@ -240,7 +240,7 @@ Some modules have specific methods that are useful if you want to have specific 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>local.sendPOST(</b><em>url, param1, value1, param2, value2, ...</em><b>)</b>
+      <td style="text-align:left"><b>sendPOST(</b><em>url, param1, value1, param2, value2, ...</em><b>)</b>
       </td>
       <td style="text-align:left">This will send an HTTP POST request.
         <br />After specifying the <em><b>url</b></em>, you can add pair of values that
