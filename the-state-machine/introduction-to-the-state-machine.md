@@ -1,6 +1,8 @@
 # Introduction to the State Machine
 
-The State machine will let you create your own interaction rules to do realtime control of all your system. As the name says, it's a state machine, which means you can create different states, each one being a group of rules that you can activate or deactivate as you wish. You can also create transitions between them, allowing for creating evolving interactions.
+![A rather complex state machine.](../.gitbook/assets/statemachine%20%281%29.png)
+
+The State machine will let you create your own interaction rules to do realtime control of all your system. As the name says, it's a state machine, which means you can create different states, each one being a group of rules that you can activate or deactivate as you wish. You can also create transitions between them, allowing to create evolving interactions.
 
 When creating an interaction, you will first have to create a state that will contains the rules.
 
@@ -12,7 +14,20 @@ Currently, you can 2 type of rules : [**Actions**](actions.md) **and** [**Mappin
   
 When creating an interaction, you will want either punctual control to trigger commands : these are [**Actions**](actions.md)**,** or continuous control to link input values to parameters : those are [**Mappings**](mappings.md)**.**
 
-### 
+### Transitions and State network
+
+Transitions have multiple use cases :
+
+* They can act as action that will automatically transfer the activation of a state to another state. They act like an Action, and can even have consequences so you can have different behaviors when coming from one state or another. 
+* They can be used to link multiple states together. This is what we call a _**State network.**_
+
+{% hint style="info" %}
+At all time, there is **only 1 active state inside a state network.** This is why creating transitions between multiple states is helpful when you want to ensure that there is only one active state at a time in a group of states.
+{% endhint %}
+
+{% hint style="success" %}
+By note linking them altogether, you can have as many state networks as you want, meaning you still can have multiple active states at the same time.
+{% endhint %}
 
 ### 
 
