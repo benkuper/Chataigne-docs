@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome to the Chataigne wiki !](README.md)
+* [Welcome to the Chataigne docs !](README.md)
 
 ## Getting Started <a id="getting-started-1"></a>
 
