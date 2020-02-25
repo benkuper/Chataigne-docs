@@ -17,157 +17,161 @@ All scripts running inside a module will have a common set of functions that can
 
 Some modules have specific function callbacks that are useful if you want to customize the parsing of received data from this module.
 
-
-
 {% tabs %}
 {% tab title="OSC" %}
+| Method | Description | Example |
+| :--- | :--- | :--- |
+
+
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>oscEvent(</b><em>address, args</em><b>)</b>
-      </td>
-      <td style="text-align:left">
+      <th style="text-align:left"><b>oscEvent(</b><em>address, args</em><b>)</b>
+      </th>
+      <th style="text-align:left">
         <p>This function will be called each time an OSC message is received.</p>
         <p><em><b>address</b></em> is the address of the OSC Message
           <br /><em><b>args</b></em> is an array containing all the arguments of the OSC
           Message</p>
-      </td>
-      <td style="text-align:left">
+      </th>
+      <th style="text-align:left">
         <p><code>function oscEvent(address, args) {<br />script.log(&quot;OSC Message received &quot;+address+&quot;, &quot;+args.length+&quot; arguments&quot;);</code>
         </p>
         <p><code>}</code>
         </p>
-      </td>
+      </th>
     </tr>
-  </tbody>
+  </thead>
+  <tbody></tbody>
 </table>
 {% endtab %}
 
 {% tab title="MIDI" %}
+| Method | Description | Example |
+| :--- | :--- | :--- |
+
+
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>noteOnEvent(</b><em>channel, pitch, velocity</em><b>)</b>
-      </td>
-      <td style="text-align:left">
+      <th style="text-align:left"><b>noteOnEvent(</b><em>channel, pitch, velocity</em><b>)</b>
+      </th>
+      <th style="text-align:left">
         <p>This function will be called each time a noteOn event is received.</p>
         <p>The arguments are respectively the channel, pitch and velocity of this
           event.</p>
-      </td>
-      <td style="text-align:left"><code>function noteOnEvent(channel, pitch, velocity) {<br />script.log(&quot;Note on received &quot;+channel+&quot;, &quot;+pitch+&quot;, &quot;+velocity);<br />}</code>
-      </td>
+      </th>
+      <th style="text-align:left"><code>function noteOnEvent(channel, pitch, velocity) {<br />script.log(&quot;Note on received &quot;+channel+&quot;, &quot;+pitch+&quot;, &quot;+velocity);<br />}</code>
+      </th>
     </tr>
+  </thead>
+  <tbody></tbody>
+</table><table>
+  <thead>
     <tr>
-      <td style="text-align:left"><b>noteOffEvent(</b><em>channel, pitch, velocity</em><b>)</b>
-      </td>
-      <td style="text-align:left">
+      <th style="text-align:left"><b>noteOffEvent(</b><em>channel, pitch, velocity</em><b>)</b>
+      </th>
+      <th style="text-align:left">
         <p>This function will be called each time a noteOff event is received.</p>
         <p>The arguments are respectively the channel, pitch and velocity of this
           event.</p>
-      </td>
-      <td style="text-align:left"><code>function noteOffEvent(channel, pitch, velocity) {<br />script.log(&quot;Note off received &quot;+channel+&quot;, &quot;+pitch+&quot;, &quot;+velocity);<br />}</code>
-      </td>
+      </th>
+      <th style="text-align:left"><code>function noteOffEvent(channel, pitch, velocity) {<br />script.log(&quot;Note off received &quot;+channel+&quot;, &quot;+pitch+&quot;, &quot;+velocity);<br />}</code>
+      </th>
     </tr>
+  </thead>
+  <tbody></tbody>
+</table><table>
+  <thead>
     <tr>
-      <td style="text-align:left"><b>ccEvent(</b><em>channel, number, value</em><b>)</b>
-      </td>
-      <td style="text-align:left">
+      <th style="text-align:left"><b>ccEvent(</b><em>channel, number, value</em><b>)</b>
+      </th>
+      <th style="text-align:left">
         <p>This function will be called each time a noteOff event is received.</p>
         <p>The arguments are respectively the channel, number and value of this event.</p>
-      </td>
-      <td style="text-align:left"><code>function ccEvent(channel, number, value) {<br />script.log(&quot;ControlChange received &quot;+channel+&quot;, &quot;+number+&quot;, &quot;+value);<br />}</code>
-      </td>
+      </th>
+      <th style="text-align:left"><code>function ccEvent(channel, number, value) {<br />script.log(&quot;ControlChange received &quot;+channel+&quot;, &quot;+number+&quot;, &quot;+value);<br />}</code>
+      </th>
     </tr>
+  </thead>
+  <tbody></tbody>
+</table><table>
+  <thead>
     <tr>
-      <td style="text-align:left"><b>sysExEvent(</b><em>data</em><b>)</b>
-      </td>
-      <td style="text-align:left">
+      <th style="text-align:left"><b>sysExEvent(</b><em>data</em><b>)</b>
+      </th>
+      <th style="text-align:left">
         <p>This function will be called each time a sysEx event is received.</p>
         <p>The argument is an array of bytes containing the sysEx data.</p>
-      </td>
-      <td style="text-align:left"><code>function sysExEvent(data) { script.log(&quot;Sysex Message received, &quot;+data.length+&quot; bytes :&quot;);<br />for(var i=0; i &lt; data.length; i++) {<br />script.log(&quot; &gt; &quot;+data[i]);<br />}<br />}</code>
-      </td>
+      </th>
+      <th style="text-align:left"><code>function sysExEvent(data) { script.log(&quot;Sysex Message received, &quot;+data.length+&quot; bytes :&quot;);<br />for(var i=0; i &lt; data.length; i++) {<br />script.log(&quot; &gt; &quot;+data[i]);<br />}<br />}</code>
+      </th>
     </tr>
-  </tbody>
+  </thead>
+  <tbody></tbody>
 </table>
 {% endtab %}
 
 {% tab title="DMX" %}
+No method is currently implemented for DMX.
+
 | Method | Description | Example |
 | :--- | :--- | :--- |
-| **send\(**_startChannel, value1, value2, ..., valueN_**\)** | Sends DMX values starting at the **startChannel.** You can add as many values as you want, and you can even mix array of values with single values. Values are 0 to 255. | `local.send(32, 255);`  |
+|  |  |  |
 {% endtab %}
 
 {% tab title="Serial/UDP/TCP" %}
+| Method | Description | Example |
+| :--- | :--- | :--- |
+
+
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>dataReceived</b><em><b>(</b>data</em><b>)</b>
-      </td>
-      <td style="text-align:left">
+      <th style="text-align:left"><b>dataReceived(</b><em>data</em><b>)</b>
+      </th>
+      <th style="text-align:left">
         <p>This function will be called each time data has been received.</p>
         <p>If the Module&apos;s protocol is set to <em><b>Lines,</b></em> then the <b>data</b> argument
           will be a string containing the line, without the ending \n.</p>
         <p>Otherwise, the data will be an array of bytes containing the received
           data.</p>
-      </td>
-      <td style="text-align:left">
+      </th>
+      <th style="text-align:left">
         <p><code>function dataReceived(data) {</code>
         </p>
         <p><code>script.log(&quot;Received data : &quot;+data);</code>
         </p>
         <p><code>}</code>
         </p>
-      </td>
+      </th>
     </tr>
-  </tbody>
+  </thead>
+  <tbody></tbody>
 </table>
 {% endtab %}
 
 {% tab title="HTTP" %}
+| Method | Description | Example |
+| :--- | :--- | :--- |
+
+
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>dataEvent(</b><em>data, requestURL</em><b>)</b>
-      </td>
-      <td style="text-align:left">
+      <th style="text-align:left"><b>dataEvent(</b><em>data, requestURL</em><b>)</b>
+      </th>
+      <th style="text-align:left">
         <p>This function will be called each time the module has got a response from
           a request.
           <br /><em><b>data</b></em> is the content of the response</p>
         <p><em><b>requestURL</b></em> is the url of the original request.</p>
-      </td>
-      <td style="text-align:left"><code>function dataEvent(data, requestURL) {<br />script.log(&quot;Data received, request URL :&quot;+requestURL+&quot;\nContent :\n&quot; +data);<br />}</code>
-      </td>
+      </th>
+      <th style="text-align:left"><code>function dataEvent(data, requestURL) {<br />script.log(&quot;Data received, request URL :&quot;+requestURL+&quot;\nContent :\n&quot; +data);<br />}</code>
+      </th>
     </tr>
-  </tbody>
+  </thead>
+  <tbody></tbody>
 </table>
 {% endtab %}
 {% endtabs %}
@@ -178,26 +182,24 @@ Some modules have specific methods that are useful if you want to have specific 
 
 {% tabs %}
 {% tab title="OSC" %}
+| Method | Description | Example |
+| :--- | :--- | :--- |
+
+
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>send(</b><em>address, arg1, arg2, arg3, ...</em><b>)</b>
-      </td>
-      <td style="text-align:left">
+      <th style="text-align:left"><b>send(</b><em>address, arg1, arg2, arg3, ...</em><b>)</b>
+      </th>
+      <th style="text-align:left">
         <p>This sends an OSC message to all the enabled outputs of this module.</p>
         <p><em><b>address</b></em> is the address of the message</p>
-      </td>
-      <td style="text-align:left"><code>local.send(&quot;/myAddress&quot;, 1, .5f, &quot;cool&quot;);</code>
-      </td>
+      </th>
+      <th style="text-align:left"><code>local.send(&quot;/myAddress&quot;, 1, .5f, &quot;cool&quot;);</code>
+      </th>
     </tr>
-  </tbody>
+  </thead>
+  <tbody></tbody>
 </table>
 {% endtab %}
 
@@ -248,14 +250,14 @@ Some modules have specific methods that are useful if you want to have specific 
 {% tab title="HTTP" %}
 | Method | Description | Example |
 | :--- | :--- | :--- |
-| **sendGET\(**_url_**\)** | This will send an HTTP GET request. You can add parameters at the end of the _**url**_ argument, just like any GET URL. | `local.sendGET( "https://httpbin.org/anything?myValue1=1&myValue2=super");` |
-| **sendPOST\(**_url, param1, value1, param2, value2, ..._**\)** | This will send an HTTP POST request. After specifying the _**url**_, you can add pair of values that are respectively the _**parameter name**_ and its _**value**_. | `local.sendPOST( "https://httpbin.org/anything", "myValue1", 1, "myValue2", 2);` |
-{% endtab %}
 
-{% tab title="System" %}
-| Method | Description | Example |
+
+| **sendGET\(**_url_**\)** | This will send an HTTP GET request. You can add parameters at the end of the _**url**_ argument, just like any GET URL. | `local.sendGET( "https://httpbin.org/anything?myValue1=1&myValue2=super");` |
 | :--- | :--- | :--- |
-| **launchApp\(**_appPath, arguments_**\)** | Launches an app at the provided path with the provided arguments | `local.launchApp("myApp.exe","-p myOption");` |
+
+
+| **sendPOST\(**_url, param1, value1, param2, value2, ..._**\)** | This will send an HTTP POST request. After specifying the _**url**_, you can add pair of values that are respectively the _**parameter name**_ and its _**value**_. | `local.sendPOST( "https://httpbin.org/anything", "myValue1", 1, "myValue2", 2);` |
+| :--- | :--- | :--- |
 {% endtab %}
 {% endtabs %}
 
