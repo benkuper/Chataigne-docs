@@ -10,7 +10,7 @@ Filter scripts are JavaScript files that can be used as a filter in a mapping. T
 
 Filter scripts are useful to add math functions or advanced filtering logic to your mappings.
 
-## Filter specific functions <a id="condition-specific-methods-the-local-object"></a>
+### Filter specific functions <a id="condition-specific-methods-the-local-object"></a>
 
 When scripts are running as a filter, new function callbacks are called to process the filter.
 
@@ -29,9 +29,9 @@ When scripts are running as a filter, new function callbacks are called to proce
       <td style="text-align:left">
         <p>This function is called everytime the mapping is processed and goes through
           the filter chain.</p>
-        <p><em><b>inputValue</b></em> is the value from the input or from the preceding
+        <p><em><b>inputValue </b></em>is the value from the input or from the preceding
           filter.</p>
-        <p><em><b>min</b></em> and <em><b>max</b></em> are the range of the <em><b>inputValue</b></em>,
+        <p><em><b>min </b></em>and <em><b>max </b></em>are the range of the <em><b>inputValue</b></em>,
           if applicable. It&apos;s useful when filtering the value as a normalized
           value, or to avoid overshooting the values.
           <br />
@@ -39,11 +39,18 @@ When scripts are running as a filter, new function callbacks are called to proce
         <p><b>This function must return a value !</b>
         </p>
       </td>
-      <td style="text-align:left"><code>function filter(inputValue, min, max)<br />{<br />var result = inputValue * myFloatParam.get();<br />return result;<br />}</code>
+      <td style="text-align:left"><code>function filter(inputValue, min, max)<br />{ <br />var result = inputValue * myFloatParam.get();<br />return result; <br />}</code>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
   </tbody>
-</table>In this example, we consider a simple project with a looping audio track. We also have a masterVolume custom variable controlling the audio track volume through a mapping.
+</table>## Filter script example : Audio track fading to master volume.
+
+In this example, we consider a simple project with a looping audio track. We also have a masterVolume custom variable controlling the audio track volume through a mapping.
 
 ![](../../.gitbook/assets/filterscript_mastervolumeexample_presentation.gif)
 
