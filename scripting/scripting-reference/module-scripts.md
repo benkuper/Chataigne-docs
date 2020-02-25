@@ -19,30 +19,32 @@ Some modules have specific function callbacks that are useful if you want to cus
 
 {% tabs %}
 {% tab title="OSC" %}
-| Method | Description | Example |
-| :--- | :--- | :--- |
-
-
 <table>
   <thead>
     <tr>
-      <th style="text-align:left"><b>oscEvent(</b><em>address, args</em><b>)</b>
-      </th>
-      <th style="text-align:left">
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>oscEvent(</b><em>address, args</em><b>)</b>
+      </td>
+      <td style="text-align:left">
         <p>This function will be called each time an OSC message is received.</p>
         <p><em><b>address</b></em> is the address of the OSC Message
           <br /><em><b>args</b></em> is an array containing all the arguments of the OSC
           Message</p>
-      </th>
-      <th style="text-align:left">
+      </td>
+      <td style="text-align:left">
         <p><code>function oscEvent(address, args) {<br />script.log(&quot;OSC Message received &quot;+address+&quot;, &quot;+args.length+&quot; arguments&quot;);</code>
         </p>
         <p><code>}</code>
         </p>
-      </th>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
+  </tbody>
 </table>
 {% endtab %}
 
