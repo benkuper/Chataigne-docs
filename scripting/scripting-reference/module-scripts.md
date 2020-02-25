@@ -182,24 +182,26 @@ Some modules have specific methods that are useful if you want to have specific 
 
 {% tabs %}
 {% tab title="OSC" %}
-| Method | Description | Example |
-| :--- | :--- | :--- |
-
-
 <table>
   <thead>
     <tr>
-      <th style="text-align:left"><b>send(</b><em>address, arg1, arg2, arg3, ...</em><b>)</b>
-      </th>
-      <th style="text-align:left">
-        <p>This sends an OSC message to all the enabled outputs of this module.</p>
-        <p><em><b>address</b></em> is the address of the message</p>
-      </th>
-      <th style="text-align:left"><code>local.send(&quot;/myAddress&quot;, 1, .5f, &quot;cool&quot;);</code>
-      </th>
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
     </tr>
   </thead>
-  <tbody></tbody>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>send(</b><em>address, arg1, arg2, arg3, ...</em><b>)</b>
+      </td>
+      <td style="text-align:left">
+        <p>This sends an OSC message to all the enabled outputs of this module.</p>
+        <p><em><b>address</b></em> is the address of the message</p>
+      </td>
+      <td style="text-align:left"><code>local.send(&quot;/myAddress&quot;, 1, .5f, &quot;cool&quot;);</code>
+      </td>
+    </tr>
+  </tbody>
 </table>
 {% endtab %}
 
@@ -250,14 +252,8 @@ Some modules have specific methods that are useful if you want to have specific 
 {% tab title="HTTP" %}
 | Method | Description | Example |
 | :--- | :--- | :--- |
-
-
 | **sendGET\(**_url_**\)** | This will send an HTTP GET request. You can add parameters at the end of the _**url**_ argument, just like any GET URL. | `local.sendGET( "https://httpbin.org/anything?myValue1=1&myValue2=super");` |
-| :--- | :--- | :--- |
-
-
 | **sendPOST\(**_url, param1, value1, param2, value2, ..._**\)** | This will send an HTTP POST request. After specifying the _**url**_, you can add pair of values that are respectively the _**parameter name**_ and its _**value**_. | `local.sendPOST( "https://httpbin.org/anything", "myValue1", 1, "myValue2", 2);` |
-| :--- | :--- | :--- |
 {% endtab %}
 {% endtabs %}
 
