@@ -64,10 +64,6 @@ All parameters and triggers have common methods and specific methods
 
 #### Common methods and properties
 
-|  |  |  |
-| :--- | :--- | :--- |
-
-
 <table>
   <thead>
     <tr>
