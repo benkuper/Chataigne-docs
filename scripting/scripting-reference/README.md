@@ -252,16 +252,168 @@ All parameters and triggers have common methods and specific methods
 
 ### Container
 
-| Method | Description | Example |
-| :--- | :--- | :--- |
-| **getChild\(**_childName_**\)** | Returns the parameter or container with the provided name. | `var child = myContainer.getChild("activity");` |
-| **getParent\(\)** | Returns the parent container | `var parent = myContainer.getParent();` |
-| **setName\(**_name_**\)** | Changes the name of the container | `myContainer.setName("new name");` |
-| **setCollapsed\(**_value_**\)** | Change the collapsed state of the container, if it can be collapsed. | `myContainer.setCollapsed(false);` |
-| **name** | This is the name identifier of the object, as you would target it in a script. | `script.log(myContainer.name);` |
-| **niceName** | This is the "nice name" of the object, as you see it in the Inspector. | `script.log(myContainer.niceName);` |
-
-### Manager
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>getChild(</b><em>childName</em><b>)</b>
+      </td>
+      <td style="text-align:left">Returns the parameter or container with the provided name.</td>
+      <td style="text-align:left"><code>var child = myContainer.getChild(&quot;activity&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>getParent()</b>
+      </td>
+      <td style="text-align:left">Returns the parent container</td>
+      <td style="text-align:left"><code>var parent = myContainer.getParent();</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>setName(</b><em>name</em><b>)</b>
+      </td>
+      <td style="text-align:left">Changes the name of the container</td>
+      <td style="text-align:left"><code>myContainer.setName(&quot;new name&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>setCollapsed(</b><em>value</em><b>)</b>
+      </td>
+      <td style="text-align:left">Change the collapsed state of the container, if it can be collapsed.</td>
+      <td
+      style="text-align:left"><code>myContainer.setCollapsed(false);</code>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>name</b>
+      </td>
+      <td style="text-align:left">This is the name identifier of the object, as you would target it in a
+        script.</td>
+      <td style="text-align:left"><code>script.log(myContainer.name);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>niceName</b>
+      </td>
+      <td style="text-align:left">This is the &quot;nice name&quot; of the object, as you see it in the
+        Inspector.</td>
+      <td style="text-align:left"><code>script.log(myContainer.niceName);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>addTrigger(</b><em>name, description</em><b>)</b>
+      </td>
+      <td style="text-align:left">This will add a trigger (button).</td>
+      <td style="text-align:left"><code>var myTrigger = myContainer.addTrigger(&quot;My Trigger&quot;, &quot;Trigger description&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>addFloatParameter(</b><em>name, description, default, min max</em><b>)</b>
+      </td>
+      <td style="text-align:left">This will add a float number parameter (slider).</td>
+      <td style="text-align:left"><code>var myFloatParam = myContainer.addFloatParameter(&quot;My Float Param&quot;,&quot;Description of my float param&quot;,.1,0,1);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>addIntParameter(</b><em>name, description, default, min max</em><b>)</b>
+      </td>
+      <td style="text-align:left">add an integer number parameter (stepper), default value of 2, with a
+        range between 0 and 10</td>
+      <td style="text-align:left"><code>var myIntParam = myContainer.addIntParameter(&quot;My Int Param&quot;,&quot;Description of my int param&quot;,2,0,10);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>addBoolParameter(</b><em>name, description, default</em><b>)</b>
+      </td>
+      <td style="text-align:left">add a boolean parameter (toggle)</td>
+      <td style="text-align:left"><code>var myBoolParam = myContainer.addBoolParameter(&quot;My Bool Param&quot;,&quot;Description of my bool param&quot;,false);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>addStringParameter(</b><em>name, description, default</em><b>)</b>
+      </td>
+      <td style="text-align:left">add a string parameter (text field)</td>
+      <td style="text-align:left"> <code>var myStringParam = myContainer.addStringParameter(&quot;My String Param&quot;,&quot;Description of my string param&quot;, &quot;cool&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>addColorParameter(</b><em>name, description, default</em><b>)</b>
+      </td>
+      <td style="text-align:left">add a color parameter (color picker)</td>
+      <td style="text-align:left"><code>var myColorParam = myContainer.addColorParameter(&quot;My Color Param&quot;,&quot;Description of my color param&quot;,0xff0000ff);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>addPoint2DParameter(</b><em>name, description</em><b>)</b>
+      </td>
+      <td style="text-align:left">add a point 2d parameter</td>
+      <td style="text-align:left"><code>var myP2DParam = myContainer.addPoint2DParameter(&quot;My P2D Param&quot;,&quot;Description of my p2d param&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>addPoint3DParameter(</b><em>name, description</em><b>)</b>
+      </td>
+      <td style="text-align:left">add a point 3d parameter</td>
+      <td style="text-align:left"><code>var myP3DParam = myContainer.addPoint3DParameter(&quot;My P3D Param&quot;,&quot;Description of my p3d param&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>addTargetParameter(</b><em>name, description</em><b>)</b>
+      </td>
+      <td style="text-align:left">add a target parameter (to reference another parameter)</td>
+      <td style="text-align:left"><code>var myTargetParam = myContainer.addTargetParameter(&quot;My Target Param&quot;,&quot;Description of my target param&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>addFileParameter(</b><em>name, description, </em>[directoryMode]<b>)</b>
+      </td>
+      <td style="text-align:left">
+        <p>Add a file parameter (to reference file or folder on the disk).</p>
+        <p>If directoryMode is set to true a folder instead of a file can be selected.</p>
+      </td>
+      <td style="text-align:left"><code>var myFileParam = myContainer.addFileParameter(&quot;My File Param&quot;,&quot;Description of my file param&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>addEnumParameter(</b><em>name, description, label1, value1, label2, value2, ..</em>.<b>)</b>
+      </td>
+      <td style="text-align:left">
+        <p>Add a enum parameter (dropdown with options)</p>
+        <p>Each pair of values after the first 2 arguments define an option and its
+          linked data</p>
+      </td>
+      <td style="text-align:left"><code>var myEnumParam = myContainer.addEnumParameter(&quot;My Enum Param&quot;,&quot;Description of my enum param&quot;, &quot;Option 1&quot;, 1,&quot;Option 2&quot;, 5, &quot;Option 3&quot;, &quot;banana&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>addContainer(</b>name<b>)</b>
+      </td>
+      <td style="text-align:left">Add a container inside of the container.</td>
+      <td style="text-align:left"><code>var childContainer = myContainer.addContainer(&quot;My Child Container&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>removeContainer(</b>name<b>)</b>
+      </td>
+      <td style="text-align:left">Remove a child container from the container.</td>
+      <td style="text-align:left"><code>myContainer.removeContainer(&quot;My Child Container&quot;)</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>removeParameter(</b><em>message</em><b>)</b>
+      </td>
+      <td style="text-align:left">Remove a parameter from the container.</td>
+      <td style="text-align:left"><code>myContainer.removeParameter(&quot;My Parameter&quot;);</code>
+      </td>
+    </tr>
+  </tbody>
+</table>### Manager
 
 Managers are special types of container. In the software, you can see that a container is a manager when there is a "**+**" icon on the right of its block. Well, almost all the times, some of them are just enhanced containers. Most of the times, the managers you will be interested in are the **Module manager, the Sequence manager, Layer managers and Automation keys managers.**
 
