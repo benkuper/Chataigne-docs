@@ -15,17 +15,20 @@ None of the functions below are needed when making a script, they are just helpe
 If you don't need them, don't add them in your script as Chataigne will optimize your script depending on the available functions in it.
 {% endhint %}
 
-| Method | Description | Example |
-| :--- | :--- | :--- |
-
-
 <table>
   <thead>
     <tr>
-      <th style="text-align:left"><b>init()</b>
-      </th>
-      <th style="text-align:left">If present, this function will be called right after the script is loaded.</th>
-      <th
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>init()</b>
+      </td>
+      <td style="text-align:left">If present, this function will be called right after the script is loaded.</td>
+      <td
       style="text-align:left">
         <p><code>function init() {</code>
         </p>
@@ -33,21 +36,17 @@ If you don't need them, don't add them in your script as Chataigne will optimize
         </p>
         <p><code>}</code>
         </p>
-        </th>
+        </td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table><table>
-  <thead>
     <tr>
-      <th style="text-align:left"><b>update(</b><em>deltaTime</em><b>)</b>
-      </th>
-      <th style="text-align:left">If present, this function will be called regularly at rate specified by
+      <td style="text-align:left"><b>update(</b><em>deltaTime</em><b>)</b>
+      </td>
+      <td style="text-align:left">If present, this function will be called regularly at rate specified by
         the &quot;Update rate&quot; script parameter. This parameter is only visible
         when the function is present in the script. You can also change the rate
         from the script by calling <b>script.updateRate</b><em>(rate).</em> see below
-        for more informations.</th>
-      <th style="text-align:left">
+        for more informations.</td>
+      <td style="text-align:left">
         <p><code>function update(deltaTime)</code>
         </p>
         <p><code>{</code>
@@ -56,57 +55,81 @@ If you don't need them, don't add them in your script as Chataigne will optimize
         </p>
         <p><code>}</code>
         </p>
-      </th>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
+  </tbody>
 </table>### Parameters and triggers
 
 All parameters and triggers have common methods and specific methods
 
 #### Common methods and properties
 
-| Method | Description | Example |
-| :--- | :--- | :--- |
-
-
-| **getParent\(\)** | Returns the value of this parameter | `myParam.getParent();` |
-| :--- | :--- | :--- |
-
-
-| **setName\(**_name_**\)** | Sets the parameters name | `myParam.setName("new name");` |
+|  |  |  |
 | :--- | :--- | :--- |
 
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
-      </th>
-      <th style="text-align:left">Sets a parameter&apos;s attribute.
-        <br />More information below</th>
-      <th style="text-align:left">
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>getParent()</b>
+      </td>
+      <td style="text-align:left">Returns the value of this parameter</td>
+      <td style="text-align:left"><code>myParam.getParent();</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>setName(</b><em>name</em><b>)</b>
+      </td>
+      <td style="text-align:left">Sets the parameters name</td>
+      <td style="text-align:left"><code>myParam.setName(&quot;new name&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
+      </td>
+      <td style="text-align:left">Sets a parameter&apos;s attribute.
+        <br />More information below</td>
+      <td style="text-align:left">
         <p><code>myParam.setAttribute(&quot;readonly&quot;,true);</code>
         </p>
         <p><code>myParam.setAttribute(&quot;description&quot;,&quot; new description&quot;);</code>
         </p>
         <p><code>myParam.setAttribute(&quot;enabled&quot;,false);</code>
         </p>
-      </th>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table>| **isParameter\(\)** | returns whether the target is a parameter or a trigger | `var isParam = myTarget.isParameter();` |
-| :--- | :--- | :--- |
-
-
-| **name** | This is the name identifier of the object, as you would target it in a script. | `script.log(myParam.name);` |
-| :--- | :--- | :--- |
-
-
-| **niceName** | This is the "nice name" of the object, as you see it in the Inspector. | `script.log(myParam.niceName);` |
-| :--- | :--- | :--- |
-
+    <tr>
+      <td style="text-align:left"><b>isParameter()</b>
+      </td>
+      <td style="text-align:left">returns whether the target is a parameter or a trigger</td>
+      <td style="text-align:left"><code>var isParam = myTarget.isParameter();</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>name</b>
+      </td>
+      <td style="text-align:left">This is the name identifier of the object, as you would target it in a
+        script.</td>
+      <td style="text-align:left"><code>script.log(myParam.name);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>niceName</b>
+      </td>
+      <td style="text-align:left">This is the &quot;nice name&quot; of the object, as you see it in the
+        Inspector.</td>
+      <td style="text-align:left"><code>script.log(myParam.niceName);</code>
+      </td>
+    </tr>
+  </tbody>
+</table>#### Trigger
 
 | Method | Description | Example |
 | :--- | :--- | :--- |
@@ -165,7 +188,9 @@ All parameters and triggers have common methods and specific methods
     </tr>
   </thead>
   <tbody></tbody>
-</table>| Method | Description | Example |
+</table>#### Target Parameter
+
+| Method | Description | Example |
 | :--- | :--- | :--- |
 | **get\(\)** | Returns the string value of the target address | `var address = myTargetParam.get();` |
 | **getTarget\(\)** | Returns the actual selected target | `var target = myTargetParam.getTarget();` |
@@ -180,7 +205,58 @@ All parameters and triggers have common methods and specific methods
 | **getData\(\)** | Get the selected data | `var data = myEnumParam.getData();` |
 | **set\(**_label_**\)** | Sets the value with the provided label | `myEnumParam.set("new option");` |
 
-#### Point2D Parameter
+#### File Parameter
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
+      </td>
+      <td style="text-align:left">Set specific FileParameter attribute (see examples)</td>
+      <td style="text-align:left"><code>myFileParam.setAttribute(&quot;directoryMode&quot;,true);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>readFile(</b><em>[asJSON]</em><b>)</b>
+      </td>
+      <td style="text-align:left">Get the content of the file. If <em><b>asJSON </b></em>is <em>true, </em>then
+        the content will be parsed and returned as an Object.</td>
+      <td style="text-align:left">
+        <p><code>var myTextContent = myFileParam.readFile();</code>
+        </p>
+        <p><code>var myJSONContent = myFileParam.readFile(true);</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>writeFile(data, </b><em>overwriteIfExists</em><b>)</b>
+      </td>
+      <td style="text-align:left">Write the content of a string of an Object to the selected file. If the
+        file exists, <em><b>overwriteIfExists </b></em>will let you decide whether
+        to overwrite it or not (false by default).</td>
+      <td style="text-align:left">
+        <p><code>var data = &quot;super&quot;;</code>
+        </p>
+        <p><code>myFileParam.write(data, true);</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>getAbsolutePath()</b>
+      </td>
+      <td style="text-align:left">Returns the absolute path for this file.</td>
+      <td style="text-align:left"><code>var path = myFileParam.getAbsolutePath();</code>
+      </td>
+    </tr>
+  </tbody>
+</table>#### Point2D Parameter
 
 | Method | Description | Example |
 | :--- | :--- | :--- |
