@@ -99,6 +99,8 @@ All parameters and triggers have common methods and specific methods
         </p>
         <p><code>myParam.setAttribute(&quot;enabled&quot;,false);</code>
         </p>
+        <p><code>myParam.setAttribute(&quot;alwaysNotify&quot;, true);</code>
+        </p>
       </td>
     </tr>
     <tr>
