@@ -252,6 +252,8 @@ All parameters and triggers have common methods and specific methods
 
 ### Container
 
+Containers are any object that contains parameters or other containers. If you're targetting something from the hierarchy \(_root.\*_ ****or _local.\*_\), this will be either a container of a parameter, so if it's not a parameter, then it's a container.
+
 <table>
   <thead>
     <tr>
@@ -402,14 +404,14 @@ All parameters and triggers have common methods and specific methods
       <td style="text-align:left"><b>removeContainer(</b>name<b>)</b>
       </td>
       <td style="text-align:left">Remove a child container from the container.</td>
-      <td style="text-align:left"><code>myContainer.removeContainer(&quot;My Child Container&quot;)</code>
+      <td style="text-align:left"><code>myContainer.removeContainer (myChildContainer)</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>removeParameter(</b><em>message</em><b>)</b>
       </td>
       <td style="text-align:left">Remove a parameter from the container.</td>
-      <td style="text-align:left"><code>myContainer.removeParameter(&quot;My Parameter&quot;);</code>
+      <td style="text-align:left"><code>myContainer.removeParameter (myChildParameter);</code>
       </td>
     </tr>
   </tbody>
@@ -596,7 +598,12 @@ The script object refers to the script container. You can add your own custom pa
       </td>
     </tr>
   </tbody>
-</table>### Local object
+</table>### Root object
+
+The root object refers to Chataigne's engine, which is the root object of all parent.  
+It allows you to access any object in Chataigne's hierarchy. The best way to access them is to right click on a parameter's UI and select "Copy Script control address". Then you can past the address in your script and you will be able to control this parameter.
+
+### Local object
 
 The local object depends on where the scripts is running.
 
@@ -711,12 +718,10 @@ The util object provides helpers and utility functions like time or conversion.
     <tr>
       <td style="text-align:left"><b>getObjectProperties(</b><em>object</em><b>)</b>
       </td>
-      <td style="text-align:left">Returns an array of all the property / method names of this objects.</td>
+      <td style="text-align:left">Returns an array of all the property / method names of this <em><b>object</b></em>.</td>
       <td
       style="text-align:left"><code>var propNames = util.getObjectProperties(myObjects);</code>
         </td>
     </tr>
   </tbody>
-</table>The root object refers to Chataigne's engine, which is the root object of all parent.  
-It allows you to access any object in Chataigne's hierarchy. The best way to access them is to right click on a parameter's UI and select "Copy Script control address". Then you can past the address in your script and you will be able to control this parameter.
-
+</table>
