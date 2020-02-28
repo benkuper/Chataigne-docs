@@ -705,7 +705,16 @@ The util object provides helpers and utility functions like time or conversion.
       <td style="text-align:left"><b>createDirectory(</b><em>folderPath</em><b>)</b>
       </td>
       <td style="text-align:left">Creates a directory at the path specified.</td>
-      <td style="text-align:left">util.createDirectory(&quot;path/to/dir&quot;);</td>
+      <td style="text-align:left"><code>util.createDirectory(&quot;path/to/dir&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>getObjectProperties(</b><em>object</em><b>)</b>
+      </td>
+      <td style="text-align:left">Returns an array of all the property / method names of this objects.</td>
+      <td
+      style="text-align:left"><code>var propNames = util.getObjectProperties(myObjects);</code>
+        </td>
     </tr>
   </tbody>
 </table>The root object refers to Chataigne's engine, which is the root object of all parent.  
