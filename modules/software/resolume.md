@@ -8,7 +8,7 @@ The Resolume module is based on the OSC module, with premade commands that refle
 Because Resolume changed multiple times their OSC API, when using the Resolume module, be sure to select the right version corresponding to your Resolume's version in the module's parameters, otherwise commands may not work.
 {% endhint %}
 
-### Using the VideoFX and AudioFX commands in Resolume 6+
+## Using the VideoFX and AudioFX commands in Resolume 6+
 
 When using those commands in Resolume 6 and later, you will have to find out the effect and parameter names in order to control them. You can zoom out in the image below to see the correspondance between fields in Resolume and fields in Chataigne.
 

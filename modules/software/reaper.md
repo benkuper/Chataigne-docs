@@ -8,5 +8,3 @@ The Reaper module is based on the OSC module, with premade commands that reflect
 The Reaper Module has very limited premade command support, but you can create your own commands by using the "_Custom Message_" command. If you wish to have more native support, please contact me and consider [donating](https://github.com/sponsors/benkuper) so I can take more time improving Chataigne !
 {% endhint %}
 
-
-

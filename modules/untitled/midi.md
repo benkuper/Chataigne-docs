@@ -23,9 +23,3 @@ You can even send MIDI events across network and OS-independant by using **Netwo
 * On Windows, you can use [**rtpMIDI**](http://www.tobias-erichsen.de/software/rtpmidi.html), which basically replicate MacOS's Network-MIDI panel.
 {% endhint %}
 
-
-
-
-
-
-

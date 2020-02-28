@@ -16,7 +16,7 @@ The DMX Module allows to control DMX device such as Enttec OpenDMX, Enttec DMX P
 * **Enable receive \(DMXPro / Artnet only\) :** If checked, this activates receiving data.
 * **Port \(OpenDMX / DMXPro only\) :** This is the port to connect the device to. 
 
-#### ArtNet specific :
+### ArtNet specific :
 
 ![](../../.gitbook/assets/artnet.png)
 

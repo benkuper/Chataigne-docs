@@ -4,7 +4,7 @@ Actions are "one-time" conditionnal triggers. You will want to use them if you h
 
 ![](../.gitbook/assets/action.gif)
 
-#### Conditions
+## Conditions
 
 Conditions are the "**if**" part of your action. You can have multiple conditions running together. Each time the conditions get validated, the action will be triggered.
 
@@ -16,14 +16,14 @@ There are 3 types of conditions : From Input Value, Scripts and Group.
 
 Each time a condition is validated, it will turned green. It will turn back to grey once it gets invalidated.
 
-#### Consequences
+## Consequences
 
 Consequences are the "**then**" part of your action.
 
 * Each time an action is validated, it will trigger all the commands contained in the "**Consequences : TRUE"** section. 
 * Each time an action is invalidated, it will trigger all the commands contained in the **"Consequence : FALSE"** section.
 
-For each action, you can create as many consequences as you want, and it will trigger them all at once, allowing for synchronized control of different softwares.  
-  
+For each action, you can create as many consequences as you want, and it will trigger them all at once, allowing for synchronized control of different softwares.
+
 You have also options to delay the trigger after the action is validated, as well as staggering the trigger of each consequences, resulting in a regularly timed triggering of each consequence.
 

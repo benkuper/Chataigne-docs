@@ -12,5 +12,3 @@ And finally add another action to verify if the current score is a certain numbe
 
 ![An action that shows &quot;YOU WIN&quot; and reset the current score when it hits 10](../../.gitbook/assets/highscore.png)
 
-
-

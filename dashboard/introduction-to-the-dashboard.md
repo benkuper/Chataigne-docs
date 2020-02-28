@@ -6,5 +6,9 @@ The Dashboard is a way to create customized interface by importing, placing and 
 Although the Dashboard is already functional and useful, it's under development and is subject to breaking changes.
 {% endhint %}
 
+{% hint style="info" %}
+You can easily switch from Edit mode to play mode with the shortcut Ctrl+E
+{% endhint %}
+
 ![A rather simple and uninteresting Dashboard layout.](../.gitbook/assets/dashboard.png)
 

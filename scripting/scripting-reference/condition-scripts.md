@@ -4,7 +4,7 @@ Condition Scripts use cases are more rare but can prove convenient in very speci
 
 For instance, if I want to detect a suite of notes to sing, I could easily create a script that will automatically check the next note to sing in order to validate the condition.
 
-### Condition specific methods \(the local object\)
+## Condition specific methods \(the local object\)
 
 When scripts are running as a condition, the **local** Javascript object has specific methods to change the validation state of this condition.
 

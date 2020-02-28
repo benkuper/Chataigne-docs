@@ -18,5 +18,3 @@ There are already precreated values who will be updated when the projector sends
 Not all the PJLink specification is supported by this module, more support will come when the community asks for it, and when I get time to implement it \(make [donations](https://github.com/sponsors/benkuper) !\)
 {% endhint %}
 
-
-

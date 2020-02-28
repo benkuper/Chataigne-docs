@@ -10,8 +10,8 @@ They are divided in main categories representing different types of interfaces. 
 
 ### Header
 
-When selecting a module, you can find at the very top a header with some controls. You can here choose to enable/disable the module.   
-When a module is disabled, it will not update or send anything.   
+When selecting a module, you can find at the very top a header with some controls. You can here choose to enable/disable the module.  
+When a module is disabled, it will not update or send anything.  
 Depending on whether the module is able to receive and/or send data, you can choose to activate/deactivate the logging of all data received and/or sent from this module with the **Log Incoming / Log Outgoing** buttons. If enabled, you'll be able to check in the Logger panel what's going on with this module.
 
 ### Parameters
@@ -46,8 +46,4 @@ The templates are a good way to customize a module for a specific use without ha
 You can create your own custom commands, by creating a new Template and choosing a base command to derive from. Then you can customize it, and choose which fields are editable, which are not, and setup default mapping behaviors.
 
 ![](../.gitbook/assets/template.png)
-
-
-
-
 

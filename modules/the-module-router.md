@@ -1,7 +1,7 @@
 # The Module Router
 
 The Module Router is a handy tool when you have a lot of mappings to do from one module to another.  
-It allows to quickly select input values from one module and choose and have basic settings for outputting those values, depending on the  out module type. 
+It allows to quickly select input values from one module and choose and have basic settings for outputting those values, depending on the out module type.
 
 ![An example router, routing wiimote values to an OSC module](../.gitbook/assets/router.png)
 
