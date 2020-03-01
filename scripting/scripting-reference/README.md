@@ -163,12 +163,47 @@ All parameters and triggers have common methods and specific methods
 
 #### Color Parameter
 
-| Method | Description | Example |
-| :--- | :--- | :--- |
-| **get\(\)** | Returns the value of this parameter | `var value = myStringParam.get();` |
-| **set\(**_value_**\)** | Sets the value of this parameter | `myStringParam.set("super");` |
-
-#### Target Parameter
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>get()</b>
+      </td>
+      <td style="text-align:left">Returns the value of this parameter. The result is an array containing
+        [r,g,b,a], values are between 0 and 1</td>
+      <td style="text-align:left">
+        <p><code>var value = myColorParam.get();</code>
+        </p>
+        <p><code>script.log(&quot;green : &quot;+value[1]);</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
+      </td>
+      <td style="text-align:left">Sets the value of this parameter. You can either set the value with ARGB
+        hex value, [r,g,b,a] float array, or r,g,b,a separate values. r, g and
+        b values are always between 0 and 1 and alpha is optional (you can specify
+        r,g,b only);</td>
+      <td style="text-align:left">
+        <p><code>//this is all set to cyan alpha 100%</code>
+        </p>
+        <p><code>myColorParam.set(0xff00ffff);</code>
+        </p>
+        <p><code>myColorParam.set([0,1,1,1]);</code>
+        </p>
+        <p><code>myColorParam.set(0,1,1,1);</code>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>#### Target Parameter
 
 | Method | Description | Example |
 | :--- | :--- | :--- |
@@ -347,8 +382,17 @@ Containers are any object that contains parameters or other containers. If you'r
     <tr>
       <td style="text-align:left"><b>addColorParameter(</b><em>name, description, default</em><b>)</b>
       </td>
-      <td style="text-align:left">add a color parameter (color picker)</td>
-      <td style="text-align:left"><code>var myColorParam = myContainer.addColorParameter(&quot;My Color Param&quot;,&quot;Description of my color param&quot;,0xff0000ff);</code>
+      <td style="text-align:left">
+        <p>add a color parameter (color picker).</p>
+        <p>You can either set the default color with ARGB hex value, [r,g,b,a] float
+          array, or r,g,b,a separate values. r, g and b values are always between
+          0 and 1 and alpha is optional (you can specify r,g,b only);</p>
+      </td>
+      <td style="text-align:left">
+        <p><code>var myColorParam = script.addColorParameter(&quot;My Color Param&quot;,&quot;Description of my color param&quot;,0xff0000ff); //default blue alpha 100%</code>
+        </p>
+        <p><code>var myColorParam2 = script.addColorParameter(&quot;My Color Param 2 &quot;,&quot;Description of my color param&quot;,[1,0,1]); //default purple</code>
+        </p>
       </td>
     </tr>
     <tr>
@@ -522,8 +566,17 @@ The script object refers to the script container. You can add your own custom pa
     <tr>
       <td style="text-align:left"><b>addColorParameter(</b><em>name, description, default</em><b>)</b>
       </td>
-      <td style="text-align:left">add a color parameter (color picker)</td>
-      <td style="text-align:left"><code>var myColorParam = script.addColorParameter(&quot;My Color Param&quot;,&quot;Description of my color param&quot;,0xff0000ff);</code>
+      <td style="text-align:left">
+        <p>add a color parameter (color picker).</p>
+        <p>You can either set the default color with ARGB hex value, [r,g,b,a] float
+          array, or r,g,b,a separate values. r, g and b values are always between
+          0 and 1 and alpha is optional (you can specify r,g,b only);</p>
+      </td>
+      <td style="text-align:left">
+        <p><code>var myColorParam = script.addColorParameter(&quot;My Color Param&quot;,&quot;Description of my color param&quot;,0xff0000ff); //default blue alpha 100%</code>
+        </p>
+        <p><code>var myColorParam2 = script.addColorParameter(&quot;My Color Param 2 &quot;,&quot;Description of my color param&quot;,[1,0,1]); //default purple</code>
+        </p>
       </td>
     </tr>
     <tr>
