@@ -597,6 +597,14 @@ The script object refers to the script container. You can add your own custom pa
       <td style="text-align:left"><code>script.setUpdateRate(50);</code>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left"><b>function scriprtParameterChanged(</b><em>param</em><b>)</b>
+      </td>
+      <td style="text-align:left">This function will be called each time a parameter of this script has
+        changed.</td>
+      <td style="text-align:left"><code>function scriptParameterChanged(param){    script.log(&quot;Param changed : &quot;+param.name); }</code>
+      </td>
+    </tr>
   </tbody>
 </table>### Root object
 

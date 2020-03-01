@@ -10,8 +10,8 @@ All scripts running inside a module will have a common set of functions that can
 
 | Method | Description | Example |
 | :--- | :--- | :--- |
-| **moduleParameterChanged\(**_param_**\)** | This function will be called each time a parameter of this module has changed, meaning a parameter or trigger inside the "Parameters" panel of this module. | `moduleParameterChanged(param){    script.log("Param changed : "+param.name); }` _\`\`_ |
-| **moduleValueChanged\(**_param_**\)** | This function will be called each time a value of this module has changed, meaning a parameter or trigger inside the "Values" panel of this module. | `function moduleValueChanged(value) { if(value.isParameter()) { script.log("Module value changed : "+value.name+" > "+value.get()); }else { script.log("Module value triggered : "+value.name); }  }` |
+| **function moduleParameterChanged\(**_param_**\)** | This function will be called each time a parameter of this module has changed, meaning a parameter or trigger inside the "Parameters" panel of this module. | `function moduleParameterChanged(param){    script.log("Param changed : "+param.name); }` _\`\`_ |
+| **function moduleValueChanged\(**_param_**\)** | This function will be called each time a value of this module has changed, meaning a parameter or trigger inside the "Values" panel of this module. | `function moduleValueChanged(value) { if(value.isParameter()) { script.log("Module value changed : "+value.name+" > "+value.get()); }else { script.log("Module value triggered : "+value.name); }  }` |
 
 ## Module-specific functions
 
