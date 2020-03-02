@@ -16,7 +16,7 @@ The OSC Module will receive any OSC message and convert them automatically into 
   * **Local :** if checked, this will force this output to send to the same computer. It's handy to quickly switch between a remote computer and this computer, to test.
   * **Remote host :** This is the IP address of the computer to send messages to. You need to uncheck _Local_ if you want to specify another address.
   * **Remote port :** This is the port to send the messages to.
-  * **Auto-set :** This is a handy tool to auto discover through Bonjour/Zeroconf  apps that support OSC. This may not work on every computer, especially if you don't have the Bonjour services installed. 
+  * **Auto detect:** This is a handy tool to auto discover through Bonjour/Zeroconf  apps that support OSC. This may not work on every computer, especially if you don't have the Bonjour services installed. 
 * **Pass-through :** This section allows you to directly transfer the incoming OSC messages to other OSC modules. This allow for fast, optimized data transfer through modules, even for messages that are not handled by Chataigne.
 
 ### Commands
