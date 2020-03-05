@@ -777,12 +777,13 @@ The util object provides helpers and utility functions like time or conversion.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>getObjectProperties(</b><em>object</em><b>)</b>
+      <td style="text-align:left"><b>getObjectProperties(</b><em>object, includeParameters, includeObjects</em><b>)</b>
       </td>
-      <td style="text-align:left">Returns an array of all the property / method names of this <em><b>object</b></em>.</td>
-      <td
-      style="text-align:left"><code>var propNames = util.getObjectProperties(myObjects);</code>
-        </td>
+      <td style="text-align:left">Returns an array of all the properties names of this <em><b>object</b></em>.
+        You can specify if you want to include parameters and objects. Default
+        is include all.</td>
+      <td style="text-align:left"><code>var propNames = util.getObjectProperties(myObject, true, false); //only get properties</code>
+      </td>
     </tr>
   </tbody>
 </table>
