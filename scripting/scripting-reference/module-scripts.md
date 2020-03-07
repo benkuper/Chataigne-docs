@@ -253,9 +253,9 @@ Some modules have specific methods that are useful if you want to have specific 
 | Method | Description | Example |
 | :--- | :--- | :--- |
 | **send\(**_message_**\)** | This will send the string passed in as ASCII characters. | `local.send("This is my message");` |
-| **sendBytes\(**_byte1, byte2, \[bytes\], ..._**\)** | This will send all the bytes passed in as they are. The bytes can be packed into arrays or just laid out one by one, or a mix of arrays and bytes. | `local.sendBytes(30, 210, 46, 255, 10);` |
+| **sendBytes\(**_byte1, byte2, \[bytes\], ..._**\)** | This will send all the bytes passed in as they are. The bytes can be packed into arrays or just laid out one by one, or a mix of arrays and bytes. | `local.sendBytes(30,210, [255,0,0], 5);` |
 | **sendTo\(**_ip, port, message_**\)** | **\[UDP Only\]** Same as the _**send**_ method, but will send to a specific _**ip**_ and _**port**_, ignoring the module's output. | `local.sendTo("192.168.1.255", 8888, "This is my message");` |
-| **sendBytesTo\(**_ip, port, byte1, byte2, \[bytes\], ..._**\)** | **\[UDP Only\]** Same as the _**sendBytes**_ method, but will send to a specific _**ip**_ and _**port**_, ignoring the module's output. | `local.sendBytesTo("192.168.1.255", 8888, "This is my message");` |
+| **sendBytesTo\(**_ip, port, byte1, byte2, \[bytes\], ..._**\)** | **\[UDP Only\]** Same as the _**sendBytes**_ method, but will send to a specific _**ip**_ and _**port**_, ignoring the module's output. | `local.sendBytesTo("192.168.1.255", 8888, 30,210, [255,0,0], 5);` |
 {% endtab %}
 
 {% tab title="HTTP" %}
