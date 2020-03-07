@@ -200,11 +200,8 @@ Some modules have specific methods that are useful if you want to have specific 
     <tr>
       <td style="text-align:left"><b>sendTo(</b><em>ip, port, address, arg1, arg2, arg3, ...</em><b>)</b>
       </td>
-      <td style="text-align:left">
-        <p>This sends an OSC message to a specific <em><b>ip </b></em>and <em><b>port, </b></em>ignoring
-          the module&apos;s output.</p>
-        <p><em><b>address</b></em> is the address of the message</p>
-      </td>
+      <td style="text-align:left">Same as the <b>send </b>method, but sending to a specific <em><b>ip </b></em>and <em><b>port, </b></em>ignoring
+        the module&apos;s output.</td>
       <td style="text-align:left"><code>local.sendTo(&quot;192.168.1.255&quot;, 9000, &quot;/myAddress&quot;, 1, .5f, &quot;cool&quot;);</code>
       </td>
     </tr>
@@ -254,8 +251,8 @@ Some modules have specific methods that are useful if you want to have specific 
 | :--- | :--- | :--- |
 | **send\(**_message_**\)** | This will send the string passed in as ASCII characters. | `local.send("This is my message");` |
 | **sendBytes\(**_byte1, byte2, \[bytes\], ..._**\)** | This will send all the bytes passed in as they are. The bytes can be packed into arrays or just laid out one by one, or a mix of arrays and bytes. | `local.sendBytes(30,210, [255,0,0], 5);` |
-| **sendTo\(**_ip, port, message_**\)** | **\[UDP Only\]** Same as the _**send**_ method, but will send to a specific _**ip**_ and _**port**_, ignoring the module's output. | `local.sendTo("192.168.1.255", 8888, "This is my message");` |
-| **sendBytesTo\(**_ip, port, byte1, byte2, \[bytes\], ..._**\)** | **\[UDP Only\]** Same as the _**sendBytes**_ method, but will send to a specific _**ip**_ and _**port**_, ignoring the module's output. | `local.sendBytesTo("192.168.1.255", 8888, 30,210, [255,0,0], 5);` |
+| **sendTo\(**_ip, port, message_**\)** | **\[UDP Only\]** Same as the **send** method, but will send to a specific _**ip**_ and _**port**_, ignoring the module's output. | `local.sendTo("192.168.1.255", 8888, "This is my message");` |
+| **sendBytesTo\(**_ip, port, byte1, byte2, \[bytes\], ..._**\)** | **\[UDP Only\]** Same as the **sendBytes** method, but will send to a specific _**ip**_ and _**port**_, ignoring the module's output. | `local.sendBytesTo("192.168.1.255", 8888, 30,210, [255,0,0], 5);` |
 {% endtab %}
 
 {% tab title="HTTP" %}
