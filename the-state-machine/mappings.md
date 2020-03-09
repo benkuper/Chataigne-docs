@@ -13,8 +13,6 @@ Mappings will allow you to create a continuous relationship between a module's v
 **- Hold shift while moving a point :** Lock X or Y value \(automatic decision depending on the mouse motion\).
 {% endhint %}
 
-
-
 ### Input
 
 You can here choose the input value you want as a source to control your commands parameters
