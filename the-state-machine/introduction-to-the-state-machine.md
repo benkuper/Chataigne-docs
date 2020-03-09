@@ -6,6 +6,13 @@ The State machine will let you create your own interaction rules to do realtime 
 
 When creating an interaction, you will first have to create a state that will contains the rules.
 
+{% hint style="success" %}
+**SHORTCUTS  
+- Alt + drag or MSB \(middle mouse button\) :** drag the canvas to navigate in an infinite world of wonder !  
+**-  Shift + mouse scroll :** Zoom in/out to see more things, or have bigger UI  
+**- Ctrl + C, Ctrl + V, Ctrl + D :** Copy, paste, duplicate items \(this applies to all items in lists and views, i.e. States, Mappings, Actions, Modules, Sequences...\)
+{% endhint %}
+
 ## States
 
 States are containers that will contains different interaction rules. They can be activated and deactivate manually or automatically, and you can create transition between them.
