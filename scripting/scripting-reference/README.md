@@ -90,8 +90,16 @@ All parameters and triggers have common methods and specific methods
     <tr>
       <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
       </td>
-      <td style="text-align:left">Sets a parameter&apos;s attribute.
-        <br />More information below</td>
+      <td style="text-align:left">
+        <p>Sets a parameter&apos;s attribute.</p>
+        <p>All parameters get :
+          <br /><em><b>readonly : </b></em>sets the parameter as not editable</p>
+        <p><em><b>description : </b></em>change the tooltip description</p>
+        <p><em><b>enabled : </b></em>enable or disable this parameter</p>
+        <p><em><b>alwaysNotify : </b></em>set the alwaysNotify flag (if true, this
+          will trigger updates even if setting the same value than before).
+          <br />More information for specific parameters in each parameter&apos;s section.</p>
+      </td>
       <td style="text-align:left">
         <p><code>myParam.setAttribute(&quot;readonly&quot;,true);</code>
         </p>
@@ -156,12 +164,43 @@ All parameters and triggers have common methods and specific methods
 
 #### String Parameter
 
-| Method | Description | Example |
-| :--- | :--- | :--- |
-| **get\(\)** | Returns the value of this parameter | `var value = myStringParam.get();` |
-| **set\(**_value_**\)** | Sets the value of this parameter | `myStringParam.set("super");` |
-
-#### Color Parameter
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>get()</b>
+      </td>
+      <td style="text-align:left">Returns the value of this parameter</td>
+      <td style="text-align:left"><code>var value = myStringParam.get();</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
+      </td>
+      <td style="text-align:left">Sets the value of this parameter</td>
+      <td style="text-align:left"><code>myStringParam.set(&quot;super&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
+      </td>
+      <td style="text-align:left">
+        <p>Specific attributes :</p>
+        <p><em><b>multiline</b></em>: whether the parameter can be multiline</p>
+        <p><em><b>prefix</b></em>: add a prefix before the value</p>
+        <p><em><b>suffix</b></em>: add a suffix after the value</p>
+      </td>
+      <td style="text-align:left"><code>myStringParam.setAttribute (&quot;multiline&quot;, true);</code>
+      </td>
+    </tr>
+  </tbody>
+</table>#### Color Parameter
 
 <table>
   <thead>
@@ -205,13 +244,59 @@ All parameters and triggers have common methods and specific methods
   </tbody>
 </table>#### Target Parameter
 
-| Method | Description | Example |
-| :--- | :--- | :--- |
-| **get\(\)** | Returns the string value of the target address | `var address = myTargetParam.get();` |
-| **getTarget\(\)** | Returns the actual selected target | `var target = myTargetParam.getTarget();` |
-| **set\(**_value_**\)** | Sets the string value of the target's address. | `myTargetParam.set("/root/modules/osc");` |
-
-#### Enum Parameter
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>get()</b>
+      </td>
+      <td style="text-align:left">Returns the string value of the target address</td>
+      <td style="text-align:left"><code>var address = myTargetParam.get();</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>getTarget()</b>
+      </td>
+      <td style="text-align:left">Returns the actual selected target</td>
+      <td style="text-align:left"><code>var target = myTargetParam.getTarget();</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
+      </td>
+      <td style="text-align:left">Sets the string value of the target&apos;s address.</td>
+      <td style="text-align:left"><code>myTargetParam.set (&quot;/root/modules/osc&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
+      </td>
+      <td style="text-align:left">
+        <p>Specific attributes :</p>
+        <p><em><b>root </b></em>: the root container from which to search</p>
+        <p><em><b>searchLevel </b></em>: specify the max level to search from the
+          root</p>
+        <p><em><b>showParameters </b></em>: if target is controllable, hide or show
+          parameters</p>
+        <p><em><b>showTriggers </b></em>: if target is controllable, hide or show
+          triggers</p>
+        <p><em><b>labelLevel </b></em>: the level of parents to show in the UI.</p>
+      </td>
+      <td style="text-align:left">
+        <p><code>myTargetParam.setAttribute (&quot;searchLevel&quot;,2);</code>
+        </p>
+        <p><code>myTargetParam.setAttribute (&quot;root&quot;, root.sequences);</code>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>#### Enum Parameter
 
 | Method | Description | Example |
 | :--- | :--- | :--- |
@@ -235,7 +320,7 @@ All parameters and triggers have common methods and specific methods
       <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
       </td>
       <td style="text-align:left">Set specific FileParameter attribute (see examples)</td>
-      <td style="text-align:left"><code>myFileParam.setAttribute(&quot;directoryMode&quot;,true);</code>
+      <td style="text-align:left"><code>myFileParam.setAttribute (&quot;directoryMode&quot;,true);</code>
       </td>
     </tr>
     <tr>
@@ -244,9 +329,9 @@ All parameters and triggers have common methods and specific methods
       <td style="text-align:left">Get the content of the file. If <em><b>asJSON </b></em>is <em>true, </em>then
         the content will be parsed and returned as an Object.</td>
       <td style="text-align:left">
-        <p><code>var myTextContent = myFileParam.readFile();</code>
+        <p><code>var myTextContent = myFileParam.readFile ();</code>
         </p>
-        <p><code>var myJSONContent = myFileParam.readFile(true);</code>
+        <p><code>var myJSONContent = myFileParam.readFile (true);</code>
         </p>
       </td>
     </tr>
@@ -259,7 +344,7 @@ All parameters and triggers have common methods and specific methods
       <td style="text-align:left">
         <p><code>var data = &quot;super&quot;;</code>
         </p>
-        <p><code>myFileParam.writeFile(data, true);</code>
+        <p><code>myFileParam.writeFile (data, true);</code>
         </p>
       </td>
     </tr>
