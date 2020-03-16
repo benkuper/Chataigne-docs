@@ -2,7 +2,7 @@
 
 Here you can find an almost exhaustive reference on Chataigne specific functions.
 
-{% hint style="info" %}
+{% hint style="success" %}
 Scripts in Chataigne are based on a simplified version of Javascript. Most functions are available, but some might be missing. If you're missing some functions, please contact me and consider [donating](https://github.com/sponsors/benkuper) so I can spend more time improving Chataigne !
 {% endhint %}
 
