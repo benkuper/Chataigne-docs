@@ -44,8 +44,8 @@ If you don't need them, don't add them in your script as Chataigne will optimize
       <td style="text-align:left">If present, this function will be called regularly at rate specified by
         the &quot;Update rate&quot; script parameter. This parameter is only visible
         when the function is present in the script. You can also change the rate
-        from the script by calling <b>script.updateRate</b><em>(rate).</em> see below
-        for more informations.</td>
+        from the script by calling <b>script.setUpdateRate</b><em>(rate).</em> see
+        below for more informations.</td>
       <td style="text-align:left">
         <p><code>function update(deltaTime)</code>
         </p>
@@ -489,7 +489,6 @@ When a manipulating a manager, you have access to specific functions and propert
       <td style="text-align:left">
         <p><code>var newOSCModule = root.modules.addItem(&quot;OSC&quot;);</code>
         </p>
-        <p>&lt;code&gt;&lt;/code&gt;</p>
         <p><code>var newSequence = root.sequences.addItem();</code>
         </p>
       </td>
@@ -499,7 +498,7 @@ When a manipulating a manager, you have access to specific functions and propert
       </td>
       <td style="text-align:left">Removes an item. <em><b>item</b></em> must be a item managed by this manager.</td>
       <td
-      style="text-align:left"><code>root.modules.removeItem(myModule);</code>
+      style="text-align:left"><code>root.modules.removeItem (myModule);</code>
         </td>
     </tr>
     <tr>
@@ -511,6 +510,47 @@ When a manipulating a manager, you have access to specific functions and propert
         </p>
         <p><code>script.log(&quot;Num sequences : &quot;+items.length);</code>
         </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>getItemWithName(</b><em>name</em><b>)</b>
+      </td>
+      <td style="text-align:left">Returns the first item found with <em><b>name. </b></em>This will search
+        for exact match of niceName, shortName, and lowercase version.</td>
+      <td
+      style="text-align:left"><code>var introSeq = root.sequences.getItemWithName (&quot;Intro&quot;);</code>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>getItemAt(</b><em>index</em><b>)</b>
+      </td>
+      <td style="text-align:left">Returns the item at the <em><b>index.</b></em>
+      </td>
+      <td style="text-align:left"><code>var curSequence = root.sequences.getItemAt(1); //0 is first, so this will get the second sequence in the list.</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>getItemIndex(</b><em>item</em><b>)</b>
+      </td>
+      <td style="text-align:left">Returns the index of the specified <em><b>item.</b></em>
+      </td>
+      <td style="text-align:left"><code>var index= root.sequences.getItemIndex (curSequence);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>getItemBefore(</b><em>item</em><b>)</b>
+      </td>
+      <td style="text-align:left">Returns the item before the specified <em><b>item.</b></em>
+      </td>
+      <td style="text-align:left"><code>var prevSequence = root.sequences.getItemBefore (curSequence);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>getItemAfter(</b><em>item</em><b>)</b>
+      </td>
+      <td style="text-align:left">Returns the item after the specified <em><b>item.</b></em>
+      </td>
+      <td style="text-align:left"><code>var nextSequence = root.sequences.getItemAfter (curSequence);</code>
       </td>
     </tr>
   </tbody>
@@ -780,10 +820,18 @@ The util object provides helpers and utility functions like time or conversion.
       <td style="text-align:left"><b>getObjectProperties(</b><em>object, includeParameters, includeObjects</em><b>)</b>
       </td>
       <td style="text-align:left">Returns an array of all the properties names of this <em><b>object</b></em>.
-        You can specify if you want to include parameters and objects. Default
-        is include all.</td>
-      <td style="text-align:left"><code>var propNames = util.getObjectProperties(myObject, true, false); //only get properties</code>
+        You can specify if you want to include parameters and/or objects (like
+        containers) Default is include all.</td>
+      <td style="text-align:left"><code>var propNames = util.getObjectProperties(myObject, true, false); //only get parameters</code>
       </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>getObjectMethods(</b><em>object</em><b>)</b>
+      </td>
+      <td style="text-align:left">Returns an array of all the method names of this <em><b>object</b></em>.</td>
+      <td
+      style="text-align:left"><code>var methods= util.getObjectMethods();</code>
+        </td>
     </tr>
   </tbody>
 </table>
