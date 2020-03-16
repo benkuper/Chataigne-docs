@@ -61,7 +61,7 @@ Some modules have specific function callbacks that are useful if you want to cus
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>noteOnEvent(</b><em>channel, pitch, velocity</em><b>)</b>
+      <td style="text-align:left"><b>noteOnEvent (</b><em>channel, pitch, velocity</em><b>)</b>
       </td>
       <td style="text-align:left">
         <p>This function will be called each time a noteOn event is received.</p>
@@ -72,7 +72,7 @@ Some modules have specific function callbacks that are useful if you want to cus
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>noteOffEvent(</b><em>channel, pitch, velocity</em><b>)</b>
+      <td style="text-align:left"><b>noteOffEvent (</b><em>channel, pitch, velocity</em><b>)</b>
       </td>
       <td style="text-align:left">
         <p>This function will be called each time a noteOff event is received.</p>
@@ -83,7 +83,7 @@ Some modules have specific function callbacks that are useful if you want to cus
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>ccEvent(</b><em>channel, number, value</em><b>)</b>
+      <td style="text-align:left"><b>ccEvent (</b><em>channel, number, value</em><b>)</b>
       </td>
       <td style="text-align:left">
         <p>This function will be called each time a noteOff event is received.</p>
@@ -100,6 +100,33 @@ Some modules have specific function callbacks that are useful if you want to cus
         <p>The argument is an array of bytes containing the sysEx data.</p>
       </td>
       <td style="text-align:left"><code>function sysExEvent(data) { script.log(&quot;Sysex Message received, &quot;+data.length+&quot; bytes :&quot;);<br />for(var i=0; i &lt; data.length; i++) {<br />script.log(&quot; &gt; &quot;+data[i]);<br />}<br />}</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>pitchWheelEvent (</b><em>channel, value</em><b>)</b>
+      </td>
+      <td style="text-align:left">This function will be called each time a pitchWheel event is received.
+        The arguments are respectively the channel and the value of this event.</td>
+      <td
+      style="text-align:left"><code>function pitchWheelEvent(channel, value) {<br />script.log(&quot;PitchWheel received &quot;+channel+&quot;, &quot;+value);<br />}</code>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>channelPressureEvent (</b><em>channel, value</em><b>)</b>
+      </td>
+      <td style="text-align:left">This function will be called each time a channelPressure event is received.
+        The arguments are respectively the channel and the value of this event.</td>
+      <td
+      style="text-align:left"><code>function channelPressureEvent(channel, value) {<br />script.log(&quot;Channel Pressure received &quot;+channel+&quot;, &quot;+value);<br />}</code>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>afterTouchEvent (</b><em>channel, note, value</em><b>)</b>
+      </td>
+      <td style="text-align:left">This function will be called each time an afterTouch event is received.
+        The arguments are respectively the channel, the note and the value of this
+        event.</td>
+      <td style="text-align:left"><code>function afterTouchEvent(channel, note, value) {<br />script.log(&quot;After Touch received &quot;+channel+&quot;, &quot;+note+&quot;, &quot;+value);<br />}</code>
       </td>
     </tr>
   </tbody>
@@ -212,10 +239,13 @@ Some modules have specific methods that are useful if you want to have specific 
 {% tab title="MIDI" %}
 | Method | Description | Example |
 | :--- | :--- | :--- |
-| **sendNoteOn\(**_channel, pitch, velocity_**\)** | This will send a Note On event on the module's output MIDI device. | `local.sendNoteOn(1, 12, 127);` |
-| **sendNoteOff\(**_channel, pitch_**\)** | This will send a Note Off event on the module's output MIDI device. | `local.sendNoteOff(1, 12);` |
-| **sendCC\(**_channel, pitch, velocity_**\)** | This will send a Control Change event on the module's output MIDI device. | `local.sendCC(3, 20, 65);` |
-| **sendSysEx\(**_byte1, byte2, byte3, ..._**\)** | This will send a SysEx message on the module's output MIDI device. You can add as many arguments you want in the SysEx message. |  |
+| **sendNoteOn\(**_channel, pitch, velocity_**\)** | This will send a Note On event on the module's output MIDI device. | `local.sendNoteOn (1, 12, 127);` |
+| **sendNoteOff\(**_channel, pitch_**\)** | This will send a Note Off event on the module's output MIDI device. | `local.sendNoteOff (1, 12);` |
+| **sendCC\(**_channel, pitch, velocity_**\)** | This will send a Control Change event on the module's output MIDI device. | `local.sendCC (3, 20, 65);` |
+| **sendSysEx\(**_byte1, byte2, byte3, ..._**\)** | This will send a SysEx message on the module's output MIDI device. You can add as many arguments you want in the SysEx message. | `local.sendSysex (10, 15,20,20,0);` |
+| **sendPitchWheel\(**_channel, value_**\)** | This will send a Pitch Wheel event on the module's output MIDI device. | `local.sendPitchWheel (3, 2000);` |
+| **sendChannelPressure\(**_channel, value_**\)** | This will send a Channel Pressure event on the module's output MIDI device. | `local.sendChannelPressure (1, 67);` |
+| **sendAfterTouch\(**_channel, note, value_**\)** | This will send an After Touch event on the module's output MIDI device. | `local.sendAfterTouch (3, 20, 65);` |
 {% endtab %}
 
 {% tab title="DMX" %}
