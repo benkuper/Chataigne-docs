@@ -143,19 +143,79 @@ All parameters and triggers have common methods and specific methods
 
 #### Float Parameter
 
-| Method | Description | Example |
-| :--- | :--- | :--- |
-| **get\(\)** | Returns the value of this parameter | `var value = myFloatParam.get();` |
-| **set\(**_value_**\)** | Sets the value of this parameter | `myFloatParam.set(.5);` |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>get()</b>
+      </td>
+      <td style="text-align:left">Returns the value of this parameter</td>
+      <td style="text-align:left"><code>var value = myFloatParam.get();</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
+      </td>
+      <td style="text-align:left">Sets the value of this parameter</td>
+      <td style="text-align:left"><code>myFloatParam.set(.5);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
+      </td>
+      <td style="text-align:left">
+        <p>Specific attributes :</p>
+        <p><em><b>ui : </b></em>The UI to use to show this parameter. Accepted values
+          are : <em><b>time, slider,  stepper, label</b></em>
+        </p>
+      </td>
+      <td style="text-align:left"><code>myStringParam.setAttribute (&quot;ui&quot;, &quot;time&quot;);</code>
+      </td>
+    </tr>
+  </tbody>
+</table>#### Integer Parameter
 
-#### Integer Parameter
-
-| Method | Description | Example |
-| :--- | :--- | :--- |
-| **get\(\)** | Returns the value of this parameter | `var value = myIntParam.get();` |
-| **set\(**_value_**\)** | Sets the value of this parameter | `myIntParam.set(2);` |
-
-#### Boolean Parameter
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>get()</b>
+      </td>
+      <td style="text-align:left">Returns the value of this parameter</td>
+      <td style="text-align:left"><code>var value = myIntParam.get();</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
+      </td>
+      <td style="text-align:left">Sets the value of this parameter</td>
+      <td style="text-align:left"><code>myIntParam.set(2);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
+      </td>
+      <td style="text-align:left">
+        <p>Specific attributes :</p>
+        <p><em><b>hexMode : </b></em>Whether to show the value as decimal or hexadecimal.</p>
+      </td>
+      <td style="text-align:left"><code>myStringParam.setAttribute (&quot;hexMode&quot;, true);</code>
+      </td>
+    </tr>
+  </tbody>
+</table>#### Boolean Parameter
 
 | Method | Description | Example |
 | :--- | :--- | :--- |
@@ -304,6 +364,7 @@ All parameters and triggers have common methods and specific methods
 | **get\(\)** | Get the selected label | `var label = myEnumParam.get();` |
 | **getData\(\)** | Get the selected data | `var data = myEnumParam.getData();` |
 | **set\(**_label_**\)** | Sets the value with the provided label | `myEnumParam.set("new option");` |
+| **removeOptions\(\)** | Removes all options. | `myEnumParam.removeOptions();` |
 
 #### File Parameter
 
@@ -354,6 +415,14 @@ All parameters and triggers have common methods and specific methods
       <td style="text-align:left">Returns the absolute path for this file.</td>
       <td style="text-align:left"><code>var path = myFileParam.getAbsolutePath();</code>
       </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>launchFile(</b><em>arguments<b>)</b></em>
+      </td>
+      <td style="text-align:left">This will launch the selected file with the <em><b>arguments</b> </em>provided</td>
+      <td
+      style="text-align:left"><code>myFileParam.launchFile<br />(&quot;--verbose&quot;)</code>
+        </td>
     </tr>
   </tbody>
 </table>#### Point2D Parameter
