@@ -32,7 +32,7 @@ If you don't need them, don't add them in your script as Chataigne will optimize
       style="text-align:left">
         <p><code>function init() {</code>
         </p>
-        <p> <code>//init your values, log things and assign variables</code>
+        <p><code>//init your values, log things and assign variables</code>
         </p>
         <p><code>}</code>
         </p>
