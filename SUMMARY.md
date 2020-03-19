@@ -1,11 +1,11 @@
 # Table of contents
 
-* [Welcome to the Chataigne docs !](README.md)
+* [Bienvenue sur la doc de Chataigne !](README.md)
 
 ## Getting Started <a id="getting-started-1"></a>
 
-* [History and Philosophy of Chataigne](getting-started-1/getting-started.md)
-* [The Interface](getting-started-1/the-interface.md)
+* [Histoire et philosophie de Chataigne](getting-started-1/getting-started.md)
+* [L'Interface](getting-started-1/the-interface.md)
 * [The Modules](getting-started-1/the-modules.md)
 
 ## Modules

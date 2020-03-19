@@ -1,48 +1,48 @@
-# History and Philosophy of Chataigne
+# Histoire et philosophie de Chataigne
 
-## The History
+## L' Histoire
 
-### Why making Chataigne ?
+### Pourquoi faire Chataigne ?
 
-Along the years, I've worked in a lot of different projects and had to create a lot of tools again and again. While those tools were functional, they weren't optimized nor easy to use and once the creation is done, I couldn't let those tools to the artists I worked with for them to continue working on the project as they were not quite user-friendly.
+Au fil des années, j'ai travaillé sur beaucoup de projets pour lesquels j'ai du créer des outils très similaires. Même si ces outils étaient fonctionnels, comme ils étaient à chaque fois créés in situ, ils n'étaient ni optimisés, ni facile à prendre en main, je ne pouvais donc pas souvent laisser sereinement ces outils en autonomie aux artistes avec qui je travaillais.
 
-Few years ago, i decided to create once and for all a tool that would fit most of my purposes as both a technician and digital artist. After few years of private use and tests, i decided to rewrite it completely from scratch in C++/JUCE and give it to the community as a free, open-source software, now known as Chataigne.
+Il y a quelques années, j'ai décidé de concentrer cette énergie dans un outil qui conviendrait à la plupart des usages auquel j'ai été confronté pendant mes projets, et qui pourrait être utilisé à la fois par des techniciens du spectacle \(lumière, vidéo, son..\) et les artistes. Après quelques années de test et usage privé, j'ai décidé de redévelopper une solution optimisée basée sur JUCE/C++, et de l'ouvrir au public en mettant ce projet à la fois gratuit et open-source. 
 
-### Why this unpronounceable name ?
+### Pourquoi "Chataigne" ?
 
-Chataigne means "Chestnut" in french, the real story behind this name involves a love story and wanting to remember this time in my life. Also it's funny.
+L'histoire derrière le choix de ce nom la implique une histoire d'amour, et mon envie de m'en rappeler. Et puis c'est marrant surtout.
 
-## The Philosophy
+## La Philosophie
 
-### What exactly is Chataigne ?
+### Qu'est-ce que c'est exactement, Chataigne ?
 
-In most of artistic projects involving technology, creators are going to use multiple softwares and devices for different purposes : one to control audio, one to generate video, another to handle the video mapping and maybe one to control lights, or Arduino boards to control motors, who knows..
+Dans la plupart des projets artistiques intégrant de la technologie, les différents créateurs vont utiliser plusieurs logiciels et matériels différents : un logiciel pour contrôler le son, un ou plusieurs pour la vidéo, un logiciel ou une console pour la lumière, des capteurs, moteurs...
 
-In these setups, the communication and synchronization between those softwares can be challenging and therefore rapidly escalate to an overly complex setup. Also, those softwares and devices may require technical experience to be able to understand how they work and what's their best practices.
+Dans ces systèmes, la communication et synchronisation entre les différentes parties peut ne pas être évident, et rapidement devenir trop complexe. Un autre facteur important est que chacun de ces logiciels requiert potentiellement une expérience technique spécifique.
 
-Chataigne aims to be the "conductor" of this technologic orchestra : while it will barely do anything visible to the public on it's own, it will be the one seeing the big picture and make sure that everyone gets what it needs. I'm trying hard to make the interface understandable for both technician and artists, so hopefully Chataigne would be the common workplace for artists and technician to work together.
+Chataigne a pour but d'être le "chef" de cette orchestre technologique : bien qu'il ne fasse rien de visible pour le public de lui-même, il sera l'élément qui aura connaissance du projet dans son ensemble et s'assurera que chacun des acteurs du système reçoive ce dont il a besoin. Je travaille dur pour que l'interface de Chataigne soit compréhensible et utilisable à la fois pour les techniciens et les artistes, en espérant qu'il puisse devenir un terrain de rencontre et de travail commun entre les techniciens et les artistes.
 
-### Why and when should i use it ?
+### Pourquoi et quand devrais-je l'utiliser ?
 
-First of all, because Chataigne is a conductor and doesn't "play an instrument", you won't have much use of it unless you have an "orchestra", meaning you it will make sense if you actually have a project and want to control other softwares and devices.
+Tout d'abord, Chataigne est un "chef d'orchestre" et ne "joue pas" d'instrument lui-même, vous n'aurez donc pas beaucoup d'intérêt à l'utiliser sans "orchestre". Chataigne ne prend de sens que si vous avez un projet dans lequel vous voulez contrôler et synchroniser plusieurs logiciels et matériels ensemble.
 
-#### Chataigne is mainly a show and interactive installation creation tool
+#### Chataigne est principalement un outil pour les spectacles et installation interactives
 
-If you have a project involving multiple softwares and / or devices, you may want to synchronize everything from a unique place dedicated to that and not have intricate relationship between all your tools.
+Si vous avez un projet impliquant plusieurs logiciels et / ou périphériques physiques, vous voudrez probablement synchroniser le tout à un endroit unique et dédié à cette tâche plutôt que de se retrouver avec des connections croisées et complexes entre les différents logiciels.
 
-#### Chataigne is both "interactive" real-time and timeline based
+#### Chataigne supporte à la fois le temps-réel "interactive" et le contrôle temporel linéaire.
 
-Chataigne is working around two core concepts : the State Machine and the Time Machine.
+Chataigne tourne autour de deux concepts : la [State Machine](../the-state-machine/introduction-to-the-state-machine.md) \(Machine à état\) et la [Time Machine ](../the-time-machine-sequences/introduction-to-the-time-machine.md)\(Sequences\)
 
-The State Machine will handle all real-time interaction with rules that can be very basic but can get fairly complex if needed.
+La State Machine s'occupera de toutes les intéractions temps réel, avec des règles d'intéraction qui peuvent aller des plus simples concepts à des systèmes complexes en fonction des besoins.
 
-The Time Machine will handle all time based control, with classic timelines that can trigger controls at precise moments, or animate parameters and colors along time. It features a basic audio timeline if you need to play audio in sync, but if you need complex audio handling, you should definitely use a dedicated software for that, and control it from Chataigne.
+La Time Machine s'occupera de toute ce qui est géré dans le temps. Elle utilise principalement des timelines classiques, qui peuvent déclencher des événements à des moments précis, ou animer des paramètres et des couleurs dans le temps. Elle intègre aussi un support basique de l'audio, mais si vous avez des besoins plus complexe en son, vous devrez utiliser un autre logiciel dédié, que vous pourrez ensuite contrôler depuis Chataigne.
 
-#### Chataigne features a lot of side tools for fast testing and researching
+#### Chataigne contient également plusieurs outils secondaires pour tester et prototyper rapidement
 
-Chataigne contains a lot of "hidden gems" and tools that integrate with the global workflow, but also can be used separately such as the Router which will basically route any input to different outputs and convert the signal at the same time. You'll discover them as you wander around the docs and the software.
+Chataigne contient beaucoup de "perles cachées" et d'outils qui s'intègrent avec le reste du logiciel, mais qui peuvent aussi être utilisés séparement, comme le [Router ](../modules/the-module-router.md)qui peut rapidement rediriger les informations d'un logiciel à un autre logiciel et convertir les données en même temps. Vous découvrirez ces outils au fur et à mesure de l'utilisation du logiciel et de la lecture de cette documentation.
 
-## Next
+## Ensuite
 
-Now that you have some context, let's dive into it ! Learn all about [The Interface](the-interface.md)
+Maintenant que tu as une bonne idée générale, rentrons dans le vif du sujet ! Découvrons  [L'interface](the-interface.md)
 

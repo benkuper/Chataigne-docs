@@ -1,12 +1,12 @@
 ---
 description: >-
-  You made is so far, thank you for coming here before asking questions (or have
-  you already ?)
+  Bravo et merci de venir ici avant de poser des questions (ou peut-être l'as tu
+  déjà fait ?)
 ---
 
-# Welcome to the Chataigne docs !
+# Bienvenue sur la doc de Chataigne !
 
 ![](.gitbook/assets/welcome_sign.png)
 
-You can start by going to the[ Introduction page](getting-started-1/getting-started.md)
+Tu peux commencer par le [commencement.](getting-started-1/getting-started.md)
 

@@ -1,4 +1,4 @@
-# The Interface
+# L'Interface
 
 The interface can be frightening at first, but worry not, it will quickly make sense as we dissect it together. Here it goes.
 
