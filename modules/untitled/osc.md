@@ -1,13 +1,13 @@
 # OSC
 
-The OSC Module will receive any OSC message and convert them automatically into values, and allows to send OSC messages to one or more outputs
+Le module OSC Module peut recevoir n'importe quel message  OSC et le convertir en "Values". Il peut aussi envoyer des messages OSC à une ou plusieurs destinations.
 
 ![](../../.gitbook/assets/osc.png)
 
 ## Parameters
 
-* **Auto-Add :** This will automatically add values when OSC messages are received. Keep it checked if you want to receive every OSC message and convert it to value, otherwise if you want to only receive some messages, uncheck it when you don't wan't to automatically add more values anymore 
-* **Split Arguments :** When checked, if the received OSC Message contains more than one argument, it will automatically create one value for each argument and append 0,1,2 to the value's name. 
+* **Auto-Add :** Cette option active l'ajout automatique de "Values" quand un message OSC est réceptionné. Garde-le activé tant que tu veux recevoir des nouveaux types de messages, et désactives le quand tu ne veux plus créer de nouvelles values automatiquement.
+* **Split Arguments :** Une fois activé, les messages OSC comportants plusieurs arguments créeront automatiquement une value différente par arguments, le nom de la value aura un numéro 0,1,2... ajouté à la fin de l'adresse OSC.
 * **Auto Range :** When checked, it will automatically assign a range to float and integer values when receiving new OSC messages. This range will automatically adapt when receiving new values. You can change this range by right clicking on the value and choosing "Set Range..." 
 * **Auto Feedback :** When checked, every change of value in the Values container will be automatically sent to all OSC outputs. This is useful when you want to test out or only change those values without having to create commands to send OSC. 
 * **OSC Input :** OSC Input allows you to receive OSC messages. It's good practice to disable it if your module is supposed to only send OSC messages and not receiving any. You will see in the Module list that the "Incoming data" icon is automatically hidden when disabling the OSC Input.

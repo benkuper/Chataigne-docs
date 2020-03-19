@@ -1,6 +1,6 @@
 # Protocol
 
-The Protocol category contains all the general purpose modules, so you can configure yourself all the control you need and not be limited to the existing supported softwares and devices.
+La catégorie "Protocol" contient tous les modules d'usage générique , que tu peux configurer toi-même, sans être limité par la liste des logiciels et périphériques supportés par défaut.
 
 ![](../../.gitbook/assets/menu_protocols.png)
 
