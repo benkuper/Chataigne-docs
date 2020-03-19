@@ -1,31 +1,33 @@
 # DMX
 
-The DMX Module allows to control DMX device such as Enttec OpenDMX, Enttec DMX Pro, Enttec DMX MkII and Artnet.
+Le module DMX permet de contrôler des boitiers DMX comme Enttec OpenDMX, Enttec DMX Pro, Enttec DMX MkII et également d'enovoyer de l'Artnet.
 
 ![](../../.gitbook/assets/dmx.png)
 
 ## Parameters
 
-* **DMX Type :** This is type of DMX to use. It depends on the hardware you're using. 
-* **Connected :** Whether the device is connected or not. If at least one of the devices, input or output is connected, it will be checked.
+* **DMX Type :** Le type de DMX que tu veux utiliser. Ca dépend tu matos que tu as.
+* **Connected :** Affiche l'état de la connection à ton périphérique.
 
 **DMX Device parameters :**
 
-* **Use fixed send rate :** If checked, this will always send DMX data at the rate specified below
-* **Target send rate :** If sending at a fixed rate, this is the rate at which to send the DMX data.
-* **Enable receive \(DMXPro / Artnet only\) :** If checked, this activates receiving data.
-* **Port \(OpenDMX / DMXPro only\) :** This is the port to connect the device to. 
+* **Use fixed send rate :** Si cette option est activée, les données DMX seront envoyées à interval régulier. Sinon elle seront envoyées à chaque déclenchement de commande.
+* **Target send rate :** Si "fixed send rate" est activée, c'est la fréquence d'envoie des données DMX.
+* **Enable receive \(DMXPro / Artnet seulement\) :** Active la réception de données DMX.
+* **Port \(OpenDMX / DMXPro seulement\) :** Le périphérique sur lequel se connecter.
 
 ### ArtNet specific :
 
 ![](../../.gitbook/assets/artnet.png)
 
-* **Interface :** The network interface to use to connect to the artnet node. Depending on the OS, you will want to test different options, leaving it to All \(Default\) will probably work though.
-* **Subnet :** The subnet to send the data to.
-* **Universe :** The DMX universe to send the data to.
-* **Node Name :** The name of the Artnet receiver node that will be shown in other softwares \(if _Enable received_ is checked\).
+* **Interface :** L'interface réseau à utiliser pour se connecter au node ArtNet. En fonction de l'OS, tu voudras sûrement tester différents options, mais "All \(Default\)" marchera probablement.
+* **Subnet :** Le subnet sur lequel envoyer les données.
+* **Universe :** L'univers DMX sur lequel envoyer les données.
+* **Node Name :** The nom du node Artnet de Chataigne qui sera montré aux autres logiciels \(si "Enable Receive" est activé\).
 
 {% hint style="warning" %}
-ArtNet may have some problems on some platforms, if you have any knowledge in implementing this protocol in C++, please contact me !
+ArtNet peut présenter des problèmes sur certaines plateformes, si tu as des connaissances pour implémenter ce protocole en C++, tu peux me contacter !
 {% endhint %}
+
+
 
