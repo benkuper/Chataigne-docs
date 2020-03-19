@@ -1,45 +1,44 @@
 # L'Interface
 
-The interface can be frightening at first, but worry not, it will quickly make sense as we dissect it together. Here it goes.
+L'interface peut faire un peu peur à la première ouverture, mais un peu de courage, tu vas voir tout va prendre du sens après avoir fait un rapide tour de la bête.
 
 ![](../.gitbook/assets/interface_notes.png)
 
-### Global notes
+### Notes générales
 
-The interface is based on a sub-framework called "Organic UI", which features a ShapeShifter mechanism.
+L'interface est basée sur un sous-système appelé "Organic UI", qui inclut un méchanism de "ShapeShifter.
 
-Basically, this means that you can change the panel layout as much as you want, and save different layouts depending on what you want to work on.
+En gros, ça veut dire que tu peux supprimer, ajouter et déplacer les différents panneaux, et changer la disposition. Puis tu peux sauvegarder ces différents dispositions en fonction de ce sur quoi tu es en train de travailler.
 
-### 1. The Module Panel
+### 1. Les Modules
 
-This first panel is you starting point. This is where you can create the different modules, each one being a connection to another software or device. When creating a project, you will start by listing all the software and devices you want to interact with, and add them here. You can find more infos about the modules in the [Module Page](the-modules.md)
+Ce premier panneau est ton point de démarrage. C'est ici que tu peux créer les différents modules, chacun étant une connection vers un logiciel ou un périphérique. Au moment de créer un projet, la première chose à faire est de faire une liste des logiciels et périphériques avec lesquels tu vas intéragir, et créer les modules correspondants ici. Tu peux trouver plus d'infos sur les modules à la section [Modules](the-modules.md).
 
-### 2. The State Machine
+### 2. La State Machine
 
-This panel will let you create your own interaction rules to do realtime control of all your system. As the name says, it's a state machine, which means you can create different states, each one being a group of rules that you can activate or deactivate as you wish. You can also create transitions between them, allowing for creating evolving interactions. You can find more infos in the [State Machine Page](../the-state-machine/introduction-to-the-state-machine.md)
+Cette section te permettra de créer tes propres règles d'intéraction pour avoir un contrôle temps-réel de ton système. C'est une machine à état, ce qui veut dire que tu peux créer différents "States", et chaque state est un ensemble de règles que tu peux activer et désactiver quand tu veux. Tu peux aussi créer des transitions entre ces états, ce qui te permettra de créer des intéractions évolutives. Tu peux trouver plus d'infos dans la section [State Machine](../the-state-machine/introduction-to-the-state-machine.md) .
 
-### 2. The Time Machine \(or Sequence Editor\)
+### 2. La Time Machine \(ou Sequence Editor\)
 
-This panel will let you create timeline-based sequences and create triggers and parameter animations over time. You can find more infos in the [Time Machine Page](../the-time-machine-sequences/introduction-to-the-time-machine.md)
+Cette section de permet de créer et d'éditer des séquences pour faire de la création temporelle. Plus d'info dans la section [Time Machine.](../the-time-machine-sequences/introduction-to-the-time-machine.md)
 
-### 3. The Inspector
+### 3. L' Inspector \(Editeur de propriétés\)
 
-The Inspector is your main editing panel, you'll spend a lot of time there ! Anything you can select in the software will be showed in detail in this panel. You can then edit all the properties of this item.  
-If you select another item, then the elements in this panel will change to show the newly selected item.
+L'inspector est ton panneau principal d'édition, tu vas y passer un paquet de temps ! Tout ce que tu peux sélectionner sera affiché en détails dans ce panneau. Tu pourras ensuite éditer les différentes propriétés de l'objet sélectionné. Si tu sélectionnées un autre élément, alors l'affichage dans ce panneau changera pour montrer les propriétés de ce nouvel élément sélectionné.
 
-### 4. The Logger
+### 4. Le Logger
 
-The Logger is your verbose friend. It will tell you if something wend well or failed, as well as other useful informations such as your IP addresses when you create a network module. You can also log you own message and values there so you can keep track of what's happening when building complex setups.
+The Logger est ton ami bavard. Il te donnera des infos sur ce qu'il se passe dans le logiciel, si quelque chose c'est bien ou mal passé, mais également t'affichera d'autres infos comme les adresses IP de ton ordinateur. Tu peux aussi afficher des messages personnalisés dedans pour vérifier des données et suivre ce qu'il se passe dans le logiciel quand ton projet devient plus complexe.
 
-### 5. The Help
+### 5. Le panneau "Help"
 
-The help is a good starter panel, showing you useful hotkeys and how to use the item you're hovering.
+Ce panneau est un pense-bête idéal pour commencer, et t'affichera des informations et des raccourcis clavier sur l'élément que tu survoles avec la souris.
 
-### 6. The Warnings
+### 6. Les Warnings
 
-The Warnings panel is handy when loading a file and checking if there are anything that has been broken, files missing, scripts error, broken links, etc.
+Le panneau Warning rassemble toutes les erreurs détectées dans le logiciel comme des liens cassés, des serveurs OSC ou TCP mal initialisés, etc.
 
-## Next
+## Suite
 
-Interface, check. Now let's go and play with some Modules !
+Interface, check. Maintenant on va s'amuser avec les [Modules ](the-modules.md)!
 
