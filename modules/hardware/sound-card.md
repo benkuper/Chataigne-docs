@@ -1,28 +1,28 @@
 # Sound Card
 
-The Sound Card module will allow you to have sound detection and playback. It has basic pitch detection and an FFT analysis module that allows to create frequency based volume detection.
+Le module Sound Card te permettra de lire des sons et d'analyser un signal sonore. Il implémente une détection de pitch basique, ainsi qu'une analyses FFT pour créer des detection de volume basées sur la fréquence.
 
 {% hint style="info" %}
-If you're using an audio layer in your sequences, you will need a Sound Card module to output the sound as there is no global audio settings.
+Si tu utilises un Audio Layer dans une Séquence, tu auras besoin d'un module Sound Card.
 {% endhint %}
 
 {% hint style="success" %}
-You can connect to multiple sound cards in the same project.
+Tu peux connecter plusieurs cartes son différentes en créant plusieurs modules.
 {% endhint %}
 
 {% hint style="info" %}
-For performance optimization, audio input, pitch detection and FFT analysis are disable. If you wish to do volume / pitch detection, you first have to setup Audio input. See parameters below for more informations.
+Afin d'optimiser la performance de Chataigne, les entrées audio, détection de pitch et analyse FFT sont désactivées par défaut. Si tu veux utiliser ces fonctionnalités, il faudra d'abord les activer. Mate donc la suite pour avoir plus d'infos.
 {% endhint %}
 
 ![](../../.gitbook/assets/sound.png)
 
 ## Parameters
 
-* **Input Gain :** This is the gain to apply to the input. It will affect the detected volume and the activity threshold parameter. _This will only work if an Audio input device has been selected and channels have been activated._ 
-* **Activity Threshold :** This is volume threshold at which the audio processing is triggered. If the input volume is below this threshold, then its considered as no activity, so no processing will occur. You can consider it as a processing gate. 
-* **Keep values :** By default, detected volume, and pitch values will be set back to zero when there is no activity. Activating this parameters allows to avoid resetting the values and staying on the last volume/pitch detected. 
-* **Out volume :** This is the master volume, affecting all sound output from this module. It is a multiplier that is applied at the very end of the processing chain, meaning setting it to 0 will result in no sound. 
-* **Pitch Detection Method :** This will activate pitch processing, and if there is enough activity in the microphone, it will fill the Pitch Detection section of the values.
+* **Input Gain :** C'est le gain appliqué à l'entrée son. Ca affectera le volume détecté et le seuil de détéction d'activité. _Ce paramètre n'est utile que si une entrée est sélectionnée et que les channels ont été activés._ 
+* **Activity Threshold :** C'est le seuil de volume à partir duquel les systèmes d'analyse vont se déclencher. Si le volume \(multiplié par le gain\) est en dessous de ce seuil, le module considère qu'il n'y a aucune activité et ne va pas traiter le signal.
+* **Keep values :** Par défaut, les valeurs de pitch, note, fréquence détectées sont mises à 0 quand aucune activité n'est détectée. Activer ce paramètre permet de garder les derniers résultats de l'analyse sans remettre à 0 quand il n'y a plus de signal entrant.
+* **Out volume :** C'est le volume "master", qui affectera la totalité des générateur de son de Chataigne. Il est utilisé à la toute fin de la chaîne de traitement du son. Mettre ce paramètre à 0 aura pour effet de n'avoir aucun son sortant.
+* **Pitch Detection Method :** Si il n'est pas sur None, cela va activer la détection de pitch quand le volume est au-dessus de _Activity Threshold._
   * **None :** This will disable pitch detection. If you don't need it, keep it that way so it's not taking CPU.
   * **MPM :** This is a simple pitch detection method that works quite well for singing, as well as monophonic instruments. If you like reading, [there you go.](http://miracle.otago.ac.nz/tartini/papers/A_Smarter_Way_to_Find_Pitch.pdf)
   * **YIN :** This is another pitch detection method, a bit more complex and more suited to polyphonic sounds or rich in harmonics. More information [here](https://www.eecs.qmul.ac.uk/~simond/pub/2014/MauchDixon-PYIN-ICASSP2014.pdf). 
