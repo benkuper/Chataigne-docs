@@ -1,13 +1,13 @@
 # DMX
 
-Le module DMX permet de contrôler des boitiers DMX comme Enttec OpenDMX, Enttec DMX Pro, Enttec DMX MkII et également d'enovoyer de l'Artnet.
+The DMX Module allows to control DMX device such as Enttec OpenDMX, Enttec DMX Pro, Enttec DMX MkII and Artnet.
 
 ![](../../.gitbook/assets/dmx.png)
 
 ## Parameters
 
-* **DMX Type :** Le type de DMX que tu veux utiliser. Ca dépend tu matos que tu as.
-* **Connected :** Affiche l'état de la connection à ton périphérique.
+* **DMX Type :** This is type of DMX to use. It depends on the hardware you're using. 
+* **Connected :** Whether the device is connected or not. If at least one of the devices, input or output is connected, it will be checked.
 
 **DMX Device parameters :**
 
