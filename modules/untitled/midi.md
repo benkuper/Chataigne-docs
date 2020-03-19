@@ -1,25 +1,25 @@
 # MIDI
 
-The MIDI Module will receive any MIDI note and CC from an input device, and allows to send Notes and CC to an output device.
+Le module MIDI permet de recevoir et envoyer des données MIDI à des périphériques MIDI physiques ou virtuels.
 
 ![](../../.gitbook/assets/midi.png)
 
 ## Parameters
 
-* **Auto-Add :** This will automatically add values when MIDI events are received. Keep it checked if you want to receive every MIDI note and controlChange and convert it to value, otherwise if you want to only receive some of them, uncheck it when you don't wan't to automatically add more values anymore. 
-* **Auto Feedback :** When checked, every change of value in the Values container will be automatically sent to the MIDI Output. This is useful when you want to test out or only change those values without having to create commands to send MIDI events. 
-* **Devices :** This is where you choose which device to connect to. The top line is input and the bottom one is output. You don't need to select both, only the ones that you want to use. If you only want to receive informations from a MIDI controller, then you only need to choosing the MIDI Input device. 
-* **Is connected :** Whether the device is connected or not. If at least one of the devices, input or output is connected, it will be checked.
+* **Auto-Add :** Cette option va automatiquement ajouter des values à la réception de données MIDI. Garde cette option activée dans que tu veux ajouter des nouvelles values, et désactive-la quand tu veux arrêter la création automatique de values.
+* **Auto Feedback :** Une fois activée, les values modifiées seront automatiquement envoyées à la sortie MIDI. 
+* **Devices :** Ce paramètre gère les périphériques sur lesquels se connecter. La première ligne est le MIDI Input, et la seconde est l'Output. Tu n'as pas besoin que les deux soient connectés, tu peux n'utiliser que l'entrée ou que la sortie en fonction de tes besoins.
+* **Is connected :** Affiche si le périphérique est bien connecté. Si au moins un des deux périphérique, entrée ou sortie est connecté, il sera activé.
 
 {% hint style="success" %}
-If you want to send MIDI events to another software like Ableton Live, you will need a **MIDI Loopback** tool, that will create virtual MIDI devices in your computer, and that you can use to output from Chataigne and use as Input in your other software.
+Si tu veux envoyer des données MIDI à un autre logiciel sur le même ordinateur \(comme Ableton Live\) tu auras besoin d'un **MIDI Loopback,** qui te permettra de créer des périphériques MIDI virtuels sur ton ordinateur, que tu peux utiliser en Output sur Chataigne et en Input sur ton autre logiciel.
 
-* On MacOS, you can use the IAC Driver for this purpose.
-* On Windows, I personally recommend [**loopMIDI**](https://www.tobias-erichsen.de/software/loopmidi.html), which is free, simple, stable and allows creation of multiple devices.
+* Sur MacOS, tu peux utiliser le "Gestionnaire de Bus IAC"
+* Sur Windows, je recommande personnellement [**loopMIDI**](https://www.tobias-erichsen.de/software/loopmidi.html), qui est gratuit, simple, stable et permet de créer autant de périphériques virtuels que tu veux.
 
-You can even send MIDI events across network and OS-independant by using **Network RTP MIDI devices.**
+Tu peux même envoyer des donénes MIDI sur un autre ordinateur à travers le réseau en utilisant un périphérique **RTP MIDI.**
 
-* On MacOS, you can activate network MIDI device in the _MIDI Studio_ panel.
-* On Windows, you can use [**rtpMIDI**](http://www.tobias-erichsen.de/software/rtpmidi.html), which basically replicate MacOS's Network-MIDI panel.
+* Sur MacOS, tu peux activée "Réseau MIDI" dans le panneau "Studio MIDI"
+* Sur Windows, tu peux utiliser [**rtpMIDI**](http://www.tobias-erichsen.de/software/rtpmidi.html), qui a le même fonctionnement que le "Réseau MIDI" de Mac.
 {% endhint %}
 
