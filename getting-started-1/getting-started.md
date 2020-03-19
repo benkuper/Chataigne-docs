@@ -32,7 +32,7 @@ If you have a project involving multiple softwares and / or devices, you may wan
 
 #### Chataigne is both "interactive" real-time and timeline based
 
-Chataigne is working around two core concepts : the State Machine and the Time Machine.
+Chataigne is working around two core concepts : the[ State Machine ](../the-state-machine/introduction-to-the-state-machine.md)and the [Time Machine.](../the-time-machine-sequences/introduction-to-the-time-machine.md)
 
 The State Machine will handle all real-time interaction with rules that can be very basic but can get fairly complex if needed.
 
@@ -40,7 +40,7 @@ The Time Machine will handle all time based control, with classic timelines that
 
 #### Chataigne features a lot of side tools for fast testing and researching
 
-Chataigne contains a lot of "hidden gems" and tools that integrate with the global workflow, but also can be used separately such as the Router which will basically route any input to different outputs and convert the signal at the same time. You'll discover them as you wander around the docs and the software.
+Chataigne contains a lot of "hidden gems" and tools that integrate with the global workflow, but also can be used separately such as the [Router ](../modules/the-module-router.md)which will basically route any input to different outputs and convert the signal at the same time. You'll discover them as you wander around the docs and the software.
 
 ## Next
 
