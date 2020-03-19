@@ -1,6 +1,6 @@
 # Hardware
 
-The Hardware category contains different devices you may want to connect to.
+La catégorie Hardware contient différents périphériques auquel tu pourrais vouloir de connecter.
 
 ![](../../.gitbook/assets/menu_hardware.png)
 
