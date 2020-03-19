@@ -1,29 +1,29 @@
 # Serial
 
-Connect any serial device like Arduino and communicate with it
+Permet de te connecter et communiquer avec n'importe quel périphérique série comme les cartes Arduino.
 
 ![](../../.gitbook/assets/serial.png)
 
 ## Parameters
 
-* **Protocol :** This is a way to easily parse incoming messages depending on the protocol you chose.
-  * **Lines :** This will consider new data every time a new line character is received. Most Arduino users use new lines as messages split, so it's the default. 
-  * **Raw :** If you want to get every byte separately, you can choose _Raw_, which won't do any parsing of incoming data.
-  * **Data255 :** This will consider new data every time a byte with value of 255 is received. This is a personal and very efficient protocol if you don't care about loosing one byte precision, and only want to send single bytes as it obviously doesn't work for sending float or 32-bit integers.
-  * **COBS :** This is parsing the data accordingly to the COBS mechanism. If you don't know what that is, check out the [Wikipedia page](https://en.wikipedia.org/wiki/Consistent_Overhead_Byte_Stuffing). _\*\*_
-* **Auto Add :** This will automatically add values when data is received. Keep it checked if you want to always convert the received data to values, otherwise if you want to only receive some data, uncheck it when you don't wan't to automatically add more values anymore _\*\*_
-* **Message structure :** This decides how every message should be parsed. It depends on the protocol you chose. _\*\*_
-* **First value is the name :** If checked, messages will be expected in the format of 2 arguments : the first one is the name and the second one is the actual value. _\*\*_
-* **Port :** The serial port to connect to. _\*\*_
-* **Baud rate :** The speed of the device to connect to. This is set inside the device. In Arduino code this is the parameter passed in the _**Serial.begin\(&lt;baudrate&gt;\)**;_ function. _\*\*_
-* **Is connected :** Whether the device is connected or not. 
-* **Pass-through :** This section allows you to directly transfer the incoming data  to other Streaming modules, i.e. [Serial](serial.md), [UDP](udp.md), [TCP Client](tcp-client.md) and [TCP Server](tcp-server.md). This allow for fast, optimized data transfer through modules, even for data that are not handled by Chataigne.
+* **Protocol :** C'est la méthode à utiliser pour interpréter les données entrantes et sortantes.
+  * **Lines :** Cela découpera les données par ligne. C'est largement utilisé par les utilisateurs Arduino pour facilement communiquer avec les cartes.
+  * **Raw :** Cela va créer une valeur par octet reçu. C'est pratique si tu crées ton propre script d'interprétation des données.
+  * **Data255 :** C'est un protocole spécial qui découpe les données à chaque réception du byte 255 . C'est un protocole personnel et très efficace pour envoyer des bytes avec découpage rapide, et même envoyer des couleurs en acceptant de perdre un byte de précision. Par contre cela ne permet pas d'envoyer des float ou des 32bit integers.
+  * **COBS :** Cela interprète les données selon le mechanisme ****_COBS_**.** Si tu ne connais pas, check donc la [page Wikipedia](https://en.wikipedia.org/wiki/Consistent_Overhead_Byte_Stuffing).
+* **Auto Add :** Ajoutes automatiquement des values quand des données sont reçues. Garde cette option activée tant que tu veux ajouter automatiquement des values, puis désactive quand tu as finis d'ajouter des values.
+* **Message structure :** Cela décide de comment interpréter le message reçu. Ca dépend du protocole choisi.
+* **First value is the name :** Si activé, le message reçu aura un format attendu d'au moins 2 arguments : la première est le nom de la valeur, et les autres sont la valeur actuelle.
+* **Port :** Le port série sur lequel se connecter.
+* **Baud rate :** Le vitesse à laquelle se connecter. Ce paramètre est décidé dans le programme sur le périphérique. Sur Arduino, ce paramètre est décidé avec la fonction _**Serial.begin\(&lt;baudrate&gt;\)**;_
+* **Is connected :** Affiche si le périphérique est connecté ou non. 
+* **Pass-through :** Cette section permet le transfert direct des données **non-filtrées** à tous les modules de type Streaming, i.e. [Serial](serial.md), [UDP](udp.md), [TCP Client](tcp-client.md) and [TCP Server](tcp-server.md). Ce transfert ne passant pas par le système de gestion des données de Chataigne, il est optimisé pour être effectué le plus rapidement possible.
 
 {% hint style="success" %}
-Disabling this module will actually disconnect the Serial device, meaning that you don't need to close Chataigne or remove the module if you want to connect it to another software. For instance, if you want to upload a new sketch onto an Arduino board, you can just disable the module, upload the sketch, and enable the module again.
+Désactiver ce module déconnectera automatiquement le périphérique, ce qui veut dire que tu n'as pas besoin de ferme Chataigne ou de supprimer le module pour connecter la carté à un autre logiciel. Par exemple si tu veux uploadre un nouveau sketch à ta carte Arduino, tu peux juste désactiver le module, uploader le sketch, puis réactiver le module.
 {% endhint %}
 
 {% hint style="success" %}
-By activating "Log Incoming", you can actually use Chataigne as a very fast and simple Serial logger !
+En activant "Log Incoming", tu peux utiliser Chataigne comme un très simple moniteur série !
 {% endhint %}
 
