@@ -8,22 +8,25 @@ Le module OSC Module peut recevoir n'importe quel message  OSC et le convertir e
 
 * **Auto-Add :** Cette option active l'ajout automatique de "Values" quand un message OSC est réceptionné. Garde-le activé tant que tu veux recevoir des nouveaux types de messages, et désactives le quand tu ne veux plus créer de nouvelles values automatiquement.
 * **Split Arguments :** Une fois activé, les messages OSC comportants plusieurs arguments créeront automatiquement une value différente par arguments, le nom de la value aura un numéro 0,1,2... ajouté à la fin de l'adresse OSC.
-* **Auto Range :** When checked, it will automatically assign a range to float and integer values when receiving new OSC messages. This range will automatically adapt when receiving new values. You can change this range by right clicking on the value and choosing "Set Range..." 
-* **Auto Feedback :** When checked, every change of value in the Values container will be automatically sent to all OSC outputs. This is useful when you want to test out or only change those values without having to create commands to send OSC. 
-* **OSC Input :** OSC Input allows you to receive OSC messages. It's good practice to disable it if your module is supposed to only send OSC messages and not receiving any. You will see in the Module list that the "Incoming data" icon is automatically hidden when disabling the OSC Input.
-  * **Local Port :** This is the port on which your external software will send the OSC messages. 
-* **OSC Outputs :** OSC Outputs allows sending OSC messages. It's good practice to disable it if your module is supposed to only receive OSC messages and not sending any. You will see in the Module list that the "Outgoing data" icon is automatically hidden when disabling the OSC Outputs. You can create as many outputs you want, each one will send the exact same messages at the same time whenever a command will be triggered.
-  * **Local :** if checked, this will force this output to send to the same computer. It's handy to quickly switch between a remote computer and this computer, to test.
-  * **Remote host :** This is the IP address of the computer to send messages to. You need to uncheck _Local_ if you want to specify another address.
-  * **Remote port :** This is the port to send the messages to.
-  * **Auto detect:** This is a handy tool to auto discover through Bonjour/Zeroconf  apps that support OSC. This may not work on every computer, especially if you don't have the Bonjour services installed. 
-* **Pass-through :** This section allows you to directly transfer the incoming OSC messages to other OSC modules. This allow for fast, optimized data transfer through modules, even for messages that are not handled by Chataigne.
+* **Auto Feedback :** Une fois activé, une message OSC sera envoyé à chaque fois qu'une Value sera modifiée. C'est pratique pour tester l'envoie rapide de values, ou avoir un synchronisation bi-directionnelle des données.
+* **OSC Input :** La section OSC Input gère les paramètres de réception de l'OSC. Si ton module n'a pas vocation à recevoir des messages, mais uniquement envoyer, alors je te conseille de désactiver cette section \(avec le bouton rouge à gauche du titre\). Dans la liste des modules dans le panel "Modules", tu verras que l'icône "Incoming Data" deviendra cachée au moment de désactiver la réception.
+  * **Local Port :** C'est le port sur lequel ton logiciel externe va envoyer les messages OSC.
+* **OSC Outputs :** La section OSC Outputs gère les paramètres d'envoi des messages OSC.  Si ton module n'a pas vocation à envoyer des messages, mais uniquement recevoir, alors je te conseille de désactiver cette section \(avec le bouton rouge à gauche du titre\). Dans la liste des modules dans le panel "Modules", tu verras que l'icône "Outgoing Data" deviendra cachée au moment de désactiver l'envoi.
+
+   Tu peux créer autant d'Output que tu veux, chaque Output enverra exactement les même données au même moment au déclenchement d'une commande.
+
+  * **Local :** Cela permet de forcer l'envoi sur le même ordinateur et ne pas utiliser le champs "Remote Host". Pratique pour basculer rapidement entre un contrôle d'ordinateur à distance ou en local.
+  * **Remote host :** C'est l'adresse IP de l'ordinateur à qui tu envoies les messages OSC. Tu dois désactiver "Local" pour pouvoir utiliser ce paramètres.
+  * **Remote port :** Le port sur lequel envoyer les messages.
+  * **Auto detect:** Cette option \(en haut à droite dans l'en-tête de la section\) est pratique pour détecter les logiciels capables de recevoir de l'OSC sur le réseau, et assigner automatiquement bon paramètres pour ce logiciel. Il est possible que cette option ne marche pas, surtout si tu n'as pas le service d'impression "Bonjour" d'Apple installé.
+
+* **Pass-through :** Cette section te permet de faire un transfert direct des données entrantes **non-filtrées** de ce module vers un autre module OSC. Comme cette partie est en transfert direct, elle est optimisée pour être le plus rapide possible, et ne rentre pas du tout dans le système de gestion des données de Chataigne.
 
 ### Commands
 
 ![OSC Module&apos;s only command : custom message](../../.gitbook/assets/custommessage.png)
 
-Because the OSC Module doesn't know about the target software \(it's an _open_ module\), you can and have to create your own commands.
+Le module OSC  étant générique, il n'y a pas de commandes pré-existantes. Tu peux et dois créer tes propres commandes à partir de la "Custom command".
 
-You can then choose the OSC address, and add as many OSC arguments you want using the small green '**+**' icon on the right.
+Tu peux ensuite choisir l'adresse OSC et ajouter des arguments OSC avec l'icône "**+**" verte.
 
