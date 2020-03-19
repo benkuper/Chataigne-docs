@@ -1,10 +1,10 @@
 # MadMapper
 
-MadMapper is a popular video mapping software made by [garageCube](https://www.garagecube.com/). You can find more about it [here](https://madmapper.com/).
+MadMapper est un logiciel populaire de vidéo mapping fait par [garageCube](https://www.garagecube.com/). Tu peux trouver plus d'infos [ici](https://madmapper.com/).
 
-The MadMapper module is based on the OSCQuery module, meaning that you first have to connect to the OSCQuery port \(default is 8010\).  
-When connected, the module will synchronize all the parameter hierarchy from MadMapper and you will be able to control any parameter directly from the values.  
-You can also use the **Set value** command, which will actually have the same effect.
+Le module MadMapper est basé sur le module OSCQuery module, tu dois donc d'abord te connecter sur le port OSCQuery configuré dans Madmapper \(8010 par défaut\).  
+Une fois connecté, le module va synchroniser tous les paramètres de ta session Madmapper avec Chataigne, tu pourras ensuite contrôler chacun de ces paramètres depuis la section "Values" du module.  
+Tu peux aussi utiliser la commande **Set value**, qui aura le même effet que changer la valeu
 
-![Changing a parameter&apos;s value inside the &quot;Values&quot; container will automatically send the OSC message.](../../.gitbook/assets/madmapper.gif)
+![Changer un param&#xE8;tre dans &quot;Values&quot; envoie automatiquement le message OSC correspondant.](../../.gitbook/assets/madmapper.gif)
 

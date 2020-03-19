@@ -1,10 +1,10 @@
 # Reaper
 
-Reaper is a music software, or DAW made by [Cockos](https://www.cockos.com/index.php). You can find more about it [here](https://www.reaper.fm/).
+Reaper est un logiciel de musique fait par [Cockos](https://www.cockos.com/index.php). Tu peux trouver plus d'infos [ici](https://www.reaper.fm/).
 
-The Reaper module is based on the OSC module, with premade commands that reflect [Reaper's OSC API.](https://www.reaper.fm/sdk/osc/osc.php#osc_pattern_config)
+Le module Reaper est basé sur le module OSC, avec des commandes pré-créées en fonction de l' [API OSC de Reaper.](https://www.reaper.fm/sdk/osc/osc.php#osc_pattern_config)
 
 {% hint style="info" %}
-The Reaper Module has very limited premade command support, but you can create your own commands by using the "_Custom Message_" command. If you wish to have more native support, please contact me and consider [donating](https://github.com/sponsors/benkuper) so I can take more time improving Chataigne !
+Le module Reaper Module a un set de commandes limité, tu peux toujours créer tes commandes en utilisant la command "Custom Message". Si tu veux améliorer le support de ce module, contacte moi et [fais un don](https://github.com/sponsors/benkuper) !
 {% endhint %}
 

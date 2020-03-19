@@ -1,6 +1,6 @@
 # Millumin
 
-Millumin is a video show control and mapping software made by [Anomes](https://blog.anomes.com/). You can find more about it [here](https://www.millumin.com/v3/index.php).
+Millumin est un logiciel de gestion de spectacle et de mapping vidéo fait par [Anomes](https://blog.anomes.com/). Tu peux trouver plus d'infos [ici](https://www.millumin.com/v3/index.php).
 
-The Millumin module is based on the OSC module, with premade commands that reflect [Millumin's OSC API.](https://heavym.net/blog/en/tutorials/controlling-heavym-remote-device/osc-documentation/)
+Le module Millumin est basé sur le module OSC module, avec des commandes pré-créées en fonction de l' [API OSC de Millumin.](https://heavym.net/blog/fr/tutorials/controlling-heavym-remote-device/osc-documentation/)
 

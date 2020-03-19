@@ -1,16 +1,16 @@
 # Resolume
 
-Resolume is a popular video mapping software, you can find more informations [here](https://resolume.com/)
+Resolume est un logiciel de video mapping populaire, plus d'informations[ ici](https://resolume.com/)
 
-The Resolume module is based on the OSC module, with premade commands that reflect Resolume's OSC API. You can find out about this API by activating "_Shortcuts &gt; Edit OSC_" in Resolume and clicking on the parameter you want to control.
+The module Resolume est basé sur le module OSC, avec des commandes pré-crées en fonction de l'API OSC de resolume. Tu peux trouver comment cette API est construite en activant "_Shortcuts &gt; Edit OSC_" dans Resolume et en cliquant sur la paramètre que tu veux contrôler.
 
 {% hint style="warning" %}
-Because Resolume changed multiple times their OSC API, when using the Resolume module, be sure to select the right version corresponding to your Resolume's version in the module's parameters, otherwise commands may not work.
+Comme Resolume a changé plusieurs fois son API OSC, fais bien attention à bien choisir la bonne version de Resolume dans les paramètres du module, sinon ça risque de pas marcher...
 {% endhint %}
 
-## Using the VideoFX and AudioFX commands in Resolume 6+
+## Utilisation des commands VideoFX et AudioFX dans Resolume 6+
 
-When using those commands in Resolume 6 and later, you will have to find out the effect and parameter names in order to control them. You can zoom out in the image below to see the correspondance between fields in Resolume and fields in Chataigne.
+A partir de Resolume 6, tu devrais rentrer les noms des effets que tu veux contrôler. Tu peux voir dans l'image ci-dessous comment trouver la correspondance entre les noms des effets et des paramètres, et où les placer dans la commande dans Chataigne.
 
 ![](../../.gitbook/assets/videofx.png)
 

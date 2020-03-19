@@ -1,6 +1,6 @@
 # HeavyM
 
-HeavyM is a mapping software made by [Digital Essence](https://digitalessence.fr/en/). You can find more about it[ here](https://heavym.net/en/).
+HeavyM est un logiciel de video mapping fait par [Digital Essence](https://digitalessence.fr/). Plus d'infos[ ici](https://heavym.net/fr/).
 
-The HeavyM Module is based on the OSC module, with premade commands that reflect [HeavyM's OSC API.](https://heavym.net/blog/en/tutorials/controlling-heavym-remote-device/osc-documentation/)
+Le module HeavyM basé sur le module OSC, avec des fonctions pré-crées en fonction de l' [API OSC de HeavyM.](https://heavym.net/blog/en/tutorials/controlling-heavym-remote-device/osc-documentation/)
 
