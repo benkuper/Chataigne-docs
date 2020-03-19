@@ -32,18 +32,18 @@ Les scripts te permettront de créer des logiques plus complexes. Tu peux trouve
 
 ### Command Tester
 
-The command tester is a handy tool to be able to test the functionality of your module by sending commands manually. It is not affecting the rest of the software, and allows you to just verify that the communication between Chataigne and your software or device is functioning properly.
+The command tester est un outil pratique pour tester les commandes que le module permet, ou juste d'envoyer une command manuellement rapidement. Il n'affecte pas le reste du logiciel, et peut être utilisé juste pour vérifier que la communication entre Chataigne et un autre logiciel ou matériel marche correctement.
 
 ![](../.gitbook/assets/command-tester.png)
 
 {% hint style="info" %}
-When testing commands, first set your parameters and then hit the "Trigger" buttons. If you want to send the command every time a parameter of this command has changed, you can check the **"Auto Trigger"** option.
+Pour tester des commandes, choisis d'abord la commande à tester et ensuite appuies sur le bouton "**Trigger**" pour envoyer la command. Si tu veux envoyer une commande à chaque fois qu'un paramètre de cette command a channgé, tu peux activer l'option "**Auto trigger**".
 {% endhint %}
 
 ### Templates
 
-The templates are a good way to customize a module for a specific use without having to create your own custom module.  
-You can create your own custom commands, by creating a new Template and choosing a base command to derive from. Then you can customize it, and choose which fields are editable, which are not, and setup default mapping behaviors.
+Les templates sont un bon moyen de personnaliser un module pour un usage spécifique sans avoir à créer son propre "Custom Module".  
+Tu peux dans cette section créer tes propres commandes, en créant un template de la commande de base à personnaliser. Ensuite tu peux changer les paramètres, choisir quels champs seront éditables, et des comportements par défaut pour les mappings.
 
 ![](../.gitbook/assets/template.png)
 
