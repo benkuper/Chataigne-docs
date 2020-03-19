@@ -13,7 +13,7 @@ There are 5 types of conditions : From Input Value, Scripts and Group.
 * The "**From Input Value**" is the most used one. It will let you compare a module's input value in different ways and decide whether the condition is validated or not. 
 * The **Script conditions** allows you to write complex conditions using scripts. You can find more about that in the [Script Conditions](../scripting/scripting-reference/condition-scripts.md) section. 
 * The **Group condition** allows you to create nested groups of conditions to create more complex condition combinations, like "_If I sing a D **AND** press this button, **OR** if I sing a G **AND** I press this other button"_
-* The **onActivate** and **onDeactivate** conditions can be used for two scenarios :
+* The **onActivate** and **onDeactivate** conditions are triggered when the state containing them gets activated or deactivated \(not enabled / disabled\). This can be used for two scenarios :
   * If you want to trigger some actions whenever this state gets activated, which is a good tool when using state transitions, then you can use this to ensure that you send all commands when entering in a different state of your project.
   * Because **onActivate** conditions get triggered when loading a project if the containing state is active, it can be used as a startup initialization action.
 
