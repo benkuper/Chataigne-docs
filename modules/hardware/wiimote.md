@@ -1,6 +1,8 @@
 # Wiimote
 
-After having connected your wiimote via the windows bluetooth interface, you will be able to get all the sensor data from your controller here.
+Après avoir connecté ta wiimote en bluetooth, tu pourras récupérer les informations de tes controlleurs avec ce module.
 
-Due to bugs in Windows's bluetooth stack, when rebooting you computer or your controllers, you will probably have to remove the device from the bluetooth settings and add it again, then restart Chataigne.
+{% hint style="warning" %}
+Quelques bugs dans la gestion bluetooth de Windows peuvent entraîner des complications au redémarrage de windows ou des controlleurs. Tu devrais peut-être déconnecter et reconnecter les manettes, puis redémarrer Chataigne.
+{% endhint %}
 

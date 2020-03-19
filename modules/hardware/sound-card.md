@@ -23,23 +23,23 @@ Afin d'optimiser la performance de Chataigne, les entrées audio, détection de 
 * **Keep values :** Par défaut, les valeurs de pitch, note, fréquence détectées sont mises à 0 quand aucune activité n'est détectée. Activer ce paramètre permet de garder les derniers résultats de l'analyse sans remettre à 0 quand il n'y a plus de signal entrant.
 * **Out volume :** C'est le volume "master", qui affectera la totalité des générateur de son de Chataigne. Il est utilisé à la toute fin de la chaîne de traitement du son. Mettre ce paramètre à 0 aura pour effet de n'avoir aucun son sortant.
 * **Pitch Detection Method :** Si il n'est pas sur None, cela va activer la détection de pitch quand le volume est au-dessus de _Activity Threshold._
-  * **None :** This will disable pitch detection. If you don't need it, keep it that way so it's not taking CPU.
-  * **MPM :** This is a simple pitch detection method that works quite well for singing, as well as monophonic instruments. If you like reading, [there you go.](http://miracle.otago.ac.nz/tartini/papers/A_Smarter_Way_to_Find_Pitch.pdf)
-  * **YIN :** This is another pitch detection method, a bit more complex and more suited to polyphonic sounds or rich in harmonics. More information [here](https://www.eecs.qmul.ac.uk/~simond/pub/2014/MauchDixon-PYIN-ICASSP2014.pdf). 
-* **Monitor :** The Monitor section allows you to create a direct pass-through between the input and the output. You can tweak the volume gain, and filter out which channels to output to. 
-* **FFT Analysis :** This section will allow you to create custom frequency-based volume detection. To use it, you first need to enable it by clicking on the power icon next to the "FFT Analysis" label. You can then create any number of analyzers by clicking on the green "**+**" icon on the right. Each FFT analyzer also create an "Enveloppe" value in the "FFT Enveloppes" section of the Values.
+  * **None :** Cette option désactive la détection du pitch. A garder sélectionné si on a pas besoin de détection pour optimiser les performances.
+  * **MPM :** C'est une méthode détection de pitch simple mais efficace, surtout pour le chant et les instruments monophoniques. Si tu veux un peu de lecture, [c'est par ici.](http://miracle.otago.ac.nz/tartini/papers/A_Smarter_Way_to_Find_Pitch.pdf)
+  * **YIN :** C'est une méthode de détection de pitch un peu plus complexe que MPM, mais plus adaptée aux son polyphoniques, détections d'accord, etc. Plus d'infos [ici](https://www.eecs.qmul.ac.uk/~simond/pub/2014/MauchDixon-PYIN-ICASSP2014.pdf). 
+* **Monitor :** Le monitor permet de créer un pont direct entre les entrées et la sortie, sans traitement au milieu. Tu peux changer le gain du monitor et filtrer  quels channels renvoyer vers la sortie.
+* **FFT Analysis :** Cette section te permettra d'effectuer de la détection basée sur la fréquence. Pour l'utiliser, tu dois d'abord l'activer en cliquand sur le bouton rouge en haut à gauche du panneau "FFT Analysis". Tu peux ensuite créer autant d'Analyzers que tu veux en cliquant sur le bouton "+" en haut à droite. Chaque FFT Analyzer va créer une value "Enveloppe" que tu peux retrouver dans le groupe "FFT Enveloppes" des Values du module.
 
-![2 FFT Analyzers, one is detecting high volume within its frequency range. ](../../.gitbook/assets/fft.png)
+![2 FFT Analyzers, le jaune d&#xE9;tecte des fr&#xE9;quences basses et le rouge des fr&#xE9;quences hautes. ](../../.gitbook/assets/fft.png)
 
 * **FFT Parameters :**
-  * **Min DB / Max DB :** This is the minimum and maximum volume to detect from. Reducing the range is a good way to filter out background noise.
-  * **Analyzer Position :** This is the center frequency at which this analyzer will operate.
-  * **Analyzer Size :** This is the frequency range around the center at which the analyzer will operate. Higher range means more tolerant detection, but less sensitive.
-  * **Color :** The UI color of the analyer, to easily find it in the analysis window.
+  * **Min DB / Max DB :** Ce sont les fréquences minimum et maximum à laquelle faire le traitement. Réduire l'intervalle entre ces 2 paramètres peut être un moyen facile de filtrer le bruit du signal.
+  * **Analyzer Position :** C'est la fréquence central à laquelle faire l'analyse.
+  * **Analyzer Size :** C'est la "tolérance" autour de la fréquence centrale. Une valeur haute veut dire une détection plus tolérante, mais mois sensible.
+  * **Color :**  La couleur de l'analyzer dans la vue fréquencielle.
 
 {% hint style="success" %}
-Once you have finished your FFT setup, it's good practice to collapse the FFT panel, so less CPU is taken for drawing the FFT preview.
+Une fois que tu as fini de paramétrer l'analyse FFT, tu peux refermer le panneau FFT pour éviter de déssiner la courbe FFT et inasi optimiser l'usage CPU.
 {% endhint %}
 
-* **Hardware Settings :** You will find here your usual sound card settings. Again, if you want sound input, you must select a device and then select input channels to use.
+* **Hardware Settings :** C'est la que tu choisis la carte son sur laquelle te connecter, et quels channels activer.
 

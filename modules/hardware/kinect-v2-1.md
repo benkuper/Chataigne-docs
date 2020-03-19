@@ -1,12 +1,12 @@
 # Kinect V2
 
-The KinectV2 module allows you to get skeletal data for the first detected user in front of the Kinect.
+Le module KinectV2 te permet de récupérer une version simplifée des informations fournies par la Kinect.
 
-This module is a quick way to get simple informations about the detected skeletons. It may evolve in a more customizable module depending on the community's response to it.
+C'est une version simple et rapide de détecter les infos de squelette. Il évoluera peut-être en un module plus personnalisable, en fonction de la réponse de la communauté.
 
 {% hint style="warning" %}
-This module only works on Windows.
+Ce module ne marche que sur Windows.
 
-Due to end of production of the KinectV2, there are very few chances that this module will be supported on MacOS and Linux. If you wish to add support for the KinectV2 on Mac or Linux, contact me and please consider [donating](https://github.com/sponsors/benkuper) so I can spend more time on Chataigne !
+En raison de la fin de production de KinectV2, il y a très peu de change qu'un support MacOS et linux voit le jour. Si tu souhaites ajouter cette fonctionnalités, contacte moi et puis [fais un don](https://github.com/sponsors/benkuper), c'est sympa et ça fait plaisir.
 {% endhint %}
 

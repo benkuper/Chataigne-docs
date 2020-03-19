@@ -1,8 +1,8 @@
 # Joystick and Gamepad
 
-This module will allow you to get inputs from Joystick and Gamepads.
+Ce module permet de récupérer des informations des Joysticks et Gamepads.
 
 {% hint style="info" %}
-If you don't know if your device is a Joystick or a Gamepad, look at the Logger panel and check the messages when plugging in your device. This will tell you how Chataigne detected it.
+Si tu ne sais pas si ton contrôleur est un Joystick ou un Gamepad, regardes le Logger et vérifie quel message est affiché au moment de le connecter.
 {% endhint %}
 

@@ -1,8 +1,8 @@
 # Keyboard
 
-The keyboard module will log your input keys and let you use the last key hit and the special keys combinations as well.
+Le module Keyboard te permet de  détecter les frappes de clavier, et également de simuler des touches clavier.
 
 {% hint style="warning" %}
-Special keys are only detected when hitting a "normal" key. You can't just detect a shift key or control key pressed right now.
+Les touches spéciales ne sont détectées qu'au moment ou une touche "normale" a été pressée. Il est par exemple pour l'instant impossible de détecter uniquement une pression de la touche "Shift"
 {% endhint %}
 

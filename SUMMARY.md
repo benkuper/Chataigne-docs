@@ -28,6 +28,7 @@
   * [Joystick and Gamepad](modules/hardware/joystick-and-gamepad.md)
   * [Kinect V2](modules/hardware/kinect-v2-1.md)
   * [Keyboard](modules/hardware/keyboard.md)
+  * [Mouse](modules/hardware/mouse.md)
   * [Stream Deck](modules/hardware/stream-deck.md)
 * [Software](modules/software/README.md)
   * [DLight](modules/software/dlight.md)
