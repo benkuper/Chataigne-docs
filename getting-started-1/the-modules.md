@@ -1,32 +1,32 @@
-# The Modules
+# Les Modules
 
-The modules are representing all the other softwares and devices you will interact with in your project.
+Les modules représentent tous les autres logiciels et périphériques avec lesquels tu vas intéragir dans Chataigne.
 
-They are divided in main categories representing different types of interfaces. Chataigne provides both dedicated modules for supported softwares and devices with preconfigured control for ease of use, and general modules for allowing control of anything else.
+Ils sont divisés en plusieurs catégories représentant les différents types d'interface. Chataigne propose à la fois des modules dédiés à certains logiciels et périphériques préconfigurés pour faciliter le contrôle de ceux-ci, mais également des modules génériques pour permettre de contrôler tout le reste.
 
-## Anatomy of a Module
+## Anatomie d'un Module
 
 ![The Inspector view of an OSC Module](../.gitbook/assets/osc.png)
 
-### Header
+### En-tête
 
-When selecting a module, you can find at the very top a header with some controls. You can here choose to enable/disable the module.  
-When a module is disabled, it will not update or send anything.  
-Depending on whether the module is able to receive and/or send data, you can choose to activate/deactivate the logging of all data received and/or sent from this module with the **Log Incoming / Log Outgoing** buttons. If enabled, you'll be able to check in the Logger panel what's going on with this module.
+A la sélection d'un module, tu peux trouver tout en haut dans l'Inspector un en-tête avec quelques controls. Tu peux par exemple activer / désactiver le module.  
+Quand le module est désactivé, il ne se mettra pas à jour avec des nouvelles données, et n'enverra aucune donnée non plus.  
+En fonction de la capacité du module à recevoir et / ou envoyer des données, tu peux choisir d'activer le log des données entrantes et / ou sortantes avec les boutons **Log Incoming / Log Outgoing**. Si ils sont activés, tu pourras vérifier dans le panneau Logger les données transitants dans ce module..
 
 ### Parameters
 
-This section provides all the needed parameters to configure the modules, such as Host and port configuration for network modules, or device name for MIDI controllers, etc. You can find more about a particular module's parameter in its dedicated page.
+Cette section fournir tous les paramètres nécessaires à la configuration du module, comme les ports et IP de connection, ou alors le périphérique MIDI sur lequel se connecter, etc. Tu peux trouver plus d'infos sur les paramètres de chaque module dans leur page dédiée.
 
 ### Values
 
-This is an important part of the module. The values are all the elements that you will be able to use when creating interactions. Each module has its own set of values, and some modules don't have any if they're not supposed to receive anything or if the Input parameter is deactivated \(for network module for instance\).
+C'est une importante partie du module. Les Values sont les données que tu pourras utiliser pour créer des intéractions. Chaque module possède son propre set de values, d'autres comme le module OSC se remplissent au fur et à mesure de la réception de données, et d'autres non rien car ils ne peuvent pas recevoir.
 
 ![](../.gitbook/assets/osc_values.png)
 
 ### Scripts
 
-The script section allows you to create more complex logic for this module. You can find more about scripts in the dedicated [Scripts ](../scripting/untitled.md)page.
+Les scripts te permettront de créer des logiques plus complexes. Tu peux trouver plus d'infos dans la section [Scripts](../scripting/untitled.md).
 
 ![](../.gitbook/assets/module_scripts.png)
 

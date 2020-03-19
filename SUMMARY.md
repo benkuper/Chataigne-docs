@@ -6,7 +6,7 @@
 
 * [Histoire et philosophie de Chataigne](getting-started-1/getting-started.md)
 * [L'Interface](getting-started-1/the-interface.md)
-* [The Modules](getting-started-1/the-modules.md)
+* [Les Modules](getting-started-1/the-modules.md)
 
 ## Modules
 
