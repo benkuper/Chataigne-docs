@@ -1,12 +1,12 @@
 # HTTP
 
-This module allows bi-directionnal communication with webpages and webservices, sending to and retrieve data from websites and APIs.
+Ce moule permet la communication bi-directionnelle à des pages web et des webservices, en envoyant et récupérant des données depuis les sites internet et des APIs.
 
 ![](../../.gitbook/assets/http.png)
 
 ## Parameters
 
-* **Base Address :** If you consider an HTTP module being one webservice end-point, there are high chances that most of your requests will have the same base URL. If that's the case, you can specify it here, so if the services is relocated, you just have to change this field without having to change the URL of  every command you created. 
-* **Auto-add :** If this is checked, when receiving structured _JSON_ data, this will automatically create corresponding values with the same hierarchy as in the JSON. 
-* **Clear Values :** This will conveniently remove all the parameters inside the _Values_ container.
+* **Base Address :** En considérant chaque module HTTP comme un service, il y a de fortes chances que la plupart des requêtes aient la même adresse de base. Si c'est le cas, tu peux spécifier ici cette base, ce qui est pratique au moment où le service est relocalisé sur une autre URL, car tu n'auras qu'à changer ce paramètre, sans avoir à changer chaque commande.
+* **Auto-add :** Si activé, à la réception de données structurées en _JSON_, des values seront créées avec la même hiérarchie que le JSON reçu. 
+* **Clear Values :** Permet de facilement supprimer toutes les values.
 

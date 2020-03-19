@@ -1,31 +1,30 @@
 # UDP
 
-Bi-directionnal communication with a UDP server/client
+Communication bi-directionnelle avec un client / serveur UDP
 
 ![](../../.gitbook/assets/udp.png)
 
 ## Parameters
 
-* **Protocol :** This is a way to easily parse incoming messages depending on the protocol you chose.
-  * **Lines :** This will consider new data every time a new line character is received. Most Arduino users use new lines as messages split, so it's the default. 
-  * **Raw :** If you want to get every byte separately, you can choose _Raw_, which won't do any parsing of incoming data.
-  * **Data255 :** This will consider new data every time a byte with value of 255 is received. This is a personal and very efficient protocol if you don't care about loosing one byte precision, and only want to send single bytes as it obviously doesn't work for sending float or 32-bit integers.
-  * **COBS :** This is parsing the data accordingly to the COBS mechanism. If you don't know what that is, check out the [Wikipedia page](https://en.wikipedia.org/wiki/Consistent_Overhead_Byte_Stuffing). 
-* **Auto Add :** This will automatically add values when data is received. Keep it checked if you want to always convert the received data to values, otherwise if you want to only receive some data, uncheck it when you don't wan't to automatically add more values anymore 
-* **Message structure :** This decides how every message should be parsed. It depends on the protocol you chose. _\*\*_
-* **First value is the name :** If checked, messages will be expected in the format of 2 arguments : the first one is the name and the second one is the actual value. _\*\*_
-* **Input :** \__\*\*_\_Input allows you to receive data. It's good practice to disable it if your module is supposed to only send data and not receiving any. You will see in the Module list that the "Incoming data" icon is automatically hidden when disabling the  Input.
-  * **Local Port :** This is the port on which your external software will send the data.
-  * **Is Bound :** This shows if the port was successfully bound and the module is able to receive data.
-  * **Receive Frequency :** The rate at which to receive the data. Lower frequency will optimize CPU usage and overall performance, but if you receive too much data, you may loose some or not receive it in time, as multiple packets will be processed at the same time. _\*\*_
-* **Output :** Output allows sending data. It's good practice to disable it if your module is supposed to only receive data and not sending any. You will see in the Module list that the "Outgoing data" icon is automatically hidden when disabling the Output.
-  * **Local :** if checked, this will force this output to send to the same computer. It's handy to quickly switch between a remote computer and this computer, to test.
-  * **Remote host :** This is the IP address of the computer to send data to. You need to uncheck _Local_ if you want to specify another address.
-  * **Remote port :** This is the port to send the data to.
-  * **Is connected :** Whether the device is connected or not to the remote. _Because UDP doesn't have any packet verification, this doesn't mean that packet sent while this icon is checked will be received in the other end, there may not even be a receiving end !_ 
-* **Pass-through :** This section allows you to directly transfer the incoming data  to other Streaming modules, i.e. [Serial](serial.md), [UDP](udp.md), [TCP Client](tcp-client.md) and [TCP Server](tcp-server.md). This allow for fast, optimized data transfer through modules, even for data that are not handled by Chataigne.
+* **Protocol :** C'est la méthode à utiliser pour interpréter les données entrantes et sortantes.
+  * **Lines :** Cela découpera les données par ligne. C'est largement utilisé par les utilisateurs Arduino pour facilement communiquer avec les cartes.
+  * **Raw :** Cela va créer une valeur par octet reçu. C'est pratique si tu crées ton propre script d'interprétation des données.
+  * **Data255 :** C'est un protocole spécial qui découpe les données à chaque réception du byte 255 . C'est un protocole personnel et très efficace pour envoyer des bytes avec découpage rapide, et même envoyer des couleurs en acceptant de perdre un byte de précision. Par contre cela ne permet pas d'envoyer des float ou des 32bit integers.
+  * **COBS :** Cela interprète les données selon le mechanisme ****_COBS_**.** Si tu ne connais pas, check donc la [page Wikipedia](https://en.wikipedia.org/wiki/Consistent_Overhead_Byte_Stuffing).
+* **Auto Add :** Ajoutes automatiquement des values quand des données sont reçues. Garde cette option activée tant que tu veux ajouter automatiquement des values, puis désactive quand tu as finis d'ajouter des values.
+* **Message structure :** Cela décide de comment interpréter le message reçu. Ca dépend du protocole choisi.
+* **First value is the name :** Si activé, le message reçu aura un format attendu d'au moins 2 arguments : la première est le nom de la valeur, et les autres sont la valeur actuelle.
+* **Input :** Cette section permet de recevoir les données. _Si ton module n'a pas vocation à recevoir des messages, mais uniquement envoyer, alors je te conseille de désactiver cette section \(avec le bouton rouge à gauche du titre\). Dans la liste des modules dans le panel "Modules", tu verras que l'icône "Incoming Data" deviendra cachée au moment de désactiver la réception._
+  * **Local Port :** Le port sur lequel ton logiciel externe va envoyer les données.
+  * **Is Bound :** Affiche si le module a réussi à se connecter au port et est prêt à recevoir des données.
+  * **Receive Frequency :** La fréquence à laquelle recevoir les données. Une fréquence plus faible optimisera l'utilisation du CPU et la performance générale, mais si trop de données sont envoyées par l'application externe, il est possible que tu perde des données ou que tu les reçoive avec du retard, car plusieurs paquets seront gérés en même temps.
+* **Output :** Cette section gère les paramètres d'envoi des données.  _Si ton module n'a pas vocation à envoyer des messages, mais uniquement recevoir, alors je te conseille de désactiver cette section \(avec le bouton rouge à gauche du titre\). Dans la liste des modules dans le panel Modules", tu verras que l'icône "Outgoing Data" deviendra cachée au moment de désactiver l'envoi._
+  * **Local :** Cela permet de forcer l'envoi sur le même ordinateur et ne pas utiliser le champs "Remote Host". Pratique pour basculer rapidement entre un contrôle d'ordinateur à distance ou en local.
+  * **Remote host :** C'est l'adresse IP de l'ordinateur à qui tu envoies les données. Tu dois désactiver "Local" pour pouvoir utiliser ce paramètres.
+  * **Remote port :** Le port sur lequel envoyer les messages.
+* **Pass-through :** Cette section permet le transfert direct des données **non-filtrées** à tous les modules de type Streaming, i.e. [Serial](serial.md), [UDP](udp.md), [TCP Client](tcp-client.md) and [TCP Server](tcp-server.md). Ce transfert ne passant pas par le système de gestion des données de Chataigne, il est optimisé pour être effectué le plus rapidement possible.
 
 {% hint style="success" %}
-If you want to test receiving and sending UDP packets, I recommend [**PacketSender**](https://packetsender.com/)**,** which is a great free and cross-platform packet testing utility !
+Si tu veux utiliser l'envoi et la réception de données UDP,  je recommande [**PacketSender**](https://packetsender.com/)**,** qui est un très bon outils de test, gratuit et cross-platform !
 {% endhint %}
 

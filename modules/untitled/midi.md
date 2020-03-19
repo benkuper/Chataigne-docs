@@ -8,7 +8,7 @@ Le module MIDI permet de recevoir et envoyer des données MIDI à des périphér
 
 * **Auto-Add :** Cette option va automatiquement ajouter des values à la réception de données MIDI. Garde cette option activée dans que tu veux ajouter des nouvelles values, et désactive-la quand tu veux arrêter la création automatique de values.
 * **Auto Feedback :** Une fois activée, les values modifiées seront automatiquement envoyées à la sortie MIDI. 
-* **Devices :** Ce paramètre gère les périphériques sur lesquels se connecter. La première ligne est le MIDI Input, et la seconde est l'Output. Tu n'as pas besoin que les deux soient connectés, tu peux n'utiliser que l'entrée ou que la sortie en fonction de tes besoins.
+* **Devices :** Ce paramètre gère les périphériques sur lesquels se connecter. La première ligne est le MIDI Input, et la seconde est l'Output. _Tu n'as pas besoin que les deux soient connectés, tu peux n'utiliser que l'entrée ou que la sortie en fonction de tes besoins._
 * **Is connected :** Affiche si le périphérique est bien connecté. Si au moins un des deux périphérique, entrée ou sortie est connecté, il sera activé.
 
 {% hint style="success" %}
