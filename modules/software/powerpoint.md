@@ -1,10 +1,10 @@
 # PowerPoint
 
-This allows to control Powerpoint slides and get informations on the current slide.
+Ce module permet de contrôler Powerpoint et récupérer des informations de l'état d'une présentation.
 
-This module is based on the OSC module, with premade commands and values that reflect the [Powerpoint-OSC API](https://github.com/benkuper/PowerPoint-OSC). You will need to install this plugin in order to use the module.
+Ce module est basé sur le module OSC, avec des commandes en fonction de l'API OSC du plugin powerpoing \(que tu peux trouver ici : [Powerpoint-OSC API](https://github.com/benkuper/PowerPoint-OSC)\) Tu devrais installer ce plugin pour pouvoir utiliser ce module.
 
 {% hint style="warning" %}
-This module is currently only supported on Windows as it relies on a Windows-only OSC plugin.
+Ce module ne marche que sur Windows, et sera sûrement remplacé par un module communautaire basé sur un plugin cross-platform.
 {% endhint %}
 

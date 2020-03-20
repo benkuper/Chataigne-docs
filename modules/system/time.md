@@ -1,4 +1,4 @@
 # Time
 
-The Time module gives information about the global date and time of the system, which allows to automated behaviors depending on the time of day, or year, etc.
+Le module Time donne des informations sur la date actuelle, ce qui permet d'automatiser des comportements en fonction de l'heure de la journée, du jour de la semaine ou du mois...
 

@@ -1,6 +1,6 @@
 # Watchout
 
-Watchout is a media-server software made by [dataton](https://www.dataton.com/). You can find more about it [here](https://www.dataton.com/products/watchout).
+Watchout est un logiciel de media-server fait par [dataton](https://www.dataton.com/). Plus d'infos [ici](https://www.dataton.com/products/watchout).
 
-The Watchout module is base on the TCP Client module, with premade commands that reflect Watchout's API.
+Le module Watchout est basé sur le module TCP Client, avec des commandes précréées en fonction de l'API OSC de Watchout.
 

@@ -1,4 +1,4 @@
 # Signal
 
-The Signal module will output a signal depending on the type you chose. You can choose the rate at which it refreshes, the cycle frequency. For the Perlin type, you can choose the complexity of the Perlin Noise with the Octoves paremeter.
+Le module Signal génére un nombre et l'anime en fonction de la méthode choisie. Tu peux également choisir la fréquence de rafraichissement, l'amplitude et la vitesse d'animation. Pour la méthode "Perlin" tu peux choisir la complexité du bruit de Perlin grâce au paramètres "Octaves".
 

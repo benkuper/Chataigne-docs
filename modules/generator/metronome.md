@@ -1,4 +1,4 @@
 # Metronome
 
-The Metronome module is fairly simple, it switches a Boolean value to 1 and 0 at the given frequency, and you can also tweak the relative ON/OFF time and add some randomness to the frequency.
+Le module Metronome est assez simple, il bascule un Boolean de 1 à 0 à une fréquence donnée. Tu peux changer le temps relatif entre On et Off, et aussi rajouter de l'aléatoire dans le cycle de répétitions.
 
