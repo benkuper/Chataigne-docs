@@ -1,11 +1,10 @@
 # The Morpher : 2D interpolations made fun
 
-The Morpher was originally a side project, coming from the need of a 2D interpolator that would interpolate between multiple presets. It eventually got merged into Chataigne's Custom Variable system, allowing to easily create interactions between this interpolator and Chataigne's mechanism, as well as being able to create multiple separate interpolators.
+Le Morpher était à l'origine un projet parallèle, issu du besoin d'un interpolateur 2D qui interpolerait entre plusieurs presets. Il a finalement été fusionné dans le système Custom Variables de Chataigne, permettant de créer facilement des interactions entre cet interpolateur et le mécanisme de Chataigne, ainsi que de créer plusieurs interpolateurs séparés.
 
-![Interpolating between multiple presets in a 2D voronoi system.](../.gitbook/assets/morpher.png)
+![Interpolation entre plusieurs présélections dans un système voronoïde en 2D.](../.gitbook/assets/morpher.png)
 
-By selecting **2D Voronoi** in the Control Mode parameter of your Custom Variable group, you can then use the Morpher container and panel, to place in 2D all your presets.  
-Using a Voronoi-based proximity algorithm, the white target is defining the weight of each preset depending on its distance to the target, but also depending on the global layout of the Morpher.
+En sélectionnant **2D Voronoi** dans le paramètre "Control Mode" de votre Custom Variables Group, vous pouvez alors utiliser le conteneur et le panneau Morpher, pour placer en 2D tous vos presets.  
+En utilisant un algorithme de proximité basé sur Voronoï, la cible blanche définit le poids de chaque préréglage en fonction de sa distance par rapport à la cible, mais aussi en fonction de la disposition globale du Morpher.
 
-After having set up your layout, you can start playing with attraction and decay to create even more unpredictable behaviors.
-
+Après avoir mis en place votre mise en page, vous pouvez commencer à jouer avec l'attraction et le decay pour créer des comportements encore plus imprévisibles.
