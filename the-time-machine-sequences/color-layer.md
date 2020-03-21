@@ -1,3 +1,4 @@
-# Couche de couleur
+# Color Layer
 
-Les couches de couleur sont super utiles pour animer les couleurs dans le temps. Vous pouvez choisir entre 2 types d'interpolation \(Linéaire et Hold\) en faisant ctrl+clic sur les clés.
+Color layer are super useful to animate colors over time. You can choose between 2 type of interpolation \(Linear and Hold\) by ctrl+clicking on the keys.
+

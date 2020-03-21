@@ -1,4 +1,4 @@
-# Exemple 2 : Presets d'un système de particules
+# Example 2 : Particle system presets
 
 Une autre utilisation des variables personnalisées consiste à stocker différentes valeurs prédéfinies.
 
@@ -6,12 +6,13 @@ Imaginons que vous ayez un système de particules réalisé en Unity ou Processi
 
 Les variables personnalisées peuvent vous aider à créer des ensembles de paramètres que vous souhaitez conserver et envoyer
 
-![4 variables dans un groupe, avec 2 présélections.](../../.gitbook/assets/particles.png)
+![4 variables dans un groupe, avec 2 pr&#xE9;s&#xE9;lections.](../../.gitbook/assets/particles.png)
 
 Une fois que vous avez différents préréglages, vous pouvez commencer à les interpoler avec les commandes du module spécial
 
-![Un Mapping qui prend un signal d'entrée et l'utilise pour interpoler entre 2 presets](../../.gitbook/assets/interpolate.png)
+![Un Mapping qui prend un signal d&apos;entr&#xE9;e et l&apos;utilise pour interpoler entre 2 presets](../../.gitbook/assets/interpolate.png)
 
 Voici le résultat dans la vue des variables personnalisées
 
 ![](../../.gitbook/assets/particle_anim.gif)
+
