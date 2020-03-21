@@ -431,13 +431,75 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
   </tbody>
 </table>### Point2D Parameter
 
-\\| Méthode \\\| Description \\\| Exemple \\\| \\\| :--- \\\| :--- \\\| :--- \\\| \\\| \\\*\\\*get\\\\(\\\\)\\\*\\\* \\\| Retourne la valeur de ce paramètre \\\| \\\`var value = myP2DParam.get\\\(\\\);\\\` \\\| \\\| \\\*\\\*set\\\\(\\\*\\\*\\\_x, y\\\_\\\*\\\*\\\\)\\\*\\\* \\\| Définit la valeur de ce paramètre \\\| \\\`myP2DParam.set\\\(.5, 2\\\);\\\` \\\| \\\#\\\#\\\#\\\# 
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">M&#xE9;thode</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Exemple</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>get()</b>
+      </td>
+      <td style="text-align:left">Retourne la valeur de ce param&#xE8;tre. Le r&#xE9;sultat est un tableau
+        contenant [x, y].</td>
+      <td style="text-align:left">
+        <p><code>var value = my2dParam.get();</code>
+        </p>
+        <p><code>script.log(&quot;x : &quot;+value[0]);</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
+      </td>
+      <td style="text-align:left">D&#xE9;finit la valeur de ce param&#xE8;tre</td>
+      <td style="text-align:left">
+        <p><code>my2DParam.set(2, 0.5);</code>
+        </p>
+        <p><code>my2DParam.set([1,4.63]);</code>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>### Point3D Parameter 
 
-### Point3D Parameter 
-
-\\\| Méthode \\\| Description \\\| Exemple \\\| \\\| :--- \\\| :--- \\\| :--- \\\| \\\| \\\*\\\*get\\\\(\\\\)\\\*\\\* \\\| Retourne la valeur de ce paramètre \\\| \\\`var value = myP3DParam.get\\\(\\\);\\\` \\\| \\\| \\\*\\\*set\\\\(\\\*\\\*\\\_x, y, z\\\_\\\*\\\*\\\\)\\\*\\\* \\\| Définit la valeur de ce paramètre \\\| \\\`myP3DParam.set\\\(.5, 2, -1\\\);\\\` \\\| \\\#\\\#\\\#
-
-## Container 
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">M&#xE9;thode</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Exemple</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>get()</b>
+      </td>
+      <td style="text-align:left">Retourne la valeur de ce param&#xE8;tre. Le r&#xE9;sultat est un tableau
+        contenant [x, y, z].</td>
+      <td style="text-align:left">
+        <p><code>var value = my3dParam.get();</code>
+        </p>
+        <p><code>script.log(&quot;x : &quot;+value[0]);</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
+      </td>
+      <td style="text-align:left">D&#xE9;finit la valeur de ce param&#xE8;tre</td>
+      <td style="text-align:left">
+        <p><code>my3DParam.set(2, 0.5, 0);</code>
+        </p>
+        <p><code>my3DParam.set([1,4.63, 8]);</code>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>## Container 
 
 Les conteneurs sont tout objet qui contient des paramètres ou d'autres récipients.   
 Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera soit un conteneur, soit un paramètre. Donc si ce n'est pas un paramètre, alors c'est un conteneur.
