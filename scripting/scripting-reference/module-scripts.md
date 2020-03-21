@@ -19,31 +19,32 @@ Certains modules ont des rappels de fonctions spécifiques qui sont utiles si vo
 
 {% tabs %}
 {% tab title="OSC" %}
-| Méthode | Description | Exemple |
-| :--- | :--- | :--- |
-
-
 <table>
   <thead>
     <tr>
-      <th style="text-align:left"><b>oscEvent(</b><em>address, args</em><b>)</b>
-      </th>
-      <th style="text-align:left">
-        <p>Cette fonction sera appel&#xE9;e &#xE0; chaque fois qu&apos;un message
-          du CSP sera re&#xE7;u.</p>
-        <p><em><b>adresse</b></em> est l&apos;adresse du message du CSP
-          <br /><em><b>args</b></em> est un tableau contenant tous les arguments de l&apos;OSC
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>oscEvent(</b><em>address, args</em><b>)</b>
+      </td>
+      <td style="text-align:left">
+        <p>This function will be called each time an OSC message is received.</p>
+        <p><em><b>address</b></em> is the address of the OSC Message
+          <br /><em><b>args</b></em> is an array containing all the arguments of the OSC
           Message</p>
-      </th>
-      <th style="text-align:left">
-        <p><code>fonction oscEvent(adresse, args) {<br />script.log(&quot;OSC Message re&#xE7;u &quot;+adresse+&quot; ;, &quot;+args.length+&quot; ; arguments&quot; ;);</code>
+      </td>
+      <td style="text-align:left">
+        <p><code>function oscEvent(address, args) {<br />script.log(&quot;OSC Message received &quot;+address+&quot;, &quot;+args.length+&quot; arguments&quot;);</code>
         </p>
         <p><code>}</code>
         </p>
-      </th>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
+  </tbody>
 </table>
 {% endtab %}
 
