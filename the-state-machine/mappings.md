@@ -2,26 +2,18 @@
 
 ## Mappings
 
-Mappings will allow you to create a continuous relationship between a module's value and the parameter of a command, like "The volume of my voice will be continuously controlling the opacity of a video"
+Les mappings vous permettront de créer une relation continue entre la valeur d'un module et le paramètre d'une commande, comme "Le volume de ma voix contrôlera en permanence l'opacité d'une vidéo".
 
 ![](../.gitbook/assets/mapping.gif)
 
-{% hint style="success" %}
-**SHORTCUTS  
-- Double-click or alt+click on the layer timeline :** Add a point  
-**- Ctrl+click or right-click on a curve between 2 points :** Change the transition type.  
-**- Hold shift while moving a point :** Lock X or Y value \(automatic decision depending on the mouse motion\).
-{% endhint %}
-
 ### Input
 
-You can here choose the input value you want as a source to control your commands parameters
+Vous pouvez ici choisir la valeur d'entrée que vous souhaitez comme source pour contrôler les paramètres de vos commandes
 
 ### Filters
 
-If you want to modify the input value before sending to to the commands, you can add filters to change the value. In the example above, i choose to inverse the input value before sending it to the output section. You can read more about filters in the Filter section
+Si vous souhaitez modifier la valeur d'entrée avant de l'envoyer aux commandes, vous pouvez ajouter des filtres pour changer la valeur. Dans l'exemple ci-dessus, je choisis d'inverser la valeur d'entrée avant de l'envoyer à la section de sortie. Vous pouvez en savoir plus sur les filtres dans la section Filter
 
 ### Outputs
 
-Outputs are the commands you want to send each time the value has changed. Commands will automatically lock one of their parameter to the output value of this mapping, except for custom commands on which you can choose yourseul which parameters to lock.
-
+Les sorties sont les commandes que vous voulez envoyer à chaque fois que la valeur a changé. Les commandes verrouillent automatiquement un de leurs paramètres sur la valeur de sortie de cette cartographie, sauf pour les commandes personnalisées sur lesquelles vous pouvez choisir les paramètres à verrouiller.
