@@ -29,7 +29,7 @@ Certains modules ont des rappels de fonctions spécifiques qui sont utiles si vo
       <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <corps>
+  <body>
     <tr>
       <td style="text-align:left"><b>oscEvent(</b><em>address, args</em><b>)</b>
       </td>
@@ -46,7 +46,7 @@ Certains modules ont des rappels de fonctions spécifiques qui sont utiles si vo
         </p>
       </td>
     </tr>
-  </corps>
+  </body>
 </table>
 {% endtab %}
 
@@ -59,7 +59,7 @@ Certains modules ont des rappels de fonctions spécifiques qui sont utiles si vo
       <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <corps>
+  <body>
     <tr>
       <td style="text-align:left"><b>noteOnEvent (</b><em>canal, hauteur, vitesse</em><b>)</b>
       </td>
@@ -129,7 +129,7 @@ Certains modules ont des rappels de fonctions spécifiques qui sont utiles si vo
       <td style="text-align:left"><code>fonction afterTouchEvent(channel, note, value) {<br />script.log(&quot;After Touch received &quot;+channel+&quot ;, &quot;+note+&quot ;, &quot;+value);<br />}</code>
       </td>
     </tr>
-  </corps>
+  </body>
 </table>
 {% endtab %}
 
@@ -148,7 +148,7 @@ Certains modules ont des rappels de fonctions spécifiques qui sont utiles si vo
       <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <corps>
+  <body>
     <tr>
       <td style="text-align:left"><b>donnéesReçues</b><em><b>(</b>données</em><b>)</b>
       </td>
@@ -168,7 +168,7 @@ Certains modules ont des rappels de fonctions spécifiques qui sont utiles si vo
         </p>
       </td>
     </tr>
-  </corps>
+  </body>
 </table>
 {% endtab %}
 
@@ -181,7 +181,7 @@ Certains modules ont des rappels de fonctions spécifiques qui sont utiles si vo
       <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <corps>
+  <body>
     <tr>
       <td style="text-align:left"><b>dataEvent(</b><em>data, requestURL</em><b>)</b>
       </td>
@@ -194,10 +194,11 @@ Certains modules ont des rappels de fonctions spécifiques qui sont utiles si vo
       <td style="text-align:left"><code>fonction dataEvent(data, requestURL) {<br />script.log(&quot;Data received, request URL :&quot;+requestURL+&quot;\nContent :\n&quot ; +data);<br />}</code>
       </td>
     </tr>
-  </corps>
+  </body>
 </table>
 {% endtab %}
 {% endtabs %}
+
 
 ## Module-specific methods \(the local object\)
 
