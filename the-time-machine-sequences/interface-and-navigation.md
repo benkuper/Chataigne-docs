@@ -1,18 +1,17 @@
-# Interface and navigation
+# Interface et navigation
 
 ## Cues
 
-Cues are marks that you can add on the timeline, and then use to play from there, or go to the next cue, etc.
+Les cues sont des marques que vous pouvez ajouter sur la ligne de temps, puis utiliser pour jouer à partir de là, ou passer au repère suivant, etc.
 
 {% hint style="success" %}
-You can also choose to pause the timeline when it hits a cue, which can be convenient when doing semi-interactive shows \(waiting for an actor to finish a line, or a dancer to come on stage before continuing\)
+Vous pouvez également choisir de mettre en pause la chronologie lorsqu'elle atteint un repère, ce qui peut être pratique pour les spectacles semi-interactifs (attendre qu'un acteur termine une ligne ou qu'un danseur entre en scène avant de continuer).
 {% endhint %}
 
 ![](../.gitbook/assets/cues.png)
 
-## Zooming and scrolling
+## Zoom et défilement
 
-By clicking and dragging up/down and left/right the blue rectangle on top of the sequence's timeline, you will be able to navigate and zoom.
+En cliquant et en faisant glisser vers le haut/bas et vers la gauche/droite le rectangle bleu situé en haut de la ligne de temps de la séquence, vous pourrez naviguer et zoomer.
 
 ![](../.gitbook/assets/sequencezoom.gif)
-
