@@ -1,15 +1,14 @@
-# The Module Router
+# Le Module Router
 
-The Module Router is a handy tool when you have a lot of mappings to do from one module to another.  
-It allows to quickly select input values from one module and choose and have basic settings for outputting those values, depending on the out module type.
+Le routeur de modules (Module Router) est un outil pratique lorsque vous avez beaucoup de mappings à faire d'un module à l'autre.  
+Il permet de sélectionner rapidement les valeurs d'entrée d'un module et de choisir et d'avoir des paramètres de base pour la sortie de ces valeurs, en fonction du type de module de sortie.
 
-![An example router, routing wiimote values to an OSC module](../.gitbook/assets/router.png)
-
-{% hint style="info" %}
-One router links one input to one output only, but you can create as many routers as you want.
-{% endhint %}
+[Un exemple de routeur, routing wiimote values to an OSC module](../.gitbook/assets/router.png)
 
 {% hint style="info" %}
-If you want to transfer directly data from a module to another module _of the same type_, please consider using Module's **pass-trough** feature. It's optimised to do that and is way simpler to use.
-{% endhint %}
+Un routeur relie une entrée à une seule sortie, mais vous pouvez créer autant de routeurs que vous le souhaitez.
+{% endhint%}
 
+{% hint style="info" %}
+Si vous souhaitez transférer directement des données d'un module à un autre module _du même type_, veuillez envisager d'utiliser la fonction **pass-trough** du module. Elle est optimisée pour cela et est beaucoup plus simple à utiliser.
+{% endhint %}
