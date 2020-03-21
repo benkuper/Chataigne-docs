@@ -1,14 +1,13 @@
-# Introduction to the Dashboard
+# Introduction au tableau de bord
 
-The Dashboard is a way to create customized interface by importing, placing and styling any components of your composition in a canvas. You can create as many dashboard you want.
+Le tableau de bord est un moyen de créer une interface personnalisée en important, en plaçant et en stylisant tous les éléments de votre composition dans une vue. Vous pouvez créer autant de tableaux de bord que vous le souhaitez.
 
 {% hint style="warning" %}
-Although the Dashboard is already functional and useful, it's under development and is subject to breaking changes.
+Bien que le tableau de bord soit déjà fonctionnel et utile, il est en cours de développement et est susceptible de subir des modifications de dernière minute.
 {% endhint %}
 
 {% hint style="info" %}
-You can easily switch from Edit mode to play mode with the shortcut Ctrl+E
+Vous pouvez facilement passer du mode édition au mode lecture avec le raccourci Ctrl+E
 {% endhint %}
 
-![A rather simple and uninteresting Dashboard layout.](../.gitbook/assets/dashboard.png)
-
+[Une mise en page du tableau de bord plutôt simple et inintéressante](../.gitbook/assets/dashboard.png)
