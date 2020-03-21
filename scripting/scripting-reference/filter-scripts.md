@@ -15,14 +15,14 @@ Les scripts de filtres sont utiles pour ajouter des fonctions mathématiques ou 
 Lorsque des scripts sont exécutés en tant que filtre, des rappels de nouvelles fonctions sont appelés pour traiter le filtre.
 
 <table>
-  <tête>
+  <thead>
     <tr>
       <th style="text-align:left">Méthode</th>
       <th style="text-align:left">Description</th>
       <th style="text-align:left">Exemple</th>
     </tr>
-  </tête>
-  <corps>
+  </thead>
+  <body>
     <tr>
       <td style="text-align:left"><b>filtre(</b><em>inputValue, min, max</em><b>)</b>
       </td>
@@ -42,8 +42,10 @@ Lorsque des scripts sont exécutés en tant que filtre, des rappels de nouvelles
       <td style="text-align:left"><code>fonction filtre(inputValue, min, max)<br />{<br />var résultat = inputValue * myFloatParam.get();<br />retour résultat;<br />}</code>
       </td>
     </tr>
-  </corps>
-</table>Dans cet exemple, nous considérons un projet simple avec une piste audio en boucle. Nous avons également une variable personnalisée masterVolume qui contrôle le volume de la piste audio par le biais d'un mapping.
+  </body>
+</table>
+
+Dans cet exemple, nous considérons un projet simple avec une piste audio en boucle. Nous avons également une variable personnalisée masterVolume qui contrôle le volume de la piste audio par le biais d'un mapping.
 
 ![](../../.gitbook/assets/filterscript_mastervolumeexample_presentation.gif)
 
