@@ -1,10 +1,10 @@
-# Scripts de condition
+# Condition Scripts
 
 Les cas d'utilisation de Condition Scripts sont plus rares mais peuvent s'avérer pratiques dans des configurations très spécifiques et complexes. Certaines situations sont tout simplement trop complexes ou bizarres pour les réduire à un comportement "si". Vous pouvez alors utiliser un script et décider d'activer cette partie de la condition comme vous le souhaitez.
 
 Par exemple, si je veux détecter une suite de notes à chanter, je pourrais facilement créer un script qui vérifiera automatiquement la prochaine note à chanter afin de valider la condition.
 
-## Méthodes spécifiques à la condition \(l'objet local)
+## Méthodes spécifiques à la condition \(l'objet _local_\)
 
 Lorsque des scripts sont exécutés comme condition, l'objet Javascript **local** dispose de méthodes spécifiques pour modifier l'état de validation de cette condition.
 
