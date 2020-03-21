@@ -684,7 +684,9 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
         </td>
     </tr>
   </tbody>
-</table>\#\#\# Objet de script L'objet script fait référence au conteneur de script. Vous pouvez ajouter vos propres paramètres personnalisés ici, ainsi que des informations de journalisation, des avertissements et des erreurs.
+</table>#### Object _script_
+
+L'objet script fait référence au conteneur de script. Vous pouvez ajouter vos propres paramètres personnalisés ici, ainsi que des informations de journalisation, des avertissements et des erreurs.
 
 <table>
   <thead>
@@ -829,7 +831,21 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       </td>
     </tr>
   </tbody>
-</table>\#\#\# Objet racine L'objet racine fait référence au moteur de Chataigne, qui est l'objet racine de tous les parents. Il permet d'accéder à n'importe quel objet dans la hiérarchie de Chataigne. La meilleure façon d'y accéder est de cliquer avec le bouton droit de la souris sur l'interface utilisateur d'un paramètre et de sélectionner "Copy Script control address". Vous pouvez alors passer l'adresse dans votre script et vous pourrez contrôler ce paramètre. \#\#\# Objet local L'objet local dépend de l'endroit où les scripts sont exécutés. \* Si le script est exécuté dans un module, la variable locale fera référence au module. Vous pouvez trouver toutes les fonctions du module dans la section \[Scripts de module\]\(module-scripts.md\). \* Si le script s'exécute dans une condition, la variable locale fera référence à la condition. Vous pouvez trouver toutes les fonctions de la condition dans la section \[Condition Scripts\]\(condition-scripts.md\). \* Si le script s'exécute à l'intérieur d'un filtre, la variable locale fera référence au filtre. Vous pouvez trouver toutes les fonctions de filtrage dans la section \[Filter Scripts\]\(filter-scripts.md\)\[ \]\(condition-scripts.md\)\*. \#\#\# \*\*Util objet\*\* L'objet utilitaire fournit des aides et des fonctions utilitaires comme le temps ou la conversion.
+</table>#### Objet _root_
+
+L'objet racine fait référence au moteur de Chataigne, qui est l'objet racine de tous les parents. Il permet d'accéder à n'importe quel objet dans la hiérarchie de Chataigne. La meilleure façon d'y accéder est de cliquer avec le bouton droit de la souris sur l'interface utilisateur d'un paramètre et de sélectionner "Copy Script control address". Vous pouvez alors passer l'adresse dans votre script et vous pourrez contrôler ce paramètre. 
+
+#### Objet _local_
+
+L'objet local dépend de l'endroit où les scripts sont exécutés.
+
+* Si le script est exécuté dans un module, la variable locale fera référence au module. Vous pouvez trouver toutes les fonctions du module dans la section[ Module Scripts](module-scripts.md). 
+* Si le script s'exécute dans une condition, la variable locale fera référence à la condition. Vous pouvez trouver toutes les fonctions de la condition dans la section [Condition Scripts](condition-scripts.md). 
+* Si le script s'exécute à l'intérieur d'un filtre, la variable locale fera référence au filtre. Vous pouvez trouver toutes les fonctions de filtrage dans la section [Filter scripts](filter-scripts.md). 
+
+#### Objet _util_
+
+L'objet utilitaire fournit des aides et des fonctions utilitaires comme le temps ou la conversion.
 
 <table>
   <thead>
@@ -858,7 +874,7 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
     <tr>
       <td style="text-align:left"><b>getFloatFromBytes(</b><em>byte1, byte2, byte3, byte4</em><b>)</b>
       </td>
-      <td style="text-align:left">Retourne un flotteur de 4 octets (big endian, l&apos;octet 1 est le plus
+      <td style="text-align:left">Retourne un float de 4 octets (big endian, l&apos;octet 1 est le plus
         significatif)</td>
       <td style="text-align:left"><code>var value = util.getFloatFromBytes(0, 0, 2, 10);</code>
       </td>
@@ -894,7 +910,7 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       <td style="text-align:left"><b>encodeHMAC_SHA1(</b><em>text, key</em><b>)</b>
       </td>
       <td style="text-align:left">Retourne une cha&#xEE;ne cod&#xE9;e HMAC-SHA1</td>
-      <td style="text-align:left"><code>var encoded = util.encodeHMAC_SHA1(&quot;my text&quot; ;, &quot;my key&quot; ;);</code>
+      <td style="text-align:left"><code>var encoded = util.encodeHMAC_SHA1(&quot;my text&quot;, &quot;my key&quot; ;);</code>
       </td>
     </tr>
     <tr>
@@ -911,7 +927,7 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       <td style="text-align:left">Consultez le contenu du fichier &#xE0; <em><b>path</b></em>. Si <em><b>asJSON</b></em> est <em>vrai,</em> alors
         le contenu sera analys&#xE9; et renvoy&#xE9; sous la forme d&apos;un Object.</td>
       <td
-      style="text-align:left"><code>var myTextContent = util.readFile(&quot;myfile.txt&quot; ;);</code>
+      style="text-align:left"><code>var myTextContent = util.readFile(&quot;myfile.txt&quot;);</code>
         </td>
     </tr>
     <tr>
@@ -924,7 +940,7 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       <td style="text-align:left">
         <p><code>donn&#xE9;es variables = &quot;super&quot;;</code>
         </p>
-        <p><code>util.writeFile(&quot;monfichier.txt&quot; ;, donn&#xE9;es, vrai);</code>
+        <p><code>util.writeFile(&quot;monfichier.txt&quot;, donn&#xE9;es, vrai);</code>
         </p>
       </td>
     </tr>
@@ -946,11 +962,11 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
         </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>getObjectMetMethods(</b><em>objet</em><b>)</b>
+      <td style="text-align:left"><b>getObjectMethods(</b><em>objet</em><b>)</b>
       </td>
       <td style="text-align:left">Retourne un tableau de tous les noms de m&#xE9;thode de ce <em><b>objet</b></em>.</td>
       <td
-      style="text-align:left"><code>var methods= util.getObjectMetMethods();</code>
+      style="text-align:left"><code>var methods= util.getObjectMethods();</code>
         </td>
     </tr>
   </tbody>
