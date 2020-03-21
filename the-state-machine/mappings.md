@@ -6,13 +6,6 @@ Mappings will allow you to create a continuous relationship between a module's v
 
 ![](../.gitbook/assets/mapping.gif)
 
-{% hint style="success" %}
-**SHORTCUTS  
-- Double-click or alt+click on the layer timeline :** Add a point  
-**- Ctrl+click or right-click on a curve between 2 points :** Change the transition type.  
-**- Hold shift while moving a point :** Lock X or Y value \(automatic decision depending on the mouse motion\).
-{% endhint %}
-
 ### Input
 
 You can here choose the input value you want as a source to control your commands parameters
