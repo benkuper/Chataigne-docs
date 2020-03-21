@@ -15,7 +15,7 @@ Lors de la création d'une interaction, vous devrez d'abord créer un état qui 
 
 ## States
 
-Les States ont des conteneurs qui contiendront des règles d'interaction différentes. Ils peuvent être activés et désactivés manuellement ou automatiquement, et vous pouvez créer une transition entre eux.
+Les States sont des conteneurs qui contiendront des règles d'interaction différentes. Ils peuvent être activés et désactivés manuellement ou automatiquement, et vous pouvez créer une transition entre eux.
 
 Actuellement, il existe deux types de règles : [**Actions**](actions.md) **et** [**Mappings**](mappings.md)**.**
 
@@ -32,7 +32,7 @@ Les transitions ont des cas d'utilisation multiples :
 C'est pourquoi il est utile de créer des transitions entre plusieurs States lorsque vous voulez vous assurer qu'il n'y a qu'un seul State actif à la fois dans un groupe de States.
 {% endhint %}
 
-{% indice style="succès" %}
+{% indice style="success" %}
 En les reliant entre eux, vous pouvez avoir autant de réseaux de State que vous le souhaitez, ce qui signifie que vous pouvez toujours avoir plusieurs States actifs en même temps.
 {% endhint %}
 
