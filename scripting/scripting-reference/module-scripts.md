@@ -139,64 +139,65 @@ Some modules have specific function callbacks that are useful if you want to cus
 | **send\(**_startChannel, value1, value2, ..., valueN_**\)** | Sends DMX values starting at the **startChannel.** You can add as many values as you want, and you can even mix array of values with single values. Values are 0 to 255. | `local.send(32, 255);`  |
 {% endtab %}
 
-{% tab title="Serial/UDP/TCP" %}
-<tableau>
-  <tête>
-    <tr>
-      <th style="text-align:left">Méthode</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Exemple</th>
-    </tr>
-  </tête>
-  <corps>
-    <tr>
-      <td style="text-align:left"><b>donnéesReçues</b><em><b>(</b>données</em><b>)</b>
-      </td>
-      <td style="text-align:left">
-        <p>Cette fonction sera appelée à chaque fois que des données auront été reçues.</p>
-        <p>Si le protocole du Module&apos;s est réglé sur <em><b>Lines,</b></em> alors l'argument <b>data</b>
-          sera une chaîne contenant la ligne, sans la terminaison \n.</p>
-        <p> Sinon, les données seront un tableau d'octets contenant les
-          data.</p>
-      </td>
-      <td style="text-align:left">
-        <p><code>fonction dataReceived(data) {</code>
-        </p>
-        <p><code>script.log(&quot;Données reçues : &quot;+data);</code>
-        </p>
-        <p><code>}</code>
-        </p>
-      </td>
-    </tr>
-  </corps>
-</table>
-{% endtab %}
+{% tab title="Serial/UDP/TCP" %}	{% tab title="Serial/UDP/TCP" %}
+<table>	<tableau>
+  <thead>	  <tête>
+    <tr>	    <tr>
+      <th style="text-align:left">Method</th>	      <th style="text-align:left">Méthode</th>
+      <th style="text-align:left">Description</th>	      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>	      <th style="text-align:left">Exemple</th>
+    </tr>	    </tr>
+  </thead>	  </tête>
+  <tbody>	  <corps>
+    <tr>	    <tr>
+      <td style="text-align:left"><b>dataReceived</b><em><b>(</b>data</em><b>)</b>	      <td style="text-align:left"><b>donnéesReçues</b><em><b>(</b>données</em><b>)</b>
+      </td>	      </td>
+      <td style="text-align:left">	      <td style="text-align:left">
+        <p>This function will be called each time data has been received.</p>	        <p>Cette fonction sera appelée à chaque fois que des données auront été reçues.</p>
+        <p>If the Module&apos;s protocol is set to <em><b>Lines,</b></em> then the <b>data</b> argument	        <p>Si le protocole du Module&apos;s est réglé sur <em><b>Lines,</b></em> alors l'argument <b>data</b>
+          will be a string containing the line, without the ending \n.</p>	          sera une chaîne contenant la ligne, sans la terminaison \n.</p>
+        <p>Otherwise, the data will be an array of bytes containing the received	        <p> Sinon, les données seront un tableau d'octets contenant les
+          data.</p>	          data.</p>
+      </td>	      </td>
+      <td style="text-align:left">	      <td style="text-align:left">
+        <p><code>function dataReceived(data) {</code>	        <p><code>fonction dataReceived(data) {</code>
+        </p>	        </p>
+        <p><code>script.log(&quot;Received data : &quot;+data);</code>	        <p><code>script.log(&quot;Données reçues : &quot;+data);</code>
+        </p>	        </p>
+        <p><code>}</code>	        <p><code>}</code>
+        </p>	        </p>
+      </td>	      </td>
+    </tr>	    </tr>
+  </tbody>	  </corps>
+</table>	</table>
+{% endtab %}	{% endtab %}
 
-{% tab title="HTTP" %}
-<tableau>
-  <tête>
-    <tr>
-      <th style="text-align:left">Méthode</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Exemple</th>
-    </tr>
-  </tête>
-  <corps>
-    <tr>
-      <td style="text-align:left"><b>dataEvent(</b><em>data, requestURL</em><b>)</b>
-      </td>
-      <td style="text-align:left">
-        <p>Cette fonction sera appelée chaque fois que le module aura reçu une réponse de
-          une demande.
-          <br /><em><b>data</b></em> est le contenu de la réponse</p>
-        <p><em><b>demandeURL</b></em> est l'url de la demande initiale.</p>
-      </td>
-      <td style="text-align:left"><code>fonction dataEvent(data, requestURL) {<br />script.log(&quot;Data received, request URL :&quot;+requestURL+&quot;\nContent :\n&quot ; +data);<br />}</code>
-      </td>
-    </tr>
-  </corps>
-</table>
-{% endtab %}
+
+{% tab title="HTTP" %}	{% tab title="HTTP" %}
+<table>	<tableau>
+  <thead>	  <tête>
+    <tr>	    <tr>
+      <th style="text-align:left">Method</th>	      <th style="text-align:left">Méthode</th>
+      <th style="text-align:left">Description</th>	      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>	      <th style="text-align:left">Exemple</th>
+    </tr>	    </tr>
+  </thead>	  </tête>
+  <tbody>	  <corps>
+    <tr>	    <tr>
+      <td style="text-align:left"><b>dataEvent(</b><em>data, requestURL</em><b>)</b>	      <td style="text-align:left"><b>dataEvent(</b><em>data, requestURL</em><b>)</b>
+      </td>	      </td>
+      <td style="text-align:left">	      <td style="text-align:left">
+        <p>This function will be called each time the module has got a response from	        <p>Cette fonction sera appelée chaque fois que le module aura reçu une réponse de
+          a request.	          une demande.
+          <br /><em><b>data</b></em> is the content of the response</p>	          <br /><em><b>data</b></em> est le contenu de la réponse</p>
+        <p><em><b>requestURL</b></em> is the url of the original request.</p>	        <p><em><b>demandeURL</b></em> est l'url de la demande initiale.</p>
+      </td>	      </td>
+      <td style="text-align:left"><code>function dataEvent(data, requestURL) {<br />script.log(&quot;Data received, request URL :&quot;+requestURL+&quot;\nContent :\n&quot; +data);<br />}</code>	      <td style="text-align:left"><code>fonction dataEvent(data, requestURL) {<br />script.log(&quot;Data received, request URL :&quot;+requestURL+&quot;\nContent :\n&quot ; +data);<br />}</code>
+      </td>	      </td>
+    </tr>	    </tr>
+  </tbody>	  </corps>
+</table>	</table>
+{% endtab %}	
 {% endtabs %}
 
 ## Module-specific methods \(the local object\)
