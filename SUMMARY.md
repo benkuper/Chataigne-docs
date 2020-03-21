@@ -82,7 +82,7 @@
 
 ## Custom Variables
 
-* [Introduction to Custom Variables](custom-variables/untitled/README.md)
+* [Introduction aux Custom Variables](custom-variables/untitled/README.md)
   * [Example 1 : Simple game logic](custom-variables/untitled/example-1-simple-game-logic.md)
   * [Example 2 : Particle system presets](custom-variables/untitled/example-2-particle-system-presets.md)
 * [The Morpher : Du fun avec les interpolations 2D](custom-variables/the-morpher-2d-interpolations-made-fun.md)

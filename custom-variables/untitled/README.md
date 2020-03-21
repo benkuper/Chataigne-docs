@@ -1,4 +1,4 @@
-# Introduction to Custom Variables
+# Introduction aux Custom Variables
 
 Les Custom variables sont l'endroit où stocker, modifier et récupérer des données personnalisées à Chataigne.
 
