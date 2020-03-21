@@ -1,55 +1,55 @@
 ---
-description: Contributed with love by Benoit Arbelot
+description : Contribué avec amour par Benoit Arbelot
 ---
 
-# Filter Scripts
+# Scripts de filtre
 
-Filter scripts are JavaScript files that can be used as a filter in a mapping. They are created as separate JavaScript files and can be added in the filter tab by choosing the script option.
+Les scripts peuvent être utilisés comme filtre dans un mapping.
 
 ![](../../.gitbook/assets/filterscript_creation.gif)
 
-Filter scripts are useful to add math functions or advanced filtering logic to your mappings.
+Les scripts de filtres sont utiles pour ajouter des fonctions mathématiques ou une logique de filtrage avancée à vos mappages.
 
-## Filter specific functions <a id="condition-specific-methods-the-local-object"></a>
+## Fonctions de filtrage spécifiques <a id="condition-specific-methods-the-local-object"></a>
 
-When scripts are running as a filter, new function callbacks are called to process the filter.
+Lorsque des scripts sont exécutés en tant que filtre, des rappels de nouvelles fonctions sont appelés pour traiter le filtre.
 
 <table>
-  <thead>
+  <tête>
     <tr>
-      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Méthode</th>
       <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Exemple</th>
     </tr>
-  </thead>
-  <tbody>
+  </tête>
+  <corps>
     <tr>
-      <td style="text-align:left"><b>filter(</b><em>inputValue, min, max</em><b>)</b>
+      <td style="text-align:left"><b>filtre(</b><em>inputValue, min, max</em><b>)</b>
       </td>
       <td style="text-align:left">
-        <p>This function is called everytime the mapping is processed and goes through
-          the filter chain.</p>
-        <p><em><b>inputValue</b></em> is the value from the input or from the preceding
-          filter.</p>
-        <p><em><b>min</b></em> and <em><b>max</b></em> are the range of the <em><b>inputValue</b></em>,
-          if applicable. It&apos;s useful when filtering the value as a normalized
-          value, or to avoid overshooting the values.
+        <p>Cette fonction est appelée à chaque fois que la cartographie est traitée et passe par
+          la chaîne de filtrage.</p>
+        <p><em><b>inputValue</b></em> est la valeur de l'entrée ou de la précédente
+          filtre.</p>
+        <p><em><b>min</b></em> et <em><b>max</b></em> sont les plages de la <em><b>inputValue</b></em>,
+          le cas échéant. It&apos;s utile pour filtrer la valeur en tant que
+          ou pour éviter de dépasser les valeurs.
           <br />
         </p>
-        <p><b>This function must return a value !</b>
+        <p><b>Cette fonction doit retourner une valeur !</b>
         </p>
       </td>
-      <td style="text-align:left"><code>function filter(inputValue, min, max)<br />{<br />var result = inputValue * myFloatParam.get();<br />return result;<br />}</code>
+      <td style="text-align:left"><code>fonction filtre(inputValue, min, max)<br />{<br />var résultat = inputValue * myFloatParam.get();<br />retour résultat;<br />}</code>
       </td>
     </tr>
-  </tbody>
-</table>In this example, we consider a simple project with a looping audio track. We also have a masterVolume custom variable controlling the audio track volume through a mapping.
+  </corps>
+</table>Dans cet exemple, nous considérons un projet simple avec une piste audio en boucle. Nous avons également une variable personnalisée masterVolume qui contrôle le volume de la piste audio par le biais d'un mapping.
 
 ![](../../.gitbook/assets/filterscript_mastervolumeexample_presentation.gif)
 
-Now we would like to add the ability to fade in and out our audio track. We can do this using sequences which directly control the volume of the audio track. However, in order to respect the current value of the masterVolume, these sequences output need to be remapped from \[0; 1\] to \[0; masterVolume\].
+Nous aimerions maintenant ajouter la possibilité de faire un fondu enchaîné de notre piste audio. Nous pouvons le faire en utilisant des séquences qui contrôlent directement le volume de la piste audio. Cependant, afin de respecter la valeur actuelle du masterVolume, la sortie de ces séquences doit être redirigée de \[0 ; 1\] à \[0 ; masterVolume].
 
-This can be done with a simple filter script multiplying the output value of the fade sequences mappings by the masterVolume value. We create the following MultiplyByMasterVolume.js script :
+Cela peut être fait avec un simple script de filtrage en multipliant la valeur de sortie des mappages des séquences de fondu par la valeur du masterVolume. Nous créons le script MultiplyByMasterVolume.js suivant :
 
 ```javascript
 function filter(inputValue, min, max)
@@ -58,11 +58,11 @@ function filter(inputValue, min, max)
 }
 ```
 
-This filter script returns the input value _**inputValue**_, multiplied by the custom variable masterVolume.
+Ce script de filtrage renvoie la valeur d'entrée _**inputValue**_, multipliée par la variable personnalisée masterVolume.
 
-Reminder : You can quickly get the Script address of any variable in Chataigne by right-clicking on it and selecting **Copy Script Control Address**, then you can use the function get\(\) to get the current value of this variable in a script.
+Rappel : Vous pouvez obtenir rapidement l'adresse du script de toute variable dans Chataigne en faisant un clic droit dessus et en sélectionnant **Copy Script Control Address**, puis vous pouvez utiliser la fonction get\(\) pour obtenir la valeur actuelle de cette variable dans un script.
 
-We just have to assign this script as a filter script in our fade sequences mappings to get what we want : fading sequences that fade between 0 and the current _masterVolume_ value.
+Il suffit d'assigner ce script comme script de filtrage dans nos mappages de séquences de fondu pour obtenir ce que nous voulons : des séquences de fondu qui s'effacent entre 0 et la valeur actuelle de _masterVolume_.
 
-![](../../.gitbook/assets/filterscript_mastervolumeexample_withfilterscript.gif)
+![](../../.gitbook/assets/filterscript_mastervolumeexemple_withfilterscript.gif)
 
