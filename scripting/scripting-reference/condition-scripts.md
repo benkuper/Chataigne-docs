@@ -12,4 +12,3 @@ Lorsque des scripts sont exécutés comme condition, l'objet Javascript **local*
 | :--- | :--- | :--- |
 | **setValid\(**_value_**\)** | Cela fixe l'état de validation de la condition à la _**value**_ | `local.setValid(true);` |
 
-
