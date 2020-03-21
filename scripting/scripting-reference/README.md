@@ -8,7 +8,7 @@ Les scripts dans Chataigne sont basés sur une version simplifiée de Javascript
 
 ## Fonctions communes
 
-Il y a quelques fonctions communes que vous pouvez utiliser, quel que soit le type de script.
+Il y a quelques fonctions  communes que vous pouvez utiliser, quel que soit le type de script.
 
 {% hint style="info" %}
 Aucune des fonctions ci-dessous n'est nécessaire lors de la réalisation d'un script, ce sont juste des fonctions d'aide.  
