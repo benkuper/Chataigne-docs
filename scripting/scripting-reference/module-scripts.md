@@ -1,21 +1,21 @@
-# Module Scripts
+# Scripts du module
 
-Module Scripts allows you to add more complex and specific handling of values, help parsing data from network or serial streams that are following a specific API.
+Les scripts de module vous permettent d'ajouter une gestion plus complexe et plus spécifique des valeurs, d'aider à l'analyse des données provenant de flux réseau ou série qui suivent une API spécifique.
 
-It's also the way to create [Custom Modules](../../modules/custom-modules/), where you can define your own values and parameters, and have scripts run the main logic.
+C'est également la façon de créer des [Modules personnalisés](../../modules/custom-modules/), où vous pouvez définir vos propres valeurs et paramètres, et faire exécuter la logique principale par des scripts.
 
-## Module common functions
+## Fonctions communes des modules
 
-All scripts running inside a module will have a common set of functions that can be added to the script. Those functions are not needed to run the script.
+Tous les scripts fonctionnant à l'intérieur d'un module auront un ensemble commun de fonctions qui pourront être ajoutées au script. Ces fonctions ne sont pas nécessaires pour exécuter le script.
 
-| Method | Description | Example |
+| Méthode | Description | Exemple |
 | :--- | :--- | :--- |
-| **function moduleParameterChanged\(**_param_**\)** | This function will be called each time a parameter of this module has changed, meaning a parameter or trigger inside the "Parameters" panel of this module. | `function moduleParameterChanged(param){    script.log("Param changed : "+param.name); }` _\`\`_ |
-| **function moduleValueChanged\(**_param_**\)** | This function will be called each time a value of this module has changed, meaning a parameter or trigger inside the "Values" panel of this module. | `function moduleValueChanged(value) { if(value.isParameter()) { script.log("Module value changed : "+value.name+" > "+value.get()); }else { script.log("Module value triggered : "+value.name); }  }` |
+| **function moduleParameterChanged\(**_param_**\)** | Cette fonction sera appelée chaque fois qu'un paramètre de ce module aura changé, c'est-à-dire un paramètre ou un déclencheur à l'intérieur du panneau "Paramètres" de ce module. | `fonction moduleParameterChanged(param){ script.log("Param changed : "+param.name) ; }` _\`\`_ |
+| **function moduleValueChanged\(**_param_**\)** | Cette fonction sera appelée à chaque fois qu'une valeur de ce module aura changé, c'est-à-dire un paramètre ou un déclencheur à l'intérieur du panneau "Valeurs" de ce module. | `fonction moduleValueChanged(value) { if(value.isParameter()) { script.log("Valeur du module changée : "+value.name+") > "+value.get()) ; }else { script.log("Valeur du module déclenchée : "+value.name) ; }  }` |
 
-## Module-specific functions
+## Fonctions spécifiques aux modules
 
-Some modules have specific function callbacks that are useful if you want to customize the parsing of received data from this module.
+Certains modules ont des rappels de fonctions spécifiques qui sont utiles si vous souhaitez personnaliser l'analyse des données reçues de ce module.
 
 
 
@@ -24,29 +24,29 @@ Some modules have specific function callbacks that are useful if you want to cus
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Méthode</th>
       <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <tbody>
+  <corps>
     <tr>
       <td style="text-align:left"><b>oscEvent(</b><em>address, args</em><b>)</b>
       </td>
       <td style="text-align:left">
-        <p>This function will be called each time an OSC message is received.</p>
-        <p><em><b>address</b></em> is the address of the OSC Message
-          <br /><em><b>args</b></em> is an array containing all the arguments of the OSC
+        <p>Cette fonction sera appelée à chaque fois qu'un message du CSP sera reçu.</p>
+        <p><em><b>adresse</b></em> est l'adresse du message du CSP
+          <br /><em><b>args</b></em> est un tableau contenant tous les arguments de l'OSC
           Message</p>
       </td>
       <td style="text-align:left">
-        <p><code>function oscEvent(address, args) {<br />script.log(&quot;OSC Message received &quot;+address+&quot;, &quot;+args.length+&quot; arguments&quot;);</code>
+        <p><code>fonction oscEvent(adresse, args) {<br />script.log(&quot;OSC Message reçu &quot;+adresse+&quot ;, &quot;+args.length+&quot ; arguments&quot ;);</code>
         </p>
         <p><code>}</code>
         </p>
       </td>
     </tr>
-  </tbody>
+  </corps>
 </table>
 {% endtab %}
 
@@ -54,121 +54,121 @@ Some modules have specific function callbacks that are useful if you want to cus
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Méthode</th>
       <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <tbody>
+  <corps>
     <tr>
-      <td style="text-align:left"><b>noteOnEvent (</b><em>channel, pitch, velocity</em><b>)</b>
+      <td style="text-align:left"><b>noteOnEvent (</b><em>canal, hauteur, vitesse</em><b>)</b>
       </td>
       <td style="text-align:left">
-        <p>This function will be called each time a noteOn event is received.</p>
-        <p>The arguments are respectively the channel, pitch and velocity of this
+        <p>Cette fonction sera appelée à chaque fois qu'un événement noteOn sera reçu.</p>
+        <p>Les arguments sont respectivement le canal, le pas et la vitesse de cette
           event.</p>
       </td>
-      <td style="text-align:left"><code>function noteOnEvent(channel, pitch, velocity) {<br />script.log(&quot;Note on received &quot;+channel+&quot;, &quot;+pitch+&quot;, &quot;+velocity);<br />}</code>
+      <td style="text-align:left"><code>function noteOnEvent(channel, pitch, velocity) {<br />script.log(&quot;Note on received &quot;+channel+&quot ;, &quot;+pitch+&quot ;, &quot;+velocity);<br />}</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>noteOffEvent (</b><em>channel, pitch, velocity</em><b>)</b>
+      <td style="text-align:left"><b>noteOffEvent (</b><em>canal, hauteur, vitesse</em><b>)</b>
       </td>
       <td style="text-align:left">
-        <p>This function will be called each time a noteOff event is received.</p>
-        <p>The arguments are respectively the channel, pitch and velocity of this
+        <p>Cette fonction sera appelée à chaque fois qu'un événement noteOff sera reçu.</p>
+        <p>Les arguments sont respectivement le canal, le pas et la vitesse de cette
           event.</p>
       </td>
-      <td style="text-align:left"><code>function noteOffEvent(channel, pitch, velocity) {<br />script.log(&quot;Note off received &quot;+channel+&quot;, &quot;+pitch+&quot;, &quot;+velocity);<br />}</code>
+      <td style="text-align:left"><code>function noteOffEvent(channel, pitch, velocity) {<br />script.log(&quot;Note off received &quot;+channel+&quot ;, &quot;+pitch+&quot ;, &quot;+velocity);<br />}</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>ccEvent (</b><em>channel, number, value</em><b>)</b>
+      <td style="text-align:left"><b>ccEvent (</b><em>canal, nombre, valeur</em><b>)</b>
       </td>
       <td style="text-align:left">
-        <p>This function will be called each time a noteOff event is received.</p>
-        <p>The arguments are respectively the channel, number and value of this event.</p>
+        <p>Cette fonction sera appelée à chaque fois qu'un événement noteOff sera reçu.</p>
+        <p>Les arguments sont respectivement le canal, le nombre et la valeur de cet événement.</p>
       </td>
-      <td style="text-align:left"><code>function ccEvent(channel, number, value) {<br />script.log(&quot;ControlChange received &quot;+channel+&quot;, &quot;+number+&quot;, &quot;+value);<br />}</code>
+      <td style="text-align:left"><code>fonction ccEvent(channel, number, value) {<br />script.log(&quot;ControlChange reçu &quot;+channel+&quot ;, &quot;+number+&quot ;, &quot;+value);<br />}</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>sysExEvent(</b><em>data</em><b>)</b>
       </td>
       <td style="text-align:left">
-        <p>This function will be called each time a sysEx event is received.</p>
-        <p>The argument is an array of bytes containing the sysEx data.</p>
+        <p>Cette fonction sera appelée à chaque fois qu'un événement sysEx sera reçu.</p>
+        <p>L'argument est un tableau d'octets contenant les données sysEx.</p>
       </td>
-      <td style="text-align:left"><code>function sysExEvent(data) { script.log(&quot;Sysex Message received, &quot;+data.length+&quot; bytes :&quot;);<br />for(var i=0; i &lt; data.length; i++) {<br />script.log(&quot; &gt; &quot;+data[i]);<br />}<br />}</code>
+      <td style="text-align:left"><code>fonction sysExEvent(data) { script.log(&quot;Sysex Message reçu, &quot;+data.length+&quot ; bytes :&quot ;);<br />for(var i=0 ; i &lt ; data.length ; i++) {<br />script.log(&quot ; &gt ; &quot;+data[i]);<br />}<br />}</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>pitchWheelEvent (</b><em>channel, value</em><b>)</b>
       </td>
-      <td style="text-align:left">This function will be called each time a pitchWheel event is received.
-        The arguments are respectively the channel and the value of this event.</td>
+      <td style="text-align:left">Cette fonction sera appelée à chaque fois qu'un événement pitchWheel sera reçu.
+        Les arguments sont respectivement le canal et la valeur de cet événement.</td>
       <td
-      style="text-align:left"><code>function pitchWheelEvent(channel, value) {<br />script.log(&quot;PitchWheel received &quot;+channel+&quot;, &quot;+value);<br />}</code>
+      style="text-align:left"><code>fonction pitchWheelEvent(channel, value) {<br />script.log(&quot;PitchWheel received &quot;+channel+&quot ;, &quot;+value);<br />}</code>
         </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>channelPressureEvent (</b><em>channel, value</em><b>)</b>
       </td>
-      <td style="text-align:left">This function will be called each time a channelPressure event is received.
-        The arguments are respectively the channel and the value of this event.</td>
+      <td style="text-align:left">Cette fonction sera appelée à chaque fois qu'un événement ChannelPressure sera reçu.
+        Les arguments sont respectivement le canal et la valeur de cet événement.</td>
       <td
-      style="text-align:left"><code>function channelPressureEvent(channel, value) {<br />script.log(&quot;Channel Pressure received &quot;+channel+&quot;, &quot;+value);<br />}</code>
+      style="text-align:left"><code>fonction channelPressureEvent(channel, value) {<br />script.log(&quot;Channel Pressure received &quot;+channel+&quot ;, &quot;+value);<br />}</code>
         </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>afterTouchEvent (</b><em>channel, note, value</em><b>)</b>
+      <td style="text-align:left"><b>afterTouchEvent (</b><em>canal, note, valeur</em><b>)</b>
       </td>
-      <td style="text-align:left">This function will be called each time an afterTouch event is received.
-        The arguments are respectively the channel, the note and the value of this
+      <td style="text-align:left">Cette fonction sera appelée à chaque fois qu'un événement afterTouch sera reçu.
+        Les arguments sont respectivement le canal, la note et la valeur de cette
         event.</td>
-      <td style="text-align:left"><code>function afterTouchEvent(channel, note, value) {<br />script.log(&quot;After Touch received &quot;+channel+&quot;, &quot;+note+&quot;, &quot;+value);<br />}</code>
+      <td style="text-align:left"><code>fonction afterTouchEvent(channel, note, value) {<br />script.log(&quot;After Touch received &quot;+channel+&quot ;, &quot;+note+&quot ;, &quot;+value);<br />}</code>
       </td>
     </tr>
-  </tbody>
+  </corps>
 </table>
 {% endtab %}
 
 {% tab title="DMX" %}
-| Method | Description | Example |
+| Méthode | Description | Exemple |
 | :--- | :--- | :--- |
-| **send\(**_startChannel, value1, value2, ..., valueN_**\)** | Sends DMX values starting at the **startChannel.** You can add as many values as you want, and you can even mix array of values with single values. Values are 0 to 255. | `local.send(32, 255);`  |
+| **send\(**_startChannel, value1, value2, ..., valueN_**\)** | Envoie des valeurs DMX à partir du **startChannel.** Vous pouvez ajouter autant de valeurs que vous le souhaitez, et vous pouvez même mélanger des tableaux de valeurs avec des valeurs individuelles. Les valeurs vont de 0 à 255. | `local.send(32, 255);` |
 {% endtab %}
 
 {% tab title="Serial/UDP/TCP" %}
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Méthode</th>
       <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <tbody>
+  <corps>
     <tr>
-      <td style="text-align:left"><b>dataReceived</b><em><b>(</b>data</em><b>)</b>
+      <td style="text-align:left"><b>donnéesReçues</b><em><b>(</b>données</em><b>)</b>
       </td>
       <td style="text-align:left">
-        <p>This function will be called each time data has been received.</p>
-        <p>If the Module&apos;s protocol is set to <em><b>Lines,</b></em> then the <b>data</b> argument
-          will be a string containing the line, without the ending \n.</p>
-        <p>Otherwise, the data will be an array of bytes containing the received
+        <p>Cette fonction sera appelée à chaque fois que des données auront été reçues.</p>
+        <p>Si le protocole du Module&apos;s est réglé sur <em><b>Lines,</b></em> alors l'argument <b>data</b>
+          sera une chaîne contenant la ligne, sans la terminaison \n.</p>
+        <p> Sinon, les données seront un tableau d'octets contenant les
           data.</p>
       </td>
       <td style="text-align:left">
-        <p><code>function dataReceived(data) {</code>
+        <p><code>fonction dataReceived(data) {</code>
         </p>
-        <p><code>script.log(&quot;Received data : &quot;+data);</code>
+        <p><code>script.log(&quot;Données reçues : &quot;+data);</code>
         </p>
         <p><code>}</code>
         </p>
       </td>
     </tr>
-  </tbody>
+  </corps>
 </table>
 {% endtab %}
 
@@ -176,25 +176,25 @@ Some modules have specific function callbacks that are useful if you want to cus
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Méthode</th>
       <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <tbody>
+  <corps>
     <tr>
       <td style="text-align:left"><b>dataEvent(</b><em>data, requestURL</em><b>)</b>
       </td>
       <td style="text-align:left">
-        <p>This function will be called each time the module has got a response from
-          a request.
-          <br /><em><b>data</b></em> is the content of the response</p>
-        <p><em><b>requestURL</b></em> is the url of the original request.</p>
+        <p>Cette fonction sera appelée chaque fois que le module aura reçu une réponse de
+          une demande.
+          <br /><em><b>data</b></em> est le contenu de la réponse</p>
+        <p><em><b>demandeURL</b></em> est l'url de la demande initiale.</p>
       </td>
-      <td style="text-align:left"><code>function dataEvent(data, requestURL) {<br />script.log(&quot;Data received, request URL :&quot;+requestURL+&quot;\nContent :\n&quot; +data);<br />}</code>
+      <td style="text-align:left"><code>fonction dataEvent(data, requestURL) {<br />script.log(&quot;Data received, request URL :&quot;+requestURL+&quot;\nContent :\n&quot ; +data);<br />}</code>
       </td>
     </tr>
-  </tbody>
+  </corps>
 </table>
 {% endtab %}
 {% endtabs %}
