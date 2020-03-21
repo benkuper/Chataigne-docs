@@ -300,7 +300,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
     </tr>
   </tbody>
-</table>\#\#\# TargetParameter
+</table>### Target Parameter
 
 <table>
   <thead>
@@ -615,7 +615,10 @@ Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera so
       </td>
     </tr>
   </tbody>
-</table>\\#\\#\\# Managers Les managers sont des types particuliers de conteneurs. Dans le logiciel, vous pouvez voir qu'un conteneur est un gestionnaire lorsqu'il y a une icône "\\*\\*+\\*\\*" à droite de son bloc. Dans la plupart des cas, il s'agit simplement de conteneurs améliorés. La plupart du temps, les gestionnaires qui vous intéresseront sont le \\*\\*gestionnaire de modules, le gestionnaire de séquences, les gestionnaires de couches et les gestionnaires de clés d'automatisation.\\*\\* Lorsque vous manipulez un gestionnaire, vous avez accès à des fonctions et des propriétés spécifiques comme l'ajout d'éléments, la suppression d'éléments ou l'obtention d'un tableau de ses éléments.
+</table>## Managers 
+
+Les managers sont des types particuliers de conteneurs. Dans le logiciel, vous pouvez voir qu'un conteneur est un gestionnaire lorsqu'il y a une icône "**+**\*" à droite de son bloc. Dans la plupart des cas, il s'agit simplement de conteneurs améliorés. La plupart du temps, les gestionnaires qui vous intéresseront sont **le gestionnaire de modules, le gestionnaire de séquences, les gestionnaires de couches et les gestionnaires de clés d'automatisation.**  
+Lorsque vous manipulez un gestionnaire, vous avez accès à des fonctions et des propriétés spécifiques comme l'ajout d'éléments, la suppression d'éléments ou l'obtention d'un tableau de ses éléments.
 
 <table>
   <thead>
@@ -709,7 +712,9 @@ Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera so
         </td>
     </tr>
   </tbody>
-</table>\\#\\#\\#\\# Object \\_script\\_ L'objet script fait référence au conteneur de script. Vous pouvez ajouter vos propres paramètres personnalisés ici, ainsi que des informations de journalisation, des avertissements et des erreurs.
+</table>## Objet _script_
+
+L'objet _script_ fait référence au conteneur de script. Vous pouvez ajouter vos propres paramètres personnalisés ici, ainsi que des informations de journalisation, des avertissements et des erreurs.
 
 <table>
   <thead>
@@ -854,7 +859,21 @@ Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera so
       </td>
     </tr>
   </tbody>
-</table>\\#\\#\\# Objet \\_root\\_ L'objet racine fait référence au moteur de Chataigne, qui est l'objet racine de tous les parents. Il permet d'accéder à n'importe quel objet dans la hiérarchie de Chataigne. La meilleure façon d'y accéder est de cliquer avec le bouton droit de la souris sur l'interface utilisateur d'un paramètre et de sélectionner "Copy Script control address". Vous pouvez alors passer l'adresse dans votre script et vous pourrez contrôler ce paramètre. \\#\\#\\# Objet \\_local\\_ L'objet local dépend de l'endroit où les scripts sont exécutés. \\* Si le script est exécuté dans un module, la variable locale fera référence au module. Vous pouvez trouver toutes les fonctions du module dans la section\\[ Module Scripts\\]\\(module-scripts.md\\). \\* Si le script s'exécute dans une condition, la variable locale fera référence à la condition. Vous pouvez trouver toutes les fonctions de la condition dans la section \\[Condition Scripts\\]\\(condition-scripts.md\\). \\* Si le script s'exécute à l'intérieur d'un filtre, la variable locale fera référence au filtre. Vous pouvez trouver toutes les fonctions de filtrage dans la section \\[Filter scripts\\]\\(filter-scripts.md\\). \\#\\#\\# Objet \\_util\\_ L'objet utilitaire fournit des aides et des fonctions utilitaires comme le temps ou la conversion.
+</table>## Objet _root_
+
+L'objet _root_ fait référence au moteur de Chataigne, qui est l'objet racine de tous les parents. Il permet d'accéder à n'importe quel objet dans la hiérarchie de Chataigne. La meilleure façon d'y accéder est de cliquer avec le bouton droit de la souris sur l'interface utilisateur d'un paramètre et de sélectionner "Copy Script control address". Vous pouvez alors passer l'adresse dans votre script et vous pourrez contrôler ce paramètre. 
+
+## Objet _local_ 
+
+L'objet _local_ dépend de l'endroit où les scripts sont exécutés. 
+
+* Si le script est exécuté dans un module, la variable locale fera référence au module. Vous pouvez trouver toutes les fonctions du module dans la section [Module Scripts](module-scripts.md). 
+* Si le script s'exécute dans une condition, la variable locale fera référence à la condition. Vous pouvez trouver toutes les fonctions de la condition dans la section [Condition Scripts.](condition-scripts.md) 
+* Si le script s'exécute à l'intérieur d'un filtre, la variable locale fera référence au filtre. Vous pouvez trouver toutes les fonctions de filtrage dans la section [Filter Scripts](filter-scripts.md).
+
+## Objet _util_
+
+L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou la conversion.
 
 <table>
   <thead>
