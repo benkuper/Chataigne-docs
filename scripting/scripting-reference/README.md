@@ -219,7 +219,14 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
     </tr>
   </tbody>
-</table>\#\#\#\# Paramètre booléen \| Méthode \| Description \| Exemple \| \| :--- \| :--- \| :--- \| \| \*\*get\\(\\)\*\* \| Retourne la valeur de ce paramètre \| \`var value = myBoolParam.get\(\);\` \| \| \*\*set\\(\*\*\_value\_\*\*\\)\*\* \| Définit la valeur de ce paramètre \| \`myBoolParam.set\(true\);\` \| \#\#\#\# Paramètre de la chaîne
+</table>
+
+| Méthode | Description | Exemple |
+| :--- | :--- | :--- |
+| **get\(\)** | Retourne la valeur de ce paramètre | `var value = myBoolParam.get();` |
+| **set\(**_value_**\)** | Définit la valeur de ce paramètre | `myBoolParam.set(true);` |
+
+#### Parametre String
 
 <table>
   <thead>
