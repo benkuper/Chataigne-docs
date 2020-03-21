@@ -1,29 +1,28 @@
-# Introduction to Scripts
+# Introduction aux Scripts
 
-## Scripting In Chataigne
+## Scripter dans  Chataigne
 
-While Chataigne tries to enable many things as possible without coding, some mechanism and behaviors are just too complex to benefit from a visual-only system. When the case occurs, scripts are there to fill this hole. They have been integrated in Chataigne in such a way that their footprint is very small and it feels seamless.
+Bien que Chataigne essaie de permettre le plus de choses possible sans coder, certains mécanismes et comportements sont tout simplement trop complexes pour bénéficier d'un système uniquement visuel. Lorsque le cas se présente, les scripts sont là pour combler ce trou. Ils ont été intégrés dans Chataigne de telle sorte que leur empreinte est très petite et qu'ils semblent sans faille.
 
-![Example of a loaded script](../.gitbook/assets/module_scripts.png)
+[Exemple d'un script chargé](../.gitbook/assets/module_scripts.png)
 
-Scripts can be found and created in different places of Chataigne, depending on the role of them :
+Les scripts peuvent être trouvés et créés dans différents endroits de Chataigne, en fonction de leur rôle :
 
-* in [Modules ](../getting-started-1/the-modules.md): see the [Module Scripts](scripting-reference/module-scripts.md) section. 
-* in [Conditions ](../the-state-machine/actions.md#conditions): see the [Condition Scripts](scripting-reference/condition-scripts.md) section. 
-* in [Filters ](../the-state-machine/mappings.md#filters): see the [Filter Scripts](scripting-reference/filter-scripts.md) section.
+* dans [Modules ](../getting-started-1/the-modules.md) : voir la section [Scripts de module](scripting-reference/module-scripts.md). 
+* dans [Conditions ](../the-state-machine/actions.md#conditions) : voir la section [Scripts de condition](scripting-reference/condition-scripts.md). 
+* dans [Filtres ](../the-state-machine/mappings.md#filters) : voir la section [Scripts de filtre](scripting-reference/filter-scripts.md).
 
-### Creating a Script
+### Création d'un script
 
-When creating a script, the script container will be empty. You can then choose to either load an already existing file by clicking "Browse...", or create a new file by clicking on the blue icon with a pencil inside \(I know it's very small and not recognizable\). This will create the file and open it in your default editor.
+Lors de la création d'un script, le conteneur de script sera vide. Vous pouvez alors choisir soit de charger un fichier déjà existant en cliquant sur "Parcourir...", soit de créer un nouveau fichier en cliquant sur l'icône bleue avec un crayon à l'intérieur [(je sais qu'il est très petit et non reconnaissable)]. Cela créera le fichier et l'ouvrira dans votre éditeur par défaut.
 
-{% hint style="success" %}
-Most systems don't have a default editor for Javascript file. I strongly recommend using [**Sublime Text**](https://www.sublimetext.com/) or [**VS Code**](https://code.visualstudio.com/) _\*\*_as your default Javascript editor !
+{% hint style="succès" %}
+La plupart des systèmes n'ont pas d'éditeur par défaut pour les fichiers Javascript. Je recommande fortement d'utiliser [**Sublime Text**](https://www.sublimetext.com/) ou [**VS Code**](https://code.visualstudio.com/) _\*\*_ comme éditeur Javascript par défaut !
 {% endhint %}
 
-When creating a new script, the newly created file will already be filled with content that aims to guide new users. This content is dynamically generated depending on the object you created your script from. For instance, if you create it in an OSC module, you will have generic content, but also module-specific content as well as OSC-specific content.
+Lors de la création d'un nouveau script, le fichier nouvellement créé sera déjà rempli de contenu visant à guider les nouveaux utilisateurs. Ce contenu est généré dynamiquement en fonction de l'objet à partir duquel vous avez créé votre script. Par exemple, si vous le créez dans un module OSC, vous aurez un contenu générique, mais aussi un contenu spécifique au module ainsi qu'un contenu spécifique à l'OSC.
 
-Scripts are compiled and interpreted in real-time, meaning that every time you save your script file, it will be automatically reloaded in Chataigne. At any time, you can check the [Logger](../getting-started-1/the-interface.md#4-the-logger) panel to see the compilation result :
+Les scripts sont compilés et interprétés en temps réel, ce qui signifie que chaque fois que vous enregistrez votre fichier de script, il sera automatiquement rechargé dans Chataigne. À tout moment, vous pouvez consulter le panneau [Logger](../getting-started-1/the-interface.md#4-the-logger) pour voir le résultat de la compilation :
 
-* If the script is well written and compiles, the Logger will tell that it loaded successfully and you will see in the script's Inspector a green dot like in the picture above. 
-* If the script is badly written or has compile errors, the Logger will tell that it has error and will show the error and the line of the error, which is very fast and convenient to fix bugs. When a script has loading problems, a warning will be shown as well, and a red dot is visible on the script's inspector.
-
+* Si le script est bien écrit et se compile, le Logger vous dira qu'il s'est chargé avec succès et vous verrez dans l'inspecteur du script un point vert comme dans l'image ci-dessus. 
+* Si le script est mal écrit ou comporte des erreurs de compilation, le Logger indiquera qu'il y a une erreur et affichera l'erreur et la ligne d'erreur, ce qui est très rapide et pratique pour corriger les bogues. Lorsqu'un script a des problèmes de chargement, un avertissement s'affiche également, et un point rouge est visible sur l'inspecteur du script.
