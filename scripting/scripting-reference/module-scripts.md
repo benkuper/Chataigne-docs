@@ -213,6 +213,7 @@ Some modules have specific methods that are useful if you want to have specific 
 
 {% tabs %}
 {% tab title="OSC" %}
+
 <table>
   <thead>
     <tr>
@@ -242,6 +243,7 @@ Some modules have specific methods that are useful if you want to have specific 
     </tr>
   </tbody>
 </table>
+
 {% endtab %}
 
 {% tab title="MIDI" %}
@@ -257,6 +259,7 @@ Some modules have specific methods that are useful if you want to have specific 
 {% endtab %}
 
 {% tab title="DMX" %}
+
 <table>
   <thead>
     <tr>
@@ -282,6 +285,7 @@ Some modules have specific methods that are useful if you want to have specific 
     </tr>
   </tbody>
 </table>
+
 {% endtab %}
 
 {% tab title="Serial/UDP/TCP" %}
@@ -306,4 +310,3 @@ Some modules have specific methods that are useful if you want to have specific 
 | **launchApp\(**_appPath, arguments_**\)** | Launches an app at the provided path with the provided arguments | `local.launchApp("myApp.exe","-p myOption");` |
 {% endtab %}
 {% endtabs %}
-
