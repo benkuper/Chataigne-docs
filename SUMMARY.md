@@ -74,7 +74,7 @@
 
 ## Scripting
 
-* [Introduction to Scripts](scripting/untitled.md)
+* [Introduction to Scripts](scripting/introduction-to-scripts.md)
 * [Scripting Reference](scripting/scripting-reference/README.md)
   * [Module Scripts](scripting/scripting-reference/module-scripts.md)
   * [Condition Scripts](scripting/scripting-reference/condition-scripts.md)

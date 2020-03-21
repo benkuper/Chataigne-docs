@@ -26,7 +26,7 @@ This is an important part of the module. The values are all the elements that yo
 
 ### Scripts
 
-The script section allows you to create more complex logic for this module. You can find more about scripts in the dedicated [Scripts ](../scripting/untitled.md)page.
+The script section allows you to create more complex logic for this module. You can find more about scripts in the dedicated [Scripts ](../scripting/introduction-to-scripts.md)page.
 
 ![](../.gitbook/assets/module_scripts.png)
 
