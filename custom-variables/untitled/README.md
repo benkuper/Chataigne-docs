@@ -1,10 +1,9 @@
-# Introduction to Custom Variables
+# Introduction aux Custom Variables
 
-Custom Variables are the place to store, modify and retrieve custom data in Chataigne.
+Les Custom variables sont l'endroit où stocker, modifier et récupérer des données personnalisées à Chataigne.
 
-When creating an interactive project or a show, sometimes you want to keep track of different values and uses them later or for different purposes. Then you can create your own group of values and presets, and make them evolve as your project runs on, or simple store nice presets of multiple values at once.
+Lors de la création d'un projet interactif ou d'un spectacle, il arrive que l'on souhaite garder une trace des différentes valeurs et les utiliser plus tard ou à des fins différentes. Vous pouvez alors créer votre propre groupe de valeurs et de presets et les faire évoluer au fur et à mesure du déroulement de votre projet, ou simplement stocker de jolis préréglages de plusieurs valeurs à la fois.
+Les variables personnalisées sont structurées en groupes, il est donc facile d'organiser différents groupes de Custom Variables et vous pouvez ensuite avoir différents presetspour différents groupes.
 
-Custom Variables are structured intro Groups, so it's easy to organize different groups of custom variables and then you can have different presets for different groups.
 
-This concept is a bit abstract for non-programmers, so check out the example to get a better idea of how it could help you in your projects.
-
+Ce concept est un peu abstrait pour les non-programmeurs, alors consultez les exemples pour avoir une meilleure idée de la façon dont il pourrait vous aider dans vos projets.
