@@ -1,4 +1,4 @@
-# Introduction à Time Machine
+# Introduction à la Time Machine
 
 ## La Time Machine
 
@@ -13,10 +13,13 @@ Une séquence est un objet basé sur le temps qui a sa propre ligne de temps et 
 ![](../.gitbook/assets/sequence.gif)
 
 {% hint style="success" %}
-** RACCOURCIS ET NAVIGATION  
-- Faites glisser la barre bleue horizontalement / verticalement :** Zoom avant/arrière et modifiez le cadre de mise au point temporelle  
-**- Clic droit sur la barre bleue :** Réinitialiser la vue pour obtenir une vue complète de la séquence  
-**- Ctrl + C, Ctrl + V, Ctrl + D :** Copier, coller, dupliquer des éléments \(cela s'applique à tous les éléments des listes et des vues, c'est-à-dire les séquences, les layers, les triggers...\)
+\*\* RACCOURCIS ET NAVIGATION
+
+* Faites glisser la barre bleue horizontalement / verticalement :\*\* Zoom avant/arrière et modifiez le cadre de mise au point temporelle  
+
+  **- Clic droit sur la barre bleue :** Réinitialiser la vue pour obtenir une vue complète de la séquence  
+
+  **- Ctrl + C, Ctrl + V, Ctrl + D :** Copier, coller, dupliquer des éléments \(cela s'applique à tous les éléments des listes et des vues, c'est-à-dire les séquences, les layers, les triggers...\)
 {% endhint %}
 
 ### Couche
@@ -27,3 +30,4 @@ Une couche est une ligne d'une ligne de temps, contenant des données qui sont l
 * [Mapping](../the-state-machine/mappings.md)
 * [Color](color-layer.md)
 * [Audio](audio-layer.md)
+

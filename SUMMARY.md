@@ -54,8 +54,8 @@
   * [Augmenta Simulator](modules/custom-modules/augmenta-simulator.md)
   * [Lighttoys FT](modules/custom-modules/lighttoys-ft.md)
   * [TPLink SmartHome](modules/custom-modules/tplink-smarthome.md)
-* [Special Modules](modules/special-modules.md)
-* [The Module Router](modules/the-module-router.md)
+* [Modules spéciaux](modules/special-modules.md)
+* [Le Module Router](modules/the-module-router.md)
 
 ## The State Machine
 
@@ -65,8 +65,8 @@
 
 ## The Time Machine \(Sequences\)
 
-* [Introduction to the Time Machine](the-time-machine-sequences/introduction-to-the-time-machine.md)
-* [Interface and navigation](the-time-machine-sequences/interface-and-navigation.md)
+* [Introduction à la Time Machine](the-time-machine-sequences/introduction-to-the-time-machine.md)
+* [Interface et navigation](the-time-machine-sequences/interface-and-navigation.md)
 * [Trigger Layer](the-time-machine-sequences/trigger-layer.md)
 * [Mapping Layer](the-time-machine-sequences/mapping-layer.md)
 * [Color Layer](the-time-machine-sequences/color-layer.md)

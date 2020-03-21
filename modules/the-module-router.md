@@ -1,4 +1,4 @@
-# The Module Router
+# Le Module Router
 
 Le routeur de modules \(Module Router\) est un outil pratique lorsque vous avez beaucoup de mappings à faire d'un module à l'autre.  
 Il permet de sélectionner rapidement les valeurs d'entrée d'un module et de choisir et d'avoir des paramètres de base pour la sortie de ces valeurs, en fonction du type de module de sortie.
