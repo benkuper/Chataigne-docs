@@ -8,7 +8,7 @@ Les scripts dans Chataigne sont basés sur une version simplifiée de Javascript
 
 ## Fonctions communes
 
-Il y a quelques fonctions  communes que vous pouvez utiliser, quel que soit le type de script.
+Il y a quelques fonctions communes que vous pouvez utiliser, quel que soit le type de script.
 
 {% hint style="info" %}
 Aucune des fonctions ci-dessous n'est nécessaire lors de la réalisation d'un script, ce sont juste des fonctions d'aide.  
@@ -52,7 +52,7 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
         </p>
         <p><code>{</code>
         </p>
-        <p> <code>script.log(&quot;Delta time : &quot; ; + deltaTime);</code>
+        <p> <code>script.log(&quot;Delta time : &quot; + deltaTime);</code>
         </p>
         <p><code>}</code>
         </p>
@@ -81,7 +81,7 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       <td style="text-align:left"><b>setName(</b><em>name</em><b>)</b>
       </td>
       <td style="text-align:left">D&#xE9;finit les param&#xE8;tres name</td>
-      <td style="text-align:left"><code>myParam.setName(&quot;new name&quot; ;);</code>
+      <td style="text-align:left"><code>myParam.setName(&quot;new name&quot;);</code>
       </td>
     </tr>
     <tr>
@@ -100,13 +100,13 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
           chaque section de param&#xE8;tres&apos;s.</p>
       </td>
       <td style="text-align:left">
-        <p><code>myParam.setAttribute(&quot;readonly&quot; ;,true);</code>
+        <p><code>myParam.setAttribute(&quot;readonly&quot; ,true);</code>
         </p>
-        <p><code>myParam.setAttribute(&quot;description&quot; ;,&quot; ; new description&quot; ;);</code>
+        <p><code>myParam.setAttribute(&quot;description&quot; ,&quot;new description&quot; ;);</code>
         </p>
-        <p><code>myParam.setAttribute(&quot;enabled&quot; ;,false);</code>
+        <p><code>myParam.setAttribute(&quot;enabled&quot; ,false);</code>
         </p>
-        <p><code>myParam.setAttribute(&quot;alwaysNotify&quot; ;, true);</code>
+        <p><code>myParam.setAttribute(&quot;alwaysNotify&quot; , true);</code>
         </p>
       </td>
     </tr>
@@ -135,7 +135,13 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       </td>
     </tr>
   </tbody>
-</table>\#\#\#\#\#\#\#\# Déclencheur \| Méthode \| Description \| Exemple \| \| :--- \| :--- \| :--- \| \| \*\*trigger\\(\\)\*\* \| Retourne la valeur de ce paramètre \| \`myTrigger.trigger\(\);\` \| \#\#\#\# Paramètre de flottabilité
+</table>#### Trigger \(déclencheur\)
+
+| Méthode | Description | Exemple |
+| :--- | :--- | :--- |
+| **trigger\(\)** | Déclenche ce contrôle | `myTrigger.trigger();` |
+
+####  Float Parameter
 
 <table>
   <thead>
@@ -173,7 +179,7 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       </td>
     </tr>
   </tbody>
-</table>\#\#\#\# Paramètre entier
+</table>#### Integer Parameter
 
 <table>
   <thead>
@@ -205,7 +211,7 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
         <p>Attributs sp&#xE9;cifiques :</p>
         <p><em><b>hexMode :</b></em> Afficher la valeur en d&#xE9;cimal ou en hexad&#xE9;cimal.</p>
       </td>
-      <td style="text-align:left"><code>myStringParam.setAttribute (&quot;hexMode&quot; ;, true);</code>
+      <td style="text-align:left"><code>myStringParam.setAttribute (&quot;hexMode&quot;, true);</code>
       </td>
     </tr>
   </tbody>
@@ -247,7 +253,7 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       </td>
     </tr>
   </tbody>
-</table>\#\#\#\# Paramètre de couleur
+</table>#### Color Parameter
 
 <table>
   <thead>
@@ -290,7 +296,7 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       </td>
     </tr>
   </tbody>
-</table>\#\#\#\# Paramètre cible
+</table>#### TargetParameter
 
 <table>
   <thead>
