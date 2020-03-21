@@ -59,7 +59,7 @@
 
 ## The State Machine
 
-* [Introduction to the State Machine](the-state-machine/introduction-to-the-state-machine.md)
+* [Introduction à la State Machine](the-state-machine/introduction-to-the-state-machine.md)
 * [Actions](the-state-machine/actions.md)
 * [Mappings](the-state-machine/mappings.md)
 

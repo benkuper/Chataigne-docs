@@ -17,3 +17,4 @@ Si vous souhaitez modifier la valeur d'entrée avant de l'envoyer aux commandes,
 ### Outputs
 
 Les sorties sont les commandes que vous voulez envoyer à chaque fois que la valeur a changé. Les commandes verrouillent automatiquement un de leurs paramètres sur la valeur de sortie de cette cartographie, sauf pour les commandes personnalisées sur lesquelles vous pouvez choisir les paramètres à verrouiller.
+
