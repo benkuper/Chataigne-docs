@@ -17,10 +17,8 @@ All scripts running inside a module will have a common set of functions that can
 
 Some modules have specific function callbacks that are useful if you want to customize the parsing of received data from this module.
 
-
 {% tabs %}
 {% tab title="OSC" %}
-
 <table>
   <thead>
     <tr>
@@ -48,11 +46,9 @@ Some modules have specific function callbacks that are useful if you want to cus
     </tr>
   </tbody>
 </table>
-
 {% endtab %}
 
 {% tab title="MIDI" %}
-
 <table>
   <thead>
     <tr>
@@ -133,17 +129,15 @@ Some modules have specific function callbacks that are useful if you want to cus
     </tr>
   </tbody>
 </table>
-
 {% endtab %}
 
 {% tab title="DMX" %}
 | Method | Description | Example |
 | :--- | :--- | :--- |
-| **send\(**_startChannel, value1, value2, ..., valueN_**\)** | Sends DMX values starting at the **startChannel.** You can add as many values as you want, and you can even mix array of values with single values. Values are 0 to 255. | `local.send(32, 255);`  |
+| **send\(**_startChannel, value1, value2, ..., valueN_**\)** | Sends DMX values starting at the **startChannel.** You can add as many values as you want, and you can even mix array of values with single values. Values are 0 to 255. | `local.send(32, 255);` |
 {% endtab %}
 
 {% tab title="Serial/UDP/TCP" %}
-
 <table>
   <thead>
     <tr>
@@ -174,12 +168,9 @@ Some modules have specific function callbacks that are useful if you want to cus
     </tr>
   </tbody>
 </table>
-
 {% endtab %}
 
-
 {% tab title="HTTP" %}
-
 <table>
   <thead>
     <tr>
@@ -198,13 +189,12 @@ Some modules have specific function callbacks that are useful if you want to cus
           <br /><em><b>data</b></em> is the content of the response</p>
         <p><em><b>requestURL</b></em> is the url of the original request.</p>
       </td>
-      <td style="text-align:left"><code>function dataEvent(data, requestURL) {<br />script.log(&quot;Data received, request URL :&quot;+requestURL+&quot;\nContent :\n&quot; +data);<br />}</code>style="text-align:left"><code>fonction dataEvent(data, requestURL) {<br />script.log(&quot;Data received, request URL :&quot;+requestURL+&quot;\nContent :\n&quot ; +data);<br />}</code>
+      <td style="text-align:left"><code>function dataEvent(data, requestURL) {<br />script.log(&quot;Data received, request URL :&quot;+requestURL+&quot;\nContent :\n&quot; +data);<br />}</code>
       </td>
     </tr>
   </tbody>
 </table>
-
-{% endtab %}	
+{% endtab %}
 {% endtabs %}
 
 ## Module-specific methods \(the local object\)
@@ -213,37 +203,26 @@ Some modules have specific methods that are useful if you want to have specific 
 
 {% tabs %}
 {% tab title="OSC" %}
+| Method | Description | Example |
+| :--- | :--- | :--- |
+
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>send(</b><em>address, arg1, arg2, arg3, ...</em><b>)</b>
-      </td>
-      <td style="text-align:left">
+      <th style="text-align:left"><b>send(</b><em>address, arg1, arg2, arg3, ...</em><b>)</b>
+      </th>
+      <th style="text-align:left">
         <p>This sends an OSC message to all the enabled outputs of this module.</p>
         <p><em><b>address</b></em> is the address of the message</p>
-      </td>
-      <td style="text-align:left"><code>local.send(&quot;/myAddress&quot;, 1, .5f, &quot;cool&quot;);</code>
-      </td>
+      </th>
+      <th style="text-align:left"><code>local.send(&quot;/myAddress&quot;, 1, .5f, &quot;cool&quot;);</code>
+      </th>
     </tr>
-    <tr>
-      <td style="text-align:left"><b>sendTo(</b><em>ip, port, address, arg1, arg2, arg3, ...</em><b>)</b>
-      </td>
-      <td style="text-align:left">Same as the <b>send </b>method, but sending to a specific <em><b>ip </b></em>and <em><b>port, </b></em>ignoring
-        the module&apos;s output.</td>
-      <td style="text-align:left"><code>local.sendTo(&quot;192.168.1.255&quot;, 9000, &quot;/myAddress&quot;, 1, .5f, &quot;cool&quot;);</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
+  </thead>
+  <tbody></tbody>
+</table>| **sendTo\(**_ip, port, address, arg1, arg2, arg3, ..._**\)** | Same as the **send** method, but sending to a specific _**ip**_ and _**port,**_ ignoring the module's output. | `local.sendTo("192.168.1.255", 9000, "/myAddress", 1, .5f, "cool");` |
+| :--- | :--- | :--- |
 {% endtab %}
 
 {% tab title="MIDI" %}
@@ -259,33 +238,28 @@ Some modules have specific methods that are useful if you want to have specific 
 {% endtab %}
 
 {% tab title="DMX" %}
+| Method | Description | Example |
+| :--- | :--- | :--- |
+
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>send(</b><em>channel, value1, value2, ...</em><b>)</b>
-      </td>
-      <td style="text-align:left">
+      <th style="text-align:left"><b>send(</b><em>channel, value1, value2, ...</em><b>)</b>
+      </th>
+      <th style="text-align:left">
         <p>This will send value to the specified DMX channel.</p>
-        <p></p>
         <p>After specifying the <b>channel</b>, you can add multiple values. The channel
           will be treated as a start channel. Value1 will be sent to the start channel.
           Value2 will be sent to the channel after the start channel. Thus, the channel
           will be incremented for each value.</p>
-      </td>
-      <td style="text-align:left"><code>local.send(1, 255);</code>
-      </td>
+      </th>
+      <th style="text-align:left"><code>local.send(1, 255);</code>
+      </th>
     </tr>
-  </tbody>
+  </thead>
+  <tbody></tbody>
 </table>
-
 {% endtab %}
 
 {% tab title="Serial/UDP/TCP" %}
@@ -310,3 +284,4 @@ Some modules have specific methods that are useful if you want to have specific 
 | **launchApp\(**_appPath, arguments_**\)** | Launches an app at the provided path with the provided arguments | `local.launchApp("myApp.exe","-p myOption");` |
 {% endtab %}
 {% endtabs %}
+
