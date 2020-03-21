@@ -4,7 +4,7 @@
 
 Bien que Chataigne essaie de permettre le plus de choses possible sans coder, certains mécanismes et comportements sont tout simplement trop complexes pour bénéficier d'un système uniquement visuel. Lorsque le cas se présente, les scripts sont là pour combler ce trou. Ils ont été intégrés dans Chataigne de telle sorte que leur empreinte est très petite et qu'ils semblent sans faille.
 
-[Exemple d'un script chargé](https://github.com/benkuper/Chataigne-docs/tree/c35ac6b398b503ce64c710770212db510b933fa8/.gitbook/assets/module_scripts.png)
+![Exemple d'un script chargé](https://github.com/benkuper/Chataigne-docs/tree/c35ac6b398b503ce64c710770212db510b933fa8/.gitbook/assets/module_scripts.png)
 
 Les scripts peuvent être trouvés et créés dans différents endroits de Chataigne, en fonction de leur rôle :
 
