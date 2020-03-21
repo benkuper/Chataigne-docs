@@ -59,7 +59,11 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       </td>
     </tr>
   </tbody>
-</table>\#\# Paramètres et Triggers Tous les paramètres et déclencheurs ont des méthodes communes et des méthodes spécifiques \#\#\# Méthodes et propriétés communes
+</table>## Paramètres et Triggers 
+
+Tous les paramètres et déclencheurs ont des méthodes communes et des méthodes spécifiques 
+
+### Méthodes et propriétés communes
 
 <table>
   <thead>
@@ -425,7 +429,18 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
         </td>
     </tr>
   </tbody>
-</table>\\\#\\\#\\\#\\\# Paramètre Point2D \\\| Méthode \\\| Description \\\| Exemple \\\| \\\| :--- \\\| :--- \\\| :--- \\\| \\\| \\\*\\\*get\\\\(\\\\)\\\*\\\* \\\| Retourne la valeur de ce paramètre \\\| \\\`var value = myP2DParam.get\\\(\\\);\\\` \\\| \\\| \\\*\\\*set\\\\(\\\*\\\*\\\_x, y\\\_\\\*\\\*\\\\)\\\*\\\* \\\| Définit la valeur de ce paramètre \\\| \\\`myP2DParam.set\\\(.5, 2\\\);\\\` \\\| \\\#\\\#\\\#\\\# Paramètre Point3D \\\| Méthode \\\| Description \\\| Exemple \\\| \\\| :--- \\\| :--- \\\| :--- \\\| \\\| \\\*\\\*get\\\\(\\\\)\\\*\\\* \\\| Retourne la valeur de ce paramètre \\\| \\\`var value = myP3DParam.get\\\(\\\);\\\` \\\| \\\| \\\*\\\*set\\\\(\\\*\\\*\\\_x, y, z\\\_\\\*\\\*\\\\)\\\*\\\* \\\| Définit la valeur de ce paramètre \\\| \\\`myP3DParam.set\\\(.5, 2, -1\\\);\\\` \\\| \\\#\\\#\\\# Conteneur Les conteneurs sont tout objet qui contient des paramètres ou d'autres récipients. Si vous visez quelque chose de la hiérarchie \\\(\\\_root.\\\\*\\\_ \\\*\\\*\\\*\\\* ou \\\_local.\\\\*\\\_\\\\), ce sera soit un conteneur d'un paramètre, donc si ce n'est pas un paramètre, alors c'est un conteneur.
+</table>### Point2D Parameter
+
+\\| Méthode \\\| Description \\\| Exemple \\\| \\\| :--- \\\| :--- \\\| :--- \\\| \\\| \\\*\\\*get\\\\(\\\\)\\\*\\\* \\\| Retourne la valeur de ce paramètre \\\| \\\`var value = myP2DParam.get\\\(\\\);\\\` \\\| \\\| \\\*\\\*set\\\\(\\\*\\\*\\\_x, y\\\_\\\*\\\*\\\\)\\\*\\\* \\\| Définit la valeur de ce paramètre \\\| \\\`myP2DParam.set\\\(.5, 2\\\);\\\` \\\| \\\#\\\#\\\#\\\# 
+
+### Point3D Parameter 
+
+\\\| Méthode \\\| Description \\\| Exemple \\\| \\\| :--- \\\| :--- \\\| :--- \\\| \\\| \\\*\\\*get\\\\(\\\\)\\\*\\\* \\\| Retourne la valeur de ce paramètre \\\| \\\`var value = myP3DParam.get\\\(\\\);\\\` \\\| \\\| \\\*\\\*set\\\\(\\\*\\\*\\\_x, y, z\\\_\\\*\\\*\\\\)\\\*\\\* \\\| Définit la valeur de ce paramètre \\\| \\\`myP3DParam.set\\\(.5, 2, -1\\\);\\\` \\\| \\\#\\\#\\\#
+
+## Container 
+
+Les conteneurs sont tout objet qui contient des paramètres ou d'autres récipients.   
+Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera soit un conteneur, soit un paramètre. Donc si ce n'est pas un paramètre, alors c'est un conteneur.
 
 <table>
   <thead>
@@ -455,7 +470,7 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       <td style="text-align:left"><b>setName(</b><em>name</em><b>)</b>
       </td>
       <td style="text-align:left">Change le nom du conteneur</td>
-      <td style="text-align:left"><code>myContainer.setName(&quot;new name&quot; ;);</code>
+      <td style="text-align:left"><code>myContainer.setName(&quot;new name&quot;);</code>
       </td>
     </tr>
     <tr>
@@ -486,7 +501,7 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       <td style="text-align:left"><b>addTrigger(</b><em>name, description</em><b>)</b>
       </td>
       <td style="text-align:left">Ceci ajoutera un d&#xE9;clencheur (bouton).</td>
-      <td style="text-align:left"><code>var myTrigger = myContainer.addTrigger(&quot;My Trigger&quot; ;, &quot;Trigger description&quot; ;);</code>
+      <td style="text-align:left"><code>var myTrigger = myContainer.addTrigger(&quot;My Trigger&quot;, &quot;Trigger description&quot; ;);</code>
       </td>
     </tr>
     <tr>
@@ -494,7 +509,7 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       </td>
       <td style="text-align:left">Cela ajoutera un param&#xE8;tre de nombre flottant (curseur).</td>
       <td
-      style="text-align:left"><code>var myFloatParam = myContainer.addFloatParameter(&quot;My Float Param&quot; ;,&quot;Description de mon flotteur param&quot; ;,.1,0,1);</code>
+      style="text-align:left"><code>var myFloatParam = myContainer.addFloatParameter(&quot;My Float Param&quot;,&quot;Description de mon flotteur param&quot;,.1,0,1);</code>
         </td>
     </tr>
     <tr>
@@ -502,21 +517,21 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       </td>
       <td style="text-align:left">ajouter un param&#xE8;tre de nombre entier (step), valeur par d&#xE9;faut
         de 2, avec un se situent entre 0 et 10</td>
-      <td style="text-align:left"><code>var myIntParam = myContainer.addIntParameter(&quot;My Int Param&quot; ;,&quot;Description de mon int param&quot; ;,2,0,10);</code>
+      <td style="text-align:left"><code>var myIntParam = myContainer.addIntParameter(&quot;My Int Param&quot;,&quot;Description de mon int param&quot;,2,0,10);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addBoolParameter(</b><em>name, description, default</em><b>)</b>
       </td>
       <td style="text-align:left">ajouter un param&#xE8;tre bool&#xE9;en (toggle)</td>
-      <td style="text-align:left"><code>var myBoolParam = myContainer.addBoolParameter(&quot;My Bool Param&quot; ;,&quot;Description of my bool param&quot; ;,false);</code>
+      <td style="text-align:left"><code>var myBoolParam = myContainer.addBoolParameter(&quot;My Bool Param&quot;,&quot;Description of my bool param&quot;,false);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addStringParameter(</b><em>name, description, default</em><b>)</b>
       </td>
       <td style="text-align:left">ajouter un param&#xE8;tre de cha&#xEE;ne (champ de texte)</td>
-      <td style="text-align:left"> <code>var myStringParam = myContainer.addStringParameter(&quot;My String Param&quot; ;,&quot;Description de ma cha&#xEE;ne param&quot; ;, &quot;cool&quot; ;);</code>
+      <td style="text-align:left"> <code>var myStringParam = myContainer.addStringParameter(&quot;My String Param&quot;,&quot;Description de ma cha&#xEE;ne param&quot;, &quot;cool&quot;);</code>
       </td>
     </tr>
     <tr>
@@ -525,9 +540,9 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       <td style="text-align:left">ajouter un param&#xE8;tre de couleur (s&#xE9;lecteur de couleur).</td>
       <td
       style="text-align:left">
-        <p><code>var myColorParam = script.addColorParameter(&quot;My Color Param&quot; ;,&quot;Description of my color param&quot; ;,0xff0000ff) ; //default blue alpha 100%</code>
+        <p><code>var myColorParam = script.addColorParameter(&quot;My Color Param&quot;,&quot;Description of my color param&quot;,0xff0000ff) ; //default blue alpha 100%</code>
         </p>
-        <p><code>var myColorParam2 = script.addColorParameter(&quot;My Color Param 2 &quot; ;,&quot;Description of my color param&quot; ;,[1,0,1]) ; //pr&#xE9;voyance violette</code>
+        <p><code>var myColorParam2 = script.addColorParameter(&quot;My Color Param 2 &quot;,&quot;Description of my color param&quot;,[1,0,1]) ; //pr&#xE9;voyance violette</code>
         </p>
         </td>
     </tr>
@@ -535,14 +550,14 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       <td style="text-align:left"><b>addPoint2DParameter(</b><em>name, description</em><b>)</b>
       </td>
       <td style="text-align:left">ajouter un point 2d param&#xE8;tre</td>
-      <td style="text-align:left"><code>var myP2DParam = myContainer.addPoint2DParameter(&quot;My P2D Param&quot; ;,&quot;Description of my p2d param&quot; ;);</code>
+      <td style="text-align:left"><code>var myP2DParam = myContainer.addPoint2DParameter(&quot;My P2D Param&quot;,&quot;Description of my p2d param&quot;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addPoint3DParameter(</b><em>name, description</em><b>)</b>
       </td>
       <td style="text-align:left">ajouter un point 3d param&#xE8;tre</td>
-      <td style="text-align:left"><code>var myP3DParam = myContainer.addPoint3DParameter(&quot;My P3D Param&quot; ;,&quot;Description of my p3d param&quot; ;);</code>
+      <td style="text-align:left"><code>var myP3DParam = myContainer.addPoint3DParameter(&quot;My P3D Param&quot;,&quot;Description of my p3d param&quot;);</code>
       </td>
     </tr>
     <tr>
@@ -550,7 +565,7 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       </td>
       <td style="text-align:left">ajouter un param&#xE8;tre cible (pour r&#xE9;f&#xE9;rencer un autre param&#xE8;tre)</td>
       <td
-      style="text-align:left"><code>var myTargetParam = myContainer.addTargetParameter(&quot;My Target Param&quot; ;,&quot;Description of my target param&quot; ;);</code>
+      style="text-align:left"><code>var myTargetParam = myContainer.addTargetParameter(&quot;My Target Param&quot;,&quot;Description of my target param&quot;);</code>
         </td>
     </tr>
     <tr>
@@ -562,7 +577,7 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
         <p>Si le mode r&#xE9;pertoire est r&#xE9;gl&#xE9; sur vrai, un dossier au
           lieu d&apos;un fichier peut &#xEA;tre s&#xE9;lectionn&#xE9;.</p>
       </td>
-      <td style="text-align:left"><code>var myFileParam = myContainer.addFileParameter(&quot;My File Param&quot; ;,&quot;Description de mon fichier param&quot; ;);</code>
+      <td style="text-align:left"><code>var myFileParam = myContainer.addFileParameter(&quot;My File Param&quot;,&quot;Description de mon fichier param&quot;);</code>
       </td>
     </tr>
     <tr>
@@ -574,7 +589,7 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
         <p>Chaque paire de valeurs apr&#xE8;s les 2 premiers arguments d&#xE9;finit
           une option et son donn&#xE9;es li&#xE9;es</p>
       </td>
-      <td style="text-align:left"><code>var myEnumParam = myContainer.addEnumParameter(&quot;My Enum Param&quot; ;,&quot;Description of my enum param&quot; ;, &quot;Option 1&quot; ;, 1,&quot;Option 2&quot; ;, 5, &quot;Option 3&quot; ;, &quot;banana&quot; ;);</code>
+      <td style="text-align:left"><code>var myEnumParam = myContainer.addEnumParameter(&quot;My Enum Param&quot;,&quot;Description of my enum param&quot;, &quot;Option 1&quot;, 1,&quot;Option 2&quot;, 5, &quot;Option 3&quot;, &quot;banana&quot;);</code>
       </td>
     </tr>
     <tr>
@@ -582,7 +597,7 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       </td>
       <td style="text-align:left">Ajouter un conteneur &#xE0; l&apos;int&#xE9;rieur du conteneur.</td>
       <td
-      style="text-align:left"><code>var childContainer = myContainer.addContainer(&quot;My Child Container&quot; ;);</code>
+      style="text-align:left"><code>var childContainer = myContainer.addContainer(&quot;My Child Container&quot;);</code>
         </td>
     </tr>
     <tr>
