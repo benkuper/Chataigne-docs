@@ -135,7 +135,13 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       </td>
     </tr>
   </tbody>
-</table>\\#\\#\\#\\# Trigger \\\(déclencheur\\\) \\| Méthode \\| Description \\| Exemple \\| \\| :--- \\| :--- \\| :--- \\| \\| \\*\\*trigger\\\(\\\)\\*\\* \\| Déclenche ce contrôle \\| \\`myTrigger.trigger\\(\\);\\` \\| \\#\\#\\#\\# Float Parameter
+</table>###  Trigger
+
+| Méthode | Description | Exemple |
+| :--- | :--- | :--- |
+| **trigger\(\)** | Déclenche ce contrôle | `myTrigger.trigger();` |
+
+### Float Parameter
 
 <table>
   <thead>
