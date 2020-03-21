@@ -1,14 +1,15 @@
-# Condition Scripts
+# Scripts de condition
 
-Condition Scripts use cases are more rare but can prove convenient in very specific and complex setups. Some situations are just too complex or weird to reduce them to an "if-then" behavior. Then you can use a script and decide to activate this part of the condition as you wish.
+Les cas d'utilisation de Condition Scripts sont plus rares mais peuvent s'avérer pratiques dans des configurations très spécifiques et complexes. Certaines situations sont tout simplement trop complexes ou bizarres pour les réduire à un comportement "si". Vous pouvez alors utiliser un script et décider d'activer cette partie de la condition comme vous le souhaitez.
 
-For instance, if I want to detect a suite of notes to sing, I could easily create a script that will automatically check the next note to sing in order to validate the condition.
+Par exemple, si je veux détecter une suite de notes à chanter, je pourrais facilement créer un script qui vérifiera automatiquement la prochaine note à chanter afin de valider la condition.
 
-## Condition specific methods \(the local object\)
+## Méthodes spécifiques à la condition \(l'objet local)
 
-When scripts are running as a condition, the **local** Javascript object has specific methods to change the validation state of this condition.
+Lorsque des scripts sont exécutés comme condition, l'objet Javascript **local** dispose de méthodes spécifiques pour modifier l'état de validation de cette condition.
 
-| Method | Description | Example |
+| Méthode | Description | Exemple |
 | :--- | :--- | :--- |
-| **setValid\(**_value_**\)** | This sets the validation state of the condition to the _**value**_ | `local.setValid(true);` |
+| **setValid\(**_value_**\)** | Cela fixe l'état de validation de la condition à la _**value**_ | `local.setValid(true);` |
+
 
