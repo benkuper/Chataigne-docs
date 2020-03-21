@@ -59,7 +59,11 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       </td>
     </tr>
   </tbody>
-</table>\#\#\# Paramètres et déclencheurs Tous les paramètres et déclencheurs ont des méthodes communes et des méthodes spécifiques \#\#\#\# Méthodes et propriétés communes
+</table>### Paramètres et Triggers 
+
+Tous les paramètres et déclencheurs ont des méthodes communes et des méthodes spécifiques 
+
+#### Méthodes et propriétés communes
 
 <table>
   <thead>
@@ -590,7 +594,10 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       </td>
     </tr>
   </tbody>
-</table>\#\#\# Directeur Les gestionnaires sont des types particuliers de conteneurs. Dans le logiciel, vous pouvez voir qu'un conteneur est un gestionnaire lorsqu'il y a une icône "\*\*+\*\*" à droite de son bloc. Dans la plupart des cas, il s'agit simplement de conteneurs améliorés. La plupart du temps, les gestionnaires qui vous intéresseront sont le \*\*gestionnaire de modules, le gestionnaire de séquences, les gestionnaires de couches et les gestionnaires de clés d'automatisation.\*\* Lorsque vous manipulez un gestionnaire, vous avez accès à des fonctions et des propriétés spécifiques comme l'ajout d'éléments, la suppression d'éléments ou l'obtention d'un tableau de ses éléments.
+</table>### Managers
+
+Les managers sont des types particuliers de conteneurs. Dans le logiciel, vous pouvez voir qu'un conteneur est un gestionnaire lorsqu'il y a une icône "**+**" à droite de son bloc.   
+Dans la plupart des cas, il s'agit simplement de conteneurs améliorés. La plupart du temps, les gestionnaires qui vous intéresseront sont le **gestionnaire de modules, le gestionnaire de séquences, les gestionnaires de couches et les gestionnaires de clés d'automatisation.** Lorsque vous manipulez un gestionnaire, vous avez accès à des fonctions et des propriétés spécifiques comme l'ajout d'éléments, la suppression d'éléments ou l'obtention d'un tableau de ses éléments.
 
 <table>
   <thead>
@@ -616,7 +623,7 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
           de la fonction.</p>
       </td>
       <td style="text-align:left">
-        <p><code>var newOSCModule = root.modules.addItem(&quot;OSC&quot; ;);</code>
+        <p><code>var newOSCModule = root.modules.addItem(&quot;OSC&quot;);</code>
         </p>
         <p><code>var newSequence = root.sequences.addItem();</code>
         </p>
@@ -701,7 +708,7 @@ L'objet script fait référence au conteneur de script. Vous pouvez ajouter vos 
       <td style="text-align:left"><b>addTrigger(</b><em>name, description</em><b>)</b>
       </td>
       <td style="text-align:left">Ceci ajoutera un d&#xE9;clencheur (bouton)</td>
-      <td style="text-align:left"><code>var myTrigger = script.addTrigger(&quot;My Trigger&quot; ;, &quot;Trigger description&quot; ;);</code>
+      <td style="text-align:left"><code>var myTrigger = script.addTrigger(&quot;My Trigger&quot;, &quot;Trigger description&quot;);</code>
       </td>
     </tr>
     <tr>
@@ -709,7 +716,7 @@ L'objet script fait référence au conteneur de script. Vous pouvez ajouter vos 
       </td>
       <td style="text-align:left">Cela ajoutera un param&#xE8;tre de nombre flottant (curseur).</td>
       <td
-      style="text-align:left"><code>var myFloatParam = script.addFloatParameter(&quot;My Float Param&quot; ;,&quot;Description of my float param&quot; ;,.1,0,1);</code>
+      style="text-align:left"><code>var myFloatParam = script.addFloatParameter(&quot;My Float Param&quot;,&quot;Description of my float param&quot;,.1,0,1);</code>
         </td>
     </tr>
     <tr>
@@ -717,21 +724,21 @@ L'objet script fait référence au conteneur de script. Vous pouvez ajouter vos 
       </td>
       <td style="text-align:left">ajouter un param&#xE8;tre de nombre entier (step), valeur par d&#xE9;faut
         de 2, avec un se situent entre 0 et 10</td>
-      <td style="text-align:left"><code>var myIntParam = script.addIntParameter(&quot;My Int Param&quot; ;,&quot;Description of my int param&quot; ;,2,0,10);</code>
+      <td style="text-align:left"><code>var myIntParam = script.addIntParameter(&quot;My Int Param&quot;,&quot;Description of my int param&quot;,2,0,10);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addBoolParameter(</b><em>name, description, default</em><b>)</b>
       </td>
       <td style="text-align:left">ajouter un param&#xE8;tre bool&#xE9;en (toggle)</td>
-      <td style="text-align:left"><code>var myBoolParam = script.addBoolParameter(&quot;My Bool Param&quot; ;,&quot;Description of my bool param&quot; ;,false);</code>
+      <td style="text-align:left"><code>var myBoolParam = script.addBoolParameter(&quot;My Bool Param&quot;,&quot;Description of my bool param&quot;,false);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addStringParameter(</b><em>name, description, default</em><b>)</b>
       </td>
       <td style="text-align:left">ajouter un param&#xE8;tre de cha&#xEE;ne (champ de texte)</td>
-      <td style="text-align:left"> <code>var myStringParam = script.addStringParameter(&quot;My String Param&quot; ;,&quot;Description de ma cha&#xEE;ne param&quot; ;, &quot;cool&quot; ;);</code>
+      <td style="text-align:left"> <code>var myStringParam = script.addStringParameter(&quot;My String Param&quot;,&quot;Description de ma cha&#xEE;ne param&quot;, &quot;cool&quot;);</code>
       </td>
     </tr>
     <tr>
@@ -740,9 +747,9 @@ L'objet script fait référence au conteneur de script. Vous pouvez ajouter vos 
       <td style="text-align:left">ajouter un param&#xE8;tre de couleur (s&#xE9;lecteur de couleur).</td>
       <td
       style="text-align:left">
-        <p><code>var myColorParam = script.addColorParameter(&quot;My Color Param&quot; ;,&quot;Description of my color param&quot; ;,0xff0000ff) ; //default blue alpha 100%</code>
+        <p><code>var myColorParam = script.addColorParameter(&quot;My Color Param&quot;,&quot;Description of my color param&quot;,0xff0000ff) ; //default blue alpha 100%</code>
         </p>
-        <p><code>var myColorParam2 = script.addColorParameter(&quot;My Color Param 2 &quot; ;,&quot;Description of my color param&quot; ;,[1,0,1]) ; //pr&#xE9;voyance violette</code>
+        <p><code>var myColorParam2 = script.addColorParameter(&quot;My Color Param 2 &quot;,&quot;Description of my color param&quot;,[1,0,1]) ; //pr&#xE9;voyance violette</code>
         </p>
         </td>
     </tr>
@@ -750,14 +757,14 @@ L'objet script fait référence au conteneur de script. Vous pouvez ajouter vos 
       <td style="text-align:left"><b>addPoint2DParameter(</b><em>name, description</em><b>)</b>
       </td>
       <td style="text-align:left">ajouter un point 2d param&#xE8;tre</td>
-      <td style="text-align:left"><code>var myP2DParam = script.addPoint2DParameter(&quot;My P2D Param&quot; ;,&quot;Description of my p2d param&quot; ;);</code>
+      <td style="text-align:left"><code>var myP2DParam = script.addPoint2DParameter(&quot;My P2D Param&quot;,&quot;Description of my p2d param&quot;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addPoint3DParameter(</b><em>name, description</em><b>)</b>
       </td>
       <td style="text-align:left">ajouter un point 3d param&#xE8;tre</td>
-      <td style="text-align:left"><code>var myP3DParam = script.addPoint3DParameter(&quot;My P3D Param&quot; ;,&quot;Description of my p3d param&quot; ;);</code>
+      <td style="text-align:left"><code>var myP3DParam = script.addPoint3DParameter(&quot;My P3D Param&quot;,&quot;Description of my p3d param&quot;);</code>
       </td>
     </tr>
     <tr>
@@ -765,7 +772,7 @@ L'objet script fait référence au conteneur de script. Vous pouvez ajouter vos 
       </td>
       <td style="text-align:left">ajouter un param&#xE8;tre cible (pour r&#xE9;f&#xE9;rencer un autre param&#xE8;tre)</td>
       <td
-      style="text-align:left"><code>var myTargetParam = script.addTargetParameter(&quot;My Target Param&quot; ;,&quot;Description of my target param&quot; ;);</code>
+      style="text-align:left"><code>var myTargetParam = script.addTargetParameter(&quot;My Target Param&quot;,&quot;Description of my target param&quot;);</code>
         </td>
     </tr>
     <tr>
@@ -777,7 +784,7 @@ L'objet script fait référence au conteneur de script. Vous pouvez ajouter vos 
         <p>Si le mode r&#xE9;pertoire est r&#xE9;gl&#xE9; sur vrai, un dossier au
           lieu d&apos;un fichier peut &#xEA;tre s&#xE9;lectionn&#xE9;.</p>
       </td>
-      <td style="text-align:left"><code>var myFileParam = script.addFileParameter(&quot;Mon fichier param&quot; ;,&quot;Description de mon fichier param&quot; ;);</code>
+      <td style="text-align:left"><code>var myFileParam = script.addFileParameter(&quot;Mon fichier param&quot;,&quot;Description de mon fichier param&quot;);</code>
       </td>
     </tr>
     <tr>
@@ -789,7 +796,7 @@ L'objet script fait référence au conteneur de script. Vous pouvez ajouter vos 
         <p>Chaque paire de valeurs apr&#xE8;s les 2 premiers arguments d&#xE9;finit
           une option et son donn&#xE9;es li&#xE9;es</p>
       </td>
-      <td style="text-align:left"><code>var myEnumParam = script.addEnumParameter(&quot;My Enum Param&quot; ;,&quot;Description of my enum param&quot; ;, &quot;Option 1&quot; ;, 1,&quot;Option 2&quot; ;, 5, &quot;Option 3&quot; ;, &quot;banana&quot; ;);</code>
+      <td style="text-align:left"><code>var myEnumParam = script.addEnumParameter(&quot;My Enum Param&quot;,&quot;Description of my enum param&quot;, &quot;Option 1&quot; ;, 1,&quot;Option 2&quot; ;, 5, &quot;Option 3&quot; ;, &quot;banana&quot; ;);</code>
       </td>
     </tr>
     <tr>
@@ -797,21 +804,21 @@ L'objet script fait référence au conteneur de script. Vous pouvez ajouter vos 
       </td>
       <td style="text-align:left">Journalise un message (doit activer &quot;Log&quot; ; dans les param&#xE8;tres
         du script)</td>
-      <td style="text-align:left"><code>script.log(&quot;Ceci est un message&quot; ;);</code>
+      <td style="text-align:left"><code>script.log(&quot;Ceci est un message&quot;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>logWarning(</b><em>message</em><b>)</b>
       </td>
       <td style="text-align:left">Journalise un message en guise d&apos;avertissement</td>
-      <td style="text-align:left"><code>script.logWarning(&quot;Ceci est un avertissement&quot; ;);</code>
+      <td style="text-align:left"><code>script.logWarning(&quot;Ceci est un avertissement&quot;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>logError(</b><em>message</em><b>)</b>
       </td>
       <td style="text-align:left">Enregistre un message comme une erreur</td>
-      <td style="text-align:left"><code>script.logError(&quot;This is an error&quot; ;);</code>
+      <td style="text-align:left"><code>script.logError(&quot;This is an error&quot;);</code>
       </td>
     </tr>
     <tr>
@@ -827,15 +834,15 @@ L'objet script fait référence au conteneur de script. Vous pouvez ajouter vos 
       </td>
       <td style="text-align:left">Cette fonction sera appel&#xE9;e chaque fois qu&apos;un param&#xE8;tre
         de ce script aura changed.</td>
-      <td style="text-align:left"><code>fonction scriptParameterChanged(param){ script.log(&quot;Param changed : &quot;+param.name) ; }</code>
+      <td style="text-align:left"><code>fonction scriptParameterChanged(param){ script.log(&quot;Param changed : &quot;+param.name); }</code>
       </td>
     </tr>
   </tbody>
-</table>#### Objet _root_
+</table>### Objet _root_
 
 L'objet racine fait référence au moteur de Chataigne, qui est l'objet racine de tous les parents. Il permet d'accéder à n'importe quel objet dans la hiérarchie de Chataigne. La meilleure façon d'y accéder est de cliquer avec le bouton droit de la souris sur l'interface utilisateur d'un paramètre et de sélectionner "Copy Script control address". Vous pouvez alors passer l'adresse dans votre script et vous pourrez contrôler ce paramètre. 
 
-#### Objet _local_
+### Objet _local_
 
 L'objet local dépend de l'endroit où les scripts sont exécutés.
 
@@ -843,7 +850,7 @@ L'objet local dépend de l'endroit où les scripts sont exécutés.
 * Si le script s'exécute dans une condition, la variable locale fera référence à la condition. Vous pouvez trouver toutes les fonctions de la condition dans la section [Condition Scripts](condition-scripts.md). 
 * Si le script s'exécute à l'intérieur d'un filtre, la variable locale fera référence au filtre. Vous pouvez trouver toutes les fonctions de filtrage dans la section [Filter scripts](filter-scripts.md). 
 
-#### Objet _util_
+### Objet _util_
 
 L'objet utilitaire fournit des aides et des fonctions utilitaires comme le temps ou la conversion.
 
