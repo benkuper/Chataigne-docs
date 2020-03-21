@@ -18,9 +18,9 @@ All scripts running inside a module will have a common set of functions that can
 Some modules have specific function callbacks that are useful if you want to customize the parsing of received data from this module.
 
 
-
 {% tabs %}
 {% tab title="OSC" %}
+
 <table>
   <thead>
     <tr>
@@ -48,6 +48,7 @@ Some modules have specific function callbacks that are useful if you want to cus
     </tr>
   </tbody>
 </table>
+
 {% endtab %}
 
 {% tab title="MIDI" %}
