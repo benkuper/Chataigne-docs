@@ -356,7 +356,19 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
     </tr>
   </tbody>
-</table>\\#\\#\\#\\# Paramètre Enum \\| Méthode \\| Description \\| Exemple \\| \\| :--- \\| :--- \\| :--- \\| \\| \\*\\*addOption\\\(\\*\\*\\_label, value\\_\\*\\*\\\)\\*\\* \\| Ajouter une option à la liste \\| \\`myEnumParam.addOption\\("nouvelle option",3\\);\\` \\| \\| \\*\\*get\\\(\\\)\\*\\* \\| Obtenez le label sélectionné \\| \\`var label = myEnumParam.get\\(\\);\\` \\| \\| \\*\\*getData\\\(\\\)\\*\\* \\| Obtenir les données sélectionnées \\| \\`var data = myEnumParam.getData\\(\\);\\` \\| \\| \\*\\*set\\\(\\*\\*\\_label\\_\\*\\*\\\)\\*\\* \\| Définit la valeur avec l'étiquette fournie \\| \\`myEnumParam.set\\("nouvelle option"\\);\\` \\| \\| \\*\\*removeOptions\\\(\\\)\\*\\* \\| Supprime toutes les options. \\| \\`myEnumParam.removeOptions\\(\\);\\` \\| \\#\\#\\#\\# Paramètre de fichier
+</table>
+
+#### Enum Parameter
+
+| Méthode | Description | Exemple |
+| :--- | :--- | :--- |
+| **addOption\(**_label, value_**\)** | Ajouter une option à la liste | `myEnumParam.addOption("nouvelle option",3);` |
+| **get\(\)** | Obtenez le label sélectionné | `var label = myEnumParam.get();` |
+| **getData\(\)** | Obtenir les données sélectionnées | `var data = myEnumParam.getData();` |
+| **set\(**_label_**\)** | Définit la valeur avec l'étiquette fournie | `myEnumParam.set("nouvelle option");` |
+| **removeOptions\(\)** | Supprime toutes les options. | `myEnumParam.removeOptions();` |
+
+#### File Parameter
 
 <table>
   <thead>
