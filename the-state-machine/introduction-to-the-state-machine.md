@@ -9,11 +9,9 @@ Lors de la création d'une interaction, vous devrez d'abord créer un état qui 
 {% hint style="success" %}
 \*\*SHORTCUTS
 
-* Alt + glisser ou MSB \(bouton du milieu de la souris\) :\*\* déplacer la vue pour naviguer dans un monde de merveilles infini !  
-
-  **- Shift + scroll de la souris :** Zoom avant/arrière pour voir plus de choses, ou avoir une UI agrandie
-
-  **- Ctrl + C, Ctrl + V, Ctrl + D :** Copier, coller, dupliquer des éléments \(ceci s'applique à tous les éléments des listes et des vues, c'est-à-dire les Etats, les Mappings, les Actions, les Modules, les Séquences...\)
+* **Alt + glisser ou MSB** \(bouton du milieu de la souris\) :\*\* déplacer la vue pour naviguer dans un monde de merveilles infini !  
+* **Shift + scroll de la souris :** Zoom avant/arrière pour voir plus de choses, ou avoir une UI agrandie
+* **Ctrl + C, Ctrl + V, Ctrl + D :** Copier, coller, dupliquer des éléments \(ceci s'applique à tous les éléments des listes et des vues, c'est-à-dire les Etats, les Mappings, les Actions, les Modules, les Séquences...\)
 {% endhint %}
 
 ## States
@@ -22,7 +20,7 @@ Les States sont des conteneurs qui contiendront des règles d'interaction diffé
 
 Actuellement, il existe deux types de règles : [**Actions**](actions.md) **et** [**Mappings**](mappings.md)**.**
 
-Lorsque vous créez une interaction, vous voudrez soit un contrôle ponctuel pour déclencher des commandes : ce sont les [**Actions**](actions.md)**, soit un contrôle continu pour lier des valeurs d'entrée à des paramètres : ce sont les \[**Mappings**\]\(mappings.md\)**.\*\*
+Lorsque vous créez une interaction, vous voudrez soit un contrôle ponctuel pour déclencher des commandes : ce sont les [**Actions**](actions.md)**, soit un contrôle continu pour lier des valeurs d'entrée à des paramètres : ce sont les** [**Mappings**](mappings.md).
 
 ### Transitions et réseau de State
 

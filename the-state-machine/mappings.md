@@ -1,7 +1,5 @@
 # Mappings
 
-## Mappings
-
 Les mappings vous permettront de créer une relation continue entre la valeur d'un module et le paramètre d'une commande, comme "Le volume de ma voix contrôlera en permanence l'opacité d'une vidéo".
 
 ![](../.gitbook/assets/mapping.gif)
