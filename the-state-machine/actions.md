@@ -8,7 +8,7 @@ Actions are "one-time" conditionnal triggers. You will want to use them if you h
 
 Conditions are the "**if**" part of your action. You can have multiple conditions running together. Each time the conditions get validated, the action will be triggered.
 
-There are 5 types of conditions : From Input Value, Scripts and Group, On Activate and On Deactivate
+There are 5 types of conditions : From Input Value, Scripts, Group, On Activate and On Deactivate
 
 * The "**From Input Value**" is the most used one. It will let you compare a module's input value in different ways and decide whether the condition is validated or not. 
 * The **Script conditions** allows you to write complex conditions using scripts. You can find more about that in the [Script Conditions](../scripting/scripting-reference/condition-scripts.md) section. 
