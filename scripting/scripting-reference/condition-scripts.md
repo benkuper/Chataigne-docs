@@ -11,3 +11,4 @@ When scripts are running as a condition, the **local** Javascript object has spe
 | Method | Description | Example |
 | :--- | :--- | :--- |
 | **setValid\(**_value_**\)** | This sets the validation state of the condition to the _**value**_ | `local.setValid(true);` |
+

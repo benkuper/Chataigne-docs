@@ -24,7 +24,7 @@ When scripts are running as a filter, new function callbacks are called to proce
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>filter(</b><em>inputValue, min, max</em><b>)</b>
+      <td style="text-align:left"><b>function filter(</b><em>inputValue, min, max</em><b>)</b>
       </td>
       <td style="text-align:left">
         <p>This function is called everytime the mapping is processed and goes through
