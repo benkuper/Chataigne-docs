@@ -1,30 +1,29 @@
-# Introduction to the Time Machine
+# Introduction à Time Machine
 
-## The Time Machine
+## La Time Machine
 
-The Time Machine will let you create timeline-based sequences and create triggers and parameter animations over time.
+La Time Machine le temps vous permettra de créer des séquences basées sur le temps et de créer des déclencheurs et des animations de paramètres au fil du temps.
 
-You can create as many sequences as you want from the Sequence panel, and control them independently.
+Vous pouvez créer autant de séquences que vous le souhaitez à partir du panneau Séquence, et les contrôler indépendamment.
 
-### Sequence
+### Séquence
 
-A sequence is time-based object that has its own timeline and contains a group of layers.
+Une séquence est un objet basé sur le temps qui a sa propre ligne de temps et qui contient un groupe de couches.
 
 ![](../.gitbook/assets/sequence.gif)
 
 {% hint style="success" %}
-**SHORTCUTS AND NAVIGATION  
-- Drag the blue bar horizontal / vertical :** Zoom in/out and change the time focus frame  
-**-  Right click on the blue bar :** Reset the view to a full view of the whole sequence  
-**- Ctrl + C, Ctrl + V, Ctrl + D :** Copy, paste, duplicate items \(this applies to all items in lists and views, i.e. Sequences, Layers, Triggers...\)
+** RACCOURCIS ET NAVIGATION  
+- Faites glisser la barre bleue horizontalement / verticalement :** Zoom avant/arrière et modifiez le cadre de mise au point temporelle  
+**- Clic droit sur la barre bleue :** Réinitialiser la vue pour obtenir une vue complète de la séquence  
+**- Ctrl + C, Ctrl + V, Ctrl + D :** Copier, coller, dupliquer des éléments \(cela s'applique à tous les éléments des listes et des vues, c'est-à-dire les séquences, les layers, les triggers...\)
 {% endhint %}
 
-### Layer
+### Couche
 
-A layer is one line of a timeline, containing data that is read through time. It can be of multiple types :
+Une couche est une ligne d'une ligne de temps, contenant des données qui sont lues à travers le temps. Elle peut être de plusieurs types :
 
 * [Triggers](trigger-layer.md)
 * [Mapping](../the-state-machine/mappings.md)
 * [Color](color-layer.md)
 * [Audio](audio-layer.md)
-
