@@ -12,7 +12,7 @@ Il y a quelques fonctions communes que vous pouvez utiliser, quel que soit le ty
 
 {% hint style="info" %}
 Aucune des fonctions ci-dessous n'est nécessaire lors de la réalisation d'un script, ce sont juste des fonctions d'aide.  
-Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne optimisera votre script en fonction des fonctions disponibles dans celui-ci.
+Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne optimisera votre script en fonction des fonctions déclarées dans celui-ci.
 {% endhint %}
 
 <table>
