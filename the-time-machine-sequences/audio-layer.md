@@ -1,4 +1,3 @@
-# Audio Layer
+# Layer audio
 
-The audio layer lets you add multiple audio clips that will be played in time. The support for that is limited but let's you have a basic audio track while animating and working. When you add an audio layer, be sure to have a sound card module as well, so the sequence can connect to a sound card and actually play the sound.
-
+Le layer audio vous permet d'ajouter plusieurs clips audio qui seront joués dans le temps. La prise en charge est limitée, mais vous disposez d'une piste audio de base lorsque vous animez et travaillez. Lorsque vous ajoutez une couche audio, assurez-vous d'avoir également un module de carte son, afin que la séquence puisse se connecter à une carte son et jouer réellement le son
