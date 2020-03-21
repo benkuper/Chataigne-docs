@@ -1,32 +1,31 @@
 # Actions
 
-Actions are "one-time" conditionnal triggers. You will want to use them if you have an "if-then" scenario, like "If the volume of the microphone is more than 50%, then launch a video in Resolume"
+Les actions sont des déclencheurs conditionnels "ponctuels". Vous voudrez les utiliser si vous avez un scénario "si", comme "**Si** le volume du microphone est supérieur à 50%, **alors** lancez une vidéo dans Resolume".
 
 ![](../.gitbook/assets/action.gif)
 
 ## Conditions
 
-Conditions are the "**if**" part of your action. You can have multiple conditions running together. Each time the conditions get validated, the action will be triggered.
+Les conditions sont la partie "**si**" de votre action. Vous pouvez avoir plusieurs conditions simultanées. Chaque fois que les conditions sont validées, l'action est déclenchée.
 
-There are 5 types of conditions : From Input Value, Scripts and Group.
+Il existe 5 types de conditions : From Input value, Scripts, Group, On Activate et On Deactivate
 
-* The "**From Input Value**" is the most used one. It will let you compare a module's input value in different ways and decide whether the condition is validated or not. 
-* The **Script conditions** allows you to write complex conditions using scripts. You can find more about that in the [Script Conditions](../scripting/scripting-reference/condition-scripts.md) section. 
-* The **Group condition** allows you to create nested groups of conditions to create more complex condition combinations, like "_If I sing a D **AND** press this button, **OR** if I sing a G **AND** I press this other button"_
-* The **onActivate** and **onDeactivate** conditions are triggered when the state containing them gets activated or deactivated \(not enabled / disabled\). This can be used for two scenarios :
-  * If you want to trigger some actions whenever this state gets activated, which is a good tool when using state transitions, then you can use this to ensure that you send all commands when entering in a different state of your project.
-  * Because **onActivate** conditions get triggered when loading a project if the containing state is active, it can be used as a startup initialization action.
+* La condition "**From Input Value**" est la plus utilisée. Il vous permettra de comparer la valeur d'entrée d'un module de différentes manières et de décider si la condition est validée ou non. 
+* La **Condition Script** vous permettent d'écrire des conditions complexes à l'aide de scripts. Vous trouverez plus d'informations à ce sujet dans la section [Script Conditions](../scripting/scripting-reference/condition-scripts.md). 
+* Le **Group** vous permet de créer des groupes imbriqués de conditions pour créer des combinaisons de conditions plus complexes, comme "_Si je chante un D **ET** appuyez sur ce bouton, **OU** si je chante un G **ET** j'appuie sur cet autre bouton"_
+* Les conditions **onActivate** et **onDeactivate** sont déclenchées lorsque l'état qui les contient est activé ou désactivé \(non activé / désactivé). Ceci peut être utilisé pour deux scénarios :
+  * Si vous souhaitez déclencher certaines actions lorsque cet état est activé, ce qui est un bon outil lorsque vous utilisez les transitions d'état, vous pouvez utiliser cette fonction pour vous assurer que vous envoyez toutes les commandes lorsque vous entrez dans un état différent de votre projet.
+  * Parce que les conditions **onActivate** sont déclenchées lors du chargement d'un projet si l'état contenant est actif, il peut être utilisé comme une action d'initialisation au démarrage.
 
-Each time a condition is validated, it will turned green. It will turn back to grey once it gets invalidated.
+Chaque fois qu'une condition est validée, elle devient verte. Elle redeviendra grise une fois qu'elle sera invalidée.
 
-## Consequences
+## Conséquences
 
-Consequences are the "**then**" part of your action.
+Les conséquences sont la partie "**alors**" de votre action.
 
-* Each time an action is validated, it will trigger all the commands contained in the "**Consequences : TRUE"** section. 
-* Each time an action is invalidated, it will trigger all the commands contained in the **"Consequence : FALSE"** section.
+* Chaque fois qu'une action est validée, elle déclenche toutes les commandes contenues dans les "**conséquences : VRAI "**. 
+* Chaque fois qu'une action est invalidée, elle déclenchera toutes les commandes contenues dans la section "**Conséquences : FAUX "**.
 
-For each action, you can create as many consequences as you want, and it will trigger them all at once, allowing for synchronized control of different softwares.
+Pour chaque action, vous pouvez créer autant de conséquences que vous le souhaitez, et elle les déclenchera toutes en même temps, ce qui permet un contrôle synchronisé des différents logiciels.
 
-You have also options to delay the trigger after the action is validated, as well as staggering the trigger of each consequences, resulting in a regularly timed triggering of each consequence.
-
+Vous avez également la possibilité de retarder le déclenchement après la validation de l'action, ainsi que d'échelonner le déclenchement de chaque conséquence, ce qui permet de déclencher chaque conséquence à intervalles réguliers.
