@@ -10,7 +10,7 @@ Les variables personnalisées peuvent vous aider à créer des ensembles de para
 
 Une fois que vous avez différents préréglages, vous pouvez commencer à les interpoler avec les commandes du module spécial
 
-[Un Mapping qui prend un signal d'entrée et l'utilise pour interpoler entre 2 presets](../../.gitbook/assets/interpolate.png)
+![Un Mapping qui prend un signal d'entrée et l'utilise pour interpoler entre 2 presets](../../.gitbook/assets/interpolate.png)
 
 Voici le résultat dans la vue des variables personnalisées
 
