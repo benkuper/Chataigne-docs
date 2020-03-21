@@ -26,7 +26,7 @@ C'est une importante partie du module. Les Values sont les données que tu pourr
 
 ### Scripts
 
-Les scripts te permettront de créer des logiques plus complexes. Tu peux trouver plus d'infos dans la section [Scripts](../scripting/introduction_to_scripts.md).
+Les scripts te permettront de créer des logiques plus complexes. Tu peux trouver plus d'infos dans la section [Scripts](../scripting/introduction-to-scripts.md).
 
 ![](../.gitbook/assets/module_scripts.png)
 
