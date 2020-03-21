@@ -1,38 +1,38 @@
-# Scripting Reference
+# Référence de scripting
 
-Here you can find an almost exhaustive reference on Chataigne specific functions.
+Vous trouverez ici une référence quasi exhaustive sur les fonctions spécifiques de Chataigne.
 
 {% hint style="success" %}
-Scripts in Chataigne are based on a simplified version of Javascript. Most functions are available, but some might be missing. If you're missing some functions, please contact me and consider [donating](https://github.com/sponsors/benkuper) so I can spend more time improving Chataigne !
+Les scripts en Chataigne sont basés sur une version simplifiée de Javascript. La plupart des fonctions sont disponibles, mais certaines peuvent manquer. Si certaines fonctions vous manquent, veuillez me contacter et envisager de faire un don (https://github.com/sponsors/benkuper) pour que je puisse passer plus de temps à améliorer Chataigne !
 {% endhint %}
 
-## Common Functions
+## Fonctions communes
 
-There are few common functions that you can use, no matter the type of script.
+Il y a peu de fonctions communes que vous pouvez utiliser, quel que soit le type de script.
 
 {% hint style="info" %}
-None of the functions below are needed when making a script, they are just helper functions.  
-If you don't need them, don't add them in your script as Chataigne will optimize your script depending on the available functions in it.
+Aucune des fonctions ci-dessous n'est nécessaire lors de la réalisation d'un script, ce sont juste des fonctions d'aide.  
+Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne optimisera votre script en fonction des fonctions disponibles dans celui-ci.
 {% endhint %}
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Méthode</th>
       <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <tbody>
+  <corps>
     <tr>
       <td style="text-align:left"><b>init()</b>
       </td>
-      <td style="text-align:left">If present, this function will be called right after the script is loaded.</td>
+      <td style="text-align:left">Si elle est présente, cette fonction sera appelée juste après le chargement du script.</td>
       <td
       style="text-align:left">
-        <p><code>function init() {</code>
+        <p><code>fonction init() {</code>
         </p>
-        <p><code>//init your values, log things and assign variables</code>
+        <p><code>//init vos valeurs, enregistrez les choses et attribuez des variables</code>
         </p>
         <p><code>}</code>
         </p>
@@ -41,87 +41,87 @@ If you don't need them, don't add them in your script as Chataigne will optimize
     <tr>
       <td style="text-align:left"><b>update(</b><em>deltaTime</em><b>)</b>
       </td>
-      <td style="text-align:left">If present, this function will be called regularly at rate specified by
-        the &quot;Update rate&quot; script parameter. This parameter is only visible
-        when the function is present in the script. You can also change the rate
-        from the script by calling <b>script.setUpdateRate</b><em>(rate).</em> see
-        below for more informations.</td>
+      <td style="text-align:left">Si elle est présente, cette fonction sera appelée régulièrement au rythme spécifié par
+        le &quot;Taux de mise à jour&quot ; paramètre de script. Ce paramètre n'est visible que
+        lorsque la fonction est présente dans le scénario. Vous pouvez également modifier le taux
+        à partir du script en appelant <b>script.setUpdateRate</b><em>(rate).</em> voir
+        ci-dessous pour plus d'informations.</td>
       <td style="text-align:left">
-        <p><code>function update(deltaTime)</code>
+        <p><code>fonction update(deltaTime)</code>
         </p>
         <p><code>{</code>
         </p>
-        <p> <code>script.log(&quot;Delta time : &quot; + deltaTime);</code>
+        <p> <code>script.log(&quot;Delta time : &quot ; + deltaTime);</code>
         </p>
         <p><code>}</code>
         </p>
       </td>
     </tr>
-  </tbody>
-</table>### Parameters and triggers
+  </corps>
+</table>### Paramètres et déclencheurs
 
-All parameters and triggers have common methods and specific methods
+Tous les paramètres et déclencheurs ont des méthodes communes et des méthodes spécifiques 
 
-#### Common methods and properties
+#### Méthodes et propriétés communes
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Méthode</th>
       <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <tbody>
+  <corps>
     <tr>
       <td style="text-align:left"><b>getParent()</b>
       </td>
-      <td style="text-align:left">Returns the value of this parameter</td>
+      <td style="text-align:left">Retourne la valeur de ce paramètre</td>
       <td style="text-align:left"><code>myParam.getParent();</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>setName(</b><em>name</em><b>)</b>
       </td>
-      <td style="text-align:left">Sets the parameters name</td>
-      <td style="text-align:left"><code>myParam.setName(&quot;new name&quot;);</code>
+      <td style="text-align:left">Définit les paramètres name</td>
+      <td style="text-align:left"><code>myParam.setName(&quot;new name&quot ;);</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
+      <td style="text-align:left"><b>setAttribut(</b><em>attribut, value</em><b>)</b>
       </td>
       <td style="text-align:left">
-        <p>Sets a parameter&apos;s attribute.</p>
-        <p>All parameters get :
-          <br /><em><b>readonly : </b></em>sets the parameter as not editable</p>
-        <p><em><b>description : </b></em>change the tooltip description</p>
-        <p><em><b>enabled : </b></em>enable or disable this parameter</p>
+        <p>Définit un paramètre&apos;s attribut.</p>
+        <p>Tous les paramètres obtiennent :
+          <br /><em><b>readonly : </b></em> définit le paramètre comme non modifiable</p>
+        <p><em><b>description : </b></em>modifier la description de l'infobulle</p>
+        <p><em><b>activé : </b></em>activer ou désactiver ce paramètre</p>
         <p><em><b>alwaysNotify : </b></em>set the alwaysNotify flag (if true, this
-          will trigger updates even if setting the same value than before).
-          <br />More information for specific parameters in each parameter&apos;s section.</p>
+          déclenchera des mises à jour même si la valeur fixée est la même qu'auparavant).
+          <br />Plus d'informations pour des paramètres spécifiques dans chaque section de paramètres&apos;s. </p>
       </td>
       <td style="text-align:left">
-        <p><code>myParam.setAttribute(&quot;readonly&quot;,true);</code>
+        <p><code>myParam.setAttribute(&quot;readonly&quot ;,true);</code>
         </p>
-        <p><code>myParam.setAttribute(&quot;description&quot;,&quot; new description&quot;);</code>
+        <p><code>myParam.setAttribute(&quot;description&quot ;,&quot ; new description&quot ;);</code>
         </p>
-        <p><code>myParam.setAttribute(&quot;enabled&quot;,false);</code>
+        <p><code>myParam.setAttribute(&quot;enabled&quot ;,false);</code>
         </p>
-        <p><code>myParam.setAttribute(&quot;alwaysNotify&quot;, true);</code>
+        <p><code>myParam.setAttribute(&quot;alwaysNotify&quot ;, true);</code>
         </p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>isParameter()</b>
       </td>
-      <td style="text-align:left">returns whether the target is a parameter or a trigger</td>
+      <td style="text-align:left">retourne si la cible est un paramètre ou un déclencheur</td>
       <td style="text-align:left"><code>var isParam = myTarget.isParameter();</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>name</b>
       </td>
-      <td style="text-align:left">This is the name identifier of the object, as you would target it in a
+      <td style="text-align:left">Il s'agit de l'identificateur de nom de l'objet, comme vous le feriez dans un
         script.</td>
       <td style="text-align:left"><code>script.log(myParam.name);</code>
       </td>
@@ -129,153 +129,153 @@ All parameters and triggers have common methods and specific methods
     <tr>
       <td style="text-align:left"><b>niceName</b>
       </td>
-      <td style="text-align:left">This is the &quot;nice name&quot; of the object, as you see it in the
-        Inspector.</td>
+      <td style="text-align:left">C'est le &quot;joli nom&quot ; de l'objet, tel que vous le voyez dans le
+        Inspecteur.</td>
       <td style="text-align:left"><code>script.log(myParam.niceName);</code>
       </td>
     </tr>
-  </tbody>
-</table>#### Trigger
+  </corps>
+</table>######## Déclencheur
 
-| Method | Description | Example |
+| Méthode | Description | Exemple |
 | :--- | :--- | :--- |
-| **trigger\(\)** | Returns the value of this parameter | `myTrigger.trigger();` |
+| **trigger\(\)** | Retourne la valeur de ce paramètre | `myTrigger.trigger();` |
 
-#### Float Parameter
+#### Paramètre de flottabilité
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Méthode</th>
       <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <tbody>
+  <corps>
     <tr>
       <td style="text-align:left"><b>get()</b>
       </td>
-      <td style="text-align:left">Returns the value of this parameter</td>
+      <td style="text-align:left">Retourne la valeur de ce paramètre</td>
       <td style="text-align:left"><code>var value = myFloatParam.get();</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
       </td>
-      <td style="text-align:left">Sets the value of this parameter</td>
+      <td style="text-align:left">Définit la valeur de ce paramètre</td>
       <td style="text-align:left"><code>myFloatParam.set(.5);</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
+      <td style="text-align:left"><b>setAttribut(</b><em>attribut, value</em><b>)</b>
       </td>
       <td style="text-align:left">
-        <p>Specific attributes :</p>
-        <p><em><b>ui : </b></em>The UI to use to show this parameter. Accepted values
-          are : <em><b>time, slider,  stepper, label</b></em>
+        <p>Attributs spécifiques :</p>
+        <p><em><b>ui : </b></em> L'interface utilisateur à utiliser pour afficher ce paramètre. Valeurs acceptées
+          sont : <em><b>time, slider, stepper, label</b></em>
         </p>
       </td>
-      <td style="text-align:left"><code>myStringParam.setAttribute (&quot;ui&quot;, &quot;time&quot;);</code>
+      <td style="text-align:left"><code>myStringParam.setAttribute (&quot;ui&quot ;, &quot;time&quot ;);</code>
       </td>
     </tr>
-  </tbody>
-</table>#### Integer Parameter
+  </corps>
+</table>#### Paramètre entier
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Méthode</th>
       <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <tbody>
+  <corps>
     <tr>
       <td style="text-align:left"><b>get()</b>
       </td>
-      <td style="text-align:left">Returns the value of this parameter</td>
+      <td style="text-align:left">Retourne la valeur de ce paramètre</td>
       <td style="text-align:left"><code>var value = myIntParam.get();</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
       </td>
-      <td style="text-align:left">Sets the value of this parameter</td>
+      <td style="text-align:left">Définit la valeur de ce paramètre</td>
       <td style="text-align:left"><code>myIntParam.set(2);</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
+      <td style="text-align:left"><b>setAttribut(</b><em>attribut, value</em><b>)</b>
       </td>
       <td style="text-align:left">
-        <p>Specific attributes :</p>
-        <p><em><b>hexMode : </b></em>Whether to show the value as decimal or hexadecimal.</p>
+        <p>Attributs spécifiques :</p>
+        <p><em><b>hexMode : </b></em>Afficher la valeur en décimal ou en hexadécimal.</p>
       </td>
-      <td style="text-align:left"><code>myStringParam.setAttribute (&quot;hexMode&quot;, true);</code>
+      <td style="text-align:left"><code>myStringParam.setAttribute (&quot;hexMode&quot ;, true);</code>
       </td>
     </tr>
-  </tbody>
-</table>#### Boolean Parameter
+  </corps>
+</table>#### Paramètre booléen
 
-| Method | Description | Example |
+| Méthode | Description | Exemple |
 | :--- | :--- | :--- |
-| **get\(\)** | Returns the value of this parameter | `var value = myBoolParam.get();` |
-| **set\(**_value_**\)** | Sets the value of this parameter | `myBoolParam.set(true);` |
+| **get\(\)** | Retourne la valeur de ce paramètre | `var value = myBoolParam.get();` |
+| **set\(**_value_**\)** | Définit la valeur de ce paramètre | `myBoolParam.set(true);` |
 
-#### String Parameter
+#### Paramètre de la chaîne
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Méthode</th>
       <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <tbody>
+  <corps>
     <tr>
       <td style="text-align:left"><b>get()</b>
       </td>
-      <td style="text-align:left">Returns the value of this parameter</td>
+      <td style="text-align:left">Retourne la valeur de ce paramètre</td>
       <td style="text-align:left"><code>var value = myStringParam.get();</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
       </td>
-      <td style="text-align:left">Sets the value of this parameter</td>
-      <td style="text-align:left"><code>myStringParam.set(&quot;super&quot;);</code>
+      <td style="text-align:left">Définit la valeur de ce paramètre</td>
+      <td style="text-align:left"><code>myStringParam.set(&quot;super&quot ;);</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
+      <td style="text-align:left"><b>setAttribut(</b><em>attribut, value</em><b>)</b>
       </td>
       <td style="text-align:left">
-        <p>Specific attributes :</p>
-        <p><em><b>multiline</b></em>: whether the parameter can be multiline</p>
-        <p><em><b>prefix</b></em>: add a prefix before the value</p>
-        <p><em><b>suffix</b></em>: add a suffix after the value</p>
+        <p>Attributs spécifiques :</p>
+        <p><em><b>multiline</b></em> : si le paramètre peut être multiligne</p>
+        <p><em><b>préfixe</b></em> : ajouter un préfixe avant la valeur</p>
+        <p><em><b>suffixe</b></em> : ajouter un suffixe après la valeur</p>
       </td>
-      <td style="text-align:left"><code>myStringParam.setAttribute (&quot;multiline&quot;, true);</code>
+      <td style="text-align:left"><code>myStringParam.setAttribute (&quot;multiline&quot ;, true);</code>
       </td>
     </tr>
-  </tbody>
-</table>#### Color Parameter
+  </corps>
+</table>#### Paramètre de couleur
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Méthode</th>
       <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <tbody>
+  <corps>
     <tr>
       <td style="text-align:left"><b>get()</b>
       </td>
-      <td style="text-align:left">Returns the value of this parameter. The result is an array containing
-        [r,g,b,a], values are between 0 and 1</td>
+      <td style="text-align:left">Retourne la valeur de ce paramètre. Le résultat est un tableau contenant
+        [r,g,b,a], les valeurs sont comprises entre 0 et 1</td>
       <td style="text-align:left">
         <p><code>var value = myColorParam.get();</code>
         </p>
@@ -286,14 +286,14 @@ All parameters and triggers have common methods and specific methods
     <tr>
       <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
       </td>
-      <td style="text-align:left">Sets the value of this parameter. You can either set the value with ARGB
-        hex value, [r,g,b,a] float array, or r,g,b,a separate values. r, g and
-        b values are always between 0 and 1 and alpha is optional (you can specify
-        r,g,b only);</td>
+      <td style="text-align:left">Définit la valeur de ce paramètre. Vous pouvez soit définir la valeur avec ARGB
+        valeur hex, [r,g,b,a] tableau flottant, ou r,g,b,a valeurs séparées. r, g et
+        Les valeurs b sont toujours comprises entre 0 et 1 et l'alpha est facultatif (vous pouvez spécifier
+        r,g,b seulement);</td>
       <td style="text-align:left">
-        <p><code>//this is all set to cyan alpha 100%</code>
+        <p><code>//ceci est réglé sur cyan alpha 100%</code>
         </p>
-        <p><code>myColorParam.set(0xff00ffff);</code>
+        <p><code>myColorParam.set(0xff00ffffff);</code>
         </p>
         <p><code>myColorParam.set([0,1,1,1]);</code>
         </p>
@@ -301,94 +301,94 @@ All parameters and triggers have common methods and specific methods
         </p>
       </td>
     </tr>
-  </tbody>
-</table>#### Target Parameter
+  </corps>
+</table>#### Paramètre cible
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Méthode</th>
       <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <tbody>
+  <corps>
     <tr>
       <td style="text-align:left"><b>get()</b>
       </td>
-      <td style="text-align:left">Returns the string value of the target address</td>
+      <td style="text-align:left">Retourne la valeur de la chaîne de l'adresse cible</td>
       <td style="text-align:left"><code>var address = myTargetParam.get();</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>getTarget()</b>
       </td>
-      <td style="text-align:left">Returns the actual selected target</td>
+      <td style="text-align:left">Retourne la cible réelle sélectionnée</td>
       <td style="text-align:left"><code>var target = myTargetParam.getTarget();</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
       </td>
-      <td style="text-align:left">Sets the string value of the target&apos;s address.</td>
-      <td style="text-align:left"><code>myTargetParam.set (&quot;/root/modules/osc&quot;);</code>
+      <td style="text-align:left">Définit la valeur de la chaîne de caractères de l'adresse de target&apos;s.</td>
+      <td style="text-align:left"><code>myTargetParam.set (&quot;/root/modules/osc&quot ;);</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
+      <td style="text-align:left"><b>setAttribut(</b><em>attribut, value</em><b>)</b>
       </td>
       <td style="text-align:left">
-        <p>Specific attributes :</p>
-        <p><em><b>root </b></em>: the root container from which to search</p>
-        <p><em><b>searchLevel </b></em>: specify the max level to search from the
+        <p>Attributs spécifiques :</p>
+        <p><em><b>root </b></em> : le conteneur racine à partir duquel la recherche doit être effectuée</p>
+        <p><em><b>searchLevel </b></em> : préciser le niveau maximum à rechercher dans le
           root</p>
-        <p><em><b>showParameters </b></em>: if target is controllable, hide or show
-          parameters</p>
-        <p><em><b>showTriggers </b></em>: if target is controllable, hide or show
-          triggers</p>
-        <p><em><b>labelLevel </b></em>: the level of parents to show in the UI.</p>
+        <p><em><b>showParameters </b></em> : si la cible est contrôlable, cacher ou montrer
+          paramètres</p>
+        <p><em><b>showTriggers </b></em> : si la cible est contrôlable, cacher ou montrer
+          déclencheurs</p>
+        <p><em><b>labelLevel </b></em> : le niveau des parents à afficher dans l'IU.</p>
       </td>
       <td style="text-align:left">
-        <p><code>myTargetParam.setAttribute (&quot;searchLevel&quot;,2);</code>
+        <p><code>myTargetParam.setAttribute (&quot;searchLevel&quot ;,2);</code>
         </p>
-        <p><code>myTargetParam.setAttribute (&quot;root&quot;, root.sequences);</code>
+        <p><code>myTargetParam.setAttribute (&quot;root&quot ;, root.sequences);</code>
         </p>
       </td>
     </tr>
-  </tbody>
-</table>#### Enum Parameter
+  </corps>
+</table>#### Paramètre Enum
 
-| Method | Description | Example |
+| Méthode | Description | Exemple |
 | :--- | :--- | :--- |
-| **addOption\(**_label, value_**\)** | Add an option to the list | `myEnumParam.addOption("new option",3);` |
-| **get\(\)** | Get the selected label | `var label = myEnumParam.get();` |
-| **getData\(\)** | Get the selected data | `var data = myEnumParam.getData();` |
-| **set\(**_label_**\)** | Sets the value with the provided label | `myEnumParam.set("new option");` |
-| **removeOptions\(\)** | Removes all options. | `myEnumParam.removeOptions();` |
+| **addOption\(**_label, value_**\)** | Ajouter une option à la liste | `myEnumParam.addOption("nouvelle option",3);` |
+| **get\(\)** | Obtenez le label sélectionné | `var label = myEnumParam.get();` |
+| **getData\(\)** | Obtenir les données sélectionnées | `var data = myEnumParam.getData();` |
+| **set\(**_label_**\)** | Définit la valeur avec l'étiquette fournie | `myEnumParam.set("nouvelle option");` |
+| **removeOptions\(\)** | Supprime toutes les options. | `myEnumParam.removeOptions();` |
 
-#### File Parameter
+#### Paramètre de fichier
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Méthode</th>
       <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <tbody>
+  <corps>
     <tr>
-      <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
+      <td style="text-align:left"><b>setAttribut(</b><em>attribut, value</em><b>)</b>
       </td>
-      <td style="text-align:left">Set specific FileParameter attribute (see examples)</td>
-      <td style="text-align:left"><code>myFileParam.setAttribute (&quot;directoryMode&quot;,true);</code>
+      <td style="text-align:left">Définissez un attribut FileParameter spécifique (voir exemples)</td>
+      <td style="text-align:left"><code>myFileParam.setAttribute (&quot;directoryMode&quot ;,true);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>readFile(</b><em>[asJSON]</em><b>)</b>
       </td>
-      <td style="text-align:left">Get the content of the file. If <em><b>asJSON </b></em>is <em>true, </em>then
-        the content will be parsed and returned as an Object.</td>
+      <td style="text-align:left">Consultez le contenu du fichier. Si <em><b>asJSON </b></em>est <em>vrai, </em>alors
+        le contenu sera analysé et renvoyé sous la forme d'un Object.</td>
       <td style="text-align:left">
         <p><code>var myTextContent = myFileParam.readFile ();</code>
         </p>
@@ -399,84 +399,84 @@ All parameters and triggers have common methods and specific methods
     <tr>
       <td style="text-align:left"><b>writeFile(data, </b><em>overwriteIfExists</em><b>)</b>
       </td>
-      <td style="text-align:left">Write the content or a string of an Object to the selected file. If the
-        file exists, <em><b>overwriteIfExists </b></em>will let you decide whether
-        to overwrite it or not (false by default).</td>
+      <td style="text-align:left">Ecrivez le contenu ou une chaîne d'un Objet dans le fichier sélectionné. Si le
+        existe, <em><b>overwriteIfExists </b></em> vous permettra de décider si
+        pour l'écraser ou non (false par défaut).</td>
       <td style="text-align:left">
-        <p><code>var data = &quot;super&quot;;</code>
+        <p><code>données variables = &quot;super&quot;;</code>
         </p>
-        <p><code>myFileParam.writeFile (data, true);</code>
+        <p><code>myFileParam.writeFile (données, vrai);</code>
         </p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>getAbsolutePath()</b>
       </td>
-      <td style="text-align:left">Returns the absolute path for this file.</td>
+      <td style="text-align:left">Retourne le chemin absolu de ce fichier.</td>
       <td style="text-align:left"><code>var path = myFileParam.getAbsolutePath();</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>launchFile(</b><em>arguments<b>)</b></em>
       </td>
-      <td style="text-align:left">This will launch the selected file with the <em><b>arguments</b> </em>provided</td>
+      <td style="text-align:left">Ceci lancera le fichier sélectionné avec les <em><b>arguments</b> </em>fournis</td>
       <td
-      style="text-align:left"><code>myFileParam.launchFile<br />(&quot;--verbose&quot;)</code>
+      style="text-align:left"><code>myFileParam.launchFile<br />(&quot;--verbose&quot ;)</code>
         </td>
     </tr>
-  </tbody>
-</table>#### Point2D Parameter
+  </corps>
+</table>#### Paramètre Point2D
 
-| Method | Description | Example |
+| Méthode | Description | Exemple |
 | :--- | :--- | :--- |
-| **get\(\)** | Returns the value of this parameter | `var value = myP2DParam.get();` |
-| **set\(**_x, y_**\)** | Sets the value of this parameter | `myP2DParam.set(.5, 2);` |
+| **get\(\)** | Retourne la valeur de ce paramètre | `var value = myP2DParam.get();` |
+| **set\(**_x, y_**\)** | Définit la valeur de ce paramètre | `myP2DParam.set(.5, 2);` |
 
-#### Point3D Parameter
+#### Paramètre Point3D
 
-| Method | Description | Example |
+| Méthode | Description | Exemple |
 | :--- | :--- | :--- |
-| **get\(\)** | Returns the value of this parameter | `var value = myP3DParam.get();` |
-| **set\(**_x, y, z_**\)** | Sets the value of this parameter | `myP3DParam.set(.5, 2, -1);` |
+| **get\(\)** | Retourne la valeur de ce paramètre | `var value = myP3DParam.get();` |
+| **set\(**_x, y, z_**\)** | Définit la valeur de ce paramètre | `myP3DParam.set(.5, 2, -1);` |
 
-### Container
+### Conteneur
 
-Containers are any object that contains parameters or other containers. If you're targetting something from the hierarchy \(_root.\*_ ****or _local.\*_\), this will be either a container of a parameter, so if it's not a parameter, then it's a container.
+Les conteneurs sont tout objet qui contient des paramètres ou d'autres récipients. Si vous visez quelque chose de la hiérarchie (_root.\*_ **** ou _local.\*_\), ce sera soit un conteneur d'un paramètre, donc si ce n'est pas un paramètre, alors c'est un conteneur.
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Méthode</th>
       <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <tbody>
+  <corps>
     <tr>
       <td style="text-align:left"><b>getChild(</b><em>childName</em><b>)</b>
       </td>
-      <td style="text-align:left">Returns the parameter or container with the provided name.</td>
-      <td style="text-align:left"><code>var child = myContainer.getChild(&quot;activity&quot;);</code>
+      <td style="text-align:left">Retourne le paramètre ou le conteneur avec le nom fourni.</td>
+      <td style="text-align:left"><code>var child = myContainer.getChild(&quot;activity&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>getParent()</b>
       </td>
-      <td style="text-align:left">Returns the parent container</td>
+      <td style="text-align:left">Retourne le conteneur parent</td>
       <td style="text-align:left"><code>var parent = myContainer.getParent();</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>setName(</b><em>name</em><b>)</b>
       </td>
-      <td style="text-align:left">Changes the name of the container</td>
-      <td style="text-align:left"><code>myContainer.setName(&quot;new name&quot;);</code>
+      <td style="text-align:left">Change le nom du conteneur</td>
+      <td style="text-align:left"><code>myContainer.setName(&quot;new name&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>setCollapsed(</b><em>value</em><b>)</b>
       </td>
-      <td style="text-align:left">Change the collapsed state of the container, if it can be collapsed.</td>
+      <td style="text-align:left">Modifiez l'état d'affaissement du conteneur, s'il peut être affaissé.</td>
       <td
       style="text-align:left"><code>myContainer.setCollapsed(false);</code>
         </td>
@@ -484,7 +484,7 @@ Containers are any object that contains parameters or other containers. If you'r
     <tr>
       <td style="text-align:left"><b>name</b>
       </td>
-      <td style="text-align:left">This is the name identifier of the object, as you would target it in a
+      <td style="text-align:left">Il s'agit de l'identificateur de nom de l'objet, comme vous le feriez dans un
         script.</td>
       <td style="text-align:left"><code>script.log(myContainer.name);</code>
       </td>
@@ -492,156 +492,156 @@ Containers are any object that contains parameters or other containers. If you'r
     <tr>
       <td style="text-align:left"><b>niceName</b>
       </td>
-      <td style="text-align:left">This is the &quot;nice name&quot; of the object, as you see it in the
-        Inspector.</td>
+      <td style="text-align:left">C'est le &quot;joli nom&quot ; de l'objet, tel que vous le voyez dans le
+        Inspecteur.</td>
       <td style="text-align:left"><code>script.log(myContainer.niceName);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addTrigger(</b><em>name, description</em><b>)</b>
       </td>
-      <td style="text-align:left">This will add a trigger (button).</td>
-      <td style="text-align:left"><code>var myTrigger = myContainer.addTrigger(&quot;My Trigger&quot;, &quot;Trigger description&quot;);</code>
+      <td style="text-align:left">Ceci ajoutera un déclencheur (bouton).</td>
+      <td style="text-align:left"><code>var myTrigger = myContainer.addTrigger(&quot;My Trigger&quot ;, &quot;Trigger description&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addFloatParameter(</b><em>name, description, default, min max</em><b>)</b>
       </td>
-      <td style="text-align:left">This will add a float number parameter (slider).</td>
-      <td style="text-align:left"><code>var myFloatParam = myContainer.addFloatParameter(&quot;My Float Param&quot;,&quot;Description of my float param&quot;,.1,0,1);</code>
+      <td style="text-align:left">Cela ajoutera un paramètre de nombre flottant (curseur).</td>
+      <td style="text-align:left"><code>var myFloatParam = myContainer.addFloatParameter(&quot;My Float Param&quot ;,&quot;Description de mon flotteur param&quot ;,.1,0,1);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addIntParameter(</b><em>name, description, default, min max</em><b>)</b>
       </td>
-      <td style="text-align:left">add an integer number parameter (stepper), default value of 2, with a
-        range between 0 and 10</td>
-      <td style="text-align:left"><code>var myIntParam = myContainer.addIntParameter(&quot;My Int Param&quot;,&quot;Description of my int param&quot;,2,0,10);</code>
+      <td style="text-align:left">ajouter un paramètre de nombre entier (step), valeur par défaut de 2, avec un
+        se situent entre 0 et 10</td>
+      <td style="text-align:left"><code>var myIntParam = myContainer.addIntParameter(&quot;My Int Param&quot ;,&quot;Description de mon int param&quot ;,2,0,10);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addBoolParameter(</b><em>name, description, default</em><b>)</b>
       </td>
-      <td style="text-align:left">add a boolean parameter (toggle)</td>
-      <td style="text-align:left"><code>var myBoolParam = myContainer.addBoolParameter(&quot;My Bool Param&quot;,&quot;Description of my bool param&quot;,false);</code>
+      <td style="text-align:left">ajouter un paramètre booléen (toggle)</td>
+      <td style="text-align:left"><code>var myBoolParam = myContainer.addBoolParameter(&quot;My Bool Param&quot ;,&quot;Description of my bool param&quot ;,false);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addStringParameter(</b><em>name, description, default</em><b>)</b>
       </td>
-      <td style="text-align:left">add a string parameter (text field)</td>
-      <td style="text-align:left"> <code>var myStringParam = myContainer.addStringParameter(&quot;My String Param&quot;,&quot;Description of my string param&quot;, &quot;cool&quot;);</code>
+      <td style="text-align:left">ajouter un paramètre de chaîne (champ de texte)</td>
+      <td style="text-align:left"> <code>var myStringParam = myContainer.addStringParameter(&quot;My String Param&quot ;,&quot;Description de ma chaîne param&quot ;, &quot;cool&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addColorParameter(</b><em>name, description, default</em><b>)</b>
       </td>
       <td style="text-align:left">
-        <p>add a color parameter (color picker).</p>
-        <p>You can either set the default color with ARGB hex value, [r,g,b,a] float
-          array, or r,g,b,a separate values. r, g and b values are always between
-          0 and 1 and alpha is optional (you can specify r,g,b only);</p>
+        <p>ajouter un paramètre de couleur (sélecteur de couleur).</p>
+        <Vous pouvez soit définir la couleur par défaut avec une valeur hexadécimale ARGB, [r,g,b,a] float
+          ou r,g,b,a des valeurs séparées. Les valeurs r, g et b sont toujours comprises entre
+          0 et 1 et alpha est facultatif (vous pouvez spécifier r,g,b seulement);</p>
       </td>
       <td style="text-align:left">
-        <p><code>var myColorParam = script.addColorParameter(&quot;My Color Param&quot;,&quot;Description of my color param&quot;,0xff0000ff); //default blue alpha 100%</code>
+        <p><code>var myColorParam = script.addColorParameter(&quot;My Color Param&quot ;,&quot;Description of my color param&quot ;,0xff0000ff) ; //default blue alpha 100%</code>
         </p>
-        <p><code>var myColorParam2 = script.addColorParameter(&quot;My Color Param 2 &quot;,&quot;Description of my color param&quot;,[1,0,1]); //default purple</code>
+        <p><code>var myColorParam2 = script.addColorParameter(&quot;My Color Param 2 &quot ;,&quot;Description of my color param&quot ;,[1,0,1]) ; //prévoyance violette</code>
         </p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addPoint2DParameter(</b><em>name, description</em><b>)</b>
       </td>
-      <td style="text-align:left">add a point 2d parameter</td>
-      <td style="text-align:left"><code>var myP2DParam = myContainer.addPoint2DParameter(&quot;My P2D Param&quot;,&quot;Description of my p2d param&quot;);</code>
+      <td style="text-align:left">ajouter un point 2d paramètre</td>
+      <td style="text-align:left"><code>var myP2DParam = myContainer.addPoint2DParameter(&quot;My P2D Param&quot ;,&quot;Description of my p2d param&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addPoint3DParameter(</b><em>name, description</em><b>)</b>
       </td>
-      <td style="text-align:left">add a point 3d parameter</td>
-      <td style="text-align:left"><code>var myP3DParam = myContainer.addPoint3DParameter(&quot;My P3D Param&quot;,&quot;Description of my p3d param&quot;);</code>
+      <td style="text-align:left">ajouter un point 3d paramètre</td>
+      <td style="text-align:left"><code>var myP3DParam = myContainer.addPoint3DParameter(&quot;My P3D Param&quot ;,&quot;Description of my p3d param&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addTargetParameter(</b><em>name, description</em><b>)</b>
       </td>
-      <td style="text-align:left">add a target parameter (to reference another parameter)</td>
-      <td style="text-align:left"><code>var myTargetParam = myContainer.addTargetParameter(&quot;My Target Param&quot;,&quot;Description of my target param&quot;);</code>
+      <td style="text-align:left">ajouter un paramètre cible (pour référencer un autre paramètre)</td>
+      <td style="text-align:left"><code>var myTargetParam = myContainer.addTargetParameter(&quot;My Target Param&quot ;,&quot;Description of my target param&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addFileParameter(</b><em>name, description, </em>[directoryMode]<b>)</b>
       </td>
       <td style="text-align:left">
-        <p>Add a file parameter (to reference file or folder on the disk).</p>
-        <p>If directoryMode is set to true a folder instead of a file can be selected.</p>
+        <p>Ajouter un paramètre de fichier (pour référencer le fichier ou le dossier sur le disque).</p>
+        <p>Si le mode répertoire est réglé sur vrai, un dossier au lieu d'un fichier peut être sélectionné.</p>
       </td>
-      <td style="text-align:left"><code>var myFileParam = myContainer.addFileParameter(&quot;My File Param&quot;,&quot;Description of my file param&quot;);</code>
+      <td style="text-align:left"><code>var myFileParam = myContainer.addFileParameter(&quot;My File Param&quot ;,&quot;Description de mon fichier param&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addEnumParameter(</b><em>name, description, label1, value1, label2, value2, ..</em>.<b>)</b>
       </td>
       <td style="text-align:left">
-        <p>Add a enum parameter (dropdown with options)</p>
-        <p>Each pair of values after the first 2 arguments define an option and its
-          linked data</p>
+        <p>Ajouter un paramètre d'énumération (menu déroulant avec options)</p>
+        <p>Chaque paire de valeurs après les 2 premiers arguments définit une option et son
+          données liées</p>
       </td>
-      <td style="text-align:left"><code>var myEnumParam = myContainer.addEnumParameter(&quot;My Enum Param&quot;,&quot;Description of my enum param&quot;, &quot;Option 1&quot;, 1,&quot;Option 2&quot;, 5, &quot;Option 3&quot;, &quot;banana&quot;);</code>
+      <td style="text-align:left"><code>var myEnumParam = myContainer.addEnumParameter(&quot;My Enum Param&quot ;,&quot;Description of my enum param&quot ;, &quot;Option 1&quot ;, 1,&quot;Option 2&quot ;, 5, &quot;Option 3&quot ;, &quot;banana&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addContainer(</b>name<b>)</b>
       </td>
-      <td style="text-align:left">Add a container inside of the container.</td>
-      <td style="text-align:left"><code>var childContainer = myContainer.addContainer(&quot;My Child Container&quot;);</code>
+      <td style="text-align:left">Ajouter un conteneur à l'intérieur du conteneur.</td>
+      <td style="text-align:left"><code>var childContainer = myContainer.addContainer(&quot;My Child Container&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>removeContainer(</b>name<b>)</b>
       </td>
-      <td style="text-align:left">Remove a child container from the container.</td>
+      <td style="text-align:left">Supprimer un conteneur enfant du conteneur.</td>
       <td style="text-align:left"><code>myContainer.removeContainer (myChildContainer)</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>removeParameter(</b><em>message</em><b>)</b>
       </td>
-      <td style="text-align:left">Remove a parameter from the container.</td>
+      <td style="text-align:left">Supprimer un paramètre du conteneur.</td>
       <td style="text-align:left"><code>myContainer.removeParameter (myChildParameter);</code>
       </td>
     </tr>
-  </tbody>
-</table>### Manager
+  </corps>
+</table>### Directeur
 
-Managers are special types of container. In the software, you can see that a container is a manager when there is a "**+**" icon on the right of its block. Well, almost all the times, some of them are just enhanced containers. Most of the times, the managers you will be interested in are the **Module manager, the Sequence manager, Layer managers and Automation keys managers.**
+Les gestionnaires sont des types particuliers de conteneurs. Dans le logiciel, vous pouvez voir qu'un conteneur est un gestionnaire lorsqu'il y a une icône "**+**" à droite de son bloc. Dans la plupart des cas, il s'agit simplement de conteneurs améliorés. La plupart du temps, les gestionnaires qui vous intéresseront sont le **gestionnaire de modules, le gestionnaire de séquences, les gestionnaires de couches et les gestionnaires de clés d'automatisation.**
 
-When a manipulating a manager, you have access to specific functions and properties like adding items, removing items or getting an array of it's items.
+Lorsque vous manipulez un gestionnaire, vous avez accès à des fonctions et des propriétés spécifiques comme l'ajout d'éléments, la suppression d'éléments ou l'obtention d'un tableau de ses éléments.
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Méthode</th>
       <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <tbody>
+  <corps>
     <tr>
       <td style="text-align:left"><b>addItem(</b><em>[type]</em><b>)</b>
       </td>
       <td style="text-align:left">
-        <p>Adds an item to the manager and returns it.</p>
-        <p>Some managers like the Module manager or the layer manager can create
-          multiple types of items. Thus they need a type of item to create, which
-          you must set in the <em><b>type</b></em> argument.</p>
-        <p>Other managers like the Sequence manager don&apos;t need this argument
-          because there is only one type of sequence. In these cases you don&apos;t
-          need to provide an argument when calling the function.</p>
+        <p>Ajoute un élément au gestionnaire et le renvoie.</p>
+        <p>Certains gestionnaires comme le gestionnaire de modules ou le gestionnaire de couches peuvent créer
+          plusieurs types d'articles. Ils ont donc besoin d'un type d'article à créer, qui
+          vous devez définir dans le <em><b>type</b></em> argument.</p>
+        <p> D'autres gestionnaires comme le gestionnaire de séquences ne sont pas nécessaires
+          car il n'y a qu'un seul type de séquence. Dans ces cas, vous ne&apos;t
+          doit fournir un argument lors de l'appel de la fonction.</p>
       </td>
       <td style="text-align:left">
-        <p><code>var newOSCModule = root.modules.addItem(&quot;OSC&quot;);</code>
+        <p><code>var newOSCModule = root.modules.addItem(&quot;OSC&quot ;);</code>
         </p>
         <p><code>var newSequence = root.sequences.addItem();</code>
         </p>
@@ -650,7 +650,7 @@ When a manipulating a manager, you have access to specific functions and propert
     <tr>
       <td style="text-align:left"><b>removeItem(</b><em>item</em><b>)</b>
       </td>
-      <td style="text-align:left">Removes an item. <em><b>item</b></em> must be a item managed by this manager.</td>
+      <td style="text-align:left">Supprime un élément. <em><b>item</b></em> doit être un élément géré par ce gestionnaire.</td>
       <td
       style="text-align:left"><code>root.modules.removeItem (myModule);</code>
         </td>
@@ -658,35 +658,35 @@ When a manipulating a manager, you have access to specific functions and propert
     <tr>
       <td style="text-align:left"><b>getItems()</b>
       </td>
-      <td style="text-align:left">Returns an array containing all the items of this manager.</td>
+      <td style="text-align:left">Retourne un tableau contenant tous les éléments de ce gestionnaire.</td>
       <td style="text-align:left">
         <p><code>var items = root.sequences.getItems();</code>
         </p>
-        <p><code>script.log(&quot;Num sequences : &quot;+items.length);</code>
+        <p><code>script.log(&quot;Num séquences : &quot;+items.length);</code>
         </p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>getItemWithName(</b><em>name</em><b>)</b>
       </td>
-      <td style="text-align:left">Returns the first item found with <em><b>name. </b></em>This will search
-        for exact match of niceName, shortName, and lowercase version.</td>
+      <td style="text-align:left">Retourne le premier élément trouvé avec <em><b>nom. </b></em>Ceci va rechercher
+        pour une correspondance exacte entre niceName, shortName et la version minuscule.</td>
       <td
-      style="text-align:left"><code>var introSeq = root.sequences.getItemWithName (&quot;Intro&quot;);</code>
+      style="text-align:left"><code>var introSeq = root.sequences.getItemWithName (&quot;Intro&quot ;);</code>
         </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>getItemAt(</b><em>index</em><b>)</b>
       </td>
-      <td style="text-align:left">Returns the item at the <em><b>index.</b></em>
+      <td style="text-align:left">Retourne l'élément à l'index <em><b>de </b></em>
       </td>
-      <td style="text-align:left"><code>var curSequence = root.sequences.getItemAt(1); //0 is first, so this will get the second sequence in the list.</code>
+      <td style="text-align:left"><code>var curSequence = root.sequences.getItemAt(1) ; //0 est le premier, ce qui permet d'obtenir la deuxième séquence de la liste.</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>getItemIndex(</b><em>item</em><b>)</b>
       </td>
-      <td style="text-align:left">Returns the index of the specified <em><b>item.</b></em>
+      <td style="text-align:left">Retourne l'index de l'élément spécifié <em><b>item.</b></em>
       </td>
       <td style="text-align:left"><code>var index= root.sequences.getItemIndex (curSequence);</code>
       </td>
@@ -694,7 +694,7 @@ When a manipulating a manager, you have access to specific functions and propert
     <tr>
       <td style="text-align:left"><b>getItemBefore(</b><em>item</em><b>)</b>
       </td>
-      <td style="text-align:left">Returns the item before the specified <em><b>item.</b></em>
+      <td style="text-align:left">Retourne l'élément avant l'élément spécifié <em><b>item.</b></em>
       </td>
       <td style="text-align:left"><code>var prevSequence = root.sequences.getItemBefore (curSequence);</code>
       </td>
@@ -702,201 +702,201 @@ When a manipulating a manager, you have access to specific functions and propert
     <tr>
       <td style="text-align:left"><b>getItemAfter(</b><em>item</em><b>)</b>
       </td>
-      <td style="text-align:left">Returns the item after the specified <em><b>item.</b></em>
+      <td style="text-align:left">Retourne l'élément après le <em><b>item.</b></em> spécifié
       </td>
       <td style="text-align:left"><code>var nextSequence = root.sequences.getItemAfter (curSequence);</code>
       </td>
     </tr>
-  </tbody>
-</table>### Script object
+  </corps>
+</table>### Objet de script
 
-The script object refers to the script container. You can add your own custom parameters here, as well as logging informations, warnings and errors.
+L'objet script fait référence au conteneur de script. Vous pouvez ajouter vos propres paramètres personnalisés ici, ainsi que des informations de journalisation, des avertissements et des erreurs.
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Méthode</th>
       <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <tbody>
+  <corps>
     <tr>
       <td style="text-align:left"><b>addTrigger(</b><em>name, description</em><b>)</b>
       </td>
-      <td style="text-align:left">This will add a trigger (button)</td>
-      <td style="text-align:left"><code>var myTrigger = script.addTrigger(&quot;My Trigger&quot;, &quot;Trigger description&quot;);</code>
+      <td style="text-align:left">Ceci ajoutera un déclencheur (bouton)</td>
+      <td style="text-align:left"><code>var myTrigger = script.addTrigger(&quot;My Trigger&quot ;, &quot;Trigger description&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addFloatParameter(</b><em>name, description, default, min max</em><b>)</b>
       </td>
-      <td style="text-align:left">This will add a float number parameter (slider).</td>
-      <td style="text-align:left"><code>var myFloatParam = script.addFloatParameter(&quot;My Float Param&quot;,&quot;Description of my float param&quot;,.1,0,1);</code>
+      <td style="text-align:left">Cela ajoutera un paramètre de nombre flottant (curseur).</td>
+      <td style="text-align:left"><code>var myFloatParam = script.addFloatParameter(&quot;My Float Param&quot ;,&quot;Description of my float param&quot ;,.1,0,1);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addIntParameter(</b><em>name, description, default, min max</em><b>)</b>
       </td>
-      <td style="text-align:left">add an integer number parameter (stepper), default value of 2, with a
-        range between 0 and 10</td>
-      <td style="text-align:left"><code>var myIntParam = script.addIntParameter(&quot;My Int Param&quot;,&quot;Description of my int param&quot;,2,0,10);</code>
+      <td style="text-align:left">ajouter un paramètre de nombre entier (step), valeur par défaut de 2, avec un
+        se situent entre 0 et 10</td>
+      <td style="text-align:left"><code>var myIntParam = script.addIntParameter(&quot;My Int Param&quot ;,&quot;Description of my int param&quot ;,2,0,10);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addBoolParameter(</b><em>name, description, default</em><b>)</b>
       </td>
-      <td style="text-align:left">add a boolean parameter (toggle)</td>
-      <td style="text-align:left"><code>var myBoolParam = script.addBoolParameter(&quot;My Bool Param&quot;,&quot;Description of my bool param&quot;,false);</code>
+      <td style="text-align:left">ajouter un paramètre booléen (toggle)</td>
+      <td style="text-align:left"><code>var myBoolParam = script.addBoolParameter(&quot;My Bool Param&quot ;,&quot;Description of my bool param&quot ;,false);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addStringParameter(</b><em>name, description, default</em><b>)</b>
       </td>
-      <td style="text-align:left">add a string parameter (text field)</td>
-      <td style="text-align:left"> <code>var myStringParam = script.addStringParameter(&quot;My String Param&quot;,&quot;Description of my string param&quot;, &quot;cool&quot;);</code>
+      <td style="text-align:left">ajouter un paramètre de chaîne (champ de texte)</td>
+      <td style="text-align:left"> <code>var myStringParam = script.addStringParameter(&quot;My String Param&quot ;,&quot;Description de ma chaîne param&quot ;, &quot;cool&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addColorParameter(</b><em>name, description, default</em><b>)</b>
       </td>
       <td style="text-align:left">
-        <p>add a color parameter (color picker).</p>
-        <p>You can either set the default color with ARGB hex value, [r,g,b,a] float
-          array, or r,g,b,a separate values. r, g and b values are always between
-          0 and 1 and alpha is optional (you can specify r,g,b only);</p>
+        <p>ajouter un paramètre de couleur (sélecteur de couleur).</p>
+        <Vous pouvez soit définir la couleur par défaut avec une valeur hexadécimale ARGB, [r,g,b,a] float
+          ou r,g,b,a des valeurs séparées. Les valeurs r, g et b sont toujours comprises entre
+          0 et 1 et alpha est facultatif (vous pouvez spécifier r,g,b seulement);</p>
       </td>
       <td style="text-align:left">
-        <p><code>var myColorParam = script.addColorParameter(&quot;My Color Param&quot;,&quot;Description of my color param&quot;,0xff0000ff); //default blue alpha 100%</code>
+        <p><code>var myColorParam = script.addColorParameter(&quot;My Color Param&quot ;,&quot;Description of my color param&quot ;,0xff0000ff) ; //default blue alpha 100%</code>
         </p>
-        <p><code>var myColorParam2 = script.addColorParameter(&quot;My Color Param 2 &quot;,&quot;Description of my color param&quot;,[1,0,1]); //default purple</code>
+        <p><code>var myColorParam2 = script.addColorParameter(&quot;My Color Param 2 &quot ;,&quot;Description of my color param&quot ;,[1,0,1]) ; //prévoyance violette</code>
         </p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addPoint2DParameter(</b><em>name, description</em><b>)</b>
       </td>
-      <td style="text-align:left">add a point 2d parameter</td>
-      <td style="text-align:left"><code>var myP2DParam = script.addPoint2DParameter(&quot;My P2D Param&quot;,&quot;Description of my p2d param&quot;);</code>
+      <td style="text-align:left">ajouter un point 2d paramètre</td>
+      <td style="text-align:left"><code>var myP2DParam = script.addPoint2DParameter(&quot;My P2D Param&quot ;,&quot;Description of my p2d param&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addPoint3DParameter(</b><em>name, description</em><b>)</b>
       </td>
-      <td style="text-align:left">add a point 3d parameter</td>
-      <td style="text-align:left"><code>var myP3DParam = script.addPoint3DParameter(&quot;My P3D Param&quot;,&quot;Description of my p3d param&quot;);</code>
+      <td style="text-align:left">ajouter un point 3d paramètre</td>
+      <td style="text-align:left"><code>var myP3DParam = script.addPoint3DParameter(&quot;My P3D Param&quot ;,&quot;Description of my p3d param&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addTargetParameter(</b><em>name, description</em><b>)</b>
       </td>
-      <td style="text-align:left">add a target parameter (to reference another parameter)</td>
-      <td style="text-align:left"><code>var myTargetParam = script.addTargetParameter(&quot;My Target Param&quot;,&quot;Description of my target param&quot;);</code>
+      <td style="text-align:left">ajouter un paramètre cible (pour référencer un autre paramètre)</td>
+      <td style="text-align:left"><code>var myTargetParam = script.addTargetParameter(&quot;My Target Param&quot ;,&quot;Description of my target param&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addFileParameter(</b><em>name, description, </em>[directoryMode]<b>)</b>
       </td>
       <td style="text-align:left">
-        <p>Add a file parameter (to reference file or folder on the disk).</p>
-        <p>If directoryMode is set to true a folder instead of a file can be selected.</p>
+        <p>Ajouter un paramètre de fichier (pour référencer le fichier ou le dossier sur le disque).</p>
+        <p>Si le mode répertoire est réglé sur vrai, un dossier au lieu d'un fichier peut être sélectionné.</p>
       </td>
-      <td style="text-align:left"><code>var myFileParam = script.addFileParameter(&quot;My File Param&quot;,&quot;Description of my file param&quot;);</code>
+      <td style="text-align:left"><code>var myFileParam = script.addFileParameter(&quot;Mon fichier param&quot ;,&quot;Description de mon fichier param&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addEnumParameter(</b><em>name, description, label1, value1, label2, value2, ..</em>.<b>)</b>
       </td>
       <td style="text-align:left">
-        <p>add a enum parameter (dropdown with options)</p>
-        <p>Each pair of values after the first 2 arguments define an option and its
-          linked data</p>
+        <p>ajouter un paramètre de type énumération (menu déroulant avec options)</p>
+        <p>Chaque paire de valeurs après les 2 premiers arguments définit une option et son
+          données liées</p>
       </td>
-      <td style="text-align:left"><code>var myEnumParam = script.addEnumParameter(&quot;My Enum Param&quot;,&quot;Description of my enum param&quot;, &quot;Option 1&quot;, 1,&quot;Option 2&quot;, 5, &quot;Option 3&quot;, &quot;banana&quot;);</code>
+      <td style="text-align:left"><code>var myEnumParam = script.addEnumParameter(&quot;My Enum Param&quot ;,&quot;Description of my enum param&quot ;, &quot;Option 1&quot ;, 1,&quot;Option 2&quot ;, 5, &quot;Option 3&quot ;, &quot;banana&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>log(</b><em>message</em><b>)</b>
       </td>
-      <td style="text-align:left">Logs a message (must activate &quot;Log&quot; in the script parameters)</td>
+      <td style="text-align:left">Journalise un message (doit activer &quot;Log&quot ; dans les paramètres du script)</td>
       <td
-      style="text-align:left"><code>script.log(&quot;This is a message&quot;);</code>
+      style="text-align:left"><code>script.log(&quot;Ceci est un message&quot ;);</code>
         </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>logWarning(</b><em>message</em><b>)</b>
       </td>
-      <td style="text-align:left">Logs a message as a warning</td>
-      <td style="text-align:left"><code>script.logWarning(&quot;This is a warning&quot;);</code>
+      <td style="text-align:left">Journalise un message en guise d'avertissement</td>
+      <td style="text-align:left"><code>script.logWarning(&quot;Ceci est un avertissement&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>logError(</b><em>message</em><b>)</b>
       </td>
-      <td style="text-align:left">Logs a message as an error</td>
-      <td style="text-align:left"><code>script.logError(&quot;This is an error&quot;);</code>
+      <td style="text-align:left">Enregistre un message comme une erreur</td>
+      <td style="text-align:left"><code>script.logError(&quot;This is an error&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>setUpdateRate(</b><em>rate</em><b>)</b>
       </td>
-      <td style="text-align:left">Sets the rate at which the update() function is called</td>
+      <td style="text-align:left">Définit la vitesse à laquelle la fonction update() est appelée</td>
       <td style="text-align:left"><code>script.setUpdateRate(50);</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>function scriprtParameterChanged(</b><em>param</em><b>)</b>
+      <td style="text-align:left"><b>fonction scriprtParameterChanged(</b><em>param</em><b>)</b>
       </td>
-      <td style="text-align:left">This function will be called each time a parameter of this script has
+      <td style="text-align:left">Cette fonction sera appelée chaque fois qu'un paramètre de ce script aura
         changed.</td>
-      <td style="text-align:left"><code>function scriptParameterChanged(param){    script.log(&quot;Param changed : &quot;+param.name); }</code>
+      <td style="text-align:left"><code>fonction scriptParameterChanged(param){ script.log(&quot;Param changed : &quot;+param.name) ; }</code>
       </td>
     </tr>
-  </tbody>
-</table>### Root object
+  </corps>
+</table>### Objet racine
 
-The root object refers to Chataigne's engine, which is the root object of all parent.  
-It allows you to access any object in Chataigne's hierarchy. The best way to access them is to right click on a parameter's UI and select "Copy Script control address". Then you can past the address in your script and you will be able to control this parameter.
+L'objet racine fait référence au moteur de Chataigne, qui est l'objet racine de tous les parents.  
+Il permet d'accéder à n'importe quel objet dans la hiérarchie de Chataigne. La meilleure façon d'y accéder est de cliquer avec le bouton droit de la souris sur l'interface utilisateur d'un paramètre et de sélectionner "Copy Script control address". Vous pouvez alors passer l'adresse dans votre script et vous pourrez contrôler ce paramètre.
 
-### Local object
+### Objet local
 
-The local object depends on where the scripts is running.
+L'objet local dépend de l'endroit où les scripts sont exécutés.
 
-* If the script is running inside a module, the local variable will referring to the module. You can find all the module functions in the [Module Scripts](module-scripts.md) section. 
-* If the script is running inside a condition, the local variable will be referring to the condition. You can find all the condition functions in the [Condition Scripts](condition-scripts.md) section. 
-* If the script is running inside a filter, the local variable will be referring to the filter. You can find all the filter functions in the [Filter Scripts](filter-scripts.md)[ ](condition-scripts.md)section.
+* Si le script est exécuté dans un module, la variable locale fera référence au module. Vous pouvez trouver toutes les fonctions du module dans la section [Scripts de module](module-scripts.md). 
+* Si le script s'exécute dans une condition, la variable locale fera référence à la condition. Vous pouvez trouver toutes les fonctions de la condition dans la section [Condition Scripts](condition-scripts.md). 
+* Si le script s'exécute à l'intérieur d'un filtre, la variable locale fera référence au filtre. Vous pouvez trouver toutes les fonctions de filtrage dans la section [Filter Scripts](filter-scripts.md)[ ](condition-scripts.md)*.
 
-### **Util object**
+### **Util objet**
 
-The util object provides helpers and utility functions like time or conversion.
+L'objet utilitaire fournit des aides et des fonctions utilitaires comme le temps ou la conversion.
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Méthode</th>
       <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Exemple</th>
     </tr>
   </thead>
-  <tbody>
+  <corps>
     <tr>
       <td style="text-align:left"><b>getTime()</b>
       </td>
-      <td style="text-align:left">Returns the time since system start in seconds</td>
+      <td style="text-align:left">Retourne le temps écoulé depuis le démarrage du système en secondes</td>
       <td style="text-align:left"><code>var time = util.getTime();</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>getTimestamp()</b>
       </td>
-      <td style="text-align:left">Returns the time since January 1st 1970 in seconds</td>
+      <td style="text-align:left">Retourne le temps depuis le 1er janvier 1970 en secondes</td>
       <td style="text-align:left"><code>var timestamp = util.getTimestamp();</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>getFloatFromBytes(</b><em>byte1, byte2, byte3, byte4</em><b>)</b>
       </td>
-      <td style="text-align:left">Returns a float from 4 bytes (big endian, byte1 is most significant)</td>
+      <td style="text-align:left">Retourne un flotteur de 4 octets (big endian, l'octet 1 est le plus significatif)</td>
       <td
       style="text-align:left"><code>var value = util.getFloatFromBytes(0, 0, 2, 10);</code>
         </td>
@@ -904,7 +904,7 @@ The util object provides helpers and utility functions like time or conversion.
     <tr>
       <td style="text-align:left"><b>getInt32FromBytes(</b><em>byte1, byte2, byte3, byte4</em><b>)</b>
       </td>
-      <td style="text-align:left">Returns a 32-bit integer from 4 bytes (big endian, byte1 is most significant)</td>
+      <td style="text-align:left">Retourne un entier de 32 bits à partir de 4 octets (big endian, l'octet 1 est le plus significatif)</td>
       <td
       style="text-align:left"><code>var value = util.getInt32FromBytes(0, 0, 2, 10);</code>
         </td>
@@ -912,7 +912,7 @@ The util object provides helpers and utility functions like time or conversion.
     <tr>
       <td style="text-align:left"><b>getInt64FromBytes(</b><em>byte1, byte2, byte3, byte4, byte5, byte6, byte7, byte8</em><b>)</b>
       </td>
-      <td style="text-align:left">Returns a 64-bit integer from 8 bytes (big endian, byte1 is most significant)</td>
+      <td style="text-align:left">Retourne un entier de 64 bits à partir de 8 octets (big endian, l'octet 1 est le plus significatif)</td>
       <td
       style="text-align:left"><code>var value = util.getInt64FromBytes(0, 5, 7, 22, 0, 0, 2, 10);</code>
         </td>
@@ -920,72 +920,72 @@ The util object provides helpers and utility functions like time or conversion.
     <tr>
       <td style="text-align:left"><b>getIPs()</b>
       </td>
-      <td style="text-align:left">Returns an array of all IP addresses found</td>
+      <td style="text-align:left">Retourne un tableau de toutes les adresses IP trouvées</td>
       <td style="text-align:left">
         <p><code>var ips = util.getIPs();</code>
         </p>
-        <p><code>for(var i=0; i&lt;ips.length; i++) { script.log(ips[i]); }</code>
+        <p><code>for(var i=0 ; i&lt;ips.length ; i++) { script.log(ips[i]) ; }</code>
         </p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>encodeHMAC_SHA1(</b><em>text, key</em><b>)</b>
       </td>
-      <td style="text-align:left">Returns a HMAC-SHA1 encoded string</td>
-      <td style="text-align:left"><code>var encoded = util.encodeHMAC_SHA1(&quot;my text&quot;, &quot;my key&quot;);</code>
+      <td style="text-align:left">Retourne une chaîne codée HMAC-SHA1</td>
+      <td style="text-align:left"><code>var encoded = util.encodeHMAC_SHA1(&quot;my text&quot ;, &quot;my key&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>toBase64(</b><em>value</em><b>);</b>
       </td>
-      <td style="text-align:left">Returns a converted base-64 string from an utf8 string.</td>
-      <td style="text-align:left"><code>var str64 = util.toBase64(&quot;cool&quot;);</code>
+      <td style="text-align:left">Retourne une chaîne convertie en base-64 à partir d'une chaîne utf8.</td>
+      <td style="text-align:left"><code>var str64 = util.toBase64(&quot;cool&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>readFile(</b><em>path,</em><b> </b><em>[asJSON]</em><b>)</b>
       </td>
-      <td style="text-align:left">Get the content of the file at <em><b>path</b></em>. If <em><b>asJSON </b></em>is <em>true, </em>then
-        the content will be parsed and returned as an Object.</td>
-      <td style="text-align:left"><code>var myTextContent = util.readFile(&quot;myfile.txt&quot;);</code>
+      <td style="text-align:left">Consultez le contenu du fichier à <em><b>path</b></em>. Si <em><b>asJSON </b></em>est <em>vrai, </em>alors
+        le contenu sera analysé et renvoyé sous la forme d'un Object.</td>
+      <td style="text-align:left"><code>var myTextContent = util.readFile(&quot;myfile.txt&quot ;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>writeFile(</b><em>path, data</em><b>, </b><em>overwriteIfExists</em><b>)</b>
       </td>
-      <td style="text-align:left">Write the content of a string or an Object to the file at <em><b>path</b></em> .
-        If the file exists, <em><b>overwriteIfExists </b></em>will let you decide
-        whether to overwrite it or not (false by default).</td>
+      <td style="text-align:left">Ecrivez le contenu d'une chaîne ou d'un Objet dans le fichier à <em><b>path</b></em> .
+        Si le fichier existe, <em><b>overwriteIfExists </b></em> vous permettra de décider
+        si elle doit être écrasée ou non (false par défaut).</td>
       <td style="text-align:left">
-        <p><code>var data = &quot;super&quot;;</code>
+        <p><code>données variables = &quot;super&quot;;</code>
         </p>
-        <p><code>util.writeFile(&quot;myfile.txt&quot;, data, true);</code>
+        <p><code>util.writeFile(&quot;monfichier.txt&quot ;, données, vrai);</code>
         </p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>createDirectory(</b><em>folderPath</em><b>)</b>
       </td>
-      <td style="text-align:left">Creates a directory at the path specified.</td>
-      <td style="text-align:left"><code>util.createDirectory(&quot;path/to/dir&quot;);</code>
+      <td style="text-align:left">Crée un répertoire au chemin spécifié.</td>
+      <td style="text-align:left"><code>util.createDirectory(&quot;path/to/dir&quot ;);</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>getObjectProperties(</b><em>object, includeParameters, includeObjects</em><b>)</b>
+      <td style="text-align:left"><b>getObjectProperties(</b><em>objet, includeParameters, includeObjects</em><b>)</b>
       </td>
-      <td style="text-align:left">Returns an array of all the properties names of this <em><b>object</b></em>.
-        You can specify if you want to include parameters and/or objects (like
-        containers) Default is include all.</td>
-      <td style="text-align:left"><code>var propNames = util.getObjectProperties(myObject, true, false); //only get parameters</code>
+      <td style="text-align:left">Retourne un tableau de tous les noms de propriétés de cet <em><b>objet</b></em>.
+        Vous pouvez spécifier si vous voulez inclure des paramètres et/ou des objets (comme
+        conteneurs) La valeur par défaut est include all.</td>
+      <td style="text-align:left"><code>var propNames = util.getObjectProperties(myObject, true, false) ; //seulement get parameters</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>getObjectMethods(</b><em>object</em><b>)</b>
+      <td style="text-align:left"><b>getObjectMetMethods(</b><em>objet</em><b>)</b>
       </td>
-      <td style="text-align:left">Returns an array of all the method names of this <em><b>object</b></em>.</td>
+      <td style="text-align:left">Retourne un tableau de tous les noms de méthode de ce <em><b>objet</b></em>.</td>
       <td
-      style="text-align:left"><code>var methods= util.getObjectMethods();</code>
+      style="text-align:left"><code>var methods= util.getObjectMetMethods();</code>
         </td>
     </tr>
-  </tbody>
+  </corps>
 </table>
