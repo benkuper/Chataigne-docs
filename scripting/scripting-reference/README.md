@@ -6,6 +6,10 @@ Vous trouverez ici une référence quasi exhaustive sur les fonctions spécifiqu
 Les scripts dans Chataigne sont basés sur une version simplifiée de Javascript. La plupart des fonctions sont disponibles, mais certaines peuvent manquer. Si certaines fonctions vous manquent, veuillez me contacter et envisager de faire un don \([https://github.com/sponsors/benkuper](https://github.com/sponsors/benkuper)\) pour que je puisse passer plus de temps à améliorer Chataigne !
 {% endhint %}
 
+{% hint style="info" %}
+Cette documentation ne montre que les fonctions que j'ai rajouté par dessus le moteur Javascript de JUCE. Pour avoir plus d'informations sur toutes les fonctions de bases disponible, tu peux regarder dans le [source code du moteur Javascript](https://github.com/WeAreROLI/JUCE/blob/master/modules/juce_core/javascript/juce_Javascript.cpp).
+{% endhint %}
+
 ## Fonctions communes
 
 Il y a quelques fonctions communes que vous pouvez utiliser, quel que soit le type de script.
