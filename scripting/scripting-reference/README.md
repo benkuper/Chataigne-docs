@@ -3,7 +3,11 @@
 Here you can find an almost exhaustive reference on Chataigne specific functions.
 
 {% hint style="success" %}
-Scripts in Chataigne are based on a simplified version of Javascript. Most functions are available, but some might be missing. If you're missing some functions, please contact me and consider [donating](https://github.com/sponsors/benkuper) so I can spend more time improving Chataigne !
+Scripts in Chataigne are based on a simplified version of Javascript. Most functions are available, but some might be missing.  If you're missing some functions, please contact me and consider [donating](https://github.com/sponsors/benkuper) so I can spend more time improving Chataigne !
+{% endhint %}
+
+{% hint style="info" %}
+This documentation only shows functions that I have added on top of JUCE's Javascript Engine. To know all the base functions that are available, you can take a look at the [JavascriptEngine's source code](https://github.com/WeAreROLI/JUCE/blob/master/modules/juce_core/javascript/juce_Javascript.cpp)
 {% endhint %}
 
 ## Common Functions
