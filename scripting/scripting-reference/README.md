@@ -7,7 +7,7 @@ Les scripts dans Chataigne sont basés sur une version simplifiée de Javascript
 {% endhint %}
 
 {% hint style="info" %}
-Cette documentation ne montre que les fonctions que j'ai rajouté par dessus le moteur Javascript de JUCE. Pour avoir plus d'informations sur toutes les fonctions de bases disponible, tu peux regarder dans le [source code du moteur Javascript](https://github.com/WeAreROLI/JUCE/blob/master/modules/juce_core/javascript/juce_Javascript.cpp).
+Cette documentation ne montre que les fonctions que j'ai rajouté par dessus le moteur Javascript de JUCE. Pour avoir plus d'informations sur toutes les fonctions de bases disponible, tu peux regarder dans le [source code du moteur Javascript](https://github.com/benkuper/JUCE/blob/master/modules/juce_core/javascript/juce_Javascript.cpp).
 {% endhint %}
 
 ## Fonctions communes
