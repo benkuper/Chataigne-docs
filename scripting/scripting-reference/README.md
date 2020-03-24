@@ -7,7 +7,7 @@ Scripts in Chataigne are based on a simplified version of Javascript. Most funct
 {% endhint %}
 
 {% hint style="info" %}
-This documentation only shows functions that I have added on top of JUCE's Javascript Engine. To know all the base functions that are available, you can take a look at the [JavascriptEngine's source code](https://github.com/WeAreROLI/JUCE/blob/master/modules/juce_core/javascript/juce_Javascript.cpp)
+This documentation only shows functions that I have added on top of JUCE's Javascript Engine. To know all the base functions that are available, you can take a look at the [JavascriptEngine's source code](https://github.com/benkuper/JUCE/blob/master/modules/juce_core/javascript/juce_Javascript.cpp)
 {% endhint %}
 
 ## Common Functions
