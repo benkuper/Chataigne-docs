@@ -62,7 +62,7 @@ If you don't need them, don't add them in your script as Chataigne will optimize
       </td>
     </tr>
   </tbody>
-</table>### Parameters and triggers
+</table>## Parameters and triggers
 
 All parameters and triggers have common methods and specific methods
 
@@ -155,13 +155,13 @@ All parameters and triggers have common methods and specific methods
       </td>
     </tr>
   </tbody>
-</table>#### Trigger
+</table>### Trigger
 
 | Method | Description | Example |
 | :--- | :--- | :--- |
 | **trigger\(\)** | Returns the value of this parameter | `myTrigger.trigger();` |
 
-#### Float Parameter
+### Float Parameter
 
 <table>
   <thead>
@@ -199,7 +199,7 @@ All parameters and triggers have common methods and specific methods
       </td>
     </tr>
   </tbody>
-</table>#### Integer Parameter
+</table>### Integer Parameter
 
 <table>
   <thead>
@@ -235,14 +235,14 @@ All parameters and triggers have common methods and specific methods
       </td>
     </tr>
   </tbody>
-</table>#### Boolean Parameter
+</table>### Boolean Parameter
 
 | Method | Description | Example |
 | :--- | :--- | :--- |
 | **get\(\)** | Returns the value of this parameter | `var value = myBoolParam.get();` |
 | **set\(**_value_**\)** | Sets the value of this parameter | `myBoolParam.set(true);` |
 
-#### String Parameter
+### String Parameter
 
 <table>
   <thead>
@@ -280,7 +280,7 @@ All parameters and triggers have common methods and specific methods
       </td>
     </tr>
   </tbody>
-</table>#### Color Parameter
+</table>### Color Parameter
 
 <table>
   <thead>
@@ -322,7 +322,7 @@ All parameters and triggers have common methods and specific methods
       </td>
     </tr>
   </tbody>
-</table>#### Target Parameter
+</table>### Target Parameter
 
 <table>
   <thead>
@@ -376,7 +376,7 @@ All parameters and triggers have common methods and specific methods
       </td>
     </tr>
   </tbody>
-</table>#### Enum Parameter
+</table>### Enum Parameter
 
 | Method | Description | Example |
 | :--- | :--- | :--- |
@@ -386,7 +386,7 @@ All parameters and triggers have common methods and specific methods
 | **set\(**_label_**\)** | Sets the value with the provided label | `myEnumParam.set("new option");` |
 | **removeOptions\(\)** | Removes all options. | `myEnumParam.removeOptions();` |
 
-#### File Parameter
+### File Parameter
 
 <table>
   <thead>
@@ -445,21 +445,21 @@ All parameters and triggers have common methods and specific methods
         </td>
     </tr>
   </tbody>
-</table>#### Point2D Parameter
+</table>### Point2D Parameter
 
 | Method | Description | Example |
 | :--- | :--- | :--- |
 | **get\(\)** | Returns the value of this parameter | `var value = myP2DParam.get();` |
 | **set\(**_x, y_**\)** | Sets the value of this parameter | `myP2DParam.set(.5, 2);` |
 
-#### Point3D Parameter
+### Point3D Parameter
 
 | Method | Description | Example |
 | :--- | :--- | :--- |
 | **get\(\)** | Returns the value of this parameter | `var value = myP3DParam.get();` |
 | **set\(**_x, y, z_**\)** | Sets the value of this parameter | `myP3DParam.set(.5, 2, -1);` |
 
-### Container
+## Container
 
 Containers are any object that contains parameters or other containers. If you're targetting something from the hierarchy \(_root.\*_ ****or _local.\*_\), this will be either a container of a parameter, so if it's not a parameter, then it's a container.
 
@@ -649,7 +649,7 @@ Containers are any object that contains parameters or other containers. If you'r
       </td>
     </tr>
   </tbody>
-</table>### Manager
+</table>## Manager
 
 Managers are special types of container. In the software, you can see that a container is a manager when there is a "**+**" icon on the right of its block. Well, almost all the times, some of them are just enhanced containers. Most of the times, the managers you will be interested in are the **Module manager, the Sequence manager, Layer managers and Automation keys managers.**
 
@@ -744,7 +744,7 @@ When a manipulating a manager, you have access to specific functions and propert
       </td>
     </tr>
   </tbody>
-</table>### Script object
+</table>## Script object
 
 The script object refers to the script container. You can add your own custom parameters here, as well as logging informations, warnings and errors.
 
@@ -889,12 +889,12 @@ The script object refers to the script container. You can add your own custom pa
       </td>
     </tr>
   </tbody>
-</table>### Root object
+</table>## Root object
 
 The root object refers to Chataigne's engine, which is the root object of all parent.  
 It allows you to access any object in Chataigne's hierarchy. The best way to access them is to right click on a parameter's UI and select "Copy Script control address". Then you can past the address in your script and you will be able to control this parameter.
 
-### Local object
+## Local object
 
 The local object depends on where the scripts is running.
 
@@ -902,7 +902,7 @@ The local object depends on where the scripts is running.
 * If the script is running inside a condition, the local variable will be referring to the condition. You can find all the condition functions in the [Condition Scripts](condition-scripts.md) section. 
 * If the script is running inside a filter, the local variable will be referring to the filter. You can find all the filter functions in the [Filter Scripts](filter-scripts.md)[ ](condition-scripts.md)section.
 
-### **Util object**
+## **Util object**
 
 The util object provides helpers and utility functions like time or conversion.
 
