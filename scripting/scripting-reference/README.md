@@ -241,7 +241,14 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
     </tr>
   </tbody>
-</table>\| Méthode \| Description \| Exemple \| \| :--- \| :--- \| :--- \| \| \*\*get\\(\\)\*\* \| Retourne la valeur de ce paramètre \| \`var value = myBoolParam.get\(\);\` \| \| \*\*set\\(\*\*\_value\_\*\*\\)\*\* \| Définit la valeur de ce paramètre \| \`myBoolParam.set\(true\);\` \| \#\#\# String Parameter
+</table>### Boolean Parameter
+
+| Méthode | Description | Exemple |
+| :--- | :--- | :--- |
+| **get\(\)** | Retourne la valeur de ce paramètre | `var value = myFloatParam.get();` |
+| **set\(**_value_**\)** | Définit la valeur de ce paramètre | `myFloatParam.set(.5);` |
+
+###  String Parameter
 
 <table>
   <thead>
