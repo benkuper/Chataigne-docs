@@ -142,6 +142,24 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       <td style="text-align:left"><code>script.log(myParam.niceName);</code>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left"><b>getControlAddress (</b>[reference]<b>)</b>
+      </td>
+      <td style="text-align:left">Retourne l&apos;adresse de contr&#xF4;le OSC de cet &#xE9;lement. Le param&#xE8;tre
+        optionnel <em><b>reference </b></em>permet de sp&#xE9;cifier un &#xE9;l&#xE9;ment
+        relatif &#xE0; partir duquel g&#xE9;n&#xE9;rer l&apos;adresse .</td>
+      <td
+      style="text-align:left"><code>script.log( myContainer.getControlAddress());</code>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>getScriptControlAddress()</b>
+      </td>
+      <td style="text-align:left">Retourne l&apos;adresse de contr&#xF4;le en version script de cet &#xE9;l&#xE9;ment.</td>
+      <td
+      style="text-align:left"><code>script.log( myContainer.getScriptControlAddress());</code>
+        </td>
+    </tr>
   </tbody>
 </table>###  Trigger
 
@@ -679,6 +697,24 @@ Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera so
       <td style="text-align:left">Supprimer un param&#xE8;tre du conteneur.</td>
       <td style="text-align:left"><code>myContainer.removeParameter (myChildParameter);</code>
       </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>getControlAddress (</b>[reference]<b>)</b>
+      </td>
+      <td style="text-align:left">Retourne l&apos;adresse de contr&#xF4;le OSC de cet &#xE9;lement. Le param&#xE8;tre
+        optionnel <em><b>reference </b></em>permet de sp&#xE9;cifier un &#xE9;l&#xE9;ment
+        relatif &#xE0; partir duquel g&#xE9;n&#xE9;rer l&apos;adresse .</td>
+      <td
+      style="text-align:left"><code>script.log( myContainer.getControlAddress());</code>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>getScriptControlAddress()</b>
+      </td>
+      <td style="text-align:left">Retourne l&apos;adresse de contr&#xF4;le en version script de cet &#xE9;l&#xE9;ment.</td>
+      <td
+      style="text-align:left"><code>script.log( myContainer.getScriptControlAddress());</code>
+        </td>
     </tr>
   </tbody>
 </table>## Managers 
