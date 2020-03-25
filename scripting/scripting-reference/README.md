@@ -138,6 +138,22 @@ All parameters and triggers have common methods and specific methods
       <td style="text-align:left"><code>script.log(myParam.niceName);</code>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left"><b>getControlAddress (</b>[reference]<b>)</b>
+      </td>
+      <td style="text-align:left">Returns the OSC-style control address of this element. Optional <em><b>reference </b></em>parameter
+        allows you to specify a root container to generate the address from.</td>
+      <td
+      style="text-align:left"><code>script.log( myParam.getControlAddress());</code>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>getScriptControlAddress()</b>
+      </td>
+      <td style="text-align:left">Returns the script control address of this element.</td>
+      <td style="text-align:left"><code>script.log( myParam.getScriptControlAddress());</code>
+      </td>
+    </tr>
   </tbody>
 </table>#### Trigger
 
@@ -616,6 +632,22 @@ Containers are any object that contains parameters or other containers. If you'r
       <td style="text-align:left"><code>myContainer.removeParameter (myChildParameter);</code>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left"><b>getControlAddress (</b>[reference]<b>)</b>
+      </td>
+      <td style="text-align:left">Returns the OSC-style control address of this element. Optional <em><b>reference </b></em>parameter
+        allows you to specify a root container to generate the address from.</td>
+      <td
+      style="text-align:left"><code>script.log( myContainer.getControlAddress());</code>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>getScriptControlAddress()</b>
+      </td>
+      <td style="text-align:left">Returns the script control address of this element.</td>
+      <td style="text-align:left"><code>script.log( myContainer.getScriptControlAddress());</code>
+      </td>
+    </tr>
   </tbody>
 </table>### Manager
 
@@ -849,7 +881,7 @@ The script object refers to the script container. You can add your own custom pa
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>function scriprtParameterChanged(</b><em>param</em><b>)</b>
+      <td style="text-align:left"><b>function scriptParameterChanged (</b><em>param</em><b>)</b>
       </td>
       <td style="text-align:left">This function will be called each time a parameter of this script has
         changed.</td>
@@ -990,6 +1022,20 @@ The util object provides helpers and utility functions like time or conversion.
       <td
       style="text-align:left"><code>var methods= util.getObjectMethods();</code>
         </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>copyToClipboard(</b><em>data, data2...)</em>
+      </td>
+      <td style="text-align:left">Copies all data joined into string to the clipboard</td>
+      <td style="text-align:left"><code>util.copyToClipboard(&quot;super&quot;,5, myData);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>getFromClipboard(</b><em>)</em>
+      </td>
+      <td style="text-align:left">Returns the content of the clipboard</td>
+      <td style="text-align:left"><code>var data = util.getFromClipboard();</code>
+      </td>
     </tr>
   </tbody>
 </table>
