@@ -1063,5 +1063,20 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
       style="text-align:left"><code>var methods= util.getObjectMethods();</code>
         </td>
     </tr>
+    <tr>
+      <td style="text-align:left"><b>copyToClipboard(</b><em>data, data2...)</em>
+      </td>
+      <td style="text-align:left">Copie les donn&#xE9;es concat&#xE9;n&#xE9;es dans le presse-papier.</td>
+      <td
+      style="text-align:left"><code>util.copyToClipboard(&quot;super&quot;,5, myData);</code>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>getFromClipboard(</b><em>)</em>
+      </td>
+      <td style="text-align:left">Retourne le contenu du presse-papier.</td>
+      <td style="text-align:left"><code>var data = util.getFromClipboard();</code>
+      </td>
+    </tr>
   </tbody>
 </table>
