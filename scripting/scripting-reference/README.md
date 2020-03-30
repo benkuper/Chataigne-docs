@@ -743,6 +743,17 @@ When a manipulating a manager, you have access to specific functions and propert
       <td style="text-align:left"><code>var nextSequence = root.sequences.getItemAfter (curSequence);</code>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left"><b>reorderItems()</b>
+      </td>
+      <td style="text-align:left">Reorders all items in this manager.</td>
+      <td style="text-align:left">
+        <p><code>var mappingLayer = root.sequences.sequence.layers.mapping;</code>
+        </p>
+        <p><code>mappingLayer.automation.reorderItems();</code>
+        </p>
+      </td>
+    </tr>
   </tbody>
 </table>## Script object
 
