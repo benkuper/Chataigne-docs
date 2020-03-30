@@ -69,6 +69,7 @@
 * [Interface et navigation](the-time-machine-sequences/interface-and-navigation.md)
 * [Trigger Layer](the-time-machine-sequences/trigger-layer.md)
 * [Mapping Layer](the-time-machine-sequences/mapping-layer.md)
+* [Mapping 2D Layer](the-time-machine-sequences/mapping-2d-layer.md)
 * [Color Layer](the-time-machine-sequences/color-layer.md)
 * [Audio Layer](the-time-machine-sequences/audio-layer.md)
 
