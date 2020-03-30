@@ -4,9 +4,13 @@ A Mapping layer contains an automation, which is a curve based animation. This i
 
 The Mapping Layer features some features to ease the creation of animations.
 
+![](../.gitbook/assets/screenshot_1.png)
+
 ## The Recorder
 
+The recorder allows you to record in time an input value and convert it into a curve. You just have to choose an Input value, activate the **Arm** parameter and start playing. The value of this parameter will then be shown in red in the layer and when stopping the sequence it will convert automatically into an editable curve.
 
+![Recording a perlin noise from the Generator module](../.gitbook/assets/recording.gif)
 
 ## Painting Automation 
 
