@@ -45,12 +45,15 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
     <tr>
       <td style="text-align:left"><b>update(</b><em>deltaTime</em><b>)</b>
       </td>
-      <td style="text-align:left">Si elle est pr&#xE9;sente, cette fonction sera appel&#xE9;e r&#xE9;guli&#xE8;rement
-        au rythme sp&#xE9;cifi&#xE9; par le &quot;Taux de mise &#xE0; jour&quot;
-        ; param&#xE8;tre de script. Ce param&#xE8;tre n&apos;est visible que lorsque
-        la fonction est pr&#xE9;sente dans le sc&#xE9;nario. Vous pouvez &#xE9;galement
-        modifier le taux &#xE0; partir du script en appelant <b>script.setUpdateRate</b><em>(rate).</em> voir
-        ci-dessous pour plus d&apos;informations.</td>
+      <td style="text-align:left">
+        <p>Si elle est pr&#xE9;sente, cette fonction sera appel&#xE9;e r&#xE9;guli&#xE8;rement
+          au rythme sp&#xE9;cifi&#xE9; par le &quot;Taux de mise &#xE0; jour&quot;
+          ; param&#xE8;tre de script.</p>
+        <p>Ce param&#xE8;tre n&apos;est visible que lorsque la fonction est pr&#xE9;sente
+          dans le sc&#xE9;nario. Vous pouvez &#xE9;galement modifier le taux &#xE0;
+          partir du script en appelant <b>script.setUpdateRate</b><em>(rate).</em> voir
+          ci-dessous pour plus d&apos;informations.</p>
+      </td>
       <td style="text-align:left">
         <p><code>fonction update(deltaTime)</code>
         </p>
@@ -193,7 +196,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>setAttribut(</b><em>attribut, value</em><b>)</b>
+      <td style="text-align:left"><b>setAttribute(</b><em>attribut, value</em><b>)</b>
       </td>
       <td style="text-align:left">
         <p>Attributs sp&#xE9;cifiques :</p>

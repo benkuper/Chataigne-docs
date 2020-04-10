@@ -212,7 +212,7 @@ Certains modules ont des méthodes spécifiques qui sont utiles si vous voulez a
           ce module.</p>
         <p><em><b>adresse</b></em> est l&apos;adresse du message</p>
       </th>
-      <th style="text-align:left"><code>local.send(&quot;/myAddress&quot; ;, 1, .5f, &quot;cool&quot; ;);</code>
+      <th style="text-align:left"><code>local.send(&quot;/myAddress&quot; ;, 1, .5, &quot;cool&quot; ;);</code>
       </th>
     </tr>
   </thead>
