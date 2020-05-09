@@ -400,7 +400,11 @@ All parameters and triggers have common methods and specific methods
     <tr>
       <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
       </td>
-      <td style="text-align:left">Set specific FileParameter attribute (see examples)</td>
+      <td style="text-align:left">
+        <p>Specific attributes :</p>
+        <p><em><b>directoryMode</b></em>: specify if this parameter should be looking
+          for a file or a folder</p>
+      </td>
       <td style="text-align:left"><code>myFileParam.setAttribute (&quot;directoryMode&quot;,true);</code>
       </td>
     </tr>
