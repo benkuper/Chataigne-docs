@@ -413,10 +413,13 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
     <tr>
       <td style="text-align:left"><b>setAttribut(</b><em>attribut, value</em><b>)</b>
       </td>
-      <td style="text-align:left">D&#xE9;finissez un attribut FileParameter sp&#xE9;cifique (voir exemples)</td>
-      <td
-      style="text-align:left"><code>myFileParam.setAttribute (&quot;directoryMode&quot; ;,true);</code>
-        </td>
+      <td style="text-align:left">
+        <p>Attributs sp&#xE9;cifiques :</p>
+        <p><em><b>directoryMode </b></em>: pr&#xE9;ciser si l&apos;on veut chercher
+          un fichier ou un dossier.</p>
+      </td>
+      <td style="text-align:left"><code>myFileParam.setAttribute (&quot;directoryMode&quot;,true);</code>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>readFile(</b><em>[asJSON]</em><b>)</b>
