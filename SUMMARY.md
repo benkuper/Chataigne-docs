@@ -36,6 +36,7 @@
   * [Resolume](modules/software/resolume.md)
   * [MadMapper](modules/software/madmapper.md)
   * [Millumin](modules/software/millumin.md)
+  * [QLab](modules/software/qlab.md)
   * [Reaper](modules/software/reaper.md)
   * [LiveOSC2](modules/software/liveosc2.md)
   * [Watchout](modules/software/watchout.md)
