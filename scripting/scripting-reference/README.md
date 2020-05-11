@@ -391,15 +391,67 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
   </tbody>
 </table>### Enum Parameter
 
-| Méthode | Description | Exemple |
-| :--- | :--- | :--- |
-| **addOption\(**_label, value_**\)** | Ajouter une option à la liste | `myEnumParam.addOption("nouvelle option",3);` |
-| **get\(\)** | Obtenez le label sélectionné | `var label = myEnumParam.get();` |
-| **getData\(\)** | Obtenir les données sélectionnées | `var data = myEnumParam.getData();` |
-| **set\(**_label_**\)** | Définit la valeur avec l'étiquette fournie | `myEnumParam.set("nouvelle option");` |
-| **removeOptions\(\)** | Supprime toutes les options. | `myEnumParam.removeOptions();` |
-
-### File Parameter
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">M&#xE9;thode</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Exemple</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>addOption(</b><em>label, value</em><b>)</b>
+      </td>
+      <td style="text-align:left">Ajouter une option &#xE0; la liste</td>
+      <td style="text-align:left"><code>myEnumParam.addOption(&quot;nouvelle option&quot;,3);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>get()</b>
+      </td>
+      <td style="text-align:left">
+        <p>1.6.x : Retourne la cl&#xE9; s&#xE9;lectionn&#xE9;e</p>
+        <p>1.7.x : Retourne la donn&#xE9;e s&#xE9;lectionn&#xE9;e</p>
+      </td>
+      <td style="text-align:left">
+        <p><code>var label = myEnumParam.get(); //1.6.x</code>
+        </p>
+        <p><code>var value= myEnumParam.get(); //1.7.x</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>getData() (1.6.x)</b>
+      </td>
+      <td style="text-align:left">Obtenir les donn&#xE9;es s&#xE9;lectionn&#xE9;es (1.6.x seulement)</td>
+      <td
+      style="text-align:left"><code>var data = myEnumParam.getData(); //1.6</code>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>getKey() (1.7.x)</b>
+      </td>
+      <td style="text-align:left">Obtenir la cl&#xE9; s&#xE9;lectionn&#xE9; (1.7.x seulement)</td>
+      <td style="text-align:left"><code>var key = myEnumParam.getKey(); //1.7</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>set(</b><em>label</em><b>)</b>
+      </td>
+      <td style="text-align:left">D&#xE9;finit la valeur avec l&apos;&#xE9;tiquette fournie</td>
+      <td style="text-align:left"><code>myEnumParam.set(&quot;nouvelle option&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>removeOptions()</b>
+      </td>
+      <td style="text-align:left">Supprime toutes les options.</td>
+      <td style="text-align:left"><code>myEnumParam.removeOptions();</code>
+      </td>
+    </tr>
+  </tbody>
+</table>### File Parameter
 
 <table>
   <thead>
