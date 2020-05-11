@@ -96,7 +96,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>setAttribut(</b><em>attribut, value</em><b>)</b>
+      <td style="text-align:left"><b>setAttribute(</b><em>attribut, value</em><b>)</b>
       </td>
       <td style="text-align:left">
         <p>D&#xE9;finit un param&#xE8;tre&apos;s attribut.</p>
@@ -234,7 +234,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>setAttribut(</b><em>attribut, value</em><b>)</b>
+      <td style="text-align:left"><b>setAttribute(</b><em>attribut, value</em><b>)</b>
       </td>
       <td style="text-align:left">
         <p>Attributs sp&#xE9;cifiques :</p>
@@ -277,7 +277,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>setAttribut(</b><em>attribut, value</em><b>)</b>
+      <td style="text-align:left"><b>setAttribute(</b><em>attribut, value</em><b>)</b>
       </td>
       <td style="text-align:left">
         <p>Attributs sp&#xE9;cifiques :</p>
@@ -366,7 +366,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>setAttribut(</b><em>attribut, value</em><b>)</b>
+      <td style="text-align:left"><b>setAttribute(</b><em>attribut, value</em><b>)</b>
       </td>
       <td style="text-align:left">
         <p>Attributs sp&#xE9;cifiques :</p>
@@ -411,7 +411,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>setAttribut(</b><em>attribut, value</em><b>)</b>
+      <td style="text-align:left"><b>setAttribute(</b><em>attribut, value</em><b>)</b>
       </td>
       <td style="text-align:left">
         <p>Attributs sp&#xE9;cifiques :</p>
