@@ -230,7 +230,6 @@ Certains modules ont des méthodes spécifiques qui sont utiles si vous voulez a
 {% tab title="DMX" %}
 | Méthode | Description | Exemple |
 | :--- | :--- | :--- |
-
 | **send\(**_startChannel, value1, value2, ..., valueN_**\)** | Ceci enverra des **valeurs DMX** en démarrant par le **canal DMX** spécifié. Vous pouvez ajouter autant de valeurs que nécessaire, et même mélanger des tableaux de valeurs et des valeurs simples. Les valeurs vont de 0 à 255. | `local.send(32, 255);` |
 
 {% endtab %}
