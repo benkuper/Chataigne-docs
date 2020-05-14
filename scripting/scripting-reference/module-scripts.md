@@ -128,12 +128,6 @@ Certains modules ont des rappels de fonctions spécifiques qui sont utiles si vo
 | :--- | :--- | :--- |
 {% endtab %}
 
-{% tab title="DMX" %}
-| Method | Description | Example |
-| :--- | :--- | :--- |
-| **send\(**_startChannel, value1, value2, ..., valueN_**\)** | Sends DMX values starting at the **startChannel.** You can add as many values as you want, and you can even mix array of values with single values. Values are 0 to 255. | `local.send(32, 255);` |
-{% endtab %}
-
 {% tab title="Serial/UDP/TCP" %}
 | Méthode | Description | Exemple |
 | :--- | :--- | :--- |
