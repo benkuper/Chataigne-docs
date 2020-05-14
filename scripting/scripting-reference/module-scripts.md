@@ -121,11 +121,6 @@ Some modules have specific function callbacks that are useful if you want to cus
 | :--- | :--- | :--- |
 {% endtab %}
 
-{% tab title="DMX" %}
-| Method | Description | Example |
-| :--- | :--- | :--- |
-| **send\(**_startChannel, value1, value2, ..., valueN_**\)** | Sends DMX values starting at the **startChannel.** You can add as many values as you want, and you can even mix array of values with single values. Values are 0 to 255. | `local.send(32, 255);` |
-{% endtab %}
 
 {% tab title="Serial/UDP/TCP" %}
 | Method | Description | Example |
@@ -226,25 +221,7 @@ Some modules have specific methods that are useful if you want to have specific 
 | Method | Description | Example |
 | :--- | :--- | :--- |
 
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left"><b>send(</b><em>channel, value1, value2, ...</em><b>)</b>
-      </th>
-      <th style="text-align:left">
-        <p>This will send value to the specified DMX channel.</p>
-        <p>After specifying the <b>channel</b>, you can add multiple values. The channel
-          will be treated as a start channel. Value1 will be sent to the start channel.
-          Value2 will be sent to the channel after the start channel. Thus, the channel
-          will be incremented for each value.</p>
-      </th>
-      <th style="text-align:left"><code>local.send(1, 255);</code>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+| **send\(**_startChannel, value1, value2, ..., valueN_**\)** | Sends DMX values starting at the **startChannel.** You can add as many values as you want, and you can even mix array of values with single values. Values are 0 to 255. | `local.send(32, 255);` |
 {% endtab %}
 
 {% tab title="Serial/UDP/TCP" %}
