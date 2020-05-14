@@ -231,26 +231,8 @@ Certains modules ont des méthodes spécifiques qui sont utiles si vous voulez a
 | Méthode | Description | Exemple |
 | :--- | :--- | :--- |
 
+| **send\(**_startChannel, value1, value2, ..., valueN_**\)** | Ceci enverra des **valeurs DMX** en démarrant par le **canal DMX** spécifié. Vous pouvez ajouter autant de valeurs que nécessaire, et même mélanger des tableaux de valeurs et des valeurs simples. Les valeurs vont de 0 à 255. | `local.send(32, 255);` |
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left"><b>send(</b><em>channel, value1, value2, ...</em><b>)</b>
-      </th>
-      <th style="text-align:left">
-        <p>Ceci enverra la valeur au canal DMX sp&#xE9;cifi&#xE9;.</p>
-        <p>Apr&#xE8;s avoir sp&#xE9;cifi&#xE9; le <b>canal</b>, vous pouvez ajouter
-          plusieurs valeurs. Le canal sera trait&#xE9; comme un canal de d&#xE9;part.
-          La valeur 1 sera envoy&#xE9;e au canal de d&#xE9;part. La valeur 2 sera
-          envoy&#xE9;e au canal suivant le canal de d&#xE9;part. Ainsi, le canal
-          sera incr&#xE9;ment&#xE9; pour chaque valeur.</p>
-      </th>
-      <th style="text-align:left"><code>local.send(1, 255);</code>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
 {% endtab %}
 
 {% tab title="Serial/UDP/TCP" %}
