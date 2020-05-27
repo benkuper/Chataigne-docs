@@ -194,25 +194,10 @@ Certains modules ont des méthodes spécifiques qui sont utiles si vous voulez a
 {% tab title="OSC" %}
 | Méthode | Description | Exemple |
 | :--- | :--- | :--- |
-
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left"><b>send(</b><em>address, arg1, arg2, arg3, ...</em><b>)</b>
-      </th>
-      <th style="text-align:left">
-        <p>Cela envoie un message OSC &#xE0; toutes les sorties activ&#xE9;es de
-          ce module.</p>
-        <p><em><b>adresse</b></em> est l&apos;adresse du message</p>
-      </th>
-      <th style="text-align:left"><code>local.send(&quot;/myAddress&quot; ;, 1, .5, &quot;cool&quot; ;);</code>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>| **sendTo\(**_ip, port, adresse, arg1, arg2, arg3, ..._**\)** | Même chose que la méthode **envoi** mais envoi à un _**ip spécifique**_ et _**port,**_ ignoring le module's output. | `local.sendTo("192.168.1.255" ;, 9000, "/myAddress" ;, 1, .5f, "cool" ;);` |
-| :--- | :--- | :--- |
+| **send\(**_address, arg1, arg2, arg3, ..._**\)** | Envoie un message OSC à toutes les sorties activées du module. **_address_** est l'adresse du message | `local.send("myAddress", 1, .5f, "cool");`|
+| **sendTo\(**_ip, port, address, arg1, arg2, ..._**\)** | Même fonctionnement que **send**, mais envoie le message à une adresse _**ip**_ et un _**port**_ spécifique, sans tenir compte des sorties du module. | `local.sendTo("192.168.0.30", 9000, "myAddress", 1, .5f);` |
+| **match\(**_address, pattern_**\)** | Vérifie si l'adresse **_address_** correspond au schéma **_pattern_**, conformément à la [spécification OSC](http://opensoundcontrol.org/spec-1_0). Les astérisques, etc sont reconnus. | `if (local.match(address, "/testPattern")) ...` |
+| **register\(**_pattern, callbackFunc_**\)** | Enregistre une fonction du script à appeler quand un message correspondant à  **_pattern_** est reçu. **_callbackFunc_** est le nom de la fonction à appeler. **\[Note\]** Si le module contient plusieurs scripts, ce nom de fonction est enregistré pour tous les scripts. | <pre>function init() {<br>  local.register("/testPattern", "testPatternCallback");<br>}<br><br>function testPatternCallback(address, args) {<br>  script.log("Received message "+address);<br>}</pre> |
 {% endtab %}
 
 {% tab title="MIDI" %}
