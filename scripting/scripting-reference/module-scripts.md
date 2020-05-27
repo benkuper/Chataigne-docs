@@ -186,23 +186,12 @@ Some modules have specific methods that are useful if you want to have specific 
 {% tab title="OSC" %}
 | Method | Description | Example |
 | :--- | :--- | :--- |
+| **send\(**_address, arg1, arg2, arg3, ..._**\)** | This sends an OSC message to all the enabled outputs of this module. **_address_** is the address of the message | `local.send("myAddress", 1, .5f, "cool");`|
+| **sendTo\(**_ip, port, address, arg1, arg2, ..._**\)** | Same as the **send** method, but will send to a specific _**ip**_ and _**port**_, ignoring the module's output. | `local.sendTo("192.168.0.30", 9000, "myAddress", 1, .5f);` |
+| **match\(**_address, pattern_**\)** | Check if the specified **_address_** matches the **_pattern_**, according to the [OSC specification](http://opensoundcontrol.org/spec-1_0). Wildcards, etc are supported. | `if (local.match(address, "/testPattern")) ...` |
+| **register\(**_pattern, callbackFunc_**\)** | Register a script function to call when a message matching **_pattern_** is received. **_callbackFunc_** is the name of the callback function. **\[Note\]** if the module contains multiple scripts, the callback is registered for all the scripts. | <pre>function init() {<br>  local.register("/testPattern", "testPatternCallback");<br>}<br><br>function testPatternCallback(address, args) {<br>  script.log("Received message "+address);<br>}</pre> |
 
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left"><b>send(</b><em>address, arg1, arg2, arg3, ...</em><b>)</b>
-      </th>
-      <th style="text-align:left">
-        <p>This sends an OSC message to all the enabled outputs of this module.</p>
-        <p><em><b>address</b></em> is the address of the message</p>
-      </th>
-      <th style="text-align:left"><code>local.send(&quot;/myAddress&quot;, 1, .5f, &quot;cool&quot;);</code>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
 {% endtab %}
 
 {% tab title="MIDI" %}
