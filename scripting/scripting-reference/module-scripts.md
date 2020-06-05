@@ -68,7 +68,9 @@ Certains modules ont des rappels de fonctions spécifiques qui sont utiles si vo
     </tr>
   </thead>
   <tbody></tbody>
-</table><table>
+</table>
+
+<table>
   <thead>
     <tr>
       <th style="text-align:left"><b>noteOffEvent (</b><em>canal, hauteur, vitesse</em><b>)</b>
@@ -84,7 +86,9 @@ Certains modules ont des rappels de fonctions spécifiques qui sont utiles si vo
     </tr>
   </thead>
   <tbody></tbody>
-</table><table>
+</table>
+
+<table>
   <thead>
     <tr>
       <th style="text-align:left"><b>ccEvent (</b><em>canal, nombre, valeur</em><b>)</b>
@@ -100,7 +104,9 @@ Certains modules ont des rappels de fonctions spécifiques qui sont utiles si vo
     </tr>
   </thead>
   <tbody></tbody>
-</table><table>
+</table>
+
+<table>
   <thead>
     <tr>
       <th style="text-align:left"><b>sysExEvent(</b><em>data</em><b>)</b>
@@ -116,9 +122,7 @@ Certains modules ont des rappels de fonctions spécifiques qui sont utiles si vo
     </tr>
   </thead>
   <tbody></tbody>
-</table>| **pitchWheelEvent \(**_channel, value_**\)** | Cette fonction sera appelée à chaque fois qu'un événement pitchWheel sera reçu. Les arguments sont respectivement le canal et la valeur de cet événement. | `fonction pitchWheelEvent(channel, value) { script.log("PitchWheel received "+channel+" ;, "+value); }` |
-| :--- | :--- | :--- |
-
+</table>
 
 | **channelPressureEvent \(**_channel, value_**\)** | Cette fonction sera appelée à chaque fois qu'un événement ChannelPressure sera reçu. Les arguments sont respectivement le canal et la valeur de cet événement. | `fonction channelPressureEvent(channel, value) { script.log("Channel Pressure received "+channel+" ;, "+value); }` |
 | :--- | :--- | :--- |
@@ -194,10 +198,10 @@ Certains modules ont des méthodes spécifiques qui sont utiles si vous voulez a
 {% tab title="OSC" %}
 | Méthode | Description | Exemple |
 | :--- | :--- | :--- |
-| **send\(**_address, arg1, arg2, arg3, ..._**\)** | Envoie un message OSC à toutes les sorties activées du module. **_address_** est l'adresse du message | `local.send("myAddress", 1, .5f, "cool");`|
+| **send\(**_address, arg1, arg2, arg3, ..._**\)** | Envoie un message OSC à toutes les sorties activées du module. _**address**_ est l'adresse du message | `local.send("myAddress", 1, .5f, "cool");` |
 | **sendTo\(**_ip, port, address, arg1, arg2, ..._**\)** | Même fonctionnement que **send**, mais envoie le message à une adresse _**ip**_ et un _**port**_ spécifique, sans tenir compte des sorties du module. | `local.sendTo("192.168.0.30", 9000, "myAddress", 1, .5f);` |
-| **match\(**_address, pattern_**\)** | Vérifie si l'adresse **_address_** correspond au schéma **_pattern_**, conformément à la [spécification OSC](http://opensoundcontrol.org/spec-1_0). Les astérisques, etc sont reconnus. | `if (local.match(address, "/testPattern")) ...` |
-| **register\(**_pattern, callbackFunc_**\)** | Enregistre une fonction du script à appeler quand un message correspondant à  **_pattern_** est reçu. **_callbackFunc_** est le nom de la fonction à appeler. **\[Note\]** Si le module contient plusieurs scripts, ce nom de fonction est enregistré pour tous les scripts. | `function init() {`<br>`  local.register("/testPattern", "testPatternCallback");`<br>`}`<br>`function testPatternCallback(address, args) {`<br>`  script.log("Received message "+address);`<br>`}` |
+| **match\(**_address, pattern_**\)** | Vérifie si l'adresse _**address**_ correspond au schéma _**pattern**_, conformément à la [spécification OSC](http://opensoundcontrol.org/spec-1_0). Les astérisques, etc sont reconnus. | `if (local.match(address, "/testPattern")) ...` |
+| **register\(**_pattern, callbackFunc_**\)** | Enregistre une fonction du script à appeler quand un message correspondant à  _**pattern**_ est reçu. _**callbackFunc**_ est le nom de la fonction à appeler. **\[Note\]** Si le module contient plusieurs scripts, ce nom de fonction est enregistré pour tous les scripts. | `function init() {` `local.register("/testPattern", "testPatternCallback");` `}` `function testPatternCallback(address, args) {` `script.log("Received message "+address);` `}` |
 {% endtab %}
 
 {% tab title="MIDI" %}
@@ -216,7 +220,6 @@ Certains modules ont des méthodes spécifiques qui sont utiles si vous voulez a
 | Méthode | Description | Exemple |
 | :--- | :--- | :--- |
 | **send\(**_startChannel, value1, value2, ..., valueN_**\)** | Ceci enverra des **valeurs DMX** en démarrant par le **canal DMX** spécifié. Vous pouvez ajouter autant de valeurs que nécessaire, et même mélanger des tableaux de valeurs et des valeurs simples. Les valeurs vont de 0 à 255. | `local.send(32, 255);` |
-
 {% endtab %}
 
 {% tab title="Serial/UDP/TCP" %}

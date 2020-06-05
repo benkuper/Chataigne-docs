@@ -43,7 +43,9 @@ Lorsque des scripts sont exécutés en tant que filtre, des rappels de nouvelles
       </td>
     </tr>
   </tbody>
-</table>Dans cet exemple, nous considérons un projet simple avec une piste audio en boucle. Nous avons également une variable personnalisée masterVolume qui contrôle le volume de la piste audio par le biais d'un mapping.
+</table>
+
+Dans cet exemple, nous considérons un projet simple avec une piste audio en boucle. Nous avons également une variable personnalisée masterVolume qui contrôle le volume de la piste audio par le biais d'un mapping.
 
 ![](../../.gitbook/assets/filterscript_mastervolumeexample_presentation.gif)
 

@@ -66,7 +66,9 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
       </td>
     </tr>
   </tbody>
-</table>## Paramètres et Triggers 
+</table>
+
+## Paramètres et Triggers 
 
 Tous les paramètres et déclencheurs ont des méthodes communes et des méthodes spécifiques 
 
@@ -164,7 +166,9 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
         </td>
     </tr>
   </tbody>
-</table>###  Trigger
+</table>
+
+###  Trigger
 
 | Méthode | Description | Exemple |
 | :--- | :--- | :--- |
@@ -208,7 +212,9 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
     </tr>
   </tbody>
-</table>### Integer Parameter
+</table>
+
+### Integer Parameter
 
 <table>
   <thead>
@@ -244,7 +250,9 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
     </tr>
   </tbody>
-</table>### Boolean Parameter
+</table>
+
+### Boolean Parameter
 
 | Méthode | Description | Exemple |
 | :--- | :--- | :--- |
@@ -289,7 +297,9 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
     </tr>
   </tbody>
-</table>### Color Parameter
+</table>
+
+### Color Parameter
 
 <table>
   <thead>
@@ -332,7 +342,9 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
     </tr>
   </tbody>
-</table>### Target Parameter
+</table>
+
+### Target Parameter
 
 <table>
   <thead>
@@ -389,7 +401,9 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
     </tr>
   </tbody>
-</table>### Enum Parameter
+</table>
+
+### Enum Parameter
 
 <table>
   <thead>
@@ -451,7 +465,9 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
     </tr>
   </tbody>
-</table>### File Parameter
+</table>
+
+### File Parameter
 
 <table>
   <thead>
@@ -516,7 +532,9 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
         </td>
     </tr>
   </tbody>
-</table>### Point2D Parameter
+</table>
+
+### Point2D Parameter
 
 <table>
   <thead>
@@ -551,7 +569,9 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
     </tr>
   </tbody>
-</table>### Point3D Parameter 
+</table>
+
+### Point3D Parameter 
 
 <table>
   <thead>
@@ -586,7 +606,9 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
     </tr>
   </tbody>
-</table>## Container 
+</table>
+
+## Container 
 
 Les conteneurs sont tout objet qui contient des paramètres ou d'autres récipients.   
 Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera soit un conteneur, soit un paramètre. Donc si ce n'est pas un paramètre, alors c'est un conteneur.
@@ -782,7 +804,9 @@ Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera so
         </td>
     </tr>
   </tbody>
-</table>## Managers 
+</table>
+
+## Managers 
 
 Les managers sont des types particuliers de conteneurs. Dans le logiciel, vous pouvez voir qu'un conteneur est un gestionnaire lorsqu'il y a une icône "**+**\*" à droite de son bloc. Dans la plupart des cas, il s'agit simplement de conteneurs améliorés. La plupart du temps, les gestionnaires qui vous intéresseront sont **le gestionnaire de modules, le gestionnaire de séquences, les gestionnaires de couches et les gestionnaires de clés d'automatisation.**  
 Lorsque vous manipulez un gestionnaire, vous avez accès à des fonctions et des propriétés spécifiques comme l'ajout d'éléments, la suppression d'éléments ou l'obtention d'un tableau de ses éléments.
@@ -879,7 +903,9 @@ Lorsque vous manipulez un gestionnaire, vous avez accès à des fonctions et des
         </td>
     </tr>
   </tbody>
-</table>## Objet _script_
+</table>
+
+## Objet _script_
 
 L'objet _script_ fait référence au conteneur de script. Vous pouvez ajouter vos propres paramètres personnalisés ici, ainsi que des informations de journalisation, des avertissements et des erreurs.
 
@@ -1026,7 +1052,9 @@ L'objet _script_ fait référence au conteneur de script. Vous pouvez ajouter vo
       </td>
     </tr>
   </tbody>
-</table>## Objet _root_
+</table>
+
+## Objet _root_
 
 L'objet _root_ fait référence au moteur de Chataigne, qui est l'objet racine de tous les parents. Il permet d'accéder à n'importe quel objet dans la hiérarchie de Chataigne. La meilleure façon d'y accéder est de cliquer avec le bouton droit de la souris sur l'interface utilisateur d'un paramètre et de sélectionner "Copy Script control address". Vous pouvez alors passer l'adresse dans votre script et vous pourrez contrôler ce paramètre. 
 
@@ -1181,3 +1209,4 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
     </tr>
   </tbody>
 </table>
+

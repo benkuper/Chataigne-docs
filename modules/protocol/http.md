@@ -1,6 +1,6 @@
 # HTTP
 
-Ce moule permet la communication bi-directionnelle à des pages web et des webservices, en envoyant et récupérant des données depuis les sites internet et des APIs.
+Ce module permet la communication bi-directionnelle à des pages web et des webservices, en envoyant et récupérant des données depuis les sites internet et des APIs.
 
 ![](../../.gitbook/assets/http.png)
 
