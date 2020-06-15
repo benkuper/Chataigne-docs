@@ -19,161 +19,196 @@ Some modules have specific function callbacks that are useful if you want to cus
 
 {% tabs %}
 {% tab title="OSC" %}
-| Method | Description | Example |
-| :--- | :--- | :--- |
-
-
 <table>
   <thead>
     <tr>
-      <th style="text-align:left"><b>oscEvent(</b><em>address, args</em><b>)</b>
-      </th>
-      <th style="text-align:left">
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>oscEvent(</b><em>address, args</em><b>)</b>
+      </td>
+      <td style="text-align:left">
         <p>This function will be called each time an OSC message is received.</p>
         <p><em><b>address</b></em> is the address of the OSC Message
           <br /><em><b>args</b></em> is an array containing all the arguments of the OSC
           Message</p>
-      </th>
-      <th style="text-align:left">
+      </td>
+      <td style="text-align:left">
         <p><code>function oscEvent(address, args) {<br />script.log(&quot;OSC Message received &quot;+address+&quot;, &quot;+args.length+&quot; arguments&quot;);</code>
         </p>
         <p><code>}</code>
         </p>
-      </th>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
+  </tbody>
 </table>
 {% endtab %}
 
 {% tab title="MIDI" %}
-| Method | Description | Example |
-| :--- | :--- | :--- |
-
-
 <table>
   <thead>
     <tr>
-      <th style="text-align:left"><b>noteOnEvent (</b><em>channel, pitch, velocity</em><b>)</b>
-      </th>
-      <th style="text-align:left">
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>noteOnEvent (</b><em>channel, pitch, velocity</em><b>)</b>
+      </td>
+      <td style="text-align:left">
         <p>This function will be called each time a noteOn event is received.</p>
         <p>The arguments are respectively the channel, pitch and velocity of this
           event.</p>
-      </th>
-      <th style="text-align:left"><code>function noteOnEvent(channel, pitch, velocity) {<br />script.log(&quot;Note on received &quot;+channel+&quot;, &quot;+pitch+&quot;, &quot;+velocity);<br />}</code>
-      </th>
+      </td>
+      <td style="text-align:left"><code>function noteOnEvent(channel, pitch, velocity) {<br />script.log(&quot;Note on received &quot;+channel+&quot;, &quot;+pitch+&quot;, &quot;+velocity);<br />}</code>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table><table>
-  <thead>
     <tr>
-      <th style="text-align:left"><b>noteOffEvent (</b><em>channel, pitch, velocity</em><b>)</b>
-      </th>
-      <th style="text-align:left">
+      <td style="text-align:left"><b>noteOffEvent (</b><em>channel, pitch, velocity</em><b>)</b>
+      </td>
+      <td style="text-align:left">
         <p>This function will be called each time a noteOff event is received.</p>
         <p>The arguments are respectively the channel, pitch and velocity of this
           event.</p>
-      </th>
-      <th style="text-align:left"><code>function noteOffEvent(channel, pitch, velocity) {<br />script.log(&quot;Note off received &quot;+channel+&quot;, &quot;+pitch+&quot;, &quot;+velocity);<br />}</code>
-      </th>
+      </td>
+      <td style="text-align:left"><code>function noteOffEvent(channel, pitch, velocity) {<br />script.log(&quot;Note off received &quot;+channel+&quot;, &quot;+pitch+&quot;, &quot;+velocity);<br />}</code>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table><table>
-  <thead>
     <tr>
-      <th style="text-align:left"><b>ccEvent (</b><em>channel, number, value</em><b>)</b>
-      </th>
-      <th style="text-align:left">
+      <td style="text-align:left"><b>ccEvent (</b><em>channel, number, value</em><b>)</b>
+      </td>
+      <td style="text-align:left">
         <p>This function will be called each time a noteOff event is received.</p>
         <p>The arguments are respectively the channel, number and value of this event.</p>
-      </th>
-      <th style="text-align:left"><code>function ccEvent(channel, number, value) {<br />script.log(&quot;ControlChange received &quot;+channel+&quot;, &quot;+number+&quot;, &quot;+value);<br />}</code>
-      </th>
+      </td>
+      <td style="text-align:left"><code>function ccEvent(channel, number, value) {<br />script.log(&quot;ControlChange received &quot;+channel+&quot;, &quot;+number+&quot;, &quot;+value);<br />}</code>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table><table>
-  <thead>
     <tr>
-      <th style="text-align:left"><b>sysExEvent(</b><em>data</em><b>)</b>
-      </th>
-      <th style="text-align:left">
+      <td style="text-align:left"><b>sysExEvent(</b><em>data</em><b>)</b>
+      </td>
+      <td style="text-align:left">
         <p>This function will be called each time a sysEx event is received.</p>
         <p>The argument is an array of bytes containing the sysEx data.</p>
-      </th>
-      <th style="text-align:left"><code>function sysExEvent(data) { script.log(&quot;Sysex Message received, &quot;+data.length+&quot; bytes :&quot;);<br />for(var i=0; i &lt; data.length; i++) {<br />script.log(&quot; &gt; &quot;+data[i]);<br />}<br />}</code>
-      </th>
+      </td>
+      <td style="text-align:left"><code>function sysExEvent(data) { script.log(&quot;Sysex Message received, &quot;+data.length+&quot; bytes :&quot;);<br />for(var i=0; i &lt; data.length; i++) {<br />script.log(&quot; &gt; &quot;+data[i]);<br />}<br />}</code>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table>| **pitchWheelEvent \(**_channel, value_**\)** | This function will be called each time a pitchWheel event is received. The arguments are respectively the channel and the value of this event. | `function pitchWheelEvent(channel, value) { script.log("PitchWheel received "+channel+", "+value); }` |
-| :--- | :--- | :--- |
+    <tr>
+      <td style="text-align:left"><b>channelPressureEvent (</b><em>channel, value</em><b>)</b>
+      </td>
+      <td style="text-align:left">This function will be called each time a channelPressure event is received.
+        The arguments are respectively the channel and the value of this event.</td>
+      <td
+      style="text-align:left"><code>function channelPressureEvent(channel, value) { script.log(&quot;Channel Pressure received &quot;+channel+&quot;, &quot;+value); }</code>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>afterTouchEvent (</b><em>channel, note, value</em><b>)</b>
+      </td>
+      <td style="text-align:left">This function will be called each time an afterTouch event is received.
+        The arguments are respectively the channel, the note and the value of this
+        event.</td>
+      <td style="text-align:left"><code>function afterTouchEvent(channel, note, value) { script.log(&quot;After Touch received &quot;+channel+&quot;, &quot;+note+&quot;, &quot;+value); }</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-
-| **channelPressureEvent \(**_channel, value_**\)** | This function will be called each time a channelPressure event is received. The arguments are respectively the channel and the value of this event. | `function channelPressureEvent(channel, value) { script.log("Channel Pressure received "+channel+", "+value); }` |
-| :--- | :--- | :--- |
-
-
-| **afterTouchEvent \(**_channel, note, value_**\)** | This function will be called each time an afterTouch event is received. The arguments are respectively the channel, the note and the value of this event. | `function afterTouchEvent(channel, note, value) { script.log("After Touch received "+channel+", "+note+", "+value); }` |
-| :--- | :--- | :--- |
+| M `"+value); }` |
+| :--- |
 {% endtab %}
 
-
-{% tab title="Serial/UDP/TCP" %}
-| Method | Description | Example |
-| :--- | :--- | :--- |
-
-
+{% tab title="DMX" %}
 <table>
   <thead>
     <tr>
-      <th style="text-align:left"><b>dataReceived</b><em><b>(</b>data</em><b>)</b>
-      </th>
-      <th style="text-align:left">
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>dmxEvent(</b><em>values</em><b>)</b>
+      </td>
+      <td style="text-align:left">This is called when a group of DMX channel values is received. <em>values </em>is
+        an array of values, always starting from channel 1</td>
+      <td style="text-align:left">
+        <p><code>function dmxEvent(values) {</code>
+        </p>
+        <p><code>script.log(&quot;Received dmx : &quot;+values.length+&quot; values&quot;);</code>
+        </p>
+        <p><code>}</code>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+{% endtab %}
+
+{% tab title="Serial/UDP/TCP" %}
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>dataReceived</b><em><b>(</b>data</em><b>)</b>
+      </td>
+      <td style="text-align:left">
         <p>This function will be called each time data has been received.</p>
         <p>If the Module&apos;s protocol is set to <em><b>Lines,</b></em> then the <b>data</b> argument
           will be a string containing the line, without the ending \n.</p>
         <p>Otherwise, the data will be an array of bytes containing the received
           data.</p>
-      </th>
-      <th style="text-align:left">
+      </td>
+      <td style="text-align:left">
         <p><code>function dataReceived(data) {</code>
         </p>
         <p><code>script.log(&quot;Received data : &quot;+data);</code>
         </p>
         <p><code>}</code>
         </p>
-      </th>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
+  </tbody>
 </table>
 {% endtab %}
 
 {% tab title="HTTP" %}
-| Method | Description | Example |
-| :--- | :--- | :--- |
-
-
 <table>
   <thead>
     <tr>
-      <th style="text-align:left"><b>dataEvent(</b><em>data, requestURL</em><b>)</b>
-      </th>
-      <th style="text-align:left">
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>dataEvent(</b><em>data, requestURL</em><b>)</b>This function will be
+        called each time data has been received.</td>
+      <td style="text-align:left">
         <p>This function will be called each time the module has got a response from
           a request.
           <br /><em><b>data</b></em> is the content of the response</p>
         <p><em><b>requestURL</b></em> is the url of the original request.</p>
-      </th>
-      <th style="text-align:left"><code>function dataEvent(data, requestURL) {<br />script.log(&quot;Data received, request URL :&quot;+requestURL+&quot;\nContent :\n&quot; +data);<br />}</code>
-      </th>
+      </td>
+      <td style="text-align:left"><code>function dataEvent(data, requestURL) {<br />script.log(&quot;Data received, request URL :&quot;+requestURL+&quot;\nContent :\n&quot; +data);<br />}</code>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
+  </tbody>
 </table>
 {% endtab %}
 {% endtabs %}
@@ -186,12 +221,10 @@ Some modules have specific methods that are useful if you want to have specific 
 {% tab title="OSC" %}
 | Method | Description | Example |
 | :--- | :--- | :--- |
-| **send\(**_address, arg1, arg2, arg3, ..._**\)** | This sends an OSC message to all the enabled outputs of this module. **_address_** is the address of the message | `local.send("myAddress", 1, .5f, "cool");`|
+| **send\(**_address, arg1, arg2, arg3, ..._**\)** | This sends an OSC message to all the enabled outputs of this module. _**address**_ is the address of the message | `local.send("myAddress", 1, .5f, "cool");` |
 | **sendTo\(**_ip, port, address, arg1, arg2, ..._**\)** | Same as the **send** method, but will send to a specific _**ip**_ and _**port**_, ignoring the module's output. | `local.sendTo("192.168.0.30", 9000, "myAddress", 1, .5f);` |
-| **match\(**_address, pattern_**\)** | Check if the specified **_address_** matches the **_pattern_**, according to the [OSC specification](http://opensoundcontrol.org/spec-1_0). Wildcards, etc are supported. | `if (local.match(address, "/testPattern")) ...` |
-| **register\(**_pattern, callbackFunc_**\)** | Register a script function to call when a message matching **_pattern_** is received. **_callbackFunc_** is the name of the callback function. **\[Note\]** if the module contains multiple scripts, the callback is registered for all the scripts. | `function init() { `<br>`  local.register("/testPattern", "testPatternCallback");`<br>`}`<br>`function testPatternCallback(address, args) {`<br>`  script.log("Received message "+address);`<br>`}` |
-
-
+| **match\(**_address, pattern_**\)** | Check if the specified _**address**_ matches the _**pattern**_, according to the [OSC specification](http://opensoundcontrol.org/spec-1_0). Wildcards, etc are supported. | `if (local.match(address, "/testPattern")) ...` |
+| **register\(**_pattern, callbackFunc_**\)** | Register a script function to call when a message matching _**pattern**_ is received. _**callbackFunc**_ is the name of the callback function. **\[Note\]** if the module contains multiple scripts, the callback is registered for all the scripts. | `function init() {` `local.register("/testPattern", "testPatternCallback");` `}` `function testPatternCallback(address, args) {` `script.log("Received message "+address);` `}` |
 {% endtab %}
 
 {% tab title="MIDI" %}
@@ -207,10 +240,35 @@ Some modules have specific methods that are useful if you want to have specific 
 {% endtab %}
 
 {% tab title="DMX" %}
-| Method | Description | Example |
-| :--- | :--- | :--- |
-
-| **send\(**_startChannel, value1, value2, ..., valueN_**\)** | Sends DMX values starting at the **startChannel.** You can add as many values as you want, and you can even mix array of values with single values. Values are 0 to 255. | `local.send(32, 255);` |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p><b>send(</b><em>startChannel, value1, value2, ..., valueN</em><b>)</b> 
+        </p>
+        <p>module&apos;s output MIDI device.</p>
+      </td>
+      <td style="text-align:left">
+        <p>&lt;code&gt;&lt;/code&gt;</p>
+        <p>Sends DMX values starting at the <b>startChannel.</b> You can add as many
+          values as you want, and you can even mix array of values with single values.
+          Values are 0 to 255.</p>
+      </td>
+      <td style="text-align:left">
+        <p></p>
+        <p><code>local.send(32, 255);</code>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 {% endtab %}
 
 {% tab title="Serial/UDP/TCP" %}

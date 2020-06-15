@@ -43,7 +43,9 @@ When scripts are running as a filter, new function callbacks are called to proce
       </td>
     </tr>
   </tbody>
-</table>In this example, we consider a simple project with a looping audio track. We also have a masterVolume custom variable controlling the audio track volume through a mapping.
+</table>
+
+In this example, we consider a simple project with a looping audio track. We also have a masterVolume custom variable controlling the audio track volume through a mapping.
 
 ![](../../.gitbook/assets/filterscript_mastervolumeexample_presentation.gif)
 

@@ -62,7 +62,9 @@ If you don't need them, don't add them in your script as Chataigne will optimize
       </td>
     </tr>
   </tbody>
-</table>## Parameters and triggers
+</table>
+
+## Parameters and triggers
 
 All parameters and triggers have common methods and specific methods
 
@@ -155,7 +157,9 @@ All parameters and triggers have common methods and specific methods
       </td>
     </tr>
   </tbody>
-</table>### Trigger
+</table>
+
+### Trigger
 
 | Method | Description | Example |
 | :--- | :--- | :--- |
@@ -199,7 +203,9 @@ All parameters and triggers have common methods and specific methods
       </td>
     </tr>
   </tbody>
-</table>### Integer Parameter
+</table>
+
+### Integer Parameter
 
 <table>
   <thead>
@@ -235,7 +241,9 @@ All parameters and triggers have common methods and specific methods
       </td>
     </tr>
   </tbody>
-</table>### Boolean Parameter
+</table>
+
+### Boolean Parameter
 
 | Method | Description | Example |
 | :--- | :--- | :--- |
@@ -280,7 +288,9 @@ All parameters and triggers have common methods and specific methods
       </td>
     </tr>
   </tbody>
-</table>### Color Parameter
+</table>
+
+### Color Parameter
 
 <table>
   <thead>
@@ -322,7 +332,9 @@ All parameters and triggers have common methods and specific methods
       </td>
     </tr>
   </tbody>
-</table>### Target Parameter
+</table>
+
+### Target Parameter
 
 <table>
   <thead>
@@ -376,7 +388,9 @@ All parameters and triggers have common methods and specific methods
       </td>
     </tr>
   </tbody>
-</table>### Enum Parameter
+</table>
+
+### Enum Parameter
 
 <table>
   <thead>
@@ -430,7 +444,9 @@ All parameters and triggers have common methods and specific methods
       </td>
     </tr>
   </tbody>
-</table>### File Parameter
+</table>
+
+### File Parameter
 
 <table>
   <thead>
@@ -493,7 +509,9 @@ All parameters and triggers have common methods and specific methods
         </td>
     </tr>
   </tbody>
-</table>### Point2D Parameter
+</table>
+
+### Point2D Parameter
 
 | Method | Description | Example |
 | :--- | :--- | :--- |
@@ -697,7 +715,9 @@ Containers are any object that contains parameters or other containers. If you'r
       </td>
     </tr>
   </tbody>
-</table>## Manager
+</table>
+
+## Manager
 
 Managers are special types of container. In the software, you can see that a container is a manager when there is a "**+**" icon on the right of its block. Well, almost all the times, some of them are just enhanced containers. Most of the times, the managers you will be interested in are the **Module manager, the Sequence manager, Layer managers and Automation keys managers.**
 
@@ -803,7 +823,9 @@ When a manipulating a manager, you have access to specific functions and propert
       </td>
     </tr>
   </tbody>
-</table>## Script object
+</table>
+
+## Script object
 
 The script object refers to the script container. You can add your own custom parameters here, as well as logging informations, warnings and errors.
 
@@ -948,7 +970,9 @@ The script object refers to the script container. You can add your own custom pa
       </td>
     </tr>
   </tbody>
-</table>## Root object
+</table>
+
+## Root object
 
 The root object refers to Chataigne's engine, which is the root object of all parent.  
 It allows you to access any object in Chataigne's hierarchy. The best way to access them is to right click on a parameter's UI and select "Copy Script control address". Then you can past the address in your script and you will be able to control this parameter.
@@ -1098,3 +1122,4 @@ The util object provides helpers and utility functions like time or conversion.
     </tr>
   </tbody>
 </table>
+
