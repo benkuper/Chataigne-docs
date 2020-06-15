@@ -25,6 +25,7 @@ A layer is one line of a timeline, containing data that is read through time. It
 
 * [Triggers](trigger-layer.md)
 * [Mapping](../the-state-machine/mappings.md)
+* [Mapping 2D](mapping-2d-layer.md)
 * [Color](color-layer.md)
 * [Audio](audio-layer.md)
 
