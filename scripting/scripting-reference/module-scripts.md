@@ -232,13 +232,70 @@ Certains modules ont des méthodes spécifiques qui sont utiles si vous voulez a
 {% endtab %}
 
 {% tab title="HTTP" %}
-| Méthode | Description | Exemple |
-| :--- | :--- | :--- |
-| **sendGET\(**_url_**\)** | Cela enverra une demande HTTP GET. Vous pouvez ajouter des paramètres à la fin de l'argument _**url**_, comme pour toute URL GET. | `local.sendGET("https://httpbin.org/anything?myValue1=1&myValue2=super");` |
-| **sendPOST\(**_url, param1, value1, param2, value2, ..._**\)** | Cela enverra une requête HTTP POST. Après avoir spécifié le _**url**_, vous pouvez ajouter une paire de valeurs qui sont respectivement le nom du _**paramètre**_ et sa _**valeur**_. | `local.sendPOST( "https://httpbin.org/anything", "myValue1", 1, "myValue2", 2);` |
-| **sendPUT\(**_url, param1, value1, param2, value2, ..._**\)** | Cela enverra une requête HTTP PUT. Après avoir spécifié le _**url**_, vous pouvez ajouter une paire de valeurs qui sont respectivement le nom du _**paramètre**_ et sa _**valeur**_. | `local.sendPUT( "https://httpbin.org/anything", "myValue1", 1, "myValue2", 2);` |
-| **sendPATCH\(**_url, param1, value1, param2, value2, ..._**\)** | Cela enverra une requête HTTP DELETE. Après avoir spécifié le _**url**_, vous pouvez ajouter une paire de valeurs qui sont respectivement le nom du _**paramètre**_ et sa _**valeur**_. | `local.sendPATCH( "https://httpbin.org/anything", "myValue1", 1, "myValue2", 2);` |
-| **sendDELETE\(**_url, param1, value1, param2, value2, ..._**\)** | Cela enverra une requête HTTP DELETE. Après avoir spécifié le _**url**_, vous pouvez ajouter une paire de valeurs qui sont respectivement le nom du _**paramètre**_ et sa _**valeur**_. | `local.sendDELETE( "https://httpbin.org/anything", "myValue1", 1, "myValue2", 2);` |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">M&#xE9;thode</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Exemple</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>sendGET(</b><em>url</em><b>)</b>
+      </td>
+      <td style="text-align:left">Cela enverra une demande HTTP GET. Vous pouvez ajouter des param&#xE8;tres
+        &#xE0; la fin de l&apos;argument <em><b>url</b></em>, comme pour toute URL
+        GET.</td>
+      <td style="text-align:left">
+        <p><code>local.sendGET(</code>
+        </p>
+        <p><code>&quot;https://httpbin.org/anything?myValue1=1&amp;myValue2=super&quot;);</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>sendPOST(</b><em>url, param1, value1, param2, value2, ...</em><b>)</b>
+      </td>
+      <td style="text-align:left">Cela enverra une requ&#xEA;te HTTP POST. Apr&#xE8;s avoir sp&#xE9;cifi&#xE9;
+        le <em><b>url</b></em>, vous pouvez ajouter une paire de valeurs qui sont
+        respectivement le nom du <em><b>param&#xE8;tre</b></em> et sa <em><b>valeur</b></em>.</td>
+      <td
+      style="text-align:left"><code>local.sendPOST( &quot;https://httpbin.org/anything&quot;, &quot;myValue1&quot;, 1, &quot;myValue2&quot;, 2);</code>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>sendPUT(</b><em>url, param1, value1, param2, value2, ...</em><b>)</b>
+      </td>
+      <td style="text-align:left">Cela enverra une requ&#xEA;te HTTP PUT. Apr&#xE8;s avoir sp&#xE9;cifi&#xE9;
+        le <em><b>url</b></em>, vous pouvez ajouter une paire de valeurs qui sont
+        respectivement le nom du <em><b>param&#xE8;tre</b></em> et sa <em><b>valeur</b></em>.</td>
+      <td
+      style="text-align:left"><code>local.sendPUT( &quot;https://httpbin.org/anything&quot;, &quot;myValue1&quot;, 1, &quot;myValue2&quot;, 2);</code>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>sendPATCH(</b><em>url, param1, value1, param2, value2, ...</em><b>)</b>
+      </td>
+      <td style="text-align:left">Cela enverra une requ&#xEA;te HTTP DELETE. Apr&#xE8;s avoir sp&#xE9;cifi&#xE9;
+        le <em><b>url</b></em>, vous pouvez ajouter une paire de valeurs qui sont
+        respectivement le nom du <em><b>param&#xE8;tre</b></em> et sa <em><b>valeur</b></em>.</td>
+      <td
+      style="text-align:left"><code>local.sendPATCH( &quot;https://httpbin.org/anything&quot;, &quot;myValue1&quot;, 1, &quot;myValue2&quot;, 2);</code>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>sendDELETE(</b><em>url, param1, value1, param2, value2, ...</em><b>)</b>
+      </td>
+      <td style="text-align:left">Cela enverra une requ&#xEA;te HTTP DELETE. Apr&#xE8;s avoir sp&#xE9;cifi&#xE9;
+        le <em><b>url</b></em>, vous pouvez ajouter une paire de valeurs qui sont
+        respectivement le nom du <em><b>param&#xE8;tre</b></em> et sa <em><b>valeur</b></em>.</td>
+      <td
+      style="text-align:left"><code>local.sendDELETE( &quot;https://httpbin.org/anything&quot;, &quot;myValue1&quot;, 1, &quot;myValue2&quot;, 2);</code>
+        </td>
+    </tr>
+  </tbody>
+</table>
 {% endtab %}
 
 {% tab title="System" %}
