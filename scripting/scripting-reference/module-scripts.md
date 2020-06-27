@@ -285,6 +285,9 @@ Some modules have specific methods that are useful if you want to have specific 
 | :--- | :--- | :--- |
 | **sendGET\(**_url_**\)** | This will send an HTTP GET request. You can add parameters at the end of the _**url**_ argument, just like any GET URL. | `local.sendGET( "https://httpbin.org/anything?myValue1=1&myValue2=super");` |
 | **sendPOST\(**_url, param1, value1, param2, value2, ..._**\)** | This will send an HTTP POST request. After specifying the _**url**_, you can add pair of values that are respectively the _**parameter name**_ and its _**value**_. | `local.sendPOST( "https://httpbin.org/anything", "myValue1", 1, "myValue2", 2);` |
+| **sendPUT\(**_url, param1, value1, param2, value2, ..._**\)** | This will send an HTTP PUT request. After specifying the _**url**_, you can add pair of values that are respectively the _**parameter name**_ and its _**value**_. | `local.sendPUT( "https://httpbin.org/anything", "myValue1", 1, "myValue2", 2);` |
+| **sendPATCH\(**_url, param1, value1, param2, value2, ..._**\)** | This will send an HTTP PATCH request. After specifying the _**url**_, you can add pair of values that are respectively the _**parameter name**_ and its _**value**_. | `local.sendPATCH( "https://httpbin.org/anything", "myValue1", 1, "myValue2", 2);` |
+| **sendDELETE\(**_url, param1, value1, param2, value2, ..._**\)** | This will send an HTTP DELETE request. After specifying the _**url**_, you can add pair of values that are respectively the _**parameter name**_ and its _**value**_. | `local.sendDELETE( "https://httpbin.org/anything", "myValue1", 1, "myValue2", 2);` |
 {% endtab %}
 
 {% tab title="System" %}
