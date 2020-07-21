@@ -1152,8 +1152,7 @@ The util object provides helpers and utility functions like time or conversion.
         <p>Shows a popup message box with only one button. Additionally to title
           and message, you can provide an <b>icon </b>(accepted values are &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot; </b></em>)
           and the text of the button.</p>
-        <p>This method will return true if the first button has been clicked, false
-          otherwise</p>
+        <p>This method will return <b>true</b> if the first button has been clicked, <b>false </b>otherwise</p>
       </td>
       <td style="text-align:left"><code>util.showOkCancelBox(&quot;Super warning!&quot;, &quot;This is a warningfor you&quot;, &quot;warning&quot;, &quot;Got it&quot;,&quot;Naaah&quot;);</code>
       </td>
@@ -1161,9 +1160,13 @@ The util object provides helpers and utility functions like time or conversion.
     <tr>
       <td style="text-align:left"><b>showYesNoCancelBox(</b><em>title, message, [icon, button1Text, button2Text, button3Text] </em><b>),</b>
       </td>
-      <td style="text-align:left">Shows a popup message box with only one button. Additionally to title
-        and message, you can provide an <b>icon </b>(accepted values are &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot; </b></em>)
-        and the text of the button.</td>
+      <td style="text-align:left">
+        <p>Shows a popup message box with only one button. Additionally to title
+          and message, you can provide an <b>icon </b>(accepted values are &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot; </b></em>)
+          and the text of the button.</p>
+        <p>This method will return either <b>0,1 or 2 </b>depending on the button
+          that has been clicked.</p>
+      </td>
       <td style="text-align:left"><code>util.showYesNoCancelBox(&quot;Confirm ?&quot;, &quot;Do you really want to do that ?&quot;, &quot;question&quot;, &quot;Yeah&quot;, &quot;Never&quot;, &quot;Don&apos;t care...&quot;);</code>
       </td>
     </tr>
