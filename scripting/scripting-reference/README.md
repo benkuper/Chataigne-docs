@@ -1145,6 +1145,17 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>fileExists(</b><em>path</em><b>);</b>
+      </td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>readFile(</b><em>path,</em>  <em>[asJSON]</em><b>)</b>
       </td>
       <td style="text-align:left">Consultez le contenu du fichier &#xE0; <em><b>path</b></em>. Si <em><b>asJSON</b></em> est <em>vrai,</em> alors
@@ -1205,6 +1216,46 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
       </td>
       <td style="text-align:left">Retourne le contenu du presse-papier.</td>
       <td style="text-align:left"><code>var data = util.getFromClipboard();</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>showMessageBox(</b><em>title, message, [icon, buttonText]</em><b>)</b>
+      </td>
+      <td style="text-align:left">
+        <p>Affiche un message popup avec un seul bouton.</p>
+        <p>Il est possible de sp&#xE9;cifier une<b> icon </b>(accepted values are
+          &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot; </b></em>)
+          ainsi que le texte du bouton</p>
+      </td>
+      <td style="text-align:left"><code>util.showMessageBox(&quot;Super info !&quot;, &quot;This is a message for you&quot;, &quot;info&quot;, &quot;Got it&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>showOkCancelBox(</b><em>title, message, [icon, button1Text, button2Text]</em><b>)</b>
+      </td>
+      <td style="text-align:left">
+        <p>Affiche un message popup avec 2 boutons.</p>
+        <p>Il est possible de sp&#xE9;cifier une<b> icon </b>(accepted values are
+          &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot; </b></em>)
+          ainsi que le texte des bouton.</p>
+        <p>La valeur retourn&#xE9;e est <em><b>true </b></em>si &quot;OK&quot; a &#xE9;t&#xE9;
+          cliqu&#xE9;, sinon <em><b>false.</b></em>
+        </p>
+      </td>
+      <td style="text-align:left"><code>var okIsClicked = util.showOkCancelBox(&quot;Super warning!&quot;, &quot;This is a warningfor you&quot;, &quot;warning&quot;, &quot;Got it&quot;,&quot;Naaah&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>showYesNoCancelBox(</b><em>title, message, [icon, button1Text, button2Text, button3Text] </em><b>),</b>
+      </td>
+      <td style="text-align:left">
+        <p>Affiche un message popup avec 3 boutons.</p>
+        <p>Il est possible de sp&#xE9;cifier une<b> icon </b>(accepted values are
+          &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot; </b></em>)
+          ainsi que le texte des bouton.</p>
+        <p>La valeur retourn&#xE9;e est <b>0,1 ou 2 </b>en fonction du bouton cliqu&#xE9;.</p>
+      </td>
+      <td style="text-align:left"><code>var result = util.showYesNoCancelBox(&quot;Confirm ?&quot;, &quot;Do you really want to do that ?&quot;, &quot;question&quot;, &quot;Yeah&quot;, &quot;Never&quot;, &quot;Don&apos;t care...&quot;);</code>
       </td>
     </tr>
   </tbody>
