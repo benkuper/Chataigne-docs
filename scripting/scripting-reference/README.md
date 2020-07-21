@@ -1145,15 +1145,20 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>fileExists(</b><em>path</em><b>);</b>
+      <td style="text-align:left"><b>fileExists(</b><em>path</em><b>)</b>
       </td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">Retourne <b>true </b>si un fichier existe au path fourni, sinon <b>false</b>
+      </td>
+      <td style="text-align:left"><code>script.log(fileExists(&quot;myfile.txt&quot;));</code>
+      </td>
     </tr>
     <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left"><b>directoryExists(</b><em>path</em><b>)</b>
+      </td>
+      <td style="text-align:left">Retourne <b>true </b>si un dossier existe au path fourni, sinon <b>false</b>
+      </td>
+      <td style="text-align:left"><code>script.log(directoryExists(&quot;myFolder&quot;));</code>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>readFile(</b><em>path,</em>  <em>[asJSON]</em><b>)</b>
