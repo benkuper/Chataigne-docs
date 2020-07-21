@@ -1062,6 +1062,22 @@ The util object provides helpers and utility functions like time or conversion.
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>fileExists(</b><em>path</em><b>)</b>
+      </td>
+      <td style="text-align:left">Returns true if a file exists at the path provided, otherwise returns
+        false</td>
+      <td style="text-align:left"><code>script.log(fileExists(&quot;myfile.txt&quot;));</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>directoryExists(</b><em>path</em><b>)</b>
+      </td>
+      <td style="text-align:left">Returns true if a directory exists at the path provided, otherwise returns
+        false</td>
+      <td style="text-align:left"><code>script.log(directoryExists(&quot;myFolder&quot;));</code>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>readFile(</b><em>path,</em><b> </b><em>[asJSON]</em><b>)</b>
       </td>
       <td style="text-align:left">Get the content of the file at <em><b>path</b></em>. If <em><b>asJSON </b></em>is <em>true, </em>then
@@ -1118,6 +1134,37 @@ The util object provides helpers and utility functions like time or conversion.
       </td>
       <td style="text-align:left">Returns the content of the clipboard</td>
       <td style="text-align:left"><code>var data = util.getFromClipboard();</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>showMessageBox(</b><em>title, message, [icon, buttonText]</em><b>)</b>
+      </td>
+      <td style="text-align:left">Shows a popup message box with only one button. Additionally to title
+        and message, you can provide an <b>icon </b>(accepted values are &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot; </b></em>)
+        and the text of the button.</td>
+      <td style="text-align:left"><code>util.showMessageBox(&quot;Super info !&quot;, &quot;This is a message for you&quot;, &quot;info&quot;, &quot;Got it&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>showOkCancelBox(</b><em>title, message, [icon, button1Text, button2Text]</em><b>)</b>
+      </td>
+      <td style="text-align:left">
+        <p>Shows a popup message box with only one button. Additionally to title
+          and message, you can provide an <b>icon </b>(accepted values are &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot; </b></em>)
+          and the text of the button.</p>
+        <p>This method will return true if the first button has been clicked, false
+          otherwise</p>
+      </td>
+      <td style="text-align:left"><code>util.showOkCancelBox(&quot;Super warning!&quot;, &quot;This is a warningfor you&quot;, &quot;warning&quot;, &quot;Got it&quot;,&quot;Naaah&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>showYesNoCancelBox(</b><em>title, message, [icon, button1Text, button2Text, button3Text] </em><b>),</b>
+      </td>
+      <td style="text-align:left">Shows a popup message box with only one button. Additionally to title
+        and message, you can provide an <b>icon </b>(accepted values are &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot; </b></em>)
+        and the text of the button.</td>
+      <td style="text-align:left"><code>util.showYesNoCancelBox(&quot;Confirm ?&quot;, &quot;Do you really want to do that ?&quot;, &quot;question&quot;, &quot;Yeah&quot;, &quot;Never&quot;, &quot;Don&apos;t care...&quot;);</code>
       </td>
     </tr>
   </tbody>
