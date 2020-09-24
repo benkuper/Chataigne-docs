@@ -1,6 +1,6 @@
 ---
 description: >-
-  You made is so far, thank you for coming here before asking questions (or have
+  You made it so far, thank you for coming here before asking questions (or have
   you already ?)
 ---
 
