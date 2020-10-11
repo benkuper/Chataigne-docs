@@ -443,6 +443,20 @@ All parameters and triggers have common methods and specific methods
       <td style="text-align:left"><code>myEnumParam.removeOptions();</code>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left"><b>set(</b><em>key</em><b>)</b>
+      </td>
+      <td style="text-align:left">This sets the parameter to the corresponding key.</td>
+      <td style="text-align:left"><code>myEnumParam.set(&quot;Option 1&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>setData(</b><em>data</em><b>)</b>
+      </td>
+      <td style="text-align:left">This sets the parameter to the corresponding data</td>
+      <td style="text-align:left"><code>myEnumParam.setData(&quot;data1&quot;);</code>
+      </td>
+    </tr>
   </tbody>
 </table>
 
