@@ -451,17 +451,29 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>set(</b><em>label</em><b>)</b>
-      </td>
-      <td style="text-align:left">D&#xE9;finit la valeur avec l&apos;&#xE9;tiquette fournie</td>
-      <td style="text-align:left"><code>myEnumParam.set(&quot;nouvelle option&quot;);</code>
-      </td>
+      <td style="text-align:left">&lt;b&gt;&lt;/b&gt;</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left"><b>removeOptions()</b>
       </td>
       <td style="text-align:left">Supprime toutes les options.</td>
       <td style="text-align:left"><code>myEnumParam.removeOptions();</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>set(</b><em>key</em><b>)</b>
+      </td>
+      <td style="text-align:left">D&#xE9;finit la valeur avec l&apos;&#xE9;tiquette fournie</td>
+      <td style="text-align:left"><code>myEnumParam.set(&quot;nouvelle option&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>setData(</b><em>data</em><b>)</b>
+      </td>
+      <td style="text-align:left">D&#xE9;finit la valeur avec la donn&#xE9;e fournie</td>
+      <td style="text-align:left"><code>myEnumParam.setData(&quot;data1&quot;);</code>
       </td>
     </tr>
   </tbody>
