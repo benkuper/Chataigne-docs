@@ -371,6 +371,9 @@ All parameters and triggers have common methods and specific methods
       </td>
       <td style="text-align:left">
         <p>Specific attributes :</p>
+        <p><em><b>targetType </b></em>: the type of target to search. This can either
+          be &quot;<b>container&quot; </b>or &quot;<b>controllable&quot; </b>
+        </p>
         <p><em><b>root </b></em>: the root container from which to search</p>
         <p><em><b>searchLevel </b></em>: specify the max level to search from the
           root</p>
