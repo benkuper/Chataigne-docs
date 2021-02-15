@@ -55,7 +55,7 @@ description: >-
     </tr>
     <tr>
       <td style="text-align:left">(Ctrl or &#x2318;) + X</td>
-      <td style="text-align:left">Copies the current selection</td>
+      <td style="text-align:left">Cuts the current selection</td>
     </tr>
     <tr>
       <td style="text-align:left">(Ctrl or &#x2318;) + D</td>
