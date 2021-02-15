@@ -63,6 +63,7 @@
 * [Introduction à la State Machine](the-state-machine/introduction-to-the-state-machine.md)
 * [Actions](the-state-machine/actions.md)
 * [Mappings](the-state-machine/mappings.md)
+* [Multiplex \(1.8\)](the-state-machine/multiplex-1.8.md)
 
 ## The Time Machine \(Sequences\)
 
