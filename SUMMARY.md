@@ -8,6 +8,10 @@
 * [L'Interface](getting-started-1/the-interface.md)
 * [Les Modules](getting-started-1/the-modules.md)
 
+---
+
+* [La Cheat Sheet Ultime](la-cheat-sheet-ultime.md)
+
 ## Modules
 
 * [Protocol](modules/protocol/README.md)
