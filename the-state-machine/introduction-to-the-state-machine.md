@@ -8,7 +8,7 @@ When creating an interaction, you will first have to create a state that will co
 
 {% hint style="success" %}
 **SHORTCUTS  
-- Alt + drag or MSB \(middle mouse button\) :** drag the canvas to navigate in an infinite world of wonder !  
+- Alt + drag or MMB \(middle mouse button\) :** drag the canvas to navigate in an infinite world of wonder !  
 **-  Shift + mouse scroll :** Zoom in/out to see more things, or have bigger UI  
 **- Ctrl + C, Ctrl + V, Ctrl + D :** Copy, paste, duplicate items \(this applies to all items in lists and views, i.e. States, Mappings, Actions, Modules, Sequences...\)
 {% endhint %}

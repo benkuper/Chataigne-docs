@@ -8,6 +8,10 @@
 * [The Interface](getting-started-1/the-interface.md)
 * [The Modules](getting-started-1/the-modules.md)
 
+---
+
+* [The Ultimate Cheat Sheet](the-ultimate-cheat-sheet.md)
+
 ## Modules
 
 * [Protocol](modules/protocol/README.md)
@@ -63,6 +67,7 @@
 * [Introduction to the State Machine](the-state-machine/introduction-to-the-state-machine.md)
 * [Actions](the-state-machine/actions.md)
 * [Mappings](the-state-machine/mappings.md)
+* [Multiplex \(1.8\)](the-state-machine/multiplex-1.8.md)
 
 ## The Time Machine \(Sequences\)
 
