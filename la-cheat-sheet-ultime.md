@@ -18,73 +18,75 @@ description: >-
   <tbody>
     <tr>
       <td style="text-align:left">(Ctrl or &#x2318;) + N</td>
-      <td style="text-align:left">Creates a new file</td>
+      <td style="text-align:left">Cr&#xE9;e un nouveau fichier</td>
     </tr>
     <tr>
       <td style="text-align:left">(Ctrl or &#x2318;) + O</td>
-      <td style="text-align:left">Opens a file</td>
+      <td style="text-align:left">Ouvre un fichier</td>
     </tr>
     <tr>
       <td style="text-align:left">(Ctrl or &#x2318;) + Shift + O</td>
-      <td style="text-align:left">Opens the last opened file</td>
+      <td style="text-align:left">Ouvre le dernier fichier ouvert</td>
     </tr>
     <tr>
       <td style="text-align:left">(Ctrl or &#x2318;) + S</td>
-      <td style="text-align:left">Saves the current file</td>
+      <td style="text-align:left">Sauve le fichier courant</td>
     </tr>
     <tr>
       <td style="text-align:left">(Ctrl or &#x2318;) + Shift + S</td>
-      <td style="text-align:left">Saves the current file as a new file (Save as...)</td>
+      <td style="text-align:left">Sauve le fichier en tant que nouveau (Sauver sous...)</td>
     </tr>
     <tr>
       <td style="text-align:left">(Ctrl or &#x2318;) + ;</td>
-      <td style="text-align:left">Edit Preferences (in the Inspector)</td>
+      <td style="text-align:left">Edite les Preferences (dans l&apos;Inspector)</td>
     </tr>
     <tr>
       <td style="text-align:left">(Ctrl or &#x2318;) + ,</td>
-      <td style="text-align:left">Edit Project Settings (saved in the file)</td>
+      <td style="text-align:left">Edite Project Settings (saved in the file)</td>
     </tr>
     <tr>
       <td style="text-align:left">(Ctrl or &#x2318;) + C</td>
-      <td style="text-align:left">Copies the current selection</td>
+      <td style="text-align:left">Copie la s&#xE9;lection courante</td>
     </tr>
     <tr>
       <td style="text-align:left">(Ctrl or &#x2318;) + V</td>
-      <td style="text-align:left">Paste the current selection
-        <br />This will only work when pasting items of the same type.</td>
+      <td style="text-align:left">Colle la s&#xE9;lection courante
+        <br />Ceci ne marche qu&apos;en collant des &#xE9;l&#xE9;ments de m&#xEA;me
+        type</td>
     </tr>
     <tr>
       <td style="text-align:left">(Ctrl or &#x2318;) + X</td>
-      <td style="text-align:left">Copies the current selection</td>
+      <td style="text-align:left">Coupe la s&#xE9;lection courante</td>
     </tr>
     <tr>
       <td style="text-align:left">(Ctrl or &#x2318;) + D</td>
-      <td style="text-align:left">Duplicates the current selection</td>
+      <td style="text-align:left">Duplique la s&#xE9;lection courante</td>
     </tr>
     <tr>
       <td style="text-align:left">Alt + O</td>
       <td style="text-align:left">
-        <p>Import a LiLNut file and add all the content of this file to the existing
-          one.</p>
-        <p>Content can be Modules, States, Custom Variables,
-          <br />Module Router and Sequences</p>
+        <p>Importe un fichier LiLNut et ajoute son contenu &#xE0; la session actuelle.</p>
+        <p>Le contenu peut &#xEA;tre de type Modules, States, Custom Variables,
+          <br
+          />Module Router and Sequences</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">Alt + S</td>
       <td style="text-align:left">
-        <p>Exports the current selection to a LilNut file.</p>
-        <p>Content can be Modules, States, Custom Variables,
-          <br />Module Router and Sequences</p>
+        <p>Exporte un fichier LiLNut contenant la s&#xE9;lection courante.</p>
+        <p>Le contenu peut &#xEA;tre de type Modules, States, Custom Variables,
+          <br
+          />Module Router and Sequences</p>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">(Ctrl or &#x2318;) + Select an Item</td>
-      <td style="text-align:left">Toggles an item&apos;s selection state</td>
+      <td style="text-align:left">(Ctrl or &#x2318;) + Selectionner</td>
+      <td style="text-align:left">Inverse la s&#xE9;lection d&apos;un &#xE9;l&#xE9;ment</td>
     </tr>
     <tr>
-      <td style="text-align:left">Shift + Select an Item</td>
-      <td style="text-align:left">Select all elements up to this one</td>
+      <td style="text-align:left">Shift + Selectionner</td>
+      <td style="text-align:left">S&#xE9;lectionne tous les &#xE9;l&#xE9;mens jusqu&apos;&#xE0; celui-ci</td>
     </tr>
   </tbody>
 </table>
@@ -93,15 +95,15 @@ description: >-
 
 | Shortcut | Description |
 | :--- | :--- |
-| Shift + Click on a Container header | Toggle children collapsed |
+| Shift + Click sur un en-tête de groupe | Inverse l'état ouvert/fermé des enfants de ce groupe |
 
 ![](.gitbook/assets/toggle.gif)
 
 | Shortcut | Description |
 | :--- | :--- |
-| On a Slider or number label |  |
-| Alt + Drag | Decreases the sensitivity of the drag |
-| Shift + Drag | Increases the sensitivity of the drag |
+| _On a Slider or number label_ |  |
+| Alt + Drag | Baisse la sensibilité du drag |
+| Shift + Drag | Augmente la sensibilité du drag |
 
 ## State Machine shortcuts
 
@@ -119,30 +121,27 @@ description: >-
           <br />button drag</p>
         <p>or Alt + drag</p>
       </td>
-      <td style="text-align:left">Navigate in the State Machine View</td>
+      <td style="text-align:left">Navigue dans la State Machine View</td>
     </tr>
     <tr>
       <td style="text-align:left">F</td>
-      <td style="text-align:left">Frame the view to the center of all States</td>
+      <td style="text-align:left">Recencre la vue sur le centre des States</td>
     </tr>
     <tr>
       <td style="text-align:left">H</td>
-      <td style="text-align:left">Home to the absolute center of the view.</td>
+      <td style="text-align:left">Recentre la vue sur le centre absolute de la State View</td>
     </tr>
     <tr>
       <td style="text-align:left">Mouse wheel</td>
-      <td style="text-align:left">
-        <p>Scrolls up and down (might change</p>
-        <p>in the future)</p>
-      </td>
+      <td style="text-align:left">Scroll vertical (sujet &#xE0; changements dans le futur)</td>
     </tr>
     <tr>
       <td style="text-align:left">Shift + Mouse wheel</td>
-      <td style="text-align:left">Zoom in / out</td>
+      <td style="text-align:left">Zoom avant /arri&#xE8;re</td>
     </tr>
     <tr>
       <td style="text-align:left">Shift + Enter in a comment</td>
-      <td style="text-align:left">Add a new line</td>
+      <td style="text-align:left">Ajoute une nouvelle ligne</td>
     </tr>
   </tbody>
 </table>
@@ -151,34 +150,16 @@ description: >-
 
 ### Timeline Manipulation
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Shortcut</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">Drag the blue bar
-        <br />horizontal / vertical</td>
-      <td style="text-align:left">
-        <p></p>
-        <p>Zoom in/out and change the time focus frame</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Right click on the blue bar</td>
-      <td style="text-align:left">Reset the view to a full view of the whole sequence</td>
-    </tr>
-  </tbody>
-</table>
+| Shortcut | Description |
+| :--- | :--- |
+| Bouger la barre bleu horizontal / vertical | Zoom et déplacement de la vue dans le temps |
+| Click droit sur la barre bleue | Remet à zero la vue \(vue de la séquence en totalité\) |
 
 ![](.gitbook/assets/timemachine.gif)
 
 | Shortcut | Description |
 | :--- | :--- |
-| Double-click on the timeline numbers | Create a Time Cue |
+| Double clique sur les numéros | Crée une Time Cue |
 
 ![](.gitbook/assets/cues.gif)
 
@@ -186,12 +167,12 @@ description: >-
 
 | Shortcut | Description |
 | :--- | :--- |
-| Double click  on empty space | Create a new key at that position |
-| Double click on curve | Adds a point,  keeping the overall shape intact |
-| Shift + drag a key | Keep key's value, only move position |
-| Alt + drag a key | Keep key's position, only move value |
-| \(Ctrl or ⌘\) + click on curve | Change the curve easing type |
-| \(Ctrl or ⌘\) + shift + drag | Manually draw the curve |
+| Double click dans le vide | Crée une nouvelle clé à cette position |
+| Double click sur la courbe | Ajoute un point en maintenant la forme de la courve intacte |
+| Shift + drag une clé | Bloque la valeur, ne bouge que la position dans le temps |
+| Alt + drag une clé | Bloque la position, ne bouge que la valeur |
+| \(Ctrl or ⌘\) + click sur la courbe | Change le Easing de la courbe |
+| \(Ctrl or ⌘\) + shift + drag | Dessine la courbe manuellement  |
 
 ![](.gitbook/assets/draw-.gif)
 
@@ -199,6 +180,7 @@ description: >-
 
 | Shortcut | Description |
 | :--- | :--- |
-| Drag the module into a State | Show menu to automatically use it as an input or output for Action or Mapping |
+| Drag du module dans un State | Affiche un menu pour automatiquement utiliser ce module dans une Action ou un Mapping |
 
 ![](.gitbook/assets/module.gif)
+
