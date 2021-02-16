@@ -176,6 +176,34 @@ description: >-
 
 ![](.gitbook/assets/draw-.gif)
 
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Shortcut</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">Click-droit + drag sur la barre bleu</td>
+      <td style="text-align:left">
+        <p></p>
+        <p>Zoom s&#xE9;lectif de la timeline (absolu)</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Click-droit + drag sur les num&#xE9;ros</td>
+      <td style="text-align:left">Zoom s&#xE9;lectif de la timeline (relatif)</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">(Ctrl or &#x2318;) + click-gauche drag sur les num&#xE9;ros</td>
+      <td style="text-align:left">Affiche le menu pour ajouter/supprimer du temps</td>
+    </tr>
+  </tbody>
+</table>
+
+![](.gitbook/assets/timespan.gif)
+
 ### Module shortcuts
 
 | Shortcut | Description |
