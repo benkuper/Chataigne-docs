@@ -176,6 +176,34 @@ description: >-
 
 ![](.gitbook/assets/timemachine.gif)
 
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Shortcut</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">Right-click drag on the blue bar</td>
+      <td style="text-align:left">
+        <p></p>
+        <p>Selective zoom on a part of the timeline (absolute)</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Right click drag on the numbers</td>
+      <td style="text-align:left">Selective zoom on a part of the timeline (relative)</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">(Ctrl or &#x2318;) + Left click drag on the number</td>
+      <td style="text-align:left">Show menu for adding/removing timespan</td>
+    </tr>
+  </tbody>
+</table>
+
+![](.gitbook/assets/timespan.gif)
+
 | Shortcut | Description |
 | :--- | :--- |
 | Double-click on the timeline numbers | Create a Time Cue |
