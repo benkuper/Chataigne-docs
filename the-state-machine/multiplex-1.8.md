@@ -27,10 +27,10 @@ Un paramètre peut être lié de différentes manières :
 {% hint style="success" %}
 Pour les String Parameters, il est possible d'utiliser des jokers pour créer une combinaison plus complexe de différents liens : 
 
-* {index} sera remplacé par l'index \(basé sur 1\) 
-* {index0} sera remplacé par l'indice \(basé sur 0\) 
-* {input:0} sera remplacé par la première valeur de l'entrée de cartographie 
-* {list:names} sera remplacé par l'élément ayant le même index dans la liste appelée "Names" \(conversion camelCase\) 
+* **{index}** sera remplacé par l'index \(basé sur 1\) 
+* **{index0}** sera remplacé par l'indice \(basé sur 0\) 
+* **{input:0}** sera remplacé par la première valeur de l'entrée de cartographie 
+* **{list:names}** sera remplacé par l'élément ayant le même index dans la liste appelée "Names" \(conversion camelCase\) 
 
 De cette façon, quelque chose comme   
 **Bonjour {list:names}, vous êtes le numéro du patient {index}**   
