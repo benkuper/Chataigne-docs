@@ -1,6 +1,6 @@
 # Multiplex \(1.8\)
 
-Attendez, autre chose que l'action et la cartographie ?   
+Attendez, autre chose que les actions et les mappings ?   
 Oui ! Enfin non... mais oui !   
 Le multiplex est un moyen d'élaborer plusieurs actions et mappings à la fois. 
 
