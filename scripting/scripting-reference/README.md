@@ -1,13 +1,13 @@
 # Référence de scripting
 
-Vous trouverez ici une référence quasi exhaustive sur les fonctions spécifiques de Chataigne.
+Vous trouverez ici une référence quasi-exhaustive sur les fonctions spécifiques de Chataigne.
 
 {% hint style="success" %}
 Les scripts dans Chataigne sont basés sur une version simplifiée de Javascript. La plupart des fonctions sont disponibles, mais certaines peuvent manquer. Si certaines fonctions vous manquent, veuillez me contacter et envisager de faire un don \([https://github.com/sponsors/benkuper](https://github.com/sponsors/benkuper)\) pour que je puisse passer plus de temps à améliorer Chataigne !
 {% endhint %}
 
 {% hint style="info" %}
-Cette documentation ne montre que les fonctions que j'ai rajouté par dessus le moteur Javascript de JUCE. Pour avoir plus d'informations sur toutes les fonctions de bases disponible, tu peux regarder dans le [source code du moteur Javascript](https://github.com/benkuper/JUCE/blob/master/modules/juce_core/javascript/juce_Javascript.cpp).
+Cette documentation ne montre que les fonctions que j'ai rajoutées par-dessus le moteur Javascript de JUCE. Pour avoir plus d'informations sur toutes les fonctions de bases disponibles, vous pouvez regarder dans le [source code du moteur Javascript](https://github.com/benkuper/JUCE/blob/master/modules/juce_core/javascript/juce_Javascript.cpp).
 {% endhint %}
 
 ## Fonctions communes
@@ -93,7 +93,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
     <tr>
       <td style="text-align:left"><b>setName(</b><em>name</em><b>)</b>
       </td>
-      <td style="text-align:left">D&#xE9;finit les param&#xE8;tres name</td>
+      <td style="text-align:left">D&#xE9;finit le nom du param&#xE8;tre</td>
       <td style="text-align:left"><code>myParam.setName(&quot;new name&quot;);</code>
       </td>
     </tr>
@@ -101,12 +101,12 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       <td style="text-align:left"><b>setAttribute(</b><em>attribut, value</em><b>)</b>
       </td>
       <td style="text-align:left">
-        <p>D&#xE9;finit un param&#xE8;tre&apos;s attribut.</p>
+        <p>D&#xE9;finit un attribut du param&#xE8;tre.</p>
         <p>Tous les param&#xE8;tres obtiennent :
           <br /><em><b>readonly :</b></em> d&#xE9;finit le param&#xE8;tre comme non modifiable</p>
         <p><em><b>description :</b></em> modifier la description de l&apos;infobulle</p>
         <p><em><b>activ&#xE9; :</b></em> activer ou d&#xE9;sactiver ce param&#xE8;tre</p>
-        <p><em><b>alwaysNotify :</b></em> set the alwaysNotify flag (if true, this
+        <p><em><b>alwaysNotify :</b></em> active le flag alwaysNotify (si à true, cela
           d&#xE9;clenchera des mises &#xE0; jour m&#xEA;me si la valeur fix&#xE9;e
           est la m&#xEA;me qu&apos;auparavant).
           <br />Plus d&apos;informations pour des param&#xE8;tres sp&#xE9;cifiques dans
@@ -143,7 +143,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       <td style="text-align:left"><b>niceName</b>
       </td>
       <td style="text-align:left">C&apos;est le &quot;joli nom&quot; ; de l&apos;objet, tel que vous le
-        voyez dans le Inspecteur.</td>
+        voyez dans l&apos;Inspecteur.</td>
       <td style="text-align:left"><code>script.log(myParam.niceName);</code>
       </td>
     </tr>
@@ -205,7 +205,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       <td style="text-align:left">
         <p>Attributs sp&#xE9;cifiques :</p>
         <p><em><b>ui :</b></em> L&apos;interface utilisateur &#xE0; utiliser pour
-          afficher ce param&#xE8;tre. Valeurs accept&#xE9;es sont : <em><b>time, slider, stepper, label</b></em>
+          afficher ce param&#xE8;tre. Les valeurs accept&#xE9;es sont : <em><b>time, slider, stepper, label</b></em>
         </p>
       </td>
       <td style="text-align:left"><code>myStringParam.setAttribute (&quot;ui&quot; ;, &quot;time&quot; ;);</code>
@@ -290,8 +290,8 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       <td style="text-align:left">
         <p>Attributs sp&#xE9;cifiques :</p>
         <p><em><b>multiline</b></em> : si le param&#xE8;tre peut &#xEA;tre multiligne</p>
-        <p><em><b>pr&#xE9;fixe</b></em> : ajouter un pr&#xE9;fixe avant la valeur</p>
-        <p><em><b>suffixe</b></em> : ajouter un suffixe apr&#xE8;s la valeur</p>
+        <p><em><b>pr&#xE9;fixe</b></em> : ajoute un pr&#xE9;fixe avant la valeur</p>
+        <p><em><b>suffixe</b></em> : ajoute un suffixe apr&#xE8;s la valeur</p>
       </td>
       <td style="text-align:left"><code>myStringParam.setAttribute (&quot;multiline&quot; ;, true);</code>
       </td>
@@ -326,8 +326,8 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
       </td>
       <td style="text-align:left">D&#xE9;finit la valeur de ce param&#xE8;tre. Vous pouvez soit d&#xE9;finir
-        la valeur avec ARGB valeur hex, [r,g,b,a] tableau flottant, ou r,g,b,a
-        valeurs s&#xE9;par&#xE9;es. r, g et Les valeurs b sont toujours comprises
+        la valeur par valeur hex ARGB, tableau flottant [r,g,b,a], ou
+        valeurs s&#xE9;par&#xE9;es r,g,b,a. Les valeurs r, g et b sont toujours comprises
         entre 0 et 1 et l&apos;alpha est facultatif (vous pouvez sp&#xE9;cifier
         r,g,b seulement);</td>
       <td style="text-align:left">
@@ -373,7 +373,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
       </td>
       <td style="text-align:left">D&#xE9;finit la valeur de la cha&#xEE;ne de caract&#xE8;res de l&apos;adresse
-        de target&apos;s.</td>
+        cible.</td>
       <td style="text-align:left"><code>myTargetParam.set (&quot;/root/modules/osc&quot; ;);</code>
       </td>
     </tr>
@@ -384,7 +384,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
         <p>Attributs sp&#xE9;cifiques :</p>
         <p><em><b>root</b></em> : le conteneur racine &#xE0; partir duquel la recherche
           doit &#xEA;tre effectu&#xE9;e</p>
-        <p><em><b>searchLevel</b></em> : pr&#xE9;ciser le niveau maximum &#xE0; rechercher
+        <p><em><b>searchLevel</b></em> : pr&#xE9;cise le niveau maximum &#xE0; rechercher
           dans le root</p>
         <p><em><b>showParameters</b></em> : si la cible est contr&#xF4;lable, cacher
           ou montrer param&#xE8;tres</p>
@@ -417,7 +417,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
     <tr>
       <td style="text-align:left"><b>addOption(</b><em>label, value</em><b>)</b>
       </td>
-      <td style="text-align:left">Ajouter une option &#xE0; la liste</td>
+      <td style="text-align:left">Ajoute une option &#xE0; la liste</td>
       <td style="text-align:left"><code>myEnumParam.addOption(&quot;nouvelle option&quot;,3);</code>
       </td>
     </tr>
@@ -446,7 +446,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
     <tr>
       <td style="text-align:left"><b>getKey() (1.7.x)</b>
       </td>
-      <td style="text-align:left">Obtenir la cl&#xE9; s&#xE9;lectionn&#xE9; (1.7.x seulement)</td>
+      <td style="text-align:left">Obtenir la cl&#xE9; s&#xE9;lectionn&#xE9;e (1.7.x seulement)</td>
       <td style="text-align:left"><code>var key = myEnumParam.getKey(); //1.7</code>
       </td>
     </tr>
@@ -495,7 +495,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
       <td style="text-align:left">
         <p>Attributs sp&#xE9;cifiques :</p>
-        <p><em><b>directoryMode </b></em>: pr&#xE9;ciser si l&apos;on veut chercher
+        <p><em><b>directoryMode </b></em>: pr&#xE9;cise si l&apos;on veut chercher
           un fichier ou un dossier.</p>
       </td>
       <td style="text-align:left"><code>myFileParam.setAttribute (&quot;directoryMode&quot;,true);</code>
@@ -504,7 +504,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
     <tr>
       <td style="text-align:left"><b>readFile(</b><em>[asJSON]</em><b>)</b>
       </td>
-      <td style="text-align:left">Consultez le contenu du fichier. Si <em><b>asJSON</b></em> est <em>vrai,</em> alors
+      <td style="text-align:left">Consulte le contenu du fichier. Si <em><b>asJSON</b></em> est <em>vrai,</em> alors
         le contenu sera analys&#xE9; et renvoy&#xE9; sous la forme d&apos;un Object.</td>
       <td
       style="text-align:left">
@@ -517,9 +517,9 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
     <tr>
       <td style="text-align:left"><b>writeFile(data,</b>  <em>overwriteIfExists</em><b>)</b>
       </td>
-      <td style="text-align:left">Ecrivez le contenu ou une cha&#xEE;ne d&apos;un Objet dans le fichier
-        s&#xE9;lectionn&#xE9;. Si le existe, <em><b>overwriteIfExists</b></em> vous
-        permettra de d&#xE9;cider si pour l&apos;&#xE9;craser ou non (false par
+      <td style="text-align:left">Ecrit le contenu ou une cha&#xEE;ne d&apos;un Objet dans le fichier
+        s&#xE9;lectionn&#xE9;. Si il existe, <em><b>overwriteIfExists</b></em> vous
+        permettra de d&#xE9;cider de l&apos;&#xE9;craser ou non (false par
         d&#xE9;faut).</td>
       <td style="text-align:left">
         <p><code>donn&#xE9;es variables = &quot;super&quot;;</code>
@@ -659,8 +659,8 @@ Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera so
     <tr>
       <td style="text-align:left"><b>setCollapsed(</b><em>value</em><b>)</b>
       </td>
-      <td style="text-align:left">Modifiez l&apos;&#xE9;tat d&apos;affaissement du conteneur, s&apos;il
-        peut &#xEA;tre affaiss&#xE9;.</td>
+      <td style="text-align:left">Modifie l&apos;&#xE9;tat de repli du conteneur, s&apos;il
+        peut &#xEA;tre repli&#xE9;.</td>
       <td style="text-align:left"><code>myContainer.setCollapsed(false);</code>
       </td>
     </tr>
@@ -692,61 +692,61 @@ Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera so
       </td>
       <td style="text-align:left">Cela ajoutera un param&#xE8;tre de nombre flottant (curseur).</td>
       <td
-      style="text-align:left"><code>var myFloatParam = myContainer.addFloatParameter(&quot;My Float Param&quot;,&quot;Description de mon flotteur param&quot;,.1,0,1);</code>
+      style="text-align:left"><code>var myFloatParam = myContainer.addFloatParameter(&quot;My Float Param&quot;,&quot;Description of my float param&quot;,.1,0,1);</code>
         </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addIntParameter(</b><em>name, description, default, min max</em><b>)</b>
       </td>
-      <td style="text-align:left">ajouter un param&#xE8;tre de nombre entier (step), valeur par d&#xE9;faut
-        de 2, avec un se situent entre 0 et 10</td>
-      <td style="text-align:left"><code>var myIntParam = myContainer.addIntParameter(&quot;My Int Param&quot;,&quot;Description de mon int param&quot;,2,0,10);</code>
+      <td style="text-align:left">ajoute un param&#xE8;tre de nombre entier (step), valeur par d&#xE9;faut
+        de 2, avec une valeur se situant entre 0 et 10</td>
+      <td style="text-align:left"><code>var myIntParam = myContainer.addIntParameter(&quot;My Int Param&quot;,&quot;Description of my int param&quot;,2,0,10);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addBoolParameter(</b><em>name, description, default</em><b>)</b>
       </td>
-      <td style="text-align:left">ajouter un param&#xE8;tre bool&#xE9;en (toggle)</td>
+      <td style="text-align:left">ajoute un param&#xE8;tre bool&#xE9;en (toggle)</td>
       <td style="text-align:left"><code>var myBoolParam = myContainer.addBoolParameter(&quot;My Bool Param&quot;,&quot;Description of my bool param&quot;,false);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addStringParameter(</b><em>name, description, default</em><b>)</b>
       </td>
-      <td style="text-align:left">ajouter un param&#xE8;tre de cha&#xEE;ne (champ de texte)</td>
-      <td style="text-align:left"> <code>var myStringParam = myContainer.addStringParameter(&quot;My String Param&quot;,&quot;Description de ma cha&#xEE;ne param&quot;, &quot;cool&quot;);</code>
+      <td style="text-align:left">ajoute un param&#xE8;tre de cha&#xEE;ne (champ de texte)</td>
+      <td style="text-align:left"> <code>var myStringParam = myContainer.addStringParameter(&quot;My String Param&quot;,&quot;Description of my string param&quot;, &quot;cool&quot;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addColorParameter(</b><em>name, description, default</em><b>)</b>
       </td>
-      <td style="text-align:left">ajouter un param&#xE8;tre de couleur (s&#xE9;lecteur de couleur).</td>
+      <td style="text-align:left">ajoute un param&#xE8;tre de couleur (s&#xE9;lecteur de couleur).</td>
       <td
       style="text-align:left">
         <p><code>var myColorParam = script.addColorParameter(&quot;My Color Param&quot;,&quot;Description of my color param&quot;,0xff0000ff) ; //default blue alpha 100%</code>
         </p>
-        <p><code>var myColorParam2 = script.addColorParameter(&quot;My Color Param 2 &quot;,&quot;Description of my color param&quot;,[1,0,1]) ; //pr&#xE9;voyance violette</code>
+        <p><code>var myColorParam2 = script.addColorParameter(&quot;My Color Param 2 &quot;,&quot;Description of my color param&quot;,[1,0,1]) ; //default purple</code>
         </p>
         </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addPoint2DParameter(</b><em>name, description</em><b>)</b>
       </td>
-      <td style="text-align:left">ajouter un point 2d param&#xE8;tre</td>
+      <td style="text-align:left">ajoute param&#xE8;tre de point 2d</td>
       <td style="text-align:left"><code>var myP2DParam = myContainer.addPoint2DParameter(&quot;My P2D Param&quot;,&quot;Description of my p2d param&quot;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addPoint3DParameter(</b><em>name, description</em><b>)</b>
       </td>
-      <td style="text-align:left">ajouter un point 3d param&#xE8;tre</td>
+      <td style="text-align:left">ajoute param&#xE8;tre de point 3d</td>
       <td style="text-align:left"><code>var myP3DParam = myContainer.addPoint3DParameter(&quot;My P3D Param&quot;,&quot;Description of my p3d param&quot;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addTargetParameter(</b><em>name, description</em><b>)</b>
       </td>
-      <td style="text-align:left">ajouter un param&#xE8;tre cible (pour r&#xE9;f&#xE9;rencer un autre param&#xE8;tre)</td>
+      <td style="text-align:left">ajoute un param&#xE8;tre cible (pour r&#xE9;f&#xE9;rencer un autre param&#xE8;tre)</td>
       <td
       style="text-align:left"><code>var myTargetParam = myContainer.addTargetParameter(&quot;My Target Param&quot;,&quot;Description of my target param&quot;);</code>
         </td>
@@ -755,22 +755,22 @@ Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera so
       <td style="text-align:left"><b>addFileParameter(</b><em>name, description,</em> [directoryMode]<b>)</b>
       </td>
       <td style="text-align:left">
-        <p>Ajouter un param&#xE8;tre de fichier (pour r&#xE9;f&#xE9;rencer le fichier
+        <p>Ajoute un param&#xE8;tre de fichier (pour r&#xE9;f&#xE9;rencer le fichier
           ou le dossier sur le disque).</p>
-        <p>Si le mode r&#xE9;pertoire est r&#xE9;gl&#xE9; sur vrai, un dossier au
-          lieu d&apos;un fichier peut &#xEA;tre s&#xE9;lectionn&#xE9;.</p>
+        <p>Si le mode r&#xE9;pertoire est r&#xE9;gl&#xE9; sur vrai, un dossier peut &#xEA;tre s&#xE9;lectionn&#xE9; au
+          lieu d&apos;un fichier.</p>
       </td>
-      <td style="text-align:left"><code>var myFileParam = myContainer.addFileParameter(&quot;My File Param&quot;,&quot;Description de mon fichier param&quot;);</code>
+      <td style="text-align:left"><code>var myFileParam = myContainer.addFileParameter(&quot;My File Param&quot;,&quot;Description of my file param&quot;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addEnumParameter(</b><em>name, description, label1, value1, label2, value2, ..</em>.<b>)</b>
       </td>
       <td style="text-align:left">
-        <p>Ajouter un param&#xE8;tre d&apos;&#xE9;num&#xE9;ration (menu d&#xE9;roulant
+        <p>Ajoute un param&#xE8;tre d&apos;&#xE9;num&#xE9;ration (menu d&#xE9;roulant
           avec options)</p>
         <p>Chaque paire de valeurs apr&#xE8;s les 2 premiers arguments d&#xE9;finit
-          une option et son donn&#xE9;es li&#xE9;es</p>
+          une option et ses donn&#xE9;es li&#xE9;es</p>
       </td>
       <td style="text-align:left"><code>var myEnumParam = myContainer.addEnumParameter(&quot;My Enum Param&quot;,&quot;Description of my enum param&quot;, &quot;Option 1&quot;, 1,&quot;Option 2&quot;, 5, &quot;Option 3&quot;, &quot;banana&quot;);</code>
       </td>
@@ -778,7 +778,7 @@ Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera so
     <tr>
       <td style="text-align:left"><b>addContainer(</b>name<b>)</b>
       </td>
-      <td style="text-align:left">Ajouter un conteneur &#xE0; l&apos;int&#xE9;rieur du conteneur.</td>
+      <td style="text-align:left">Ajoute un conteneur &#xE0; l&apos;int&#xE9;rieur du conteneur.</td>
       <td
       style="text-align:left"><code>var childContainer = myContainer.addContainer(&quot;My Child Container&quot;);</code>
         </td>
@@ -786,14 +786,14 @@ Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera so
     <tr>
       <td style="text-align:left"><b>removeContainer(</b>name<b>)</b>
       </td>
-      <td style="text-align:left">Supprimer un conteneur enfant du conteneur.</td>
+      <td style="text-align:left">Supprime un conteneur enfant du conteneur.</td>
       <td style="text-align:left"><code>myContainer.removeContainer (myChildContainer)</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>removeParameter(</b><em>message</em><b>)</b>
       </td>
-      <td style="text-align:left">Supprimer un param&#xE8;tre du conteneur.</td>
+      <td style="text-align:left">Supprime un param&#xE8;tre du conteneur.</td>
       <td style="text-align:left"><code>myContainer.removeParameter (myChildParameter);</code>
       </td>
     </tr>
@@ -839,11 +839,11 @@ Lorsque vous manipulez un gestionnaire, vous avez accès à des fonctions et des
         <p>Ajoute un &#xE9;l&#xE9;ment au gestionnaire et le renvoie.</p>
         <p>Certains gestionnaires comme le gestionnaire de modules ou le gestionnaire
           de couches peuvent cr&#xE9;er plusieurs types d&apos;articles. Ils ont
-          donc besoin d&apos;un type d&apos;article &#xE0; cr&#xE9;er, qui vous devez
-          d&#xE9;finir dans le <em><b>type</b></em> argument.</p>
+          donc besoin d&apos;un type d&apos;article &#xE0; cr&#xE9;er, que vous devez
+          d&#xE9;finir dans l&apos;argument <em><b>type</b></em>.</p>
         <p>D&apos;autres gestionnaires comme le gestionnaire de s&#xE9;quences ne
           sont pas n&#xE9;cessaires car il n&apos;y a qu&apos;un seul type de s&#xE9;quence.
-          Dans ces cas, vous ne&apos;t doit fournir un argument lors de l&apos;appel
+          Dans ces cas, vous ne devez pas fournir d'&apos;argument lors de l&apos;appel
           de la fonction.</p>
       </td>
       <td style="text-align:left">
@@ -877,7 +877,7 @@ Lorsque vous manipulez un gestionnaire, vous avez accès à des fonctions et des
       <td style="text-align:left"><b>getItemWithName(</b><em>name</em><b>)</b>
       </td>
       <td style="text-align:left">Retourne le premier &#xE9;l&#xE9;ment trouv&#xE9; avec <em><b>nom.</b></em> Ceci
-        va rechercher pour une correspondance exacte entre niceName, shortName
+        va rechercher une correspondance exacte entre niceName, shortName
         et la version minuscule.</td>
       <td style="text-align:left"><code>var introSeq = root.sequences.getItemWithName (&quot;Intro&quot; ;);</code>
       </td>
@@ -885,9 +885,9 @@ Lorsque vous manipulez un gestionnaire, vous avez accès à des fonctions et des
     <tr>
       <td style="text-align:left"><b>getItemAt(</b><em>index</em><b>)</b>
       </td>
-      <td style="text-align:left">Retourne l&apos;&#xE9;l&#xE9;ment &#xE0; l&apos;index <em><b>de</b></em>
+      <td style="text-align:left">Retourne l&apos;&#xE9;l&#xE9;ment &#xE0; l&apos;index <em><b>index</b></em>
       </td>
-      <td style="text-align:left"><code>var curSequence = root.sequences.getItemAt(1) ; //0 est le premier, ce qui permet d&apos;obtenir la deuxi&#xE8;me s&#xE9;quence de la liste.</code>
+      <td style="text-align:left"><code>var curSequence = root.sequences.getItemAt(1) ; //Le premier est 0, ici on obtient donc le deuxi&#xE8;me &#xE9;l&#xE9;ment de la liste.</code>
       </td>
     </tr>
     <tr>
@@ -909,7 +909,7 @@ Lorsque vous manipulez un gestionnaire, vous avez accès à des fonctions et des
     <tr>
       <td style="text-align:left"><b>getItemAfter(</b><em>item</em><b>)</b>
       </td>
-      <td style="text-align:left">Retourne l&apos;&#xE9;l&#xE9;ment apr&#xE8;s le <em><b>item.</b></em> sp&#xE9;cifi&#xE9;</td>
+      <td style="text-align:left">Retourne l&apos;&#xE9;l&#xE9;ment apr&#xE8;s l&apos;&#xE9;l&#xE9;ment <em><b>item.</b></em> sp&#xE9;cifi&#xE9;</td>
       <td
       style="text-align:left"><code>var nextSequence = root.sequences.getItemAfter (curSequence);</code>
         </td>
@@ -940,7 +940,7 @@ L'objet _script_ fait référence au conteneur de script. Vous pouvez ajouter vo
     <tr>
       <td style="text-align:left"><b>addFloatParameter(</b><em>name, description, default, min max</em><b>)</b>
       </td>
-      <td style="text-align:left">Cela ajoutera un param&#xE8;tre de nombre flottant (curseur).</td>
+      <td style="text-align:left">Ceci ajoutera un param&#xE8;tre de type nombre flottant (curseur).</td>
       <td
       style="text-align:left"><code>var myFloatParam = script.addFloatParameter(&quot;My Float Param&quot;,&quot;Description of my float param&quot;,.1,0,1);</code>
         </td>
@@ -948,55 +948,55 @@ L'objet _script_ fait référence au conteneur de script. Vous pouvez ajouter vo
     <tr>
       <td style="text-align:left"><b>addIntParameter(</b><em>name, description, default, min max</em><b>)</b>
       </td>
-      <td style="text-align:left">ajouter un param&#xE8;tre de nombre entier (step), valeur par d&#xE9;faut
-        de 2, avec un se situent entre 0 et 10</td>
+      <td style="text-align:left">ajoute un param&#xE8;tre de type nombre entier (step), valeur par d&#xE9;faut
+        de 2, avec une valeur se situant entre 0 et 10</td>
       <td style="text-align:left"><code>var myIntParam = script.addIntParameter(&quot;My Int Param&quot;,&quot;Description of my int param&quot;,2,0,10);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addBoolParameter(</b><em>name, description, default</em><b>)</b>
       </td>
-      <td style="text-align:left">ajouter un param&#xE8;tre bool&#xE9;en (toggle)</td>
+      <td style="text-align:left">ajoute un param&#xE8;tre bool&#xE9;en (toggle)</td>
       <td style="text-align:left"><code>var myBoolParam = script.addBoolParameter(&quot;My Bool Param&quot;,&quot;Description of my bool param&quot;,false);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addStringParameter(</b><em>name, description, default</em><b>)</b>
       </td>
-      <td style="text-align:left">ajouter un param&#xE8;tre de cha&#xEE;ne (champ de texte)</td>
-      <td style="text-align:left"> <code>var myStringParam = script.addStringParameter(&quot;My String Param&quot;,&quot;Description de ma cha&#xEE;ne param&quot;, &quot;cool&quot;);</code>
+      <td style="text-align:left">ajoute un param&#xE8;tre de cha&#xEE;ne (champ de texte)</td>
+      <td style="text-align:left"> <code>var myStringParam = script.addStringParameter(&quot;My String Param&quot;,&quot;Description of my string param&quot;, &quot;cool&quot;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addColorParameter(</b><em>name, description, default</em><b>)</b>
       </td>
-      <td style="text-align:left">ajouter un param&#xE8;tre de couleur (s&#xE9;lecteur de couleur).</td>
+      <td style="text-align:left">ajoute un param&#xE8;tre de couleur (s&#xE9;lecteur de couleur).</td>
       <td
       style="text-align:left">
         <p><code>var myColorParam = script.addColorParameter(&quot;My Color Param&quot;,&quot;Description of my color param&quot;,0xff0000ff) ; //default blue alpha 100%</code>
         </p>
-        <p><code>var myColorParam2 = script.addColorParameter(&quot;My Color Param 2 &quot;,&quot;Description of my color param&quot;,[1,0,1]) ; //pr&#xE9;voyance violette</code>
+        <p><code>var myColorParam2 = script.addColorParameter(&quot;My Color Param 2 &quot;,&quot;Description of my color param&quot;,[1,0,1]) ; //default purple</code>
         </p>
         </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addPoint2DParameter(</b><em>name, description</em><b>)</b>
       </td>
-      <td style="text-align:left">ajouter un point 2d param&#xE8;tre</td>
+      <td style="text-align:left">ajoute un param&#xE8;tre de point 2d</td>
       <td style="text-align:left"><code>var myP2DParam = script.addPoint2DParameter(&quot;My P2D Param&quot;,&quot;Description of my p2d param&quot;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addPoint3DParameter(</b><em>name, description</em><b>)</b>
       </td>
-      <td style="text-align:left">ajouter un point 3d param&#xE8;tre</td>
+      <td style="text-align:left">ajoute un param&#xE8;tre de point 3d</td>
       <td style="text-align:left"><code>var myP3DParam = script.addPoint3DParameter(&quot;My P3D Param&quot;,&quot;Description of my p3d param&quot;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addTargetParameter(</b><em>name, description</em><b>)</b>
       </td>
-      <td style="text-align:left">ajouter un param&#xE8;tre cible (pour r&#xE9;f&#xE9;rencer un autre param&#xE8;tre)</td>
+      <td style="text-align:left">ajoute un param&#xE8;tre cible (pour r&#xE9;f&#xE9;rencer un autre param&#xE8;tre)</td>
       <td
       style="text-align:left"><code>var myTargetParam = script.addTargetParameter(&quot;My Target Param&quot;,&quot;Description of my target param&quot;);</code>
         </td>
@@ -1005,22 +1005,22 @@ L'objet _script_ fait référence au conteneur de script. Vous pouvez ajouter vo
       <td style="text-align:left"><b>addFileParameter(</b><em>name, description,</em> [directoryMode]<b>)</b>
       </td>
       <td style="text-align:left">
-        <p>Ajouter un param&#xE8;tre de fichier (pour r&#xE9;f&#xE9;rencer le fichier
+        <p>Ajoute un param&#xE8;tre de fichier (pour r&#xE9;f&#xE9;rencer le fichier
           ou le dossier sur le disque).</p>
-        <p>Si le mode r&#xE9;pertoire est r&#xE9;gl&#xE9; sur vrai, un dossier au
-          lieu d&apos;un fichier peut &#xEA;tre s&#xE9;lectionn&#xE9;.</p>
+        <p>Si le mode r&#xE9;pertoire est r&#xE9;gl&#xE9; sur vrai, un dossier peut &#xEA;tre s&#xE9;lectionn&#xE9; au
+          lieu d&apos;un fichier.</p>
       </td>
-      <td style="text-align:left"><code>var myFileParam = script.addFileParameter(&quot;Mon fichier param&quot;,&quot;Description de mon fichier param&quot;);</code>
+      <td style="text-align:left"><code>var myFileParam = script.addFileParameter(&quot;My file param&quot;,&quot;Description of my file param&quot;);</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>addEnumParameter(</b><em>name, description, label1, value1, label2, value2, ..</em>.<b>)</b>
       </td>
       <td style="text-align:left">
-        <p>ajouter un param&#xE8;tre de type &#xE9;num&#xE9;ration (menu d&#xE9;roulant
+        <p>Ajoute un param&#xE8;tre de type &#xE9;num&#xE9;ration (menu d&#xE9;roulant
           avec options)</p>
         <p>Chaque paire de valeurs apr&#xE8;s les 2 premiers arguments d&#xE9;finit
-          une option et son donn&#xE9;es li&#xE9;es</p>
+          une option et ses donn&#xE9;es li&#xE9;es</p>
       </td>
       <td style="text-align:left"><code>var myEnumParam = script.addEnumParameter(&quot;My Enum Param&quot;,&quot;Description of my enum param&quot;, &quot;Option 1&quot; ;, 1,&quot;Option 2&quot; ;, 5, &quot;Option 3&quot; ;, &quot;banana&quot; ;);</code>
       </td>
@@ -1043,8 +1043,8 @@ L'objet _script_ fait référence au conteneur de script. Vous pouvez ajouter vo
     <tr>
       <td style="text-align:left"><b>logError(</b><em>message</em><b>)</b>
       </td>
-      <td style="text-align:left">Enregistre un message comme une erreur</td>
-      <td style="text-align:left"><code>script.logError(&quot;This is an error&quot;);</code>
+      <td style="text-align:left">Journalise un message comme une erreur</td>
+      <td style="text-align:left"><code>script.logError(&quot;Ceci est une erreur&quot;);</code>
       </td>
     </tr>
     <tr>
@@ -1059,7 +1059,7 @@ L'objet _script_ fait référence au conteneur de script. Vous pouvez ajouter vo
       <td style="text-align:left"><b>fonction scriprtParameterChanged(</b><em>param</em><b>)</b>
       </td>
       <td style="text-align:left">Cette fonction sera appel&#xE9;e chaque fois qu&apos;un param&#xE8;tre
-        de ce script aura changed.</td>
+        de ce script aura chang&#xE9;.</td>
       <td style="text-align:left"><code>fonction scriptParameterChanged(param){ script.log(&quot;Param changed : &quot;+param.name); }</code>
       </td>
     </tr>
@@ -1074,9 +1074,9 @@ L'objet _root_ fait référence au moteur de Chataigne, qui est l'objet racine d
 
 L'objet _local_ dépend de l'endroit où les scripts sont exécutés. 
 
-* Si le script est exécuté dans un module, la variable locale fera référence au module. Vous pouvez trouver toutes les fonctions du module dans la section [Module Scripts](module-scripts.md). 
-* Si le script s'exécute dans une condition, la variable locale fera référence à la condition. Vous pouvez trouver toutes les fonctions de la condition dans la section [Condition Scripts.](condition-scripts.md) 
-* Si le script s'exécute à l'intérieur d'un filtre, la variable locale fera référence au filtre. Vous pouvez trouver toutes les fonctions de filtrage dans la section [Filter Scripts](filter-scripts.md).
+* Si le script est exécuté dans un module, la variable locale fera référence au module. Vous pouvez trouver toutes les fonctions de module dans la section [Module Scripts](module-scripts.md). 
+* Si le script s'exécute dans une condition, la variable locale fera référence à la condition. Vous pouvez trouver toutes les fonctions de condition dans la section [Condition Scripts.](condition-scripts.md) 
+* Si le script s'exécute à l'intérieur d'un filtre, la variable locale fera référence au filtre. Vous pouvez trouver toutes les fonctions de filtre dans la section [Filter Scripts](filter-scripts.md).
 
 ## Objet _util_
 
@@ -1159,7 +1159,7 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
     <tr>
       <td style="text-align:left"><b>fileExists(</b><em>path</em><b>)</b>
       </td>
-      <td style="text-align:left">Retourne <b>true </b>si un fichier existe au path fourni, sinon <b>false</b>
+      <td style="text-align:left">Retourne <b>true </b>si un fichier existe &#xE0; l&apos;emplacement fourni, sinon <b>false</b>
       </td>
       <td style="text-align:left"><code>script.log(fileExists(&quot;myfile.txt&quot;));</code>
       </td>
@@ -1167,7 +1167,7 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
     <tr>
       <td style="text-align:left"><b>directoryExists(</b><em>path</em><b>)</b>
       </td>
-      <td style="text-align:left">Retourne <b>true </b>si un dossier existe au path fourni, sinon <b>false</b>
+      <td style="text-align:left">Retourne <b>true </b>si un dossier existe &#xE0; l&apos;emplacement fourni, sinon <b>false</b>
       </td>
       <td style="text-align:left"><code>script.log(directoryExists(&quot;myFolder&quot;));</code>
       </td>
@@ -1175,8 +1175,8 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
     <tr>
       <td style="text-align:left"><b>readFile(</b><em>path,</em>  <em>[asJSON]</em><b>)</b>
       </td>
-      <td style="text-align:left">Consultez le contenu du fichier &#xE0; <em><b>path</b></em>. Si <em><b>asJSON</b></em> est <em>vrai,</em> alors
-        le contenu sera analys&#xE9; et renvoy&#xE9; sous la forme d&apos;un Object.</td>
+      <td style="text-align:left">Lit le contenu du fichier &#xE0; l&apos;emplacement <em><b>path</b></em>. Si <em><b>asJSON</b></em> est <em>vrai,</em> alors
+        le contenu sera analys&#xE9; et renvoy&#xE9; sous la forme d&apos;un Objet.</td>
       <td
       style="text-align:left"><code>var myTextContent = util.readFile(&quot;myfile.txt&quot;);</code>
         </td>
@@ -1184,9 +1184,9 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
     <tr>
       <td style="text-align:left"><b>writeFile(</b><em>path, data</em><b>,</b>  <em>overwriteIfExists</em><b>)</b>
       </td>
-      <td style="text-align:left">Ecrivez le contenu d&apos;une cha&#xEE;ne ou d&apos;un Objet dans le fichier
-        &#xE0; <em><b>path</b></em> . Si le fichier existe, <em><b>overwriteIfExists</b></em> vous
-        permettra de d&#xE9;cider si elle doit &#xEA;tre &#xE9;cras&#xE9;e ou non
+      <td style="text-align:left">Ecrit le contenu d&apos;une cha&#xEE;ne ou d&apos;un Objet dans le fichier
+        &#xE0; l&apos;emplacement <em><b>path</b></em>. Si le fichier existe, <em><b>overwriteIfExists</b></em> vous
+        permettra de d&#xE9;cider si il doit &#xEA;tre &#xE9;cras&#xE9; ou non
         (false par d&#xE9;faut).</td>
       <td style="text-align:left">
         <p><code>donn&#xE9;es variables = &quot;super&quot;;</code>
@@ -1198,7 +1198,7 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
     <tr>
       <td style="text-align:left"><b>createDirectory(</b><em>folderPath</em><b>)</b>
       </td>
-      <td style="text-align:left">Cr&#xE9;e un r&#xE9;pertoire au chemin sp&#xE9;cifi&#xE9;.</td>
+      <td style="text-align:left">Cr&#xE9;e un r&#xE9;pertoire &#xE0; l&apos;emplacement sp&#xE9;cifi&#xE9;.</td>
       <td style="text-align:left"><code>util.createDirectory(&quot;path/to/dir&quot; ;);</code>
       </td>
     </tr>
@@ -1207,15 +1207,15 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
       </td>
       <td style="text-align:left">Retourne un tableau de tous les noms de propri&#xE9;t&#xE9;s de cet <em><b>objet</b></em>.
         Vous pouvez sp&#xE9;cifier si vous voulez inclure des param&#xE8;tres et/ou
-        des objets (comme conteneurs) La valeur par d&#xE9;faut est include all.</td>
+        des objets (comme des conteneurs). La valeur par d&#xE9;faut est include all.</td>
       <td
-      style="text-align:left"><code>var propNames = util.getObjectProperties(myObject, true, false) ; //seulement get parameters</code>
+      style="text-align:left"><code>var propNames = util.getObjectProperties(myObject, true, false) ; //retourne seulement les param&#xE8;tres</code>
         </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>getObjectMethods(</b><em>objet</em><b>)</b>
       </td>
-      <td style="text-align:left">Retourne un tableau de tous les noms de m&#xE9;thode de ce <em><b>objet</b></em>.</td>
+      <td style="text-align:left">Retourne un tableau de tous les noms de m&#xE9;thodes de cet <em><b>objet</b></em>.</td>
       <td
       style="text-align:left"><code>var methods= util.getObjectMethods();</code>
         </td>
@@ -1240,9 +1240,9 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
       </td>
       <td style="text-align:left">
         <p>Affiche un message popup avec un seul bouton.</p>
-        <p>Il est possible de sp&#xE9;cifier une<b> icon </b>(accepted values are
+        <p>Il est possible de sp&#xE9;cifier une<b> icone </b>(valeurs accept&#xE9;es
           &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot; </b></em>)
-          ainsi que le texte du bouton</p>
+          ainsi que le texte du bouton.</p>
       </td>
       <td style="text-align:left"><code>util.showMessageBox(&quot;Super info !&quot;, &quot;This is a message for you&quot;, &quot;info&quot;, &quot;Got it&quot;);</code>
       </td>
@@ -1252,14 +1252,14 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
       </td>
       <td style="text-align:left">
         <p>Affiche un message popup avec 2 boutons.</p>
-        <p>Il est possible de sp&#xE9;cifier une<b> icon </b>(accepted values are
+        <p>Il est possible de sp&#xE9;cifier une<b> icone </b>(valeurs accept&#xE9;es
           &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot; </b></em>)
-          ainsi que le texte des bouton.</p>
+          ainsi que le texte des boutons.</p>
         <p>La valeur retourn&#xE9;e est <em><b>true </b></em>si &quot;OK&quot; a &#xE9;t&#xE9;
           cliqu&#xE9;, sinon <em><b>false.</b></em>
         </p>
       </td>
-      <td style="text-align:left"><code>var okIsClicked = util.showOkCancelBox(&quot;Super warning!&quot;, &quot;This is a warningfor you&quot;, &quot;warning&quot;, &quot;Got it&quot;,&quot;Naaah&quot;);</code>
+      <td style="text-align:left"><code>var okIsClicked = util.showOkCancelBox(&quot;Super warning!&quot;, &quot;This is a warning for you&quot;, &quot;warning&quot;, &quot;Got it&quot;,&quot;Naaah&quot;);</code>
       </td>
     </tr>
     <tr>
@@ -1267,10 +1267,10 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
       </td>
       <td style="text-align:left">
         <p>Affiche un message popup avec 3 boutons.</p>
-        <p>Il est possible de sp&#xE9;cifier une<b> icon </b>(accepted values are
+        <p>Il est possible de sp&#xE9;cifier une<b> icone </b>(valeurs accept&#xE9;es
           &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot; </b></em>)
-          ainsi que le texte des bouton.</p>
-        <p>La valeur retourn&#xE9;e est <b>0,1 ou 2 </b>en fonction du bouton cliqu&#xE9;.</p>
+          ainsi que le texte des boutons.</p>
+        <p>La valeur retourn&#xE9;e est <b>0, 1 ou 2 </b>en fonction du bouton cliqu&#xE9;.</p>
       </td>
       <td style="text-align:left"><code>var result = util.showYesNoCancelBox(&quot;Confirm ?&quot;, &quot;Do you really want to do that ?&quot;, &quot;question&quot;, &quot;Yeah&quot;, &quot;Never&quot;, &quot;Don&apos;t care...&quot;);</code>
       </td>
