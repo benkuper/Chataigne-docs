@@ -504,7 +504,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
     <tr>
       <td style="text-align:left"><b>readFile(</b><em>[asJSON]</em><b>)</b>
       </td>
-      <td style="text-align:left">Consulte le contenu du fichier. Si <em><b>asJSON</b></em> est <em>vrai,</em> alors
+      <td style="text-align:left">Lit le contenu du fichier. Si <em><b>asJSON</b></em> est <em>vrai,</em> alors
         le contenu sera analys&#xE9; et renvoy&#xE9; sous la forme d&apos;un Object.</td>
       <td
       style="text-align:left">
