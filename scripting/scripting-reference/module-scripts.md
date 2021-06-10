@@ -271,7 +271,7 @@ Some modules have specific methods that are useful if you want to have specific 
 </table>
 {% endtab %}
 
-{% tab title="Serial/UDP/TCP" %}
+{% tab title="Serial/UDP/TCP/Websocket" %}
 | Method | Description | Example |
 | :--- | :--- | :--- |
 | **send\(**_message_**\)** | This will send the string passed in as ASCII characters. | `local.send("This is my message");` |
