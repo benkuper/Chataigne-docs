@@ -363,7 +363,7 @@ You can either pass all the arguments inline, in which case some things are not 
 
 You can pass an object containing the parameters to send the request. This is method is described at the bottom of this section. This looks like this :
 
-```text
+```javascript
 var params = {};
 params.dataType = "json";
 params.extraHeaders = "Content-Type: application/json";
