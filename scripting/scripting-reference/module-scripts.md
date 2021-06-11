@@ -396,7 +396,7 @@ You can either pass all the arguments inline, in which case some things are not 
 
 ### Object arguments
 
-You can pass an object containing the parameters to send the request. This looks like this :
+You can pass an object containing the parameters to send the request. All properties of the "params" object are optional. When adding all, this looks like this :
 
 ```javascript
 var params = {};
