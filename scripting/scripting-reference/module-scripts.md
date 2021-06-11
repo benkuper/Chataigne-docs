@@ -318,7 +318,7 @@ Some modules have specific methods that are useful if you want to have specific 
 {% tab title="HTTP" %}
 There are 2 ways of using following methods. 
 
-In all those methods, the _**address**_ field is appended to the modules "Base Address" parameter
+In all those methods, the _**address**_ field is appended to the modules "Base Address" parameter. The examples are considering that default base address is [https://httpbin.org/](https://httpbin.org/)
 
 ### Inline arguments
 
@@ -352,7 +352,7 @@ You can either pass all the arguments inline, in which case some things are not 
           <li>add payload to the query</li>
         </ul>
       </td>
-      <td style="text-align:left"><code>local.sendGET( &quot;https://httpbin.org/anything?myValue1=1&amp;myValue2=super&quot;, &quot;json&quot;, &quot;Connection: keep-alive&quot;, &quot;some payload here&quot;);</code>
+      <td style="text-align:left"><code>local.sendGET( &quot;anything?myValue1=1&amp;myValue2=super&quot;, &quot;json&quot;, &quot;Connection: keep-alive&quot;, &quot;some payload here&quot;);</code>
       </td>
     </tr>
     <tr>
@@ -361,7 +361,7 @@ You can either pass all the arguments inline, in which case some things are not 
       <td style="text-align:left">This will send an HTTP POST request. After specifying the <em><b>url</b></em>,
         you can add pair of values that are respectively the <em><b>parameter name</b></em> and
         its <em><b>value</b></em>.</td>
-      <td style="text-align:left"><code>local.sendPOST( &quot;https://httpbin.org/anything&quot;, &quot;myValue1&quot;, 1, &quot;myValue2&quot;, 2);</code>
+      <td style="text-align:left"><code>local.sendPOST( &quot;anything&quot;, &quot;myValue1&quot;, 1, &quot;myValue2&quot;, 2);</code>
       </td>
     </tr>
     <tr>
@@ -370,7 +370,7 @@ You can either pass all the arguments inline, in which case some things are not 
       <td style="text-align:left">This will send an HTTP PUT request. After specifying the <em><b>url</b></em>,
         you can add pair of values that are respectively the <em><b>parameter name</b></em> and
         its <em><b>value</b></em>.</td>
-      <td style="text-align:left"><code>local.sendPUT( &quot;https://httpbin.org/anything&quot;, &quot;myValue1&quot;, 1, &quot;myValue2&quot;, 2);</code>
+      <td style="text-align:left"><code>local.sendPUT( &quot;anything&quot;, &quot;myValue1&quot;, 1, &quot;myValue2&quot;, 2);</code>
       </td>
     </tr>
     <tr>
@@ -379,7 +379,7 @@ You can either pass all the arguments inline, in which case some things are not 
       <td style="text-align:left">This will send an HTTP PATCH request. After specifying the <em><b>url</b></em>,
         you can add pair of values that are respectively the <em><b>parameter name</b></em> and
         its <em><b>value</b></em>.</td>
-      <td style="text-align:left"><code>local.sendPATCH( &quot;https://httpbin.org/anything&quot;, &quot;myValue1&quot;, 1, &quot;myValue2&quot;, 2);</code>
+      <td style="text-align:left"><code>local.sendPATCH( &quot;anything&quot;, &quot;myValue1&quot;, 1, &quot;myValue2&quot;, 2);</code>
       </td>
     </tr>
     <tr>
@@ -388,7 +388,7 @@ You can either pass all the arguments inline, in which case some things are not 
       <td style="text-align:left">This will send an HTTP DELETE request. After specifying the <em><b>url</b></em>,
         you can add pair of values that are respectively the <em><b>parameter name</b></em> and
         its <em><b>value</b></em>.</td>
-      <td style="text-align:left"><code>local.sendDELETE( &quot;https://httpbin.org/anything&quot;, &quot;myValue1&quot;, 1, &quot;myValue2&quot;, 2)</code>
+      <td style="text-align:left"><code>local.sendDELETE( &quot;anything&quot;, &quot;myValue1&quot;, 1, &quot;myValue2&quot;, 2)</code>
       </td>
     </tr>
   </tbody>
