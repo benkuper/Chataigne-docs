@@ -281,13 +281,105 @@ Some modules have specific methods that are useful if you want to have specific 
 {% endtab %}
 
 {% tab title="HTTP" %}
-| Method | Description | Example |
-| :--- | :--- | :--- |
-| **sendGET\(**_url_**\)** | This will send an HTTP GET request. You can add parameters at the end of the _**url**_ argument, just like any GET URL. | `local.sendGET( "https://httpbin.org/anything?myValue1=1&myValue2=super");` |
-| **sendPOST\(**_url, param1, value1, param2, value2, ..._**\)** | This will send an HTTP POST request. After specifying the _**url**_, you can add pair of values that are respectively the _**parameter name**_ and its _**value**_. | `local.sendPOST( "https://httpbin.org/anything", "myValue1", 1, "myValue2", 2);` |
-| **sendPUT\(**_url, param1, value1, param2, value2, ..._**\)** | This will send an HTTP PUT request. After specifying the _**url**_, you can add pair of values that are respectively the _**parameter name**_ and its _**value**_. | `local.sendPUT( "https://httpbin.org/anything", "myValue1", 1, "myValue2", 2);` |
-| **sendPATCH\(**_url, param1, value1, param2, value2, ..._**\)** | This will send an HTTP PATCH request. After specifying the _**url**_, you can add pair of values that are respectively the _**parameter name**_ and its _**value**_. | `local.sendPATCH( "https://httpbin.org/anything", "myValue1", 1, "myValue2", 2);` |
-| **sendDELETE\(**_url, param1, value1, param2, value2, ..._**\)** | This will send an HTTP DELETE request. After specifying the _**url**_, you can add pair of values that are respectively the _**parameter name**_ and its _**value**_. | `local.sendDELETE( "https://httpbin.org/anything", "myValue1", 1, "myValue2", 2);` |
+There are 2 ways of using following methods. 
+
+In all those methods, the _**address**_ field is appended to the modules "Base Address" parameter
+
+### Inline arguments
+
+You can either pass all the arguments inline, in which case some things are not possible \(putting extra headers and payload in other requests than GET for example\).
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>sendGET(</b><em>url, [dataType], [extraHeaders], [payload]</em><b>)</b>
+      </td>
+      <td style="text-align:left">
+        <p>This will send an HTTP GET request. You can add parameters at the end
+          of the <em><b>url</b></em> argument, just like any GET URL.</p>
+        <p>You can add optional parameters after the address (only works with GET)
+          :</p>
+        <ul>
+          <li>dataType ( <em><b>json</b></em><b> </b>or <em><b>raw </b></em>) : defines
+            what type of data to expect for the result</li>
+          <li>
+            <p>extraHeaders :</p>
+            <p>add extra headers to the query</p>
+          </li>
+          <li>payload :</li>
+          <li>add payload to the query</li>
+        </ul>
+      </td>
+      <td style="text-align:left"><code>local.sendGET( &quot;https://httpbin.org/anything?myValue1=1&amp;myValue2=super&quot;, &quot;json&quot;, &quot;Connection: keep-alive&quot;, &quot;some payload here&quot;);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>sendPOST(</b><em>url, param1, value1, param2, value2, ...</em><b>)</b>
+      </td>
+      <td style="text-align:left">This will send an HTTP POST request. After specifying the <em><b>url</b></em>,
+        you can add pair of values that are respectively the <em><b>parameter name</b></em> and
+        its <em><b>value</b></em>.</td>
+      <td style="text-align:left"><code>local.sendPOST( &quot;https://httpbin.org/anything&quot;, &quot;myValue1&quot;, 1, &quot;myValue2&quot;, 2);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>sendPUT(</b><em>url, param1, value1, param2, value2, ...</em><b>)</b>
+      </td>
+      <td style="text-align:left">This will send an HTTP PUT request. After specifying the <em><b>url</b></em>,
+        you can add pair of values that are respectively the <em><b>parameter name</b></em> and
+        its <em><b>value</b></em>.</td>
+      <td style="text-align:left"><code>local.sendPUT( &quot;https://httpbin.org/anything&quot;, &quot;myValue1&quot;, 1, &quot;myValue2&quot;, 2);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>sendPATCH(</b><em>url, param1, value1, param2, value2, ...</em><b>)</b>
+      </td>
+      <td style="text-align:left">This will send an HTTP PATCH request. After specifying the <em><b>url</b></em>,
+        you can add pair of values that are respectively the <em><b>parameter name</b></em> and
+        its <em><b>value</b></em>.</td>
+      <td style="text-align:left"><code>local.sendPATCH( &quot;https://httpbin.org/anything&quot;, &quot;myValue1&quot;, 1, &quot;myValue2&quot;, 2);</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>sendDELETE(</b><em>url, param1, value1, param2, value2, ...</em><b>)</b>
+      </td>
+      <td style="text-align:left">This will send an HTTP DELETE request. After specifying the <em><b>url</b></em>,
+        you can add pair of values that are respectively the <em><b>parameter name</b></em> and
+        its <em><b>value</b></em>.</td>
+      <td style="text-align:left"><code>local.sendDELETE( &quot;https://httpbin.org/anything&quot;, &quot;myValue1&quot;, 1, &quot;myValue2&quot;, 2)</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Object arguments
+
+You can pass an object containing the parameters to send the request. This is method is described at the bottom of this section. This looks like this :
+
+```text
+var params = {};
+params.dataType = "json";
+params.extraHeaders = "Content-Type: application/json";
+params.arguments = ["myValue1",1,"myValue2",2];
+
+var payload = {}; //the payload can be either a simple string or an object that will be automatically stringified
+payload.super = "cool";
+payload.number = 3.2;
+params.payload = payload;
+
+local.sendGET("anything", params); //the address field will be appended to the module's base address
+local.sendPOST("anything", params);
+local.sendPUT("anything", params);
+local.sendPATCH("anything", params);
+local.sendDELETE("anything", params);
+```
 {% endtab %}
 
 {% tab title="System" %}
@@ -296,4 +388,10 @@ Some modules have specific methods that are useful if you want to have specific 
 | **launchApp\(**_appPath, arguments_**\)** | Launches an app at the provided path with the provided arguments | `local.launchApp("myApp.exe","-p myOption");` |
 {% endtab %}
 {% endtabs %}
+
+
+
+
+
+
 
