@@ -394,7 +394,7 @@ You can either pass all the arguments inline, in which case some things are not 
   </tbody>
 </table>
 
-### Object arguments
+### Object arguments \(1.8 only\)
 
 You can pass an object containing the parameters to send the request. All properties of the "params" object are optional. When adding all, this looks like this :
 
