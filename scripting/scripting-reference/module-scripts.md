@@ -8,10 +8,45 @@ It's also the way to create [Custom Modules](../../modules/custom-modules/), whe
 
 All scripts running inside a module will have a common set of functions that can be added to the script. Those functions are not needed to run the script.
 
-| Method | Description | Example |
-| :--- | :--- | :--- |
-| **function moduleParameterChanged\(**_param_**\)** | This function will be called each time a parameter of this module has changed, meaning a parameter or trigger inside the "Parameters" panel of this module. | `function moduleParameterChanged(param){    script.log("Param changed : "+param.name); }` _\`\`_ |
-| **function moduleValueChanged\(**_param_**\)** | This function will be called each time a value of this module has changed, meaning a parameter or trigger inside the "Values" panel of this module. | `function moduleValueChanged(value) { if(value.isParameter()) { script.log("Module value changed : "+value.name+" > "+value.get()); }else { script.log("Module value triggered : "+value.name); }  }` |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>function moduleParameterChanged(</b><em>param</em><b>)</b>
+      </td>
+      <td style="text-align:left">This function will be called each time a parameter of this module has
+        changed, meaning a parameter or trigger inside the &quot;Parameters&quot;
+        panel of this module.</td>
+      <td style="text-align:left"><code>function moduleParameterChanged(param){    script.log(&quot;Param changed : &quot;+param.name); }</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>function moduleValueChanged(</b><em>param</em><b>)</b>
+      </td>
+      <td style="text-align:left">This function will be called each time a value of this module has changed,
+        meaning a parameter or trigger inside the &quot;Values&quot; panel of this
+        module.</td>
+      <td style="text-align:left">
+        <p><code>function moduleValueChanged(value) { if(value.isParameter()) { script.log(&quot;Module value changed : &quot;+value.name+&quot; &gt; &quot;+value.get()); </code>
+        </p>
+        <p><code>}else {</code>
+        </p>
+        <p><code>script.log(&quot;Module value triggered : &quot;+value.name); </code>
+        </p>
+        <p><code>}</code>
+        </p>
+        <p><code>}</code>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Module-specific functions
 
