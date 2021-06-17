@@ -979,6 +979,14 @@ The script object refers to the script container. You can add your own custom pa
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>setExecutionTimeout( </b><em>timeInSeconds</em><b>)</b>
+      </td>
+      <td style="text-align:left">Sets the maximum time that a call in the script can take in seconds.</td>
+      <td
+      style="text-align:left"><code>script.setExecutionTimeout(10);</code>
+        </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>function scriptParameterChanged (</b><em>param</em><b>)</b>
       </td>
       <td style="text-align:left">This function will be called each time a parameter of this script has
