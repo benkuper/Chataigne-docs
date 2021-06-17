@@ -68,9 +68,9 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
   </tbody>
 </table>
 
-## Paramètres et Triggers 
+## Paramètres et Triggers
 
-Tous les paramètres et déclencheurs ont des méthodes communes et des méthodes spécifiques 
+Tous les paramètres et déclencheurs ont des méthodes communes et des méthodes spécifiques
 
 ### Méthodes et propriétés communes
 
@@ -106,8 +106,8 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
           <br /><em><b>readonly :</b></em> d&#xE9;finit le param&#xE8;tre comme non modifiable</p>
         <p><em><b>description :</b></em> modifier la description de l&apos;infobulle</p>
         <p><em><b>activ&#xE9; :</b></em> activer ou d&#xE9;sactiver ce param&#xE8;tre</p>
-        <p><em><b>alwaysNotify :</b></em> active le flag alwaysNotify (si à true, cela
-          d&#xE9;clenchera des mises &#xE0; jour m&#xEA;me si la valeur fix&#xE9;e
+        <p><em><b>alwaysNotify :</b></em> active le flag alwaysNotify (si &#xE0; true,
+          cela d&#xE9;clenchera des mises &#xE0; jour m&#xEA;me si la valeur fix&#xE9;e
           est la m&#xEA;me qu&apos;auparavant).
           <br />Plus d&apos;informations pour des param&#xE8;tres sp&#xE9;cifiques dans
           chaque section de param&#xE8;tres&apos;s.</p>
@@ -151,7 +151,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       <td style="text-align:left"><b>getControlAddress (</b>[reference]<b>)</b>
       </td>
       <td style="text-align:left">Retourne l&apos;adresse de contr&#xF4;le OSC de cet &#xE9;lement. Le param&#xE8;tre
-        optionnel <em><b>reference </b></em>permet de sp&#xE9;cifier un &#xE9;l&#xE9;ment
+        optionnel <em><b>reference</b></em> permet de sp&#xE9;cifier un &#xE9;l&#xE9;ment
         relatif &#xE0; partir duquel g&#xE9;n&#xE9;rer l&apos;adresse .</td>
       <td
       style="text-align:left"><code>script.log( myContainer.getControlAddress());</code>
@@ -168,7 +168,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
   </tbody>
 </table>
 
-###  Trigger
+### Trigger
 
 | Méthode | Description | Exemple |
 | :--- | :--- | :--- |
@@ -259,7 +259,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
 | **get\(\)** | Retourne la valeur de ce paramètre | `var value = myFloatParam.get();` |
 | **set\(**_value_**\)** | Définit la valeur de ce paramètre | `myFloatParam.set(.5);` |
 
-###  String Parameter
+### String Parameter
 
 <table>
   <thead>
@@ -326,11 +326,11 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
       </td>
       <td style="text-align:left">D&#xE9;finit la valeur de ce param&#xE8;tre. Vous pouvez soit d&#xE9;finir
-        la valeur par valeur hex ARGB, tableau flottant [r,g,b,a], ou
-        valeurs s&#xE9;par&#xE9;es r,g,b,a. Les valeurs r, g et b sont toujours comprises
-        entre 0 et 1 et l&apos;alpha est facultatif (vous pouvez sp&#xE9;cifier
-        r,g,b seulement);</td>
-      <td style="text-align:left">
+        la valeur par valeur hex ARGB, tableau flottant [r,g,b,a], ou valeurs s&#xE9;par&#xE9;es
+        r,g,b,a. Les valeurs r, g et b sont toujours comprises entre 0 et 1 et
+        l&apos;alpha est facultatif (vous pouvez sp&#xE9;cifier r,g,b seulement);</td>
+      <td
+      style="text-align:left">
         <p><code>//ceci est r&#xE9;gl&#xE9; sur cyan alpha 100%</code>
         </p>
         <p><code>myColorParam.set(0xff00ffffff);</code>
@@ -339,7 +339,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
         </p>
         <p><code>myColorParam.set(0,1,1,1);</code>
         </p>
-      </td>
+        </td>
     </tr>
   </tbody>
 </table>
@@ -495,7 +495,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
       </td>
       <td style="text-align:left">
         <p>Attributs sp&#xE9;cifiques :</p>
-        <p><em><b>directoryMode </b></em>: pr&#xE9;cise si l&apos;on veut chercher
+        <p><em><b>directoryMode</b></em> : pr&#xE9;cise si l&apos;on veut chercher
           un fichier ou un dossier.</p>
       </td>
       <td style="text-align:left"><code>myFileParam.setAttribute (&quot;directoryMode&quot;,true);</code>
@@ -517,10 +517,9 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
     <tr>
       <td style="text-align:left"><b>writeFile(data,</b>  <em>overwriteIfExists</em><b>)</b>
       </td>
-      <td style="text-align:left">Ecrit le contenu ou une cha&#xEE;ne d&apos;un Objet dans le fichier
-        s&#xE9;lectionn&#xE9;. Si il existe, <em><b>overwriteIfExists</b></em> vous
-        permettra de d&#xE9;cider de l&apos;&#xE9;craser ou non (false par
-        d&#xE9;faut).</td>
+      <td style="text-align:left">Ecrit le contenu ou une cha&#xEE;ne d&apos;un Objet dans le fichier s&#xE9;lectionn&#xE9;.
+        Si il existe, <em><b>overwriteIfExists</b></em> vous permettra de d&#xE9;cider
+        de l&apos;&#xE9;craser ou non (false par d&#xE9;faut).</td>
       <td style="text-align:left">
         <p><code>donn&#xE9;es variables = &quot;super&quot;;</code>
         </p>
@@ -583,7 +582,7 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
   </tbody>
 </table>
 
-### Point3D Parameter 
+### Point3D Parameter
 
 <table>
   <thead>
@@ -620,9 +619,9 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
   </tbody>
 </table>
 
-## Container 
+## Container
 
-Les conteneurs sont tout objet qui contient des paramètres ou d'autres récipients.   
+Les conteneurs sont tout objet qui contient des paramètres ou d'autres récipients.  
 Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera soit un conteneur, soit un paramètre. Donc si ce n'est pas un paramètre, alors c'est un conteneur.
 
 <table>
@@ -659,8 +658,8 @@ Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera so
     <tr>
       <td style="text-align:left"><b>setCollapsed(</b><em>value</em><b>)</b>
       </td>
-      <td style="text-align:left">Modifie l&apos;&#xE9;tat de repli du conteneur, s&apos;il
-        peut &#xEA;tre repli&#xE9;.</td>
+      <td style="text-align:left">Modifie l&apos;&#xE9;tat de repli du conteneur, s&apos;il peut &#xEA;tre
+        repli&#xE9;.</td>
       <td style="text-align:left"><code>myContainer.setCollapsed(false);</code>
       </td>
     </tr>
@@ -757,8 +756,8 @@ Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera so
       <td style="text-align:left">
         <p>Ajoute un param&#xE8;tre de fichier (pour r&#xE9;f&#xE9;rencer le fichier
           ou le dossier sur le disque).</p>
-        <p>Si le mode r&#xE9;pertoire est r&#xE9;gl&#xE9; sur vrai, un dossier peut &#xEA;tre s&#xE9;lectionn&#xE9; au
-          lieu d&apos;un fichier.</p>
+        <p>Si le mode r&#xE9;pertoire est r&#xE9;gl&#xE9; sur vrai, un dossier peut
+          &#xEA;tre s&#xE9;lectionn&#xE9; au lieu d&apos;un fichier.</p>
       </td>
       <td style="text-align:left"><code>var myFileParam = myContainer.addFileParameter(&quot;My File Param&quot;,&quot;Description of my file param&quot;);</code>
       </td>
@@ -801,7 +800,7 @@ Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera so
       <td style="text-align:left"><b>getControlAddress (</b>[reference]<b>)</b>
       </td>
       <td style="text-align:left">Retourne l&apos;adresse de contr&#xF4;le OSC de cet &#xE9;lement. Le param&#xE8;tre
-        optionnel <em><b>reference </b></em>permet de sp&#xE9;cifier un &#xE9;l&#xE9;ment
+        optionnel <em><b>reference</b></em> permet de sp&#xE9;cifier un &#xE9;l&#xE9;ment
         relatif &#xE0; partir duquel g&#xE9;n&#xE9;rer l&apos;adresse .</td>
       <td
       style="text-align:left"><code>script.log( myContainer.getControlAddress());</code>
@@ -818,7 +817,7 @@ Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera so
   </tbody>
 </table>
 
-## Managers 
+## Managers
 
 Les managers sont des types particuliers de conteneurs. Dans le logiciel, vous pouvez voir qu'un conteneur est un gestionnaire lorsqu'il y a une icône "**+**\*" à droite de son bloc. Dans la plupart des cas, il s'agit simplement de conteneurs améliorés. La plupart du temps, les gestionnaires qui vous intéresseront sont **le gestionnaire de modules, le gestionnaire de séquences, les gestionnaires de couches et les gestionnaires de clés d'automatisation.**  
 Lorsque vous manipulez un gestionnaire, vous avez accès à des fonctions et des propriétés spécifiques comme l'ajout d'éléments, la suppression d'éléments ou l'obtention d'un tableau de ses éléments.
@@ -843,7 +842,7 @@ Lorsque vous manipulez un gestionnaire, vous avez accès à des fonctions et des
           d&#xE9;finir dans l&apos;argument <em><b>type</b></em>.</p>
         <p>D&apos;autres gestionnaires comme le gestionnaire de s&#xE9;quences ne
           sont pas n&#xE9;cessaires car il n&apos;y a qu&apos;un seul type de s&#xE9;quence.
-          Dans ces cas, vous ne devez pas fournir d'&apos;argument lors de l&apos;appel
+          Dans ces cas, vous ne devez pas fournir d&apos;&apos;argument lors de l&apos;appel
           de la fonction.</p>
       </td>
       <td style="text-align:left">
@@ -877,8 +876,8 @@ Lorsque vous manipulez un gestionnaire, vous avez accès à des fonctions et des
       <td style="text-align:left"><b>getItemWithName(</b><em>name</em><b>)</b>
       </td>
       <td style="text-align:left">Retourne le premier &#xE9;l&#xE9;ment trouv&#xE9; avec <em><b>nom.</b></em> Ceci
-        va rechercher une correspondance exacte entre niceName, shortName
-        et la version minuscule.</td>
+        va rechercher une correspondance exacte entre niceName, shortName et la
+        version minuscule.</td>
       <td style="text-align:left"><code>var introSeq = root.sequences.getItemWithName (&quot;Intro&quot; ;);</code>
       </td>
     </tr>
@@ -1007,8 +1006,8 @@ L'objet _script_ fait référence au conteneur de script. Vous pouvez ajouter vo
       <td style="text-align:left">
         <p>Ajoute un param&#xE8;tre de fichier (pour r&#xE9;f&#xE9;rencer le fichier
           ou le dossier sur le disque).</p>
-        <p>Si le mode r&#xE9;pertoire est r&#xE9;gl&#xE9; sur vrai, un dossier peut &#xEA;tre s&#xE9;lectionn&#xE9; au
-          lieu d&apos;un fichier.</p>
+        <p>Si le mode r&#xE9;pertoire est r&#xE9;gl&#xE9; sur vrai, un dossier peut
+          &#xEA;tre s&#xE9;lectionn&#xE9; au lieu d&apos;un fichier.</p>
       </td>
       <td style="text-align:left"><code>var myFileParam = script.addFileParameter(&quot;My file param&quot;,&quot;Description of my file param&quot;);</code>
       </td>
@@ -1056,6 +1055,14 @@ L'objet _script_ fait référence au conteneur de script. Vous pouvez ajouter vo
         </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>setExecutionTimeout( </b><em>timeInSeconds</em><b>)</b>
+      </td>
+      <td style="text-align:left">D&#xE9;fini le temps maximum avant pour &#xE9;xecuter les appels &#xE0;
+        ce script</td>
+      <td style="text-align:left"><code>script.setExecutionTimeout(10);</code>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>fonction scriprtParameterChanged(</b><em>param</em><b>)</b>
       </td>
       <td style="text-align:left">Cette fonction sera appel&#xE9;e chaque fois qu&apos;un param&#xE8;tre
@@ -1068,11 +1075,11 @@ L'objet _script_ fait référence au conteneur de script. Vous pouvez ajouter vo
 
 ## Objet _root_
 
-L'objet _root_ fait référence au moteur de Chataigne, qui est l'objet racine de tous les parents. Il permet d'accéder à n'importe quel objet dans la hiérarchie de Chataigne. La meilleure façon d'y accéder est de cliquer avec le bouton droit de la souris sur l'interface utilisateur d'un paramètre et de sélectionner "Copy Script control address". Vous pouvez alors passer l'adresse dans votre script et vous pourrez contrôler ce paramètre. 
+L'objet _root_ fait référence au moteur de Chataigne, qui est l'objet racine de tous les parents. Il permet d'accéder à n'importe quel objet dans la hiérarchie de Chataigne. La meilleure façon d'y accéder est de cliquer avec le bouton droit de la souris sur l'interface utilisateur d'un paramètre et de sélectionner "Copy Script control address". Vous pouvez alors passer l'adresse dans votre script et vous pourrez contrôler ce paramètre.
 
-## Objet _local_ 
+## Objet _local_
 
-L'objet _local_ dépend de l'endroit où les scripts sont exécutés. 
+L'objet _local_ dépend de l'endroit où les scripts sont exécutés.
 
 * Si le script est exécuté dans un module, la variable locale fera référence au module. Vous pouvez trouver toutes les fonctions de module dans la section [Module Scripts](module-scripts.md). 
 * Si le script s'exécute dans une condition, la variable locale fera référence à la condition. Vous pouvez trouver toutes les fonctions de condition dans la section [Condition Scripts.](condition-scripts.md) 
@@ -1159,7 +1166,8 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
     <tr>
       <td style="text-align:left"><b>fileExists(</b><em>path</em><b>)</b>
       </td>
-      <td style="text-align:left">Retourne <b>true </b>si un fichier existe &#xE0; l&apos;emplacement fourni, sinon <b>false</b>
+      <td style="text-align:left">Retourne <b>true</b> si un fichier existe &#xE0; l&apos;emplacement fourni,
+        sinon <b>false</b>
       </td>
       <td style="text-align:left"><code>script.log(fileExists(&quot;myfile.txt&quot;));</code>
       </td>
@@ -1167,7 +1175,8 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
     <tr>
       <td style="text-align:left"><b>directoryExists(</b><em>path</em><b>)</b>
       </td>
-      <td style="text-align:left">Retourne <b>true </b>si un dossier existe &#xE0; l&apos;emplacement fourni, sinon <b>false</b>
+      <td style="text-align:left">Retourne <b>true</b> si un dossier existe &#xE0; l&apos;emplacement fourni,
+        sinon <b>false</b>
       </td>
       <td style="text-align:left"><code>script.log(directoryExists(&quot;myFolder&quot;));</code>
       </td>
@@ -1175,11 +1184,11 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
     <tr>
       <td style="text-align:left"><b>readFile(</b><em>path,</em>  <em>[asJSON]</em><b>)</b>
       </td>
-      <td style="text-align:left">Lit le contenu du fichier &#xE0; l&apos;emplacement <em><b>path</b></em>. Si <em><b>asJSON</b></em> est <em>vrai,</em> alors
-        le contenu sera analys&#xE9; et renvoy&#xE9; sous la forme d&apos;un Objet.</td>
-      <td
-      style="text-align:left"><code>var myTextContent = util.readFile(&quot;myfile.txt&quot;);</code>
-        </td>
+      <td style="text-align:left">Lit le contenu du fichier &#xE0; l&apos;emplacement <em><b>path</b></em>.
+        Si <em><b>asJSON</b></em> est <em>vrai,</em> alors le contenu sera analys&#xE9;
+        et renvoy&#xE9; sous la forme d&apos;un Objet.</td>
+      <td style="text-align:left"><code>var myTextContent = util.readFile(&quot;myfile.txt&quot;);</code>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>writeFile(</b><em>path, data</em><b>,</b>  <em>overwriteIfExists</em><b>)</b>
@@ -1199,18 +1208,19 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
       <td style="text-align:left"><b>createDirectory(</b><em>folderPath</em><b>)</b>
       </td>
       <td style="text-align:left">Cr&#xE9;e un r&#xE9;pertoire &#xE0; l&apos;emplacement sp&#xE9;cifi&#xE9;.</td>
-      <td style="text-align:left"><code>util.createDirectory(&quot;path/to/dir&quot; ;);</code>
-      </td>
+      <td
+      style="text-align:left"><code>util.createDirectory(&quot;path/to/dir&quot; ;);</code>
+        </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>getObjectProperties(</b><em>objet, includeParameters, includeObjects</em><b>)</b>
       </td>
       <td style="text-align:left">Retourne un tableau de tous les noms de propri&#xE9;t&#xE9;s de cet <em><b>objet</b></em>.
         Vous pouvez sp&#xE9;cifier si vous voulez inclure des param&#xE8;tres et/ou
-        des objets (comme des conteneurs). La valeur par d&#xE9;faut est include all.</td>
-      <td
-      style="text-align:left"><code>var propNames = util.getObjectProperties(myObject, true, false) ; //retourne seulement les param&#xE8;tres</code>
-        </td>
+        des objets (comme des conteneurs). La valeur par d&#xE9;faut est include
+        all.</td>
+      <td style="text-align:left"><code>var propNames = util.getObjectProperties(myObject, true, false) ; //retourne seulement les param&#xE8;tres</code>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>getObjectMethods(</b><em>objet</em><b>)</b>
@@ -1240,8 +1250,8 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
       </td>
       <td style="text-align:left">
         <p>Affiche un message popup avec un seul bouton.</p>
-        <p>Il est possible de sp&#xE9;cifier une<b> icone </b>(valeurs accept&#xE9;es
-          &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot; </b></em>)
+        <p>Il est possible de sp&#xE9;cifier une <b>icone</b> (valeurs accept&#xE9;es
+          &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot;</b></em> )
           ainsi que le texte du bouton.</p>
       </td>
       <td style="text-align:left"><code>util.showMessageBox(&quot;Super info !&quot;, &quot;This is a message for you&quot;, &quot;info&quot;, &quot;Got it&quot;);</code>
@@ -1252,10 +1262,10 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
       </td>
       <td style="text-align:left">
         <p>Affiche un message popup avec 2 boutons.</p>
-        <p>Il est possible de sp&#xE9;cifier une<b> icone </b>(valeurs accept&#xE9;es
-          &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot; </b></em>)
+        <p>Il est possible de sp&#xE9;cifier une <b>icone</b> (valeurs accept&#xE9;es
+          &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot;</b></em> )
           ainsi que le texte des boutons.</p>
-        <p>La valeur retourn&#xE9;e est <em><b>true </b></em>si &quot;OK&quot; a &#xE9;t&#xE9;
+        <p>La valeur retourn&#xE9;e est <em><b>true</b></em> si &quot;OK&quot; a &#xE9;t&#xE9;
           cliqu&#xE9;, sinon <em><b>false.</b></em>
         </p>
       </td>
@@ -1263,14 +1273,14 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>showYesNoCancelBox(</b><em>title, message, [icon, button1Text, button2Text, button3Text] </em><b>),</b>
+      <td style="text-align:left"><b>showYesNoCancelBox(</b><em>title, message, [icon, button1Text, button2Text, button3Text]</em>  <b>),</b>
       </td>
       <td style="text-align:left">
         <p>Affiche un message popup avec 3 boutons.</p>
-        <p>Il est possible de sp&#xE9;cifier une<b> icone </b>(valeurs accept&#xE9;es
-          &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot; </b></em>)
+        <p>Il est possible de sp&#xE9;cifier une <b>icone</b> (valeurs accept&#xE9;es
+          &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot;</b></em> )
           ainsi que le texte des boutons.</p>
-        <p>La valeur retourn&#xE9;e est <b>0, 1 ou 2 </b>en fonction du bouton cliqu&#xE9;.</p>
+        <p>La valeur retourn&#xE9;e est <b>0, 1 ou 2</b> en fonction du bouton cliqu&#xE9;.</p>
       </td>
       <td style="text-align:left"><code>var result = util.showYesNoCancelBox(&quot;Confirm ?&quot;, &quot;Do you really want to do that ?&quot;, &quot;question&quot;, &quot;Yeah&quot;, &quot;Never&quot;, &quot;Don&apos;t care...&quot;);</code>
       </td>
