@@ -231,3 +231,9 @@ description: >-
 
 ![](.gitbook/assets/module.gif)
 
+| Shortcut | Description |
+| :--- | :--- |
+| Click on the activity arrows | Toggles Log Incoming / Log Outgoing options for this module |
+
+![](.gitbook/assets/loginout.gif)
+
