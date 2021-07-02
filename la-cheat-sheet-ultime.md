@@ -212,3 +212,11 @@ description: >-
 
 ![](.gitbook/assets/module.gif)
 
+
+
+| Shortcut | Description |
+| :--- | :--- |
+| Click sur les flèches d'activité | Active ou désactive le logging de données d'entrée / de sortie |
+
+![](.gitbook/assets/loginout.gif)
+
