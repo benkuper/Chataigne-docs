@@ -1090,7 +1090,7 @@ The util object provides helpers and utility functions like time or conversion.
       <td style="text-align:left"><b>fromBase64(</b><em>value</em><b>);</b>
       </td>
       <td style="text-align:left">Returns a converted data block from a base-64 encoded string</td>
-      <td style="text-align:left"><code>var str64 = util.toBase64(&quot;sGVsbG8gd29ybGQh&quot;);</code>
+      <td style="text-align:left"><code>var str_decoded = util.toBase64(&quot;sGVsbG8gd29ybGQh&quot;);</code>
       </td>
     </tr>
     <tr>
