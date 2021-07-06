@@ -1164,6 +1164,14 @@ L'objet _util_ fournit des aides et des fonctions utilitaires comme le temps ou 
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>fromBase64(</b><em>value</em><b>);</b>
+      </td>
+      <td style="text-align:left">Retourne un bloc de donn&#xE9;es &#xE0; partir d&apos;une chaine encod&#xE9;e
+        en base-64</td>
+      <td style="text-align:left"><code>var str_decoded = util.toBase64(&quot;sGVsbG8gd29ybGQh&quot;);</code>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>fileExists(</b><em>path</em><b>)</b>
       </td>
       <td style="text-align:left">Retourne <b>true</b> si un fichier existe &#xE0; l&apos;emplacement fourni,
