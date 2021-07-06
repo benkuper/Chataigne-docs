@@ -638,7 +638,7 @@ Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera so
       </td>
       <td style="text-align:left">Retourne le param&#xE8;tre ou le conteneur avec le nom fourni.</td>
       <td
-      style="text-align:left"><code>var child = myContainer.getChild(&quot;activity&quot; ;);</code>
+      style="text-align:left"><code>var child = myContainer.getChild(&quot;activity&quot;);</code>
         </td>
     </tr>
     <tr>
@@ -649,9 +649,13 @@ Si vous visez un élément de la hiérarchie \( _root_ ou _local_ \), ce sera so
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>setName(</b><em>name</em><b>)</b>
+      <td style="text-align:left"><b>setName(</b><em>name, [shortName]</em><b>)</b>
       </td>
-      <td style="text-align:left">Change le nom du conteneur</td>
+      <td style="text-align:left">
+        <p>Change le nom du conteneur.</p>
+        <p>Si <em><b>shortName </b></em>est mentionn&#xE9;, cela assignera son nom
+          d&apos;acces pour pouvoir y acc&#xE9;der via <em>getChild </em>ult&#xE9;rieurement.</p>
+      </td>
       <td style="text-align:left"><code>myContainer.setName(&quot;new name&quot;);</code>
       </td>
     </tr>
