@@ -570,9 +570,13 @@ Containers are any object that contains parameters or other containers. If you'r
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>setName(</b><em>name</em><b>)</b>
+      <td style="text-align:left"><b>setName(</b><em>name, [shortName]</em><b>)</b>
       </td>
-      <td style="text-align:left">Changes the name of the container</td>
+      <td style="text-align:left">
+        <p>Changes the name of the container.</p>
+        <p>If <em><b>shortName</b></em> is specified, it will set a custom short name
+          that you can access easily from the script.</p>
+      </td>
       <td style="text-align:left"><code>myContainer.setName(&quot;new name&quot;);</code>
       </td>
     </tr>
