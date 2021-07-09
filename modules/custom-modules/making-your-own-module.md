@@ -6,7 +6,7 @@ Custom modules are localized in the `<Documents>/Chataigne/modules` folder.
 
 To create a custom module, you first need to create a new folder inside the `modules` folder. Inside this folder, you need a `module.json` file that contains all of the module's metadata, as well as the module structure definition (values, parameters, commands, etc). You can find the description for the `module.json` file below.
 
-Most of the time, you'll also want to add a module script file. This file will handle all of the logic behind the module. You can read about how to write a module script here : [Module Scripts](../../scripting/scripting-reference/module-scripts)
+Most of the time, you'll also want to add a module script file. This file will handle all of the logic behind the module. You can read about how to write a module script here : [Module Scripts](../../scripting/scripting-reference/module-scripts.md)
 
 {% hint style="info" %} When you make changes to the `module.json` file, don't forget to hit `File > Reload custom modules` if Chataigne is running. You will also have to delete the module and create it back. {% endhint %}
 
@@ -84,7 +84,7 @@ Example:
 | :--- | :--- | :--- |
 | `scripts` | An array that contains the name of the script(s) to add to the modules | `"scripts": [ "moduleScript.js" ]`|
 
-You can find the documentation for module scripts here : [Module Scripts](../../scripting/scripting-reference/module-scripts)
+You can find the documentation for module scripts here : [Module Scripts](../../scripting/scripting-reference/module-scripts.md)
 
 ### Data types
 
