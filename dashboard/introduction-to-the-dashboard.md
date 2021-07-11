@@ -10,5 +10,5 @@ Bien que le tableau de bord soit déjà fonctionnel et utile, il est en cours de
 Vous pouvez facilement passer du mode édition au mode lecture avec le raccourci Ctrl+E
 {% endhint %}
 
-[Une mise en page du tableau de bord plutôt simple et inintéressante](https://github.com/benkuper/Chataigne-docs/tree/fcdc755f0e335a3c4215733504cb023e8f1cf5d8/.gitbook/assets/dashboard.png)
+![Une mise en page du tableau de bord plut&#xF4;t simple et inint&#xE9;ressante](../.gitbook/assets/dashboard.png)
 
