@@ -52,7 +52,7 @@
   * [OS](modules/system/os.md)
   * [Time](modules/system/time.md)
 * [Community Modules](modules/custom-modules/README.md)
-  * [Making your own module](modules/custom-modules/making-your-own-module.md)
+  * [Créer votre propre module](modules/custom-modules/making-your-own-module.md)
   * [Launchkey Mini](modules/custom-modules/launchkey-mini.md)
   * [EOS OSC](modules/custom-modules/eos-osc.md)
   * [Augmenta](modules/custom-modules/augmenta.md)
