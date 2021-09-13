@@ -382,12 +382,18 @@ All parameters and triggers have common methods and specific methods
         <p><em><b>showTriggers </b></em>: if target is controllable, hide or show
           triggers</p>
         <p><em><b>labelLevel </b></em>: the level of parents to show in the UI.</p>
+        <p><em><b>allowedTypes </b></em>: specify which types of targets are allowed</p>
+        <p><em><b>excludedTypes </b></em>: specify which types of targets are not
+          allowed</p>
       </td>
       <td style="text-align:left">
         <p><code>myTargetParam.setAttribute (&quot;searchLevel&quot;,2);</code>
         </p>
         <p><code>myTargetParam.setAttribute (&quot;root&quot;, root.sequences);</code>
         </p>
+        <p><code>myTargetParam.setAttribute(<br />&quot;allowedTypes&quot;, &quot;Mapping&quot;);</code>
+        </p>
+        <p>&lt;code&gt;&lt;/code&gt;</p>
       </td>
     </tr>
   </tbody>
