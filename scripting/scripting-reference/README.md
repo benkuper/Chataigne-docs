@@ -392,11 +392,17 @@ Tous les paramètres et déclencheurs ont des méthodes communes et des méthode
           ou montrer d&#xE9;clencheurs</p>
         <p><em><b>labelLevel</b></em> : le niveau des parents &#xE0; afficher dans
           l&apos;IU.</p>
+        <p><em><b>allowedTypes </b></em>: pr&#xE9;cise quels types de cible sont
+          accept&#xE9;s</p>
+        <p><em><b>excludedTypes </b></em>: pr&#xE9;cise quels types de cible ne sont
+          pas accept&#xE9;s</p>
       </td>
       <td style="text-align:left">
-        <p><code>myTargetParam.setAttribute (&quot;searchLevel&quot; ;,2);</code>
+        <p><code>myTargetParam.setAttribute (&quot;searchLevel&quot;,2);</code>
         </p>
-        <p><code>myTargetParam.setAttribute (&quot;root&quot; ;, root.sequences);</code>
+        <p><code>myTargetParam.setAttribute (&quot;root&quot; , root.sequences);</code>
+        </p>
+        <p><code>myTargetParam.setAttribute (&quot;allowedTypes&quot;, [&quot;Mapping&quot;,&quot;Color&quot;]);</code>
         </p>
       </td>
     </tr>
