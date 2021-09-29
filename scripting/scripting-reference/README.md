@@ -53,6 +53,8 @@ Si vous n'en avez pas besoin, ne les ajoutez pas à votre script, car Chataigne 
           dans le sc&#xE9;nario. Vous pouvez &#xE9;galement modifier le taux &#xE0;
           partir du script en appelant <b>script.setUpdateRate</b><em>(rate).</em> voir
           ci-dessous pour plus d&apos;informations.</p>
+        <p><em>deltaTime </em>est en secondes, et le param&#xE8;tre <em>rate </em>est
+          en Hz.</p>
       </td>
       <td style="text-align:left">
         <p><code>fonction update(deltaTime)</code>
