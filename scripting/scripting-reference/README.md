@@ -49,7 +49,9 @@ If you don't need them, don't add them in your script as Chataigne will optimize
         the &quot;Update rate&quot; script parameter. This parameter is only visible
         when the function is present in the script. You can also change the rate
         from the script by calling <b>script.setUpdateRate</b><em>(rate).</em> see
-        below for more informations.</td>
+        below for more informations.
+        <br /><em>deltaTime </em>is in seconds, and the <em>rate </em>parameter is in
+        Hz.</td>
       <td style="text-align:left">
         <p><code>function update(deltaTime)</code>
         </p>
