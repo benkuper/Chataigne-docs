@@ -181,7 +181,7 @@ When a manipulating a manager, you have access to specific functions and propert
 
 Automations are special managers that handle curves. You can find them in Mapping Layers, or Curve Map filters for instance. They have special methods that you can use to get more specialized info about the curve data.
 
-|                                | Description                                                          | Example                                           |
+| Method                         | Description                                                          | Example                                           |
 | ------------------------------ | -------------------------------------------------------------------- | ------------------------------------------------- |
 | getValueAtPosition(_position_) | Returns the value of the curve at the given position                 | `var val = automation.getValueAtPosition(2.5); `  |
 | getKeyAtPosition(_position_)   | Returns the closest key at the given position                        | var key = `automation.getKeyAtPosition(2.5); `    |
