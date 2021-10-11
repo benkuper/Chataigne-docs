@@ -181,9 +181,8 @@ Lorsque vous manipulez un gestionnaire, vous avez accès à des fonctions et des
 
 Les automations sont des types spéciaux de managers, qui représentent des courbes. On peut les trouver dans des Mapping Layers, ou des Curve Map Filter par exemple. Ils contiennet des méthodes spécifiques, permettant de manipuler et récupérer des informations sur la courbe.
 
-|                                |                                                                                 |                                                   |
-| ------------------------------ | ------------------------------------------------------------------------------- | ------------------------------------------------- |
 | Méthode                        | Description                                                                     | Exemple                                           |
+| ------------------------------ | ------------------------------------------------------------------------------- | ------------------------------------------------- |
 | getValueAtPosition(_position_) | Récupère la valeur de la courve à une position donnée                           | `var val = automation.getValueAtPosition(2.5);`   |
 | getKeyAtPosition(_position_)   | Récupère la clé la plus proche à une position donnée                            | `var key = automation.getKeyAtPosition(2.5);`     |
 | getKeysBetween(_start, end_)   | Récupère un tableau contenant toutes les clés contenues entre _start _et_ end._ | `var keys = automation.getKeysBetween(2.5, 4.7);` |
