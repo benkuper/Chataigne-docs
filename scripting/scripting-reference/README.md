@@ -15,56 +15,14 @@ This documentation only shows functions that I have added on top of JUCE's Javas
 There are few common functions that you can use, no matter the type of script.
 
 {% hint style="info" %}
-None of the functions below are needed when making a script, they are just helper functions.  
+None of the functions below are needed when making a script, they are just helper functions.\
 If you don't need them, don't add them in your script as Chataigne will optimize your script depending on the available functions in it.
 {% endhint %}
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>init()</b>
-      </td>
-      <td style="text-align:left">If present, this function will be called right after the script is loaded.</td>
-      <td
-      style="text-align:left">
-        <p><code>function init() {</code>
-        </p>
-        <p><code>//init your values, log things and assign variables</code>
-        </p>
-        <p><code>}</code>
-        </p>
-        </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>update(</b><em>deltaTime</em><b>)</b>
-      </td>
-      <td style="text-align:left">If present, this function will be called regularly at rate specified by
-        the &quot;Update rate&quot; script parameter. This parameter is only visible
-        when the function is present in the script. You can also change the rate
-        from the script by calling <b>script.setUpdateRate</b><em>(rate).</em> see
-        below for more informations.
-        <br /><em>deltaTime </em>is in seconds, and the <em>rate </em>parameter is in
-        Hz.</td>
-      <td style="text-align:left">
-        <p><code>function update(deltaTime)</code>
-        </p>
-        <p><code>{</code>
-        </p>
-        <p> <code>script.log(&quot;Delta time : &quot; + deltaTime);</code>
-        </p>
-        <p><code>}</code>
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Method                      | Description                                                                                                                                                                                                                                                                                                                                                                                                                  | Example                                                                                                                                               |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **init()**                  | If present, this function will be called right after the script is loaded.                                                                                                                                                                                                                                                                                                                                                   | <p><code>function init() {</code></p><p><code>//init your values, log things and assign variables</code></p><p><code>}</code></p>                     |
+| **update(**_deltaTime_**)** | <p>If present, this function will be called regularly at rate specified by the "Update rate" script parameter. This parameter is only visible when the function is present in the script. You can also change the rate from the script by calling <strong>script.setUpdateRate</strong><em>(rate).</em> see below for more informations.<br><em>deltaTime </em>is in seconds, and the <em>rate </em>parameter is in Hz. </p> | <p><code>function update(deltaTime)</code></p><p><code>{</code></p><p> <code>script.log("Delta time : " + deltaTime);</code></p><p><code>}</code></p> |
 
 ## Parameters and triggers
 
@@ -72,679 +30,134 @@ All parameters and triggers have common methods and specific methods
 
 #### Common methods and properties
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>getParent()</b>
-      </td>
-      <td style="text-align:left">Returns the value of this parameter</td>
-      <td style="text-align:left"><code>myParam.getParent();</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>setName(</b><em>name</em><b>)</b>
-      </td>
-      <td style="text-align:left">Sets the parameters name</td>
-      <td style="text-align:left"><code>myParam.setName(&quot;new name&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
-      </td>
-      <td style="text-align:left">
-        <p>Sets a parameter&apos;s attribute.</p>
-        <p>All parameters get :
-          <br /><em><b>readonly : </b></em>sets the parameter as not editable</p>
-        <p><em><b>description : </b></em>change the tooltip description</p>
-        <p><em><b>enabled : </b></em>enable or disable this parameter</p>
-        <p><em><b>alwaysNotify : </b></em>set the alwaysNotify flag (if true, this
-          will trigger updates even if setting the same value than before).
-          <br />More information for specific parameters in each parameter&apos;s section.</p>
-      </td>
-      <td style="text-align:left">
-        <p><code>myParam.setAttribute(&quot;readonly&quot;,true);</code>
-        </p>
-        <p><code>myParam.setAttribute(&quot;description&quot;,&quot; new description&quot;);</code>
-        </p>
-        <p><code>myParam.setAttribute(&quot;enabled&quot;,false);</code>
-        </p>
-        <p><code>myParam.setAttribute(&quot;alwaysNotify&quot;, true);</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>isParameter()</b>
-      </td>
-      <td style="text-align:left">returns whether the target is a parameter or a trigger</td>
-      <td style="text-align:left"><code>var isParam = myTarget.isParameter();</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>name</b>
-      </td>
-      <td style="text-align:left">This is the name identifier of the object, as you would target it in a
-        script.</td>
-      <td style="text-align:left"><code>script.log(myParam.name);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>niceName</b>
-      </td>
-      <td style="text-align:left">This is the &quot;nice name&quot; of the object, as you see it in the
-        Inspector.</td>
-      <td style="text-align:left"><code>script.log(myParam.niceName);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getControlAddress (</b>[reference]<b>)</b>
-      </td>
-      <td style="text-align:left">Returns the OSC-style control address of this element. Optional <em><b>reference </b></em>parameter
-        allows you to specify a root container to generate the address from.</td>
-      <td
-      style="text-align:left"><code>script.log( myParam.getControlAddress());</code>
-        </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getScriptControlAddress()</b>
-      </td>
-      <td style="text-align:left">Returns the script control address of this element.</td>
-      <td style="text-align:left"><code>script.log( myParam.getScriptControlAddress());</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Method                                   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Example                                                                                                                                                                                                                                                        |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **getParent()**                          | Returns the value of this parameter                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | `myParam.getParent();`                                                                                                                                                                                                                                         |
+| **setName(**_name_**)**                  | Sets the parameters name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | `myParam.setName("new name");`                                                                                                                                                                                                                                 |
+| **setAttribute(**_attribute, value_**)** | <p>Sets a parameter's attribute.</p><p>All parameters get : <br><em><strong>readonly : </strong></em>sets the parameter as not editable</p><p><em><strong>description : </strong></em>change the tooltip description</p><p><em><strong>enabled : </strong></em>enable or disable this parameter</p><p><em><strong>alwaysNotify : </strong></em>set the alwaysNotify flag (if true, this will trigger updates even if setting the same value than before).<br>More information for specific parameters in each parameter's section.</p> | <p><code>myParam.setAttribute("readonly",true);</code></p><p><code>myParam.setAttribute("description"," new description");</code></p><p><code>myParam.setAttribute("enabled",false);</code></p><p><code>myParam.setAttribute("alwaysNotify", true);</code></p> |
+| **isParameter()**                        | returns whether the target is a parameter or a trigger                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | `var isParam = myTarget.isParameter();`                                                                                                                                                                                                                        |
+| **name**                                 | This is the name identifier of the object, as you would target it in a script.                                                                                                                                                                                                                                                                                                                                                                                                                                                         | `script.log(myParam.name);`                                                                                                                                                                                                                                    |
+| **niceName**                             | This is the "nice name" of the object, as you see it in the Inspector.                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | `script.log(myParam.niceName);`                                                                                                                                                                                                                                |
+| **getControlAddress (**\[reference]**)** | Returns the OSC-style control address of this element. Optional _**reference **_parameter allows you to specify a root container to generate the address from.                                                                                                                                                                                                                                                                                                                                                                         | `script.log( myParam.getControlAddress());`                                                                                                                                                                                                                    |
+| **getScriptControlAddress()**            | Returns the script control address of this element.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | `script.log( myParam.getScriptControlAddress());`                                                                                                                                                                                                              |
 
 ### Trigger
 
-| Method | Description | Example |
-| :--- | :--- | :--- |
-| **trigger\(\)** | Returns the value of this parameter | `myTrigger.trigger();` |
+| Method        | Description                         | Example                |
+| ------------- | ----------------------------------- | ---------------------- |
+| **trigger()** | Returns the value of this parameter | `myTrigger.trigger();` |
 
 ### Float Parameter
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>get()</b>
-      </td>
-      <td style="text-align:left">Returns the value of this parameter</td>
-      <td style="text-align:left"><code>var value = myFloatParam.get();</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
-      </td>
-      <td style="text-align:left">Sets the value of this parameter</td>
-      <td style="text-align:left"><code>myFloatParam.set(.5);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
-      </td>
-      <td style="text-align:left">
-        <p>Specific attributes :</p>
-        <p><em><b>ui : </b></em>The UI to use to show this parameter. Accepted values
-          are : <em><b>time, slider,  stepper, label</b></em>
-        </p>
-      </td>
-      <td style="text-align:left"><code>myStringParam.setAttribute (&quot;ui&quot;, &quot;time&quot;);</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Method                                   | Description                                                                                                                                                                           | Example                                      |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| **get()**                                | Returns the value of this parameter                                                                                                                                                   | `var value = myFloatParam.get();`            |
+| **set(**_value_**)**                     | Sets the value of this parameter                                                                                                                                                      | `myFloatParam.set(.5);`                      |
+| **setAttribute(**_attribute, value_**)** | <p>Specific attributes :</p><p><em><strong>ui : </strong></em>The UI to use to show this parameter. Accepted values are : <em><strong>time, slider,  stepper, label</strong></em></p> | `myStringParam.setAttribute ("ui", "time");` |
 
 ### Integer Parameter
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>get()</b>
-      </td>
-      <td style="text-align:left">Returns the value of this parameter</td>
-      <td style="text-align:left"><code>var value = myIntParam.get();</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
-      </td>
-      <td style="text-align:left">Sets the value of this parameter</td>
-      <td style="text-align:left"><code>myIntParam.set(2);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
-      </td>
-      <td style="text-align:left">
-        <p>Specific attributes :</p>
-        <p><em><b>hexMode : </b></em>Whether to show the value as decimal or hexadecimal.</p>
-      </td>
-      <td style="text-align:left"><code>myStringParam.setAttribute (&quot;hexMode&quot;, true);</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Method                                   | Description                                                                                                                 | Example                                         |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| **get()**                                | Returns the value of this parameter                                                                                         | `var value = myIntParam.get();`                 |
+| **set(**_value_**)**                     | Sets the value of this parameter                                                                                            | `myIntParam.set(2);`                            |
+| **setAttribute(**_attribute, value_**)** | <p>Specific attributes :</p><p><em><strong>hexMode : </strong></em>Whether to show the value as decimal or hexadecimal.</p> | `myStringParam.setAttribute ("hexMode", true);` |
 
 ### Boolean Parameter
 
-| Method | Description | Example |
-| :--- | :--- | :--- |
-| **get\(\)** | Returns the value of this parameter | `var value = myBoolParam.get();` |
-| **set\(**_value_**\)** | Sets the value of this parameter | `myBoolParam.set(true);` |
+| Method               | Description                         | Example                          |
+| -------------------- | ----------------------------------- | -------------------------------- |
+| **get()**            | Returns the value of this parameter | `var value = myBoolParam.get();` |
+| **set(**_value_**)** | Sets the value of this parameter    | `myBoolParam.set(true);`         |
 
 ### String Parameter
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>get()</b>
-      </td>
-      <td style="text-align:left">Returns the value of this parameter</td>
-      <td style="text-align:left"><code>var value = myStringParam.get();</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
-      </td>
-      <td style="text-align:left">Sets the value of this parameter</td>
-      <td style="text-align:left"><code>myStringParam.set(&quot;super&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
-      </td>
-      <td style="text-align:left">
-        <p>Specific attributes :</p>
-        <p><em><b>multiline</b></em>: whether the parameter can be multiline</p>
-        <p><em><b>prefix</b></em>: add a prefix before the value</p>
-        <p><em><b>suffix</b></em>: add a suffix after the value</p>
-      </td>
-      <td style="text-align:left"><code>myStringParam.setAttribute (&quot;multiline&quot;, true);</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Method                                   | Description                                                                                                                                                                                                                                               | Example                                           |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| **get()**                                | Returns the value of this parameter                                                                                                                                                                                                                       | `var value = myStringParam.get();`                |
+| **set(**_value_**)**                     | Sets the value of this parameter                                                                                                                                                                                                                          | `myStringParam.set("super");`                     |
+| **setAttribute(**_attribute, value_**)** | <p>Specific attributes :</p><p><em><strong>multiline</strong></em>: whether the parameter can be multiline</p><p><em><strong>prefix</strong></em>: add a prefix before the value</p><p><em><strong>suffix</strong></em>: add a suffix after the value</p> | `myStringParam.setAttribute ("multiline", true);` |
 
 ### Color Parameter
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>get()</b>
-      </td>
-      <td style="text-align:left">Returns the value of this parameter. The result is an array containing
-        [r,g,b,a], values are between 0 and 1</td>
-      <td style="text-align:left">
-        <p><code>var value = myColorParam.get();</code>
-        </p>
-        <p><code>script.log(&quot;green : &quot;+value[1]);</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
-      </td>
-      <td style="text-align:left">Sets the value of this parameter. You can either set the value with ARGB
-        hex value, [r,g,b,a] float array, or r,g,b,a separate values. r, g and
-        b values are always between 0 and 1 and alpha is optional (you can specify
-        r,g,b only);</td>
-      <td style="text-align:left">
-        <p><code>//this is all set to cyan alpha 100%</code>
-        </p>
-        <p><code>myColorParam.set(0xff00ffff);</code>
-        </p>
-        <p><code>myColorParam.set([0,1,1,1]);</code>
-        </p>
-        <p><code>myColorParam.set(0,1,1,1);</code>
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Method               | Description                                                                                                                                                                                                                              | Example                                                                                                                                                                                                 |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **get()**            | Returns the value of this parameter. The result is an array containing \[r,g,b,a], values are between 0 and 1                                                                                                                            | <p><code>var value = myColorParam.get();</code></p><p><code>script.log("green : "+value[1]);</code></p>                                                                                                 |
+| **set(**_value_**)** | Sets the value of this parameter. You can either set the value with ARGB hex value, \[r,g,b,a] float array, or r,g,b,a separate values. r, g and b values are always between 0 and 1 and alpha is optional (you can specify r,g,b only); | <p><code>//this is all set to cyan alpha 100%</code></p><p><code>myColorParam.set(0xff00ffff);</code></p><p><code>myColorParam.set([0,1,1,1]);</code></p><p><code>myColorParam.set(0,1,1,1);</code></p> |
 
 ### Target Parameter
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>get()</b>
-      </td>
-      <td style="text-align:left">Returns the string value of the target address</td>
-      <td style="text-align:left"><code>var address = myTargetParam.get();</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getTarget()</b>
-      </td>
-      <td style="text-align:left">Returns the actual selected target</td>
-      <td style="text-align:left"><code>var target = myTargetParam.getTarget();</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>set(</b><em>value</em><b>)</b>
-      </td>
-      <td style="text-align:left">Sets the string value of the target&apos;s address.</td>
-      <td style="text-align:left"><code>myTargetParam.set (&quot;/root/modules/osc&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
-      </td>
-      <td style="text-align:left">
-        <p>Specific attributes :</p>
-        <p><em><b>targetType </b></em>: the type of target to search. This can either
-          be &quot;<b>container&quot; </b>or &quot;<b>controllable&quot; </b>
-        </p>
-        <p><em><b>root </b></em>: the root container from which to search</p>
-        <p><em><b>searchLevel </b></em>: specify the max level to search from the
-          root</p>
-        <p><em><b>showParameters </b></em>: if target is controllable, hide or show
-          parameters</p>
-        <p><em><b>showTriggers </b></em>: if target is controllable, hide or show
-          triggers</p>
-        <p><em><b>labelLevel </b></em>: the level of parents to show in the UI.</p>
-        <p><em><b>allowedTypes </b></em>: specify which types of targets are allowed</p>
-        <p><em><b>excludedTypes </b></em>: specify which types of targets are not
-          allowed</p>
-      </td>
-      <td style="text-align:left">
-        <p><code>myTargetParam.setAttribute (&quot;searchLevel&quot;,2);</code>
-        </p>
-        <p><code>myTargetParam.setAttribute (&quot;root&quot;, root.sequences);</code>
-        </p>
-        <p><code>myTargetParam.setAttribute(<br />&quot;allowedTypes&quot;, &quot;Mapping&quot;);</code>
-        </p>
-        <p>&lt;code&gt;&lt;/code&gt;</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Method                                   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Example                                                                                                                                                                                                                                                  |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **get()**                                | Returns the string value of the target address                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | `var address = myTargetParam.get();`                                                                                                                                                                                                                     |
+| **getTarget()**                          | Returns the actual selected target                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | `var target = myTargetParam.getTarget();`                                                                                                                                                                                                                |
+| **set(**_value_**)**                     | Sets the string value of the target's address.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | `myTargetParam.set ("/root/modules/osc");`                                                                                                                                                                                                               |
+| **setAttribute(**_attribute, value_**)** | <p>Specific attributes :</p><p><em><strong>targetType </strong></em>: the type of target to search. This can either be "<strong>container" </strong>or "<strong>controllable" </strong></p><p><em><strong>root </strong></em>: the root container from which to search</p><p><em><strong>searchLevel </strong></em>: specify the max level to search from the root</p><p><em><strong>showParameters </strong></em>: if target is controllable, hide or show parameters</p><p><em><strong>showTriggers </strong></em>: if target is controllable, hide or show triggers</p><p><em><strong>labelLevel </strong></em>: the level of  parents to show in the UI.</p><p><em><strong>allowedTypes </strong></em>: specify which types of targets are allowed</p><p><em><strong>excludedTypes </strong></em>: specify which types of targets are not allowed</p> | <p><code>myTargetParam.setAttribute ("searchLevel",2);</code></p><p><code>myTargetParam.setAttribute ("root", root.sequences);</code></p><p><code>myTargetParam.setAttribute(</code><br><code>"allowedTypes", "Mapping");</code></p><p><code></code></p> |
 
 ### Enum Parameter
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>addOption(</b><em>label, value</em><b>)</b>
-      </td>
-      <td style="text-align:left">Add an option to the list</td>
-      <td style="text-align:left"><code>myEnumParam.addOption(&quot;new option&quot;,3);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>get()</b>
-      </td>
-      <td style="text-align:left">
-        <p>1.6.x : Return the selected key</p>
-        <p>1.7.x : Return the selected data</p>
-      </td>
-      <td style="text-align:left">
-        <p><code>var label = myEnumParam.get(); //1.6.x</code>
-        </p>
-        <p><code>var value= myEnumParam.get(); //1.7.x</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getData() (1.6.x)</b>
-      </td>
-      <td style="text-align:left">Get the selected data (1.6.x only)</td>
-      <td style="text-align:left"><code>var data = myEnumParam.getData(); //1.6</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getKey() (1.7.x)</b>
-      </td>
-      <td style="text-align:left">Get the selected key (1.7.x only)</td>
-      <td style="text-align:left"><code>var key = myEnumParam.getKey(); //1.7</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>removeOptions()</b>
-      </td>
-      <td style="text-align:left">Removes all options.</td>
-      <td style="text-align:left"><code>myEnumParam.removeOptions();</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>set(</b><em>key</em><b>)</b>
-      </td>
-      <td style="text-align:left">This sets the parameter to the corresponding key.</td>
-      <td style="text-align:left"><code>myEnumParam.set(&quot;Option 1&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>setData(</b><em>data</em><b>)</b>
-      </td>
-      <td style="text-align:left">This sets the parameter to the corresponding data</td>
-      <td style="text-align:left"><code>myEnumParam.setData(&quot;data1&quot;);</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Method                            | Description                                                                   | Example                                                                                                             |
+| --------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **addOption(**_label, value_**)** | Add an option to the list                                                     | `myEnumParam.addOption("new option",3);`                                                                            |
+| **get()**                         | <p>1.6.x : Return the selected key</p><p>1.7.x : Return the selected data</p> | <p><code>var label = myEnumParam.get(); //1.6.x</code></p><p><code>var value= myEnumParam.get(); //1.7.x</code></p> |
+| **getData() (1.6.x)**             | Get the selected data (1.6.x only)                                            | `var data = myEnumParam.getData(); //1.6`                                                                           |
+| **getKey() (1.7.x)**              | Get the selected key (1.7.x only)                                             | `var key = myEnumParam.getKey(); //1.7`                                                                             |
+| **removeOptions()**               | Removes all options.                                                          | `myEnumParam.removeOptions();`                                                                                      |
+| **set(**_key_**)**                | This sets the parameter to the corresponding key.                             | `myEnumParam.set("Option 1");`                                                                                      |
+| **setData(**_data_**)**           | This sets the parameter to the corresponding data                             | `myEnumParam.setData("data1");`                                                                                     |
 
 ### File Parameter
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>setAttribute(</b><em>attribute, value</em><b>)</b>
-      </td>
-      <td style="text-align:left">
-        <p>Specific attributes :</p>
-        <p><em><b>directoryMode</b></em>: specify if this parameter should be looking
-          for a file or a folder</p>
-      </td>
-      <td style="text-align:left"><code>myFileParam.setAttribute (&quot;directoryMode&quot;,true);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>readFile(</b><em>[asJSON]</em><b>)</b>
-      </td>
-      <td style="text-align:left">Get the content of the file. If <em><b>asJSON </b></em>is <em>true, </em>then
-        the content will be parsed and returned as an Object.</td>
-      <td style="text-align:left">
-        <p><code>var myTextContent = myFileParam.readFile ();</code>
-        </p>
-        <p><code>var myJSONContent = myFileParam.readFile (true);</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>writeFile(data, </b><em>overwriteIfExists</em><b>)</b>
-      </td>
-      <td style="text-align:left">Write the content or a string of an Object to the selected file. If the
-        file exists, <em><b>overwriteIfExists </b></em>will let you decide whether
-        to overwrite it or not (false by default).</td>
-      <td style="text-align:left">
-        <p><code>var data = &quot;super&quot;;</code>
-        </p>
-        <p><code>myFileParam.writeFile (data, true);</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getAbsolutePath()</b>
-      </td>
-      <td style="text-align:left">Returns the absolute path for this file.</td>
-      <td style="text-align:left"><code>var path = myFileParam.getAbsolutePath();</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>launchFile(</b><em>arguments<b>)</b></em>
-      </td>
-      <td style="text-align:left">This will launch the selected file with the <em><b>arguments</b> </em>provided</td>
-      <td
-      style="text-align:left"><code>myFileParam.launchFile<br />(&quot;--verbose&quot;)</code>
-        </td>
-    </tr>
-  </tbody>
-</table>
+| Method                                       | Description                                                                                                                                                                          | Example                                                                                                                              |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| **setAttribute(**_attribute, value_**)**     | <p>Specific attributes :</p><p><em><strong>directoryMode</strong></em>: specify if this parameter should be looking for a file or a folder</p>                                       | `myFileParam.setAttribute ("directoryMode",true);`                                                                                   |
+| **readFile(**_\[asJSON]_**)**                | Get the content of the file. If _**asJSON **_is _true, _then the content will be parsed and returned as an Object.                                                                   | <p><code>var myTextContent = myFileParam.readFile ();</code></p><p><code>var myJSONContent = myFileParam.readFile (true);</code></p> |
+| **writeFile(data, **_overwriteIfExists_**)** | Write the content or a string of an Object to the selected file. If the file exists, _**overwriteIfExists **_will  let you decide whether to overwrite it or not (false by default). | <p><code>var data = "super";</code></p><p><code>myFileParam.writeFile (data, true);</code></p>                                       |
+| **getAbsolutePath()**                        | Returns the absolute path for this file.                                                                                                                                             | `var path = myFileParam.getAbsolutePath();`                                                                                          |
+| **launchFile(**_arguments**)**_              | This will launch the selected file with the _**arguments** _provided                                                                                                                 | <p><code>myFileParam.launchFile</code><br><code>("--verbose")</code></p>                                                             |
 
 ### Point2D Parameter
 
-| Method | Description | Example |
-| :--- | :--- | :--- |
-| **get\(\)** | Returns the value of this parameter | `var value = myP2DParam.get();` |
-| **set\(**_x, y_**\)** | Sets the value of this parameter | `myP2DParam.set(.5, 2);` |
+| Method              | Description                         | Example                         |
+| ------------------- | ----------------------------------- | ------------------------------- |
+| **get()**           | Returns the value of this parameter | `var value = myP2DParam.get();` |
+| **set(**_x, y_**)** | Sets the value of this parameter    | `myP2DParam.set(.5, 2);`        |
 
 ### Point3D Parameter
 
-| Method | Description | Example |
-| :--- | :--- | :--- |
-| **get\(\)** | Returns the value of this parameter | `var value = myP3DParam.get();` |
-| **set\(**_x, y, z_**\)** | Sets the value of this parameter | `myP3DParam.set(.5, 2, -1);` |
+| Method                 | Description                         | Example                         |
+| ---------------------- | ----------------------------------- | ------------------------------- |
+| **get()**              | Returns the value of this parameter | `var value = myP3DParam.get();` |
+| **set(**_x, y, z_**)** | Sets the value of this parameter    | `myP3DParam.set(.5, 2, -1);`    |
 
 ## Container
 
-Containers are any object that contains parameters or other containers. If you're targetting something from the hierarchy \(_root.\*_ ****or _local.\*_\), this will be either a container of a parameter, so if it's not a parameter, then it's a container.
+Containers are any object that contains parameters or other containers. If you're targetting something from the hierarchy (_root.\*_** **or _local.\*_), this will be either a container of a parameter, so if it's not a parameter, then it's a container.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>getChild(</b><em>childName</em><b>)</b>
-      </td>
-      <td style="text-align:left">Returns the parameter or container with the provided name.</td>
-      <td style="text-align:left"><code>var child = myContainer.getChild(&quot;activity&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getParent()</b>
-      </td>
-      <td style="text-align:left">Returns the parent container</td>
-      <td style="text-align:left"><code>var parent = myContainer.getParent();</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>setName(</b><em>name, [shortName]</em><b>)</b>
-      </td>
-      <td style="text-align:left">
-        <p>Changes the name of the container.</p>
-        <p>If <em><b>shortName</b></em> is specified, it will set a custom short name
-          that you can access easily from the script.</p>
-      </td>
-      <td style="text-align:left"><code>myContainer.setName(&quot;new name&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>setCollapsed(</b><em>value</em><b>)</b>
-      </td>
-      <td style="text-align:left">Change the collapsed state of the container, if it can be collapsed.</td>
-      <td
-      style="text-align:left"><code>myContainer.setCollapsed(false);</code>
-        </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>name</b>
-      </td>
-      <td style="text-align:left">This is the name identifier of the object, as you would target it in a
-        script.</td>
-      <td style="text-align:left"><code>script.log(myContainer.name);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>niceName</b>
-      </td>
-      <td style="text-align:left">This is the &quot;nice name&quot; of the object, as you see it in the
-        Inspector.</td>
-      <td style="text-align:left"><code>script.log(myContainer.niceName);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addTrigger(</b><em>name, description</em><b>)</b>
-      </td>
-      <td style="text-align:left">This will add a trigger (button).</td>
-      <td style="text-align:left"><code>var myTrigger = myContainer.addTrigger(&quot;My Trigger&quot;, &quot;Trigger description&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addFloatParameter(</b><em>name, description, default, min max</em><b>)</b>
-      </td>
-      <td style="text-align:left">This will add a float number parameter (slider).</td>
-      <td style="text-align:left"><code>var myFloatParam = myContainer.addFloatParameter(&quot;My Float Param&quot;,&quot;Description of my float param&quot;,.1,0,1);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addIntParameter(</b><em>name, description, default, min max</em><b>)</b>
-      </td>
-      <td style="text-align:left">add an integer number parameter (stepper), default value of 2, with a
-        range between 0 and 10</td>
-      <td style="text-align:left"><code>var myIntParam = myContainer.addIntParameter(&quot;My Int Param&quot;,&quot;Description of my int param&quot;,2,0,10);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addBoolParameter(</b><em>name, description, default</em><b>)</b>
-      </td>
-      <td style="text-align:left">add a boolean parameter (toggle)</td>
-      <td style="text-align:left"><code>var myBoolParam = myContainer.addBoolParameter(&quot;My Bool Param&quot;,&quot;Description of my bool param&quot;,false);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addStringParameter(</b><em>name, description, default</em><b>)</b>
-      </td>
-      <td style="text-align:left">add a string parameter (text field)</td>
-      <td style="text-align:left"> <code>var myStringParam = myContainer.addStringParameter(&quot;My String Param&quot;,&quot;Description of my string param&quot;, &quot;cool&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addColorParameter(</b><em>name, description, default</em><b>)</b>
-      </td>
-      <td style="text-align:left">
-        <p>add a color parameter (color picker).</p>
-        <p>You can either set the default color with ARGB hex value, [r,g,b,a] float
-          array, or r,g,b,a separate values. r, g and b values are always between
-          0 and 1 and alpha is optional (you can specify r,g,b only);</p>
-      </td>
-      <td style="text-align:left">
-        <p><code>var myColorParam = script.addColorParameter(&quot;My Color Param&quot;,&quot;Description of my color param&quot;,0xff0000ff); //default blue alpha 100%</code>
-        </p>
-        <p><code>var myColorParam2 = script.addColorParameter(&quot;My Color Param 2 &quot;,&quot;Description of my color param&quot;,[1,0,1]); //default purple</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addPoint2DParameter(</b><em>name, description</em><b>)</b>
-      </td>
-      <td style="text-align:left">add a point 2d parameter</td>
-      <td style="text-align:left"><code>var myP2DParam = myContainer.addPoint2DParameter(&quot;My P2D Param&quot;,&quot;Description of my p2d param&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addPoint3DParameter(</b><em>name, description</em><b>)</b>
-      </td>
-      <td style="text-align:left">add a point 3d parameter</td>
-      <td style="text-align:left"><code>var myP3DParam = myContainer.addPoint3DParameter(&quot;My P3D Param&quot;,&quot;Description of my p3d param&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addTargetParameter(</b><em>name, description</em><b>)</b>
-      </td>
-      <td style="text-align:left">add a target parameter (to reference another parameter)</td>
-      <td style="text-align:left"><code>var myTargetParam = myContainer.addTargetParameter(&quot;My Target Param&quot;,&quot;Description of my target param&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addFileParameter(</b><em>name, description, </em>[directoryMode]<b>)</b>
-      </td>
-      <td style="text-align:left">
-        <p>Add a file parameter (to reference file or folder on the disk).</p>
-        <p>If directoryMode is set to true a folder instead of a file can be selected.</p>
-      </td>
-      <td style="text-align:left"><code>var myFileParam = myContainer.addFileParameter(&quot;My File Param&quot;,&quot;Description of my file param&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addEnumParameter(</b><em>name, description, label1, value1, label2, value2, ..</em>.<b>)</b>
-      </td>
-      <td style="text-align:left">
-        <p>Add a enum parameter (dropdown with options)</p>
-        <p>Each pair of values after the first 2 arguments define an option and its
-          linked data</p>
-      </td>
-      <td style="text-align:left"><code>var myEnumParam = myContainer.addEnumParameter(&quot;My Enum Param&quot;,&quot;Description of my enum param&quot;, &quot;Option 1&quot;, 1,&quot;Option 2&quot;, 5, &quot;Option 3&quot;, &quot;banana&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addContainer(</b>name<b>)</b>
-      </td>
-      <td style="text-align:left">Add a container inside of the container.</td>
-      <td style="text-align:left"><code>var childContainer = myContainer.addContainer(&quot;My Child Container&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>removeContainer(</b>name<b>)</b>
-      </td>
-      <td style="text-align:left">Remove a child container from the container.</td>
-      <td style="text-align:left"><code>myContainer.removeContainer (myChildContainer)</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>removeParameter(</b><em>message</em><b>)</b>
-      </td>
-      <td style="text-align:left">Remove a parameter from the container.</td>
-      <td style="text-align:left"><code>myContainer.removeParameter (myChildParameter);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getControlAddress (</b>[reference]<b>)</b>
-      </td>
-      <td style="text-align:left">Returns the OSC-style control address of this element. Optional <em><b>reference </b></em>parameter
-        allows you to specify a root container to generate the address from.</td>
-      <td
-      style="text-align:left"><code>script.log( myContainer.getControlAddress());</code>
-        </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getScriptControlAddress()</b>
-      </td>
-      <td style="text-align:left">Returns the script control address of this element.</td>
-      <td style="text-align:left"><code>script.log( myContainer.getScriptControlAddress());</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Method                                                                             | Description                                                                                                                                                                                                                                                      | Example                                                                                                                                                                                                                                                                                                |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **getChild(**_childName_**)**                                                      | Returns the parameter or container with the provided name.                                                                                                                                                                                                       | `var child = myContainer.getChild("activity");`                                                                                                                                                                                                                                                        |
+| **getParent()**                                                                    | Returns the parent container                                                                                                                                                                                                                                     | `var parent = myContainer.getParent();`                                                                                                                                                                                                                                                                |
+| **setName(**_name, \[shortName]_**)**                                              | <p>Changes the name of the container.</p><p>If <em><strong>shortName</strong></em> is specified, it will set a custom short name that you can access easily from the script.</p>                                                                                 | `myContainer.setName("new name");`                                                                                                                                                                                                                                                                     |
+| **setCollapsed(**_value_**)**                                                      | Change the collapsed state of the container, if it can be collapsed.                                                                                                                                                                                             | `myContainer.setCollapsed(false);`                                                                                                                                                                                                                                                                     |
+| **name**                                                                           | This is the name identifier of the object, as you would target it in a script.                                                                                                                                                                                   | `script.log(myContainer.name);`                                                                                                                                                                                                                                                                        |
+| **niceName**                                                                       | This is the "nice name" of the object, as you see it in the Inspector.                                                                                                                                                                                           | `script.log(myContainer.niceName);`                                                                                                                                                                                                                                                                    |
+| **addTrigger(**_name, description_**)**                                            | This will add a trigger (button).                                                                                                                                                                                                                                | `var myTrigger = myContainer.addTrigger("My Trigger", "Trigger description");`                                                                                                                                                                                                                         |
+| **addFloatParameter(**_name, description, default, min max_**)**                   | This will add a float number parameter (slider).                                                                                                                                                                                                                 | `var myFloatParam = myContainer.addFloatParameter("My Float Param","Description of my float param",.1,0,1);`                                                                                                                                                                                           |
+| **addIntParameter(**_name, description, default, min max_**)**                     | add an integer number parameter (stepper), default value of 2, with a range between 0 and 10                                                                                                                                                                     | `var myIntParam = myContainer.addIntParameter("My Int Param","Description of my int param",2,0,10);`                                                                                                                                                                                                   |
+| **addBoolParameter(**_name, description, default_**)**                             | add a boolean parameter (toggle)                                                                                                                                                                                                                                 | `var myBoolParam = myContainer.addBoolParameter("My Bool Param","Description of my bool param",false);`                                                                                                                                                                                                |
+| **addStringParameter(**_name, description, default_**)**                           | add a string parameter (text field)                                                                                                                                                                                                                              |  `var myStringParam = myContainer.addStringParameter("My String Param","Description of my string param", "cool");`                                                                                                                                                                                     |
+| **addColorParameter(**_name, description, default_**)**                            | <p>add a color parameter (color picker).</p><p>You can either set the default color with ARGB hex value, [r,g,b,a] float array, or r,g,b,a separate values. r, g and b values are always between 0 and 1 and alpha is optional (you can specify r,g,b only);</p> | <p><code>var myColorParam = script.addColorParameter("My Color Param","Description of my color param",0xff0000ff); //default blue alpha 100%</code></p><p><code>var myColorParam2 = script.addColorParameter("My Color Param 2 ","Description of my color param",[1,0,1]); //default purple</code></p> |
+| **addPoint2DParameter(**_name, description_**)**                                   | add a point 2d parameter                                                                                                                                                                                                                                         | `var myP2DParam = myContainer.addPoint2DParameter("My P2D Param","Description of my p2d param");`                                                                                                                                                                                                      |
+| **addPoint3DParameter(**_name, description_**)**                                   | add a point 3d parameter                                                                                                                                                                                                                                         | `var myP3DParam = myContainer.addPoint3DParameter("My P3D Param","Description of my p3d param");`                                                                                                                                                                                                      |
+| **addTargetParameter(**_name, description_**)**                                    | add a target parameter (to reference another parameter)                                                                                                                                                                                                          | `var myTargetParam = myContainer.addTargetParameter("My Target Param","Description of my target param");`                                                                                                                                                                                              |
+| **addFileParameter(**_name, description, _\[directoryMode]**)**                    | <p>Add a file parameter (to reference file or folder on the disk). </p><p>If directoryMode is set to true a folder instead of a file can be selected.</p>                                                                                                        | `var myFileParam = myContainer.addFileParameter("My File Param","Description of my file param");`                                                                                                                                                                                                      |
+| **addEnumParameter(**_name, description, label1, value1, label2, value2, .._.**)** | <p>Add a enum parameter (dropdown with options)</p><p>Each pair of values after the first 2 arguments define an option and its linked data</p>                                                                                                                   | `var myEnumParam = myContainer.addEnumParameter("My Enum Param","Description of my enum param", "Option 1", 1,"Option 2", 5, "Option 3", "banana");`                                                                                                                                                   |
+| **addContainer(**name**)**                                                         | Add a container inside of the container.                                                                                                                                                                                                                         | `var childContainer = myContainer.addContainer("My Child Container");`                                                                                                                                                                                                                                 |
+| **removeContainer(**name**)**                                                      | Remove a child container from the container.                                                                                                                                                                                                                     | `myContainer.removeContainer (myChildContainer)`                                                                                                                                                                                                                                                       |
+| **removeParameter(**_message_**)**                                                 | Remove a parameter from the container.                                                                                                                                                                                                                           | `myContainer.removeParameter (myChildParameter);`                                                                                                                                                                                                                                                      |
+| **getControlAddress (**\[reference]**)**                                           | Returns the OSC-style control address of this element. Optional _**reference **_parameter allows you to specify a root container to generate the address from.                                                                                                   | `script.log( myContainer.getControlAddress());`                                                                                                                                                                                                                                                        |
+| **getScriptControlAddress()**                                                      | Returns the script control address of this element.                                                                                                                                                                                                              | `script.log( myContainer.getScriptControlAddress());`                                                                                                                                                                                                                                                  |
 
 ## Manager
 
@@ -752,266 +165,55 @@ Managers are special types of container. In the software, you can see that a con
 
 When a manipulating a manager, you have access to specific functions and properties like adding items, removing items or getting an array of it's items.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>addItem(</b><em>[type]</em><b>)</b>
-      </td>
-      <td style="text-align:left">
-        <p>Adds an item to the manager and returns it.</p>
-        <p>Some managers like the Module manager or the layer manager can create
-          multiple types of items. Thus they need a type of item to create, which
-          you must set in the <em><b>type</b></em> argument.</p>
-        <p>Other managers like the Sequence manager don&apos;t need this argument
-          because there is only one type of sequence. In these cases you don&apos;t
-          need to provide an argument when calling the function.</p>
-      </td>
-      <td style="text-align:left">
-        <p><code>var newOSCModule = root.modules.addItem(&quot;OSC&quot;);</code>
-        </p>
-        <p><code>var newSequence = root.sequences.addItem();</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>removeItem(</b><em>item</em><b>)</b>
-      </td>
-      <td style="text-align:left">Removes an item. <em><b>item</b></em> must be a item managed by this manager.</td>
-      <td
-      style="text-align:left"><code>root.modules.removeItem (myModule);</code>
-        </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getItems()</b>
-      </td>
-      <td style="text-align:left">Returns an array containing all the items of this manager.</td>
-      <td style="text-align:left">
-        <p><code>var items = root.sequences.getItems();</code>
-        </p>
-        <p><code>script.log(&quot;Num sequences : &quot;+items.length);</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getItemWithName(</b><em>name</em><b>)</b>
-      </td>
-      <td style="text-align:left">Returns the first item found with <em><b>name. </b></em>This will search
-        for exact match of niceName, shortName, and lowercase version.</td>
-      <td
-      style="text-align:left"><code>var introSeq = root.sequences.getItemWithName (&quot;Intro&quot;);</code>
-        </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getItemAt(</b><em>index</em><b>)</b>
-      </td>
-      <td style="text-align:left">Returns the item at the <em><b>index.</b></em>
-      </td>
-      <td style="text-align:left"><code>var curSequence = root.sequences.getItemAt(1); //0 is first, so this will get the second sequence in the list.</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getItemIndex(</b><em>item</em><b>)</b>
-      </td>
-      <td style="text-align:left">Returns the index of the specified <em><b>item.</b></em>
-      </td>
-      <td style="text-align:left"><code>var index= root.sequences.getItemIndex (curSequence);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getItemBefore(</b><em>item</em><b>)</b>
-      </td>
-      <td style="text-align:left">Returns the item before the specified <em><b>item.</b></em>
-      </td>
-      <td style="text-align:left"><code>var prevSequence = root.sequences.getItemBefore (curSequence);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getItemAfter(</b><em>item</em><b>)</b>
-      </td>
-      <td style="text-align:left">Returns the item after the specified <em><b>item.</b></em>
-      </td>
-      <td style="text-align:left"><code>var nextSequence = root.sequences.getItemAfter (curSequence);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>reorderItems()</b>
-      </td>
-      <td style="text-align:left">Reorders all items in this manager.</td>
-      <td style="text-align:left">
-        <p><code>var mappingLayer = root.sequences.sequence.layers.mapping;</code>
-        </p>
-        <p><code>mappingLayer.automation.reorderItems();</code>
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Method                          | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Example                                                                                                                                   |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **addItem(**_\[type]_**)**      | <p>Adds an item to the manager and returns it.</p><p>Some managers like the Module manager or the layer manager can create multiple types of items. Thus they need a type of item to create, which you must set in the <em><strong>type</strong></em> argument.</p><p>Other managers like the Sequence manager don't need this argument because there is only one type of sequence. In these cases you don't need to provide an argument when calling the function.</p> | <p><code>var newOSCModule = root.modules.addItem("OSC");</code></p><p><code>var newSequence = root.sequences.addItem();</code></p>        |
+| **removeItem(**_item_**)**      | Removes an item. _**item**_ must be a item managed by this manager.                                                                                                                                                                                                                                                                                                                                                                                                     | `root.modules.removeItem (myModule);`                                                                                                     |
+| **getItems()**                  | Returns an array containing all the items of this manager.                                                                                                                                                                                                                                                                                                                                                                                                              | <p><code>var items = root.sequences.getItems();</code></p><p><code>script.log("Num sequences : "+items.length);</code></p>                |
+| **getItemWithName(**_name_**)** | Returns the first item found with _**name. **_This will search for exact match of niceName, shortName, and lowercase version.                                                                                                                                                                                                                                                                                                                                           | `var introSeq = root.sequences.getItemWithName ("Intro");`                                                                                |
+| **getItemAt(**_index_**)**      | Returns the item at the _**index.**_                                                                                                                                                                                                                                                                                                                                                                                                                                    | `var curSequence = root.sequences.getItemAt(1); //0 is first, so this will get the second sequence in the list.`                          |
+| **getItemIndex(**_item_**)**    | Returns the index of the specified _**item.**_                                                                                                                                                                                                                                                                                                                                                                                                                          | `var index= root.sequences.getItemIndex (curSequence);`                                                                                   |
+| **getItemBefore(**_item_**)**   | Returns the item before the specified _**item.**_                                                                                                                                                                                                                                                                                                                                                                                                                       | `var prevSequence = root.sequences.getItemBefore (curSequence);`                                                                          |
+| **getItemAfter(**_item_**)**    | Returns the item after the specified _**item.**_                                                                                                                                                                                                                                                                                                                                                                                                                        | `var nextSequence = root.sequences.getItemAfter (curSequence);`                                                                           |
+| **reorderItems()**              | Reorders all items in this manager.                                                                                                                                                                                                                                                                                                                                                                                                                                     | <p><code>var mappingLayer = root.sequences.sequence.layers.mapping;</code></p><p><code>mappingLayer.automation.reorderItems();</code></p> |
+
+### Automation
+
+Automations are special managers that handle curves. You can find them in Mapping Layers, or Curve Map filters for instance. They have special methods that you can use to get more specialized info about the curve data.
+
+|                                | Description                                                          | Example                                           |
+| ------------------------------ | -------------------------------------------------------------------- | ------------------------------------------------- |
+| getValueAtPosition(_position_) | Returns the value of the curve at the given position                 | `var val = automation.getValueAtPosition(2.5); `  |
+| getKeyAtPosition(_position_)   | Returns the closest key at the given position                        | var key = `automation.getKeyAtPosition(2.5); `    |
+| getKeysBetween(_start, end_)   | Returns an array of all the keys contained between _start _and _end_ | `var keys = automation.getKeysBetween(2.5, 4.7);` |
 
 ## Script object
 
 The script object refers to the script container. You can add your own custom parameters here, as well as logging informations, warnings and errors.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>addTrigger(</b><em>name, description</em><b>)</b>
-      </td>
-      <td style="text-align:left">This will add a trigger (button)</td>
-      <td style="text-align:left"><code>var myTrigger = script.addTrigger(&quot;My Trigger&quot;, &quot;Trigger description&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addFloatParameter(</b><em>name, description, default, min max</em><b>)</b>
-      </td>
-      <td style="text-align:left">This will add a float number parameter (slider).</td>
-      <td style="text-align:left"><code>var myFloatParam = script.addFloatParameter(&quot;My Float Param&quot;,&quot;Description of my float param&quot;,.1,0,1);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addIntParameter(</b><em>name, description, default, min max</em><b>)</b>
-      </td>
-      <td style="text-align:left">add an integer number parameter (stepper), default value of 2, with a
-        range between 0 and 10</td>
-      <td style="text-align:left"><code>var myIntParam = script.addIntParameter(&quot;My Int Param&quot;,&quot;Description of my int param&quot;,2,0,10);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addBoolParameter(</b><em>name, description, default</em><b>)</b>
-      </td>
-      <td style="text-align:left">add a boolean parameter (toggle)</td>
-      <td style="text-align:left"><code>var myBoolParam = script.addBoolParameter(&quot;My Bool Param&quot;,&quot;Description of my bool param&quot;,false);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addStringParameter(</b><em>name, description, default</em><b>)</b>
-      </td>
-      <td style="text-align:left">add a string parameter (text field)</td>
-      <td style="text-align:left"> <code>var myStringParam = script.addStringParameter(&quot;My String Param&quot;,&quot;Description of my string param&quot;, &quot;cool&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addColorParameter(</b><em>name, description, default</em><b>)</b>
-      </td>
-      <td style="text-align:left">
-        <p>add a color parameter (color picker).</p>
-        <p>You can either set the default color with ARGB hex value, [r,g,b,a] float
-          array, or r,g,b,a separate values. r, g and b values are always between
-          0 and 1 and alpha is optional (you can specify r,g,b only);</p>
-      </td>
-      <td style="text-align:left">
-        <p><code>var myColorParam = script.addColorParameter(&quot;My Color Param&quot;,&quot;Description of my color param&quot;,0xff0000ff); //default blue alpha 100%</code>
-        </p>
-        <p><code>var myColorParam2 = script.addColorParameter(&quot;My Color Param 2 &quot;,&quot;Description of my color param&quot;,[1,0,1]); //default purple</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addPoint2DParameter(</b><em>name, description</em><b>)</b>
-      </td>
-      <td style="text-align:left">add a point 2d parameter</td>
-      <td style="text-align:left"><code>var myP2DParam = script.addPoint2DParameter(&quot;My P2D Param&quot;,&quot;Description of my p2d param&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addPoint3DParameter(</b><em>name, description</em><b>)</b>
-      </td>
-      <td style="text-align:left">add a point 3d parameter</td>
-      <td style="text-align:left"><code>var myP3DParam = script.addPoint3DParameter(&quot;My P3D Param&quot;,&quot;Description of my p3d param&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addTargetParameter(</b><em>name, description</em><b>)</b>
-      </td>
-      <td style="text-align:left">add a target parameter (to reference another parameter)</td>
-      <td style="text-align:left"><code>var myTargetParam = script.addTargetParameter(&quot;My Target Param&quot;,&quot;Description of my target param&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addFileParameter(</b><em>name, description, </em>[directoryMode]<b>)</b>
-      </td>
-      <td style="text-align:left">
-        <p>Add a file parameter (to reference file or folder on the disk).</p>
-        <p>If directoryMode is set to true a folder instead of a file can be selected.</p>
-      </td>
-      <td style="text-align:left"><code>var myFileParam = script.addFileParameter(&quot;My File Param&quot;,&quot;Description of my file param&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>addEnumParameter(</b><em>name, description, label1, value1, label2, value2, ..</em>.<b>)</b>
-      </td>
-      <td style="text-align:left">
-        <p>add a enum parameter (dropdown with options)</p>
-        <p>Each pair of values after the first 2 arguments define an option and its
-          linked data</p>
-      </td>
-      <td style="text-align:left"><code>var myEnumParam = script.addEnumParameter(&quot;My Enum Param&quot;,&quot;Description of my enum param&quot;, &quot;Option 1&quot;, 1,&quot;Option 2&quot;, 5, &quot;Option 3&quot;, &quot;banana&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>log(</b><em>message</em><b>)</b>
-      </td>
-      <td style="text-align:left">Logs a message (must activate &quot;Log&quot; in the script parameters)</td>
-      <td
-      style="text-align:left"><code>script.log(&quot;This is a message&quot;);</code>
-        </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>logWarning(</b><em>message</em><b>)</b>
-      </td>
-      <td style="text-align:left">Logs a message as a warning</td>
-      <td style="text-align:left"><code>script.logWarning(&quot;This is a warning&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>logError(</b><em>message</em><b>)</b>
-      </td>
-      <td style="text-align:left">Logs a message as an error</td>
-      <td style="text-align:left"><code>script.logError(&quot;This is an error&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>setUpdateRate(</b><em>rate</em><b>)</b>
-      </td>
-      <td style="text-align:left">Sets the rate at which the update() function is called</td>
-      <td style="text-align:left"><code>script.setUpdateRate(50);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>setExecutionTimeout( </b><em>timeInSeconds</em><b>)</b>
-      </td>
-      <td style="text-align:left">Sets the maximum time that a call in the script can take in seconds.</td>
-      <td
-      style="text-align:left"><code>script.setExecutionTimeout(10);</code>
-        </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>function scriptParameterChanged (</b><em>param</em><b>)</b>
-      </td>
-      <td style="text-align:left">This function will be called each time a parameter of this script has
-        changed.</td>
-      <td style="text-align:left"><code>function scriptParameterChanged(param){    script.log(&quot;Param changed : &quot;+param.name); }</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Method                                                                             | Description                                                                                                                                                                                                                                                      | Example                                                                                                                                                                                                                                                                                                |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **addTrigger(**_name, description_**)**                                            | This will add a trigger (button)                                                                                                                                                                                                                                 | `var myTrigger = script.addTrigger("My Trigger", "Trigger description");`                                                                                                                                                                                                                              |
+| **addFloatParameter(**_name, description, default, min max_**)**                   | This will add a float number parameter (slider).                                                                                                                                                                                                                 | `var myFloatParam = script.addFloatParameter("My Float Param","Description of my float param",.1,0,1);`                                                                                                                                                                                                |
+| **addIntParameter(**_name, description, default, min max_**)**                     | add an integer number parameter (stepper), default value of 2, with a range between 0 and 10                                                                                                                                                                     | `var myIntParam = script.addIntParameter("My Int Param","Description of my int param",2,0,10);`                                                                                                                                                                                                        |
+| **addBoolParameter(**_name, description, default_**)**                             | add a boolean parameter (toggle)                                                                                                                                                                                                                                 | `var myBoolParam = script.addBoolParameter("My Bool Param","Description of my bool param",false);`                                                                                                                                                                                                     |
+| **addStringParameter(**_name, description, default_**)**                           | add a string parameter (text field)                                                                                                                                                                                                                              |  `var myStringParam = script.addStringParameter("My String Param","Description of my string param", "cool");`                                                                                                                                                                                          |
+| **addColorParameter(**_name, description, default_**)**                            | <p>add a color parameter (color picker).</p><p>You can either set the default color with ARGB hex value, [r,g,b,a] float array, or r,g,b,a separate values. r, g and b values are always between 0 and 1 and alpha is optional (you can specify r,g,b only);</p> | <p><code>var myColorParam = script.addColorParameter("My Color Param","Description of my color param",0xff0000ff); //default blue alpha 100%</code></p><p><code>var myColorParam2 = script.addColorParameter("My Color Param 2 ","Description of my color param",[1,0,1]); //default purple</code></p> |
+| **addPoint2DParameter(**_name, description_**)**                                   | add a point 2d parameter                                                                                                                                                                                                                                         | `var myP2DParam = script.addPoint2DParameter("My P2D Param","Description of my p2d param");`                                                                                                                                                                                                           |
+| **addPoint3DParameter(**_name, description_**)**                                   | add a point 3d parameter                                                                                                                                                                                                                                         | `var myP3DParam = script.addPoint3DParameter("My P3D Param","Description of my p3d param");`                                                                                                                                                                                                           |
+| **addTargetParameter(**_name, description_**)**                                    | add a target parameter (to reference another parameter)                                                                                                                                                                                                          | `var myTargetParam = script.addTargetParameter("My Target Param","Description of my target param");`                                                                                                                                                                                                   |
+| **addFileParameter(**_name, description, _\[directoryMode]**)**                    | <p>Add a file parameter (to reference file or folder on the disk). </p><p>If directoryMode is set to true a folder instead of a file can be selected.</p>                                                                                                        | `var myFileParam = script.addFileParameter("My File Param","Description of my file param");`                                                                                                                                                                                                           |
+| **addEnumParameter(**_name, description, label1, value1, label2, value2, .._.**)** | <p>add a enum parameter (dropdown with options)</p><p>Each pair of values after the first 2 arguments define an option and its linked data</p>                                                                                                                   | `var myEnumParam = script.addEnumParameter("My Enum Param","Description of my enum param", "Option 1", 1,"Option 2", 5, "Option 3", "banana");`                                                                                                                                                        |
+| **log(**_message_**)**                                                             | Logs a message (must activate "Log" in the script parameters)                                                                                                                                                                                                    | `script.log("This is a message");`                                                                                                                                                                                                                                                                     |
+| **logWarning(**_message_**)**                                                      | Logs a message as a warning                                                                                                                                                                                                                                      | `script.logWarning("This is a warning");`                                                                                                                                                                                                                                                              |
+| **logError(**_message_**)**                                                        | Logs a message as an error                                                                                                                                                                                                                                       | `script.logError("This is an error");`                                                                                                                                                                                                                                                                 |
+| **setUpdateRate(**_rate_**)**                                                      | Sets the rate at which the update() function is called                                                                                                                                                                                                           | `script.setUpdateRate(50);`                                                                                                                                                                                                                                                                            |
+| **setExecutionTimeout( **_timeInSeconds_**)**                                      | Sets the maximum time that a call in the script can take in seconds.                                                                                                                                                                                             | `script.setExecutionTimeout(10);`                                                                                                                                                                                                                                                                      |
+| **function scriptParameterChanged (**_param_**)**                                  | This function will be called each time a parameter of this script has changed.                                                                                                                                                                                   | `function scriptParameterChanged(param){    script.log("Param changed : "+param.name); }`                                                                                                                                                                                                              |
 
 ## Root object
 
-The root object refers to Chataigne's engine, which is the root object of all parent.  
+The root object refers to Chataigne's engine, which is the root object of all parent.\
 It allows you to access any object in Chataigne's hierarchy. The best way to access them is to right click on a parameter's UI and select "Copy Script control address". Then you can past the address in your script and you will be able to control this parameter.
 
 ## Local object
@@ -1026,194 +228,26 @@ The local object depends on where the scripts is running.
 
 The util object provides helpers and utility functions like time or conversion.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>getTime()</b>
-      </td>
-      <td style="text-align:left">Returns the time since system start in seconds</td>
-      <td style="text-align:left"><code>var time = util.getTime();</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getTimestamp()</b>
-      </td>
-      <td style="text-align:left">Returns the time since January 1st 1970 in seconds</td>
-      <td style="text-align:left"><code>var timestamp = util.getTimestamp();</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getFloatFromBytes(</b><em>byte1, byte2, byte3, byte4</em><b>)</b>
-      </td>
-      <td style="text-align:left">Returns a float from 4 bytes (big endian, byte1 is most significant)</td>
-      <td
-      style="text-align:left"><code>var value = util.getFloatFromBytes(0, 0, 2, 10);</code>
-        </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getInt32FromBytes(</b><em>byte1, byte2, byte3, byte4</em><b>)</b>
-      </td>
-      <td style="text-align:left">Returns a 32-bit integer from 4 bytes (big endian, byte1 is most significant)</td>
-      <td
-      style="text-align:left"><code>var value = util.getInt32FromBytes(0, 0, 2, 10);</code>
-        </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getInt64FromBytes(</b><em>byte1, byte2, byte3, byte4, byte5, byte6, byte7, byte8</em><b>)</b>
-      </td>
-      <td style="text-align:left">Returns a 64-bit integer from 8 bytes (big endian, byte1 is most significant)</td>
-      <td
-      style="text-align:left"><code>var value = util.getInt64FromBytes(0, 5, 7, 22, 0, 0, 2, 10);</code>
-        </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getIPs()</b>
-      </td>
-      <td style="text-align:left">Returns an array of all IP addresses found</td>
-      <td style="text-align:left">
-        <p><code>var ips = util.getIPs();</code>
-        </p>
-        <p><code>for(var i=0; i&lt;ips.length; i++) { script.log(ips[i]); }</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>encodeHMAC_SHA1(</b><em>text, key</em><b>)</b>
-      </td>
-      <td style="text-align:left">Returns a HMAC-SHA1 encoded string</td>
-      <td style="text-align:left"><code>var encoded = util.encodeHMAC_SHA1(&quot;my text&quot;, &quot;my key&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>toBase64(</b><em>value</em><b>);</b>
-      </td>
-      <td style="text-align:left">Returns a converted base-64 string from an utf8 string.</td>
-      <td style="text-align:left"><code>var str64 = util.toBase64(&quot;cool&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>fromBase64(</b><em>value</em><b>);</b>
-      </td>
-      <td style="text-align:left">Returns a converted data block from a base-64 encoded string</td>
-      <td style="text-align:left"><code>var str_decoded = util.toBase64(&quot;sGVsbG8gd29ybGQh&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>fileExists(</b><em>path</em><b>)</b>
-      </td>
-      <td style="text-align:left">Returns true if a file exists at the path provided, otherwise returns
-        false</td>
-      <td style="text-align:left"><code>script.log(fileExists(&quot;myfile.txt&quot;));</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>directoryExists(</b><em>path</em><b>)</b>
-      </td>
-      <td style="text-align:left">Returns true if a directory exists at the path provided, otherwise returns
-        false</td>
-      <td style="text-align:left"><code>script.log(directoryExists(&quot;myFolder&quot;));</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>readFile(</b><em>path,</em><b> </b><em>[asJSON]</em><b>)</b>
-      </td>
-      <td style="text-align:left">Get the content of the file at <em><b>path</b></em>. If <em><b>asJSON </b></em>is <em>true, </em>then
-        the content will be parsed and returned as an Object.</td>
-      <td style="text-align:left"><code>var myTextContent = util.readFile(&quot;myfile.txt&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>writeFile(</b><em>path, data</em><b>, </b><em>overwriteIfExists</em><b>)</b>
-      </td>
-      <td style="text-align:left">Write the content of a string or an Object to the file at <em><b>path</b></em> .
-        If the file exists, <em><b>overwriteIfExists </b></em>will let you decide
-        whether to overwrite it or not (false by default).</td>
-      <td style="text-align:left">
-        <p><code>var data = &quot;super&quot;;</code>
-        </p>
-        <p><code>util.writeFile(&quot;myfile.txt&quot;, data, true);</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>createDirectory(</b><em>folderPath</em><b>)</b>
-      </td>
-      <td style="text-align:left">Creates a directory at the path specified.</td>
-      <td style="text-align:left"><code>util.createDirectory(&quot;path/to/dir&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getObjectProperties(</b><em>object, includeParameters, includeObjects</em><b>)</b>
-      </td>
-      <td style="text-align:left">Returns an array of all the properties names of this <em><b>object</b></em>.
-        You can specify if you want to include parameters and/or objects (like
-        containers) Default is include all.</td>
-      <td style="text-align:left"><code>var propNames = util.getObjectProperties(myObject, true, false); //only get parameters</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getObjectMethods(</b><em>object</em><b>)</b>
-      </td>
-      <td style="text-align:left">Returns an array of all the method names of this <em><b>object</b></em>.</td>
-      <td
-      style="text-align:left"><code>var methods= util.getObjectMethods();</code>
-        </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>copyToClipboard(</b><em>data, data2...)</em>
-      </td>
-      <td style="text-align:left">Copies all data joined into string to the clipboard</td>
-      <td style="text-align:left"><code>util.copyToClipboard(&quot;super&quot;,5, myData);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>getFromClipboard(</b><em>)</em>
-      </td>
-      <td style="text-align:left">Returns the content of the clipboard</td>
-      <td style="text-align:left"><code>var data = util.getFromClipboard();</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>showMessageBox(</b><em>title, message, [icon, buttonText]</em><b>)</b>
-      </td>
-      <td style="text-align:left">Shows a popup message box with only one button. Additionally to title
-        and message, you can provide an <b>icon </b>(accepted values are &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot; </b></em>)
-        and the text of the button.</td>
-      <td style="text-align:left"><code>util.showMessageBox(&quot;Super info !&quot;, &quot;This is a message for you&quot;, &quot;info&quot;, &quot;Got it&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>showOkCancelBox(</b><em>title, message, [icon, button1Text, button2Text]</em><b>)</b>
-      </td>
-      <td style="text-align:left">
-        <p>Shows a popup message box with only one button. Additionally to title
-          and message, you can provide an <b>icon </b>(accepted values are &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot; </b></em>)
-          and the text of the button.</p>
-        <p>This method will return <b>true</b> if the first button has been clicked, <b>false </b>otherwise</p>
-      </td>
-      <td style="text-align:left"><code>util.showOkCancelBox(&quot;Super warning!&quot;, &quot;This is a warningfor you&quot;, &quot;warning&quot;, &quot;Got it&quot;,&quot;Naaah&quot;);</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>showYesNoCancelBox(</b><em>title, message, [icon, button1Text, button2Text, button3Text] </em><b>),</b>
-      </td>
-      <td style="text-align:left">
-        <p>Shows a popup message box with only one button. Additionally to title
-          and message, you can provide an <b>icon </b>(accepted values are &quot;<em><b>info&quot;, &quot;warning&quot;, &quot;question&quot; </b></em>)
-          and the text of the button.</p>
-        <p>This method will return either <b>0,1 or 2 </b>depending on the button
-          that has been clicked.</p>
-      </td>
-      <td style="text-align:left"><code>util.showYesNoCancelBox(&quot;Confirm ?&quot;, &quot;Do you really want to do that ?&quot;, &quot;question&quot;, &quot;Yeah&quot;, &quot;Never&quot;, &quot;Don&apos;t care...&quot;);</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
+| Method                                                                                         | Description                                                                                                                                                                                                                                                                                                                                                              | Example                                                                                                                      |
+| ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| **getTime()**                                                                                  | Returns the time since system start in seconds                                                                                                                                                                                                                                                                                                                           | `var time = util.getTime();`                                                                                                 |
+| **getTimestamp()**                                                                             | Returns the time since January 1st 1970 in seconds                                                                                                                                                                                                                                                                                                                       | `var timestamp = util.getTimestamp();`                                                                                       |
+| **getFloatFromBytes(**_byte1, byte2, byte3, byte4_**)**                                        | Returns a float from 4 bytes (big endian, byte1 is most significant)                                                                                                                                                                                                                                                                                                     | `var value = util.getFloatFromBytes(0, 0, 2, 10);`                                                                           |
+| **getInt32FromBytes(**_byte1, byte2, byte3, byte4_**)**                                        | Returns a 32-bit integer from 4 bytes (big endian, byte1 is most significant)                                                                                                                                                                                                                                                                                            | `var value = util.getInt32FromBytes(0, 0, 2, 10);`                                                                           |
+| **getInt64FromBytes(**_byte1, byte2, byte3, byte4, byte5, byte6, byte7, byte8_**)**            | Returns a 64-bit integer from 8 bytes (big endian, byte1 is most significant)                                                                                                                                                                                                                                                                                            | `var value = util.getInt64FromBytes(0, 5, 7, 22, 0, 0, 2, 10);`                                                              |
+| **getIPs()**                                                                                   | Returns an array of all IP addresses found                                                                                                                                                                                                                                                                                                                               | <p><code>var ips = util.getIPs();</code></p><p><code>for(var i=0; i&#x3C;ips.length; i++) { script.log(ips[i]); }</code></p> |
+| **encodeHMAC_SHA1(**_text, key_**)**                                                           | Returns a HMAC-SHA1 encoded string                                                                                                                                                                                                                                                                                                                                       | `var encoded = util.encodeHMAC_SHA1("my text", "my key");`                                                                   |
+| **toBase64(**_value_**);**                                                                     | Returns a converted base-64 string from an utf8 string.                                                                                                                                                                                                                                                                                                                  | `var str64 = util.toBase64("cool");`                                                                                         |
+| **fromBase64(**_value_**);**                                                                   | Returns a converted data block from a base-64 encoded string                                                                                                                                                                                                                                                                                                             | `var str_decoded = util.toBase64("sGVsbG8gd29ybGQh");`                                                                       |
+| **fileExists(**_path_**)**                                                                     | Returns true if a file exists at the path provided, otherwise returns false                                                                                                                                                                                                                                                                                              | `script.log(fileExists("myfile.txt"));`                                                                                      |
+| **directoryExists(**_path_**)**                                                                | Returns true if a directory exists at the path provided, otherwise returns false                                                                                                                                                                                                                                                                                         | `script.log(directoryExists("myFolder"));`                                                                                   |
+| **readFile(**_path,_** **_\[asJSON]_**)**                                                      | Get the content of the file at _**path**_. If _**asJSON **_is _true, _then the content will be parsed and returned as an Object.                                                                                                                                                                                                                                         | `var myTextContent = util.readFile("myfile.txt");`                                                                           |
+| **writeFile(**_path, data_**, **_overwriteIfExists_**)**                                       | Write the content of a string or an Object to the file at _**path**_ . If the file exists, _**overwriteIfExists **_will  let you decide whether to overwrite it or not (false by default).                                                                                                                                                                               | <p><code>var data = "super";</code></p><p><code>util.writeFile("myfile.txt", data, true);</code></p>                         |
+| **createDirectory(**_folderPath_**)**                                                          | Creates a directory at the path specified.                                                                                                                                                                                                                                                                                                                               | `util.createDirectory("path/to/dir");`                                                                                       |
+| **getObjectProperties(**_object, includeParameters, includeObjects_**)**                       | Returns an array of all the properties names of this _**object**_. You can specify if you want to include parameters and/or objects (like containers) Default is include all.                                                                                                                                                                                            | `var propNames = util.getObjectProperties(myObject, true, false); //only get parameters`                                     |
+| **getObjectMethods(**_object_**)**                                                             | Returns an array of all the method names of this _**object**_.                                                                                                                                                                                                                                                                                                           | `var methods= util.getObjectMethods();`                                                                                      |
+| **copyToClipboard(**_data, data2...)_                                                          | Copies all data joined into string to the clipboard                                                                                                                                                                                                                                                                                                                      | `util.copyToClipboard("super",5, myData);`                                                                                   |
+| **getFromClipboard(**_)_                                                                       | Returns the content of the clipboard                                                                                                                                                                                                                                                                                                                                     | `var data = util.getFromClipboard();`                                                                                        |
+| **showMessageBox(**_title, message, \[icon, buttonText]_**)**                                  | Shows a popup message box with only one button. Additionally to title and message, you can provide an **icon **(accepted values are "_**info", "warning", "question" **_) and the text of the button.                                                                                                                                                                    | `util.showMessageBox("Super info !", "This is a message for you", "info", "Got it");`                                        |
+| **showOkCancelBox(**_title, message, \[icon, button1Text, button2Text]_**)**                   | <p>Shows a popup message box with only one button. Additionally to title and message, you can provide an <strong>icon </strong>(accepted values are "<em><strong>info", "warning", "question" </strong></em>) and the text of the button.</p><p>This method will return <strong>true</strong> if the first button has been clicked, <strong>false </strong>otherwise</p> | `util.showOkCancelBox("Super warning!", "This is a warningfor you", "warning", "Got it","Naaah");`                           |
+| **showYesNoCancelBox(**_title, message, \[icon, button1Text, button2Text, button3Text] _**),** | <p>Shows a popup message box with only one button. Additionally to title and message, you can provide an <strong>icon </strong>(accepted values are "<em><strong>info", "warning", "question" </strong></em>) and the text of the button.</p><p>This method will return either <strong>0,1 or 2 </strong>depending on the button  that has been clicked.</p>             | `util.showYesNoCancelBox("Confirm ?", "Do you really want to do that ?", "question", "Yeah", "Never", "Don't care...");`     |
