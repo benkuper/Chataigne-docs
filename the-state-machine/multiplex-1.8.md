@@ -1,10 +1,10 @@
-# Multiplex \(1.8\)
+# Multiplex (1.8)
 
-Attendez, autre chose que les actions et les mappings ?   
-Oui ! Enfin non... mais oui !   
+Attendez, autre chose que les actions et les mappings ? \
+Oui ! Enfin non... mais oui ! \
 Le multiplex est un moyen d'élaborer plusieurs actions et mappings à la fois. 
 
-  
+\
 Si vous avez plusieurs valeurs qui nécessitent le même filtrage, ou les mêmes conditions à vérifier, une liste de boutons ou de curseurs que vous voulez traiter de la même manière, alors vous trouverez un moyen de ne pas avoir à dupliquer les actions et les mappages. 
 
 ### Un seul pour tous 
@@ -22,21 +22,19 @@ C'est très pratique d'avoir le même processus pour beaucoup d'éléments mais 
 Un paramètre peut être lié de différentes manières : 
 
 * Dans une sortie de cartographie, il peut être lié à l'une des valeurs d'entrée 
-* Dans un multiplex, il peut être lié soit à l'index associé \(basé sur 0 ou sur 1\) de l'élément source qui a déclenché le processus, soit à un élément de la liste du multiplex au même index que l'élément source. 
+* Dans un multiplex, il peut être lié soit à l'index associé (basé sur 0 ou sur 1) de l'élément source qui a déclenché le processus, soit à un élément de la liste du multiplex au même index que l'élément source. 
 
 {% hint style="success" %}
 Pour les String Parameters, il est possible d'utiliser des jokers pour créer une combinaison plus complexe de différents liens : 
 
-* **{index}** sera remplacé par l'index \(basé sur 1\) 
-* **{index0}** sera remplacé par l'indice \(basé sur 0\) 
+* **{index}** sera remplacé par l'index (basé sur 1) 
+* **{index0}** sera remplacé par l'indice (basé sur 0) 
 * **{input:0}** sera remplacé par la première valeur de l'entrée de cartographie 
-* **{list:names}** sera remplacé par l'élément ayant le même index dans la liste appelée "Names" \(conversion camelCase\) 
+* **{list:names}** sera remplacé par l'élément ayant le même index dans la liste appelée "Names" (conversion camelCase) 
 
-De cette façon, quelque chose comme   
-**Bonjour {list:names}, vous êtes le numéro du patient {index}**   
-se traduirait par  
+De cette façon, quelque chose comme \
+**Bonjour {list:names}, vous êtes le numéro du patient {index} **\
+se traduirait par\
 **Bonjour Léon, vous êtes le patient numéro 5**
 {% endhint %}
-
-
 

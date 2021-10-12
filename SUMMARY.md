@@ -2,13 +2,13 @@
 
 * [Bienvenue sur la doc de Chataigne !](README.md)
 
-## Getting Started <a id="getting-started-1"></a>
+## Getting Started <a href="getting-started-1" id="getting-started-1"></a>
 
 * [Histoire et philosophie de Chataigne](getting-started-1/getting-started.md)
 * [L'Interface](getting-started-1/the-interface.md)
 * [Les Modules](getting-started-1/the-modules.md)
 
----
+***
 
 * [La Cheat Sheet Ultime](la-cheat-sheet-ultime.md)
 
@@ -52,7 +52,6 @@
   * [OS](modules/system/os.md)
   * [Time](modules/system/time.md)
 * [Community Modules](modules/custom-modules/README.md)
-  * [Crée ton propre module](modules/custom-modules/making-your-own-module.md)
   * [Launchkey Mini](modules/custom-modules/launchkey-mini.md)
   * [EOS OSC](modules/custom-modules/eos-osc.md)
   * [Augmenta](modules/custom-modules/augmenta.md)
@@ -60,6 +59,7 @@
   * [Lighttoys FT](modules/custom-modules/lighttoys-ft.md)
   * [TPLink SmartHome](modules/custom-modules/tplink-smarthome.md)
 * [Modules spéciaux](modules/special-modules.md)
+* [Crée ton propre module](modules/making-your-own-module.md)
 * [Le Module Router](modules/the-module-router.md)
 
 ## The State Machine
@@ -67,9 +67,9 @@
 * [Introduction à la State Machine](the-state-machine/introduction-to-the-state-machine.md)
 * [Actions](the-state-machine/actions.md)
 * [Mappings](the-state-machine/mappings.md)
-* [Multiplex \(1.8\)](the-state-machine/multiplex-1.8.md)
+* [Multiplex (1.8)](the-state-machine/multiplex-1.8.md)
 
-## The Time Machine \(Sequences\)
+## The Time Machine (Sequences)
 
 * [Introduction à la Time Machine](the-time-machine-sequences/introduction-to-the-time-machine.md)
 * [Interface et navigation](the-time-machine-sequences/interface-and-navigation.md)
@@ -97,4 +97,3 @@
 ## Dashboard
 
 * [Introduction to the Dashboard](dashboard/introduction-to-the-dashboard.md)
-
