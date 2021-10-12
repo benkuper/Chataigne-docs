@@ -7,10 +7,10 @@ The State machine will let you create your own interaction rules to do realtime 
 When creating an interaction, you will first have to create a state that will contains the rules.
 
 {% hint style="success" %}
-**SHORTCUTS  
-- Alt + drag or MMB \(middle mouse button\) :** drag the canvas to navigate in an infinite world of wonder !  
-**-  Shift + mouse scroll :** Zoom in/out to see more things, or have bigger UI  
-**- Ctrl + C, Ctrl + V, Ctrl + D :** Copy, paste, duplicate items \(this applies to all items in lists and views, i.e. States, Mappings, Actions, Modules, Sequences...\)
+**SHORTCUTS**\
+**- Alt + drag or MMB (middle mouse button) :** drag the canvas to navigate in an infinite world of wonder !\
+**-  Shift + mouse scroll : **Zoom in/out to see more things, or have bigger UI\
+**- Ctrl + C, Ctrl + V, Ctrl + D : **Copy, paste, duplicate items (this applies to all items in lists and views, i.e. States, Mappings, Actions, Modules, Sequences...)
 {% endhint %}
 
 ## States
@@ -35,4 +35,3 @@ At all time, there is **only 1 active state inside a state network.** This is wh
 {% hint style="success" %}
 By note linking them altogether, you can have as many state networks as you want, meaning you still can have multiple active states at the same time.
 {% endhint %}
-

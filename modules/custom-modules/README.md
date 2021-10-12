@@ -4,7 +4,6 @@ Community modules are custom modules made by the community. They're based on exi
 
 You can find those modules under the "Get more modules..." menu when creating a new Module in the Module panel.
 
-If you want to make your own module, you can go the the next page [Making your own module](making-your-own-module.md)
+If you want to make your own module, you can go the the next page [Making your own module](../making-your-own-module.md)
 
 ![](../../.gitbook/assets/community.png)
-
