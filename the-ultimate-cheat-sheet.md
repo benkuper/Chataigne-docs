@@ -62,30 +62,35 @@ description: >-
 
 ![](.gitbook/assets/timemachine.gif)
 
-| Shortcut                                    | Description                                                       |
-| ------------------------------------------- | ----------------------------------------------------------------- |
-| Right-click drag on the blue bar            | <p></p><p>Selective zoom on a part of the timeline (absolute)</p> |
-| Right click drag on the numbers             | Selective zoom on a part of the timeline (relative)               |
-| (Ctrl or ⌘) + Left click drag on the number | Show menu for adding/removing timespan                            |
+| Shortcut                                    | Description                                                                |
+| ------------------------------------------- | -------------------------------------------------------------------------- |
+| Right-click drag on the blue bar            | <p></p><p>Selective zoom on a part of the timeline (absolute)</p>          |
+| Right click drag on the numbers             | Selective zoom on a part of the timeline (relative)                        |
+| (Ctrl or ⌘) + Left click drag on the number | Show menu for adding/removing timespan                                     |
+| Shift + drag the time needle                | Snap the time to timeline elements (cues, triggers, other mapping keys...) |
 
 ![](.gitbook/assets/timespan.gif)
 
-| Shortcut                             | Description       |
-| ------------------------------------ | ----------------- |
-| Double-click on the timeline numbers | Create a Time Cue |
+| Shortcut                             | Description                                                                |
+| ------------------------------------ | -------------------------------------------------------------------------- |
+| Double-click on the timeline numbers | Create a Time Cue                                                          |
+| Shift + drag a cue                   | Move the trigger with snapping (time bar, triggers, other mapping keys...) |
+
+
 
 ![](.gitbook/assets/cues.gif)
 
 ### Mapping Layer (and Mapping 2D)
 
-| Shortcut                     | Description                                               |
-| ---------------------------- | --------------------------------------------------------- |
-| Double click  on empty space | Create a new key at that position                         |
-| Double click on curve        | <p>Adds a point, <br>keeping the overall shape intact</p> |
-| Shift + drag a key           | Keep key's value, only move position                      |
-| Alt + drag a key             | Keep key's position, only move value                      |
-| (Ctrl or ⌘) + click on curve | Change the curve easing type                              |
-| (Ctrl or ⌘) + shift + drag   | Manually draw the curve                                   |
+| Shortcut                     | Description                                                                                                                   |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Double click  on empty space | Create a new key at that position                                                                                             |
+| Double click on curve        | <p>Adds a point, <br>keeping the overall shape intact</p>                                                                     |
+| Shift + drag a key           | Keep key's value, only move position                                                                                          |
+| Alt + drag a key             | Keep key's position, only move value                                                                                          |
+| Shift + Alt + drag a key     | Keep key's value, only move position with snapping on other layers elements (time bar, cues, triggers, other mapping keys...) |
+| (Ctrl or ⌘) + click on curve | Change the curve easing type                                                                                                  |
+| (Ctrl or ⌘) + shift + drag   | Manually draw the curve                                                                                                       |
 
 ![](.gitbook/assets/draw-.gif)
 
