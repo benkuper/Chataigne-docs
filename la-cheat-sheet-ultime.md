@@ -55,29 +55,32 @@ description: >-
 
 ### Timeline Manipulation
 
-| Shortcut                                             | Description                                          |
-| ---------------------------------------------------- | ---------------------------------------------------- |
-| <p>Bouger la barre bleu<br>horizontal / vertical</p> | Zoom et déplacement de la vue dans le temps          |
-| Click droit sur la barre bleue                       | Remet à zero la vue (vue de la séquence en totalité) |
+| Shortcut                                             | Description                                                 |
+| ---------------------------------------------------- | ----------------------------------------------------------- |
+| <p>Bouger la barre bleu<br>horizontal / vertical</p> | Zoom et déplacement de la vue dans le temps                 |
+| Click droit sur la barre bleue                       | Remet à zero la vue (vue de la séquence en totalité)        |
+| Shift + déplacer le temps                            | Magnétise le déplacement aux autres éléments de la séquence |
 
 ![](.gitbook/assets/timemachine.gif)
 
-| Shortcut                      | Description       |
-| ----------------------------- | ----------------- |
-| Double clique sur les numéros | Crée une Time Cue |
+| Shortcut                      | Description                                                           |
+| ----------------------------- | --------------------------------------------------------------------- |
+| Double clique sur les numéros | Crée une Time Cue                                                     |
+| Shift + déplacer la Cue       | Magnétise le déplacement de la cue aux autres éléments de la séquence |
 
 ![](.gitbook/assets/cues.gif)
 
 ### Mapping Layer (and Mapping 2D)
 
-| Shortcut                          | Description                                                 |
-| --------------------------------- | ----------------------------------------------------------- |
-| Double click dans le vide         | Crée une nouvelle clé à cette position                      |
-| Double click sur la courbe        | Ajoute un point en maintenant la forme de la courve intacte |
-| Shift + drag une clé              | Bloque la valeur, ne bouge que la position dans le temps    |
-| Alt + drag une clé                | Bloque la position, ne bouge que la valeur                  |
-| (Ctrl or ⌘) + click sur la courbe | Change le Easing de la courbe                               |
-| (Ctrl or ⌘) + shift + drag        | Dessine la courbe manuellement                              |
+| Shortcut                          | Description                                                                                      |
+| --------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Double click dans le vide         | Crée une nouvelle clé à cette position                                                           |
+| Double click sur la courbe        | Ajoute un point en maintenant la forme de la courve intacte                                      |
+| Shift + déplacer une clé          | Bloque la valeur, ne bouge que la position dans le temps                                         |
+| Alt + déplacer une clé            | Bloque la position, ne bouge que la valeur                                                       |
+| Shift + Alt + déplacer une clé    | Bloque la vlauer, ne bouge que la position en magnétisant sur les autres éléments de la séquence |
+| (Ctrl or ⌘) + click sur la courbe | Change le Easing de la courbe                                                                    |
+| (Ctrl or ⌘) + shift + drag        | Dessine la courbe manuellement                                                                   |
 
 ![](.gitbook/assets/draw-.gif)
 
