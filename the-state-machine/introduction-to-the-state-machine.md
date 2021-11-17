@@ -25,7 +25,7 @@ When creating an interaction, you will want either punctual control to trigger c
 
 Transitions have multiple use cases :
 
-* They can act as action that will automatically transfer the activation of a state to another state. They act like an Action, and can even have consequences so you can have different behaviors when coming from one state or another. 
+* They can act as action that will automatically transfer the activation of a state to another state. They act like an Action, and can even have consequences so you can have different behaviors when coming from one state or another.&#x20;
 * They can be used to link multiple states together. This is what we call a _**State network.**_
 
 {% hint style="info" %}
@@ -33,5 +33,5 @@ At all time, there is **only 1 active state inside a state network.** This is wh
 {% endhint %}
 
 {% hint style="success" %}
-By note linking them altogether, you can have as many state networks as you want, meaning you still can have multiple active states at the same time.
+By not linking them altogether, you can have as many state networks as you want, meaning you still can have multiple active states at the same time.
 {% endhint %}
