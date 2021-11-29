@@ -181,11 +181,13 @@ When a manipulating a manager, you have access to specific functions and propert
 
 Automations are special managers that handle curves. You can find them in Mapping Layers, or Curve Map filters for instance. They have special methods that you can use to get more specialized info about the curve data.
 
-| Method                         | Description                                                          | Example                                           |
-| ------------------------------ | -------------------------------------------------------------------- | ------------------------------------------------- |
-| getValueAtPosition(_position_) | Returns the value of the curve at the given position                 | `var val = automation.getValueAtPosition(2.5); `  |
-| getKeyAtPosition(_position_)   | Returns the closest key at the given position                        | var key = `automation.getKeyAtPosition(2.5); `    |
-| getKeysBetween(_start, end_)   | Returns an array of all the keys contained between _start _and _end_ | `var keys = automation.getKeysBetween(2.5, 4.7);` |
+| Method                                   | Description                                                                                                                                                                                     | Example                                           |
+| ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| addKey(_position, value)_                | Adds a key at the given position and value                                                                                                                                                      | `var key = automation.addKey(.5,1);`              |
+| setLength(_length, stretch, stickToEnd)_ | Set a new length for this automation. Stretch allows to stretch all keys to keep relative positioning across the whole automation, stickToEnd forces them to repositioning relative to then end | automation.setLength(12.1, false, false);         |
+| getValueAtPosition(_position_)           | Returns the value of the curve at the given position                                                                                                                                            | `var val = automation.getValueAtPosition(2.5); `  |
+| getKeyAtPosition(_position_)             | Returns the closest key at the given position                                                                                                                                                   | var key = `automation.getKeyAtPosition(2.5); `    |
+| getKeysBetween(_start, end_)             | Returns an array of all the keys contained between _start _and _end_                                                                                                                            | `var keys = automation.getKeysBetween(2.5, 4.7);` |
 
 ## Script object
 
