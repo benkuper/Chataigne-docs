@@ -3,7 +3,7 @@
 Vous trouverez ici une référence quasi-exhaustive sur les fonctions spécifiques de Chataigne.
 
 {% hint style="success" %}
-Les scripts dans Chataigne sont basés sur une version simplifiée de Javascript. La plupart des fonctions sont disponibles, mais certaines peuvent manquer. Si certaines fonctions vous manquent, veuillez me contacter et envisager de faire un don ([https://github.com/sponsors/benkuper](https://github.com/sponsors/benkuper)) pour que je puisse passer plus de temps à améliorer Chataigne !
+Les scripts dans Chataigne sont basés sur une version simplifiée de Javascript. La plupart des fonctions sont disponibles, mais certaines peuvent manquer. Si certaines fonctions vous manquent, n'hésites pas à aller sur Discord et pourquoi pas faire un don ([https://github.com/sponsors/benkuper](https://github.com/sponsors/benkuper)) pour que je puisse passer plus de temps à améliorer Chataigne !
 {% endhint %}
 
 {% hint style="info" %}
