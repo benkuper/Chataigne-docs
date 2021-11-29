@@ -68,6 +68,7 @@
 * [Actions](the-state-machine/actions.md)
 * [Mappings](the-state-machine/mappings.md)
 * [Multiplex (1.8)](the-state-machine/multiplex-1.8.md)
+* [Conductor](the-state-machine/conductor.md)
 
 ## The Time Machine (Sequences)
 

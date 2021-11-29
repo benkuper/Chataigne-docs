@@ -21,6 +21,12 @@ Currently, you can 2 type of rules : [**Actions**](actions.md) **and** [**Mappin
 
 When creating an interaction, you will want either punctual control to trigger commands : these are [**Actions**](actions.md)**,** or continuous control to link input values to parameters : those are [**Mappings**](mappings.md)**.**
 
+{% hint style="info" %}
+**Special processors :**
+
+In newer versions of Chataigne, you will find 2 other processors : [**Multiplex**](multiplex-1.8.md)** **and [**Conductor**](conductor.md)**.  **These are "meta" processors, as they don't have direct action, but are specials containers for Actions and Mappings. Check out the dedicated pages to know more.&#x20;
+{% endhint %}
+
 ### Transitions and State network
 
 Transitions have multiple use cases :
