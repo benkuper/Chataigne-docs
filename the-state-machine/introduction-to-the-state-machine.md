@@ -1,6 +1,6 @@
 # Introduction à la State Machine
 
-![Une state machine plutôt complexe.](<../.gitbook/assets/statemachine (1).png>)
+![Une state machine plutôt complexe.](../.gitbook/assets/statemachine-1.png)
 
 La State Machine vous permettra de créer vos propres règles d'interaction pour contrôler en temps réel l'ensemble de votre système. Comme son nom l'indique, c'est une machine à états, ce qui signifie que vous pouvez créer différents états, appelés "State", chacun étant un groupe de règles que vous pouvez activer ou désactiver comme vous le souhaitez. Vous pouvez également créer des transitions entre eux, ce qui permet de créer des interactions évolutives.
 
