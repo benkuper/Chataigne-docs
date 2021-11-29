@@ -4,7 +4,7 @@ Un Mapping Layer contient une automatisation, qui est une animation basée sur d
 
 Le Mapping Layer possède plusieurs fonctionnalités faciliant la création d'animations.
 
-![](../.gitbook/assets/screenshot\_1.png)
+![](../.gitbook/assets/Screenshot\_1.png)
 
 ## The Recorder
 
@@ -12,7 +12,7 @@ Le recorder vous permet d'enregistrer dans le temps une valeur d'entrée et de l
 
 ![Recording a perlin noise from the Generator module](../.gitbook/assets/recording.gif)
 
-## Painting Automation 
+## Painting Automation&#x20;
 
 {% hint style="info" %}
 Cette fonctionnalité n'est disponible qu'à partir de la version 1.7.x
@@ -20,9 +20,9 @@ Cette fonctionnalité n'est disponible qu'à partir de la version 1.7.x
 
 Vous pouvez tracer une courbe en maintenant la touche **Ctrl + Shift** enfoncée et en faisant glisser votre souris de gauche à droite dans la ligne de temps du Mapping layer. Votre dessin sera alors automatiquement converti en une automation modifiable.
 
-![Drawing and modifying a mapping curve](../.gitbook/assets/automation-painting.gif)
+![Drawing and modifying a mapping curve](<../.gitbook/assets/automation painting.gif>)
 
-## Setting range and timeline navigation 
+## Setting range and timeline navigation&#x20;
 
 {% hint style="info" %}
 Cette fonctionnalité n'est disponible qu'à partir de la version 1.7.x

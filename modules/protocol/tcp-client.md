@@ -14,7 +14,7 @@ Ce module permet de se connecter en tant que client à un serveur TCP.
       * **Lines :** Cela découpera les données par ligne. C'est largement utilisé par les utilisateurs Arduino pour facilement communiquer avec les cartes.
       * **Raw :** Cela va créer une valeur par octet reçu. C'est pratique si tu crées ton propre script d'interprétation des données.
       * **Data255 :** C'est un protocole spécial qui découpe les données à chaque réception du byte 255 . C'est un protocole personnel et très efficace pour envoyer des bytes avec découpage rapide, et même envoyer des couleurs en acceptant de perdre un byte de précision. Par contre cela ne permet pas d'envoyer des float ou des 32bit integers.
-      * **COBS :** Cela interprète les données selon le mechanisme** **_COBS_**.** Si tu ne connais pas, check donc la [page Wikipedia](https://en.wikipedia.org/wiki/Consistent_Overhead_Byte_Stuffing).
+      * **COBS :** Cela interprète les données selon le mechanisme** **_COBS_**.** Si tu ne connais pas, check donc la [page Wikipedia](https://en.wikipedia.org/wiki/Consistent\_Overhead\_Byte\_Stuffing).
     * **Auto Add :** Ajoutes automatiquement des values quand des données sont reçues. Garde cette option activée tant que tu veux ajouter automatiquement des values, puis désactive quand tu as finis d'ajouter des values.
     * **Message structure :** Cela décide de comment interpréter le message reçu. Ca dépend du protocole choisi.
     * **First value is the name :** Si activé, le message reçu aura un format attendu d'au moins 2 arguments : la première est le nom de la valeur, et les autres sont la valeur actuelle.

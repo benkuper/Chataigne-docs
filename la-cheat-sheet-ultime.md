@@ -82,7 +82,7 @@ description: >-
 | (Ctrl or ⌘) + click sur la courbe | Change le Easing de la courbe                                                                    |
 | (Ctrl or ⌘) + shift + drag        | Dessine la courbe manuellement                                                                   |
 
-![](.gitbook/assets/draw-.gif)
+![](<.gitbook/assets/draw .gif>)
 
 | Shortcut                                         | Description                                         |
 | ------------------------------------------------ | --------------------------------------------------- |
@@ -106,4 +106,4 @@ description: >-
 | -------------------------------- | -------------------------------------------------------------- |
 | Click sur les flèches d'activité | Active ou désactive le logging de données d'entrée / de sortie |
 
-![](.gitbook/assets/loginout.gif)
+![](.gitbook/assets/logInOut.gif)

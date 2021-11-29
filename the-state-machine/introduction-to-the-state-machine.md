@@ -1,6 +1,6 @@
 # Introduction à la State Machine
 
-![Une state machine plutôt complexe.](../.gitbook/assets/statemachine-1.png)
+![Une state machine plutôt complexe.](<../.gitbook/assets/statemachine (1).png>)
 
 La State Machine vous permettra de créer vos propres règles d'interaction pour contrôler en temps réel l'ensemble de votre système. Comme son nom l'indique, c'est une machine à états, ce qui signifie que vous pouvez créer différents états, appelés "State", chacun étant un groupe de règles que vous pouvez activer ou désactiver comme vous le souhaitez. Vous pouvez également créer des transitions entre eux, ce qui permet de créer des interactions évolutives.
 
@@ -9,7 +9,7 @@ Lors de la création d'une interaction, vous devrez d'abord créer un état qui 
 {% hint style="success" %}
 \*\*SHORTCUTS
 
-* **Alt + glisser ou MSB** (bouton du milieu de la souris) :\*\* déplacer la vue pour naviguer dans un monde de merveilles infini !  
+* **Alt + glisser ou MSB** (bouton du milieu de la souris) :\*\* déplacer la vue pour naviguer dans un monde de merveilles infini ! &#x20;
 * **Shift + scroll de la souris :** Zoom avant/arrière pour voir plus de choses, ou avoir une UI agrandie
 * **Ctrl + C, Ctrl + V, Ctrl + D :** Copier, coller, dupliquer des éléments (ceci s'applique à tous les éléments des listes et des vues, c'est-à-dire les Etats, les Mappings, les Actions, les Modules, les Séquences...)
 {% endhint %}
@@ -26,7 +26,7 @@ Lorsque vous créez une interaction, vous voudrez soit un contrôle ponctuel pou
 
 Les transitions ont des cas d'utilisation multiples :
 
-* Elles peuvent agir comme une action qui transférera automatiquement l'activation d'un State à un autre State. Elles agissent comme une action, et peuvent même avoir des conséquences de sorte que vous pouvez avoir des comportements différents lorsque vous venez d'un état ou d'un autre. 
+* Elles peuvent agir comme une action qui transférera automatiquement l'activation d'un State à un autre State. Elles agissent comme une action, et peuvent même avoir des conséquences de sorte que vous pouvez avoir des comportements différents lorsque vous venez d'un état ou d'un autre.&#x20;
 * Ils peuvent être utilisés pour relier plusieurs états entre eux. C'est ce que nous appelons un réseau de State.
 
 {% hint style="info" %}
