@@ -1,6 +1,6 @@
 # Introduction to the State Machine
 
-![A rather complex state machine.](../.gitbook/assets/statemachine-1.png)
+![A rather complex state machine.](<../.gitbook/assets/statemachine (1).png>)
 
 The State machine will let you create your own interaction rules to do realtime control of all your system. As the name says, it's a state machine, which means you can create different states, each one being a group of rules that you can activate or deactivate as you wish. You can also create transitions between them, allowing to create evolving interactions.
 

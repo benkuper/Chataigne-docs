@@ -92,7 +92,7 @@ description: >-
 | (Ctrl or ⌘) + click on curve | Change the curve easing type                                                                                                  |
 | (Ctrl or ⌘) + shift + drag   | Manually draw the curve                                                                                                       |
 
-![](.gitbook/assets/draw-.gif)
+![](<.gitbook/assets/draw .gif>)
 
 ### Module shortcuts
 
@@ -106,4 +106,4 @@ description: >-
 | ---------------------------- | ----------------------------------------------------------- |
 | Click on the activity arrows | Toggles Log Incoming / Log Outgoing options for this module |
 
-![](.gitbook/assets/loginout.gif)
+![](.gitbook/assets/logInOut.gif)

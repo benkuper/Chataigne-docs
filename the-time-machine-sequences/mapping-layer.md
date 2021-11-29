@@ -4,7 +4,7 @@ A Mapping layer contains an automation, which is a curve based animation. This i
 
 The Mapping Layer features some features to ease the creation of animations.
 
-![](../.gitbook/assets/screenshot\_1.png)
+![](../.gitbook/assets/Screenshot\_1.png)
 
 ## The Recorder
 
@@ -12,7 +12,7 @@ The recorder allows you to record in time an input value and convert it into a c
 
 ![Recording a perlin noise from the Generator module](../.gitbook/assets/recording.gif)
 
-## Painting Automation 
+## Painting Automation&#x20;
 
 {% hint style="info" %}
 This feature is only available starting the 1.7.x cycle.
@@ -20,9 +20,9 @@ This feature is only available starting the 1.7.x cycle.
 
 You can draw a curve by holding **Ctrl+Shift **and dragging your mouse from left to right in the timeline of the Mapping layer. Your drawing will then be automatically converted into an editable automation.
 
-![Drawing and modifying a mapping curve](../.gitbook/assets/automation-painting.gif)
+![Drawing and modifying a mapping curve](<../.gitbook/assets/automation painting.gif>)
 
-## Setting range and timeline navigation 
+## Setting range and timeline navigation&#x20;
 
 {% hint style="info" %}
 This feature is only available starting the 1.7.x cycle.
