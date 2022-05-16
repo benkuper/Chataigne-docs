@@ -12,7 +12,7 @@ Le module DMX permet de contrôler des boitiers DMX comme Enttec OpenDMX, Enttec
 **DMX Device parameters :**
 
 * **Use fixed send rate :** Si cette option est activée, les données DMX seront envoyées à interval régulier. Sinon elle seront envoyées à chaque déclenchement de commande.
-* **Target send rate : **Si "fixed send rate" est activée, c'est la fréquence d'envoie des données DMX.
+* **Target send rate :** Si "fixed send rate" est activée, c'est la fréquence d'envoie des données DMX.
 * **Enable receive (DMXPro / Artnet seulement) :** Active la réception de données DMX.
 * **Port (OpenDMX / DMXPro seulement) :** Le périphérique sur lequel se connecter.
 

@@ -6,6 +6,12 @@ description: >-
 
 # La Cheat Sheet Ultime
 
+## Edition de paramètres
+
+En général, dans le logiciel, il est bon d'essayer de faire un clic droit pour voir s'il y a plus d'options. Par exemple, un clic droit sur un paramètre dans l'inspecteur te permettra d'avoir des options étendues à son sujet. Tu peux modifier sa plage de valeurs (si c'est autorisé pour paramètre), l'envoyer au Dashboard, copier son script ou son adresse de contrôle OSC...
+
+![Clic droit sur un paramètre et ouvre tout un monde de nouvelles possibilités !](.gitbook/assets/rightclick.gif)
+
 ## Common shortcuts
 
 | Shortcut                   | Description                                                                                                                                                                        |

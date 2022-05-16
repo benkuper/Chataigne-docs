@@ -20,7 +20,7 @@ Les States sont des conteneurs qui contiendront des règles d'interaction diffé
 
 Actuellement, il existe deux types de règles : [**Actions**](actions.md) **et** [**Mappings**](mappings.md)**.**
 
-Lorsque vous créez une interaction, vous voudrez soit un contrôle ponctuel pour déclencher des commandes : ce sont les [**Actions**](actions.md)**, soit un contrôle continu pour lier des valeurs d'entrée à des paramètres : ce sont les **[**Mappings**](mappings.md).
+Lorsque vous créez une interaction, vous voudrez soit un contrôle ponctuel pour déclencher des commandes : ce sont les [**Actions**](actions.md)**, soit un contrôle continu pour lier des valeurs d'entrée à des paramètres : ce sont les** [**Mappings**](mappings.md).
 
 ### Transitions et réseau de State
 
