@@ -15,8 +15,8 @@ A sequence is time-based object that has its own timeline and contains a group o
 {% hint style="success" %}
 **SHORTCUTS AND NAVIGATION**\
 **- Drag the blue bar horizontal / vertical :** Zoom in/out and change the time focus frame\
-**-  Right click on the blue bar : **Reset the view to a full view of the whole sequence\
-**- Ctrl + C, Ctrl + V, Ctrl + D : **Copy, paste, duplicate items (this applies to all items in lists and views, i.e. Sequences, Layers, Triggers...)
+**-  Right click on the blue bar :** Reset the view to a full view of the whole sequence\
+**- Ctrl + C, Ctrl + V, Ctrl + D :** Copy, paste, duplicate items (this applies to all items in lists and views, i.e. Sequences, Layers, Triggers...)
 {% endhint %}
 
 ### Layer

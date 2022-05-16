@@ -6,6 +6,13 @@ description: >-
 
 # The Ultimate Cheat Sheet
 
+## Editing Parameters
+
+Generally in the software, trying to right click and see if there are more options is a good idea.\
+For example, right clicking on a parameter in the inspector allows you to have extended options about it. You can change its range (if allowed), send it to the Dashboard, copy its script or OSC control address...
+
+![Right click on any parameter in the inspector to reveal a new world of possibilities !](.gitbook/assets/rightclick.gif)
+
 ## Common shortcuts
 
 | Shortcut                     | Description                                                                                                                                                                   |

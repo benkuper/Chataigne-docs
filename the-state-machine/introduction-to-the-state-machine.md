@@ -9,8 +9,8 @@ When creating an interaction, you will first have to create a state that will co
 {% hint style="success" %}
 **SHORTCUTS**\
 **- Alt + drag or MMB (middle mouse button) :** drag the canvas to navigate in an infinite world of wonder !\
-**-  Shift + mouse scroll : **Zoom in/out to see more things, or have bigger UI\
-**- Ctrl + C, Ctrl + V, Ctrl + D : **Copy, paste, duplicate items (this applies to all items in lists and views, i.e. States, Mappings, Actions, Modules, Sequences...)
+**-  Shift + mouse scroll :** Zoom in/out to see more things, or have bigger UI\
+**- Ctrl + C, Ctrl + V, Ctrl + D :** Copy, paste, duplicate items (this applies to all items in lists and views, i.e. States, Mappings, Actions, Modules, Sequences...)
 {% endhint %}
 
 ## States
@@ -24,7 +24,7 @@ When creating an interaction, you will want either punctual control to trigger c
 {% hint style="info" %}
 **Special processors :**
 
-In newer versions of Chataigne, you will find 2 other processors : [**Multiplex**](multiplex-1.8.md)** **and [**Conductor**](conductor.md)**.  **These are "meta" processors, as they don't have direct action, but are specials containers for Actions and Mappings. Check out the dedicated pages to know more.&#x20;
+In newer versions of Chataigne, you will find 2 other processors : [**Multiplex**](multiplex-1.8.md) **** and [**Conductor**](conductor.md)**.**  These are "meta" processors, as they don't have direct action, but are specials containers for Actions and Mappings. Check out the dedicated pages to know more.&#x20;
 {% endhint %}
 
 ### Transitions and State network

@@ -36,7 +36,7 @@ For String Parameters, it is possible to use wildcards to create a more complex 
 * {list:names} will be replaced by the element with the same index in list called "Names" (camelCase conversion)
 
 This way, something like \
-**Hello {list:names}, you're patient number {index} **\
+**Hello {list:names}, you're patient number {index}** \
 ****would translate to\
-**Hello Leon, you're patient number 5 **
+**Hello Leon, you're patient number 5**&#x20;
 {% endhint %}
