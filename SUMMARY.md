@@ -1,8 +1,8 @@
 # Table of contents
 
-* [Welcome to the Chataigne docs !](README.md)
+* [Welcome to the Amazing Chataigne Documentation !](README.md)
 
-## Getting Started <a href="getting-started-1" id="getting-started-1"></a>
+## Getting Started <a href="#getting-started-1" id="getting-started-1"></a>
 
 * [History and Philosophy of Chataigne](getting-started-1/getting-started.md)
 * [The Interface](getting-started-1/the-interface.md)
