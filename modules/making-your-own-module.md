@@ -146,7 +146,7 @@ For this purpose, you have to add the `dependency` property to the variable, the
 | -------- | ----------------------------------------------------------------------------------- | --------------------- |
 | `source` | The name of the variable you want to refer to                                       | `"source":"testEnum"` |
 | `value`  | What value to compare `source` to                                                   | `"value":"all"`       |
-| `check`  | Which check to perform. Possible values: `equals`, `notEquals`                      | `"check":"equals"`    |
+| `check`  | Which check to perform. Possible values: `equals`, `notEquals`, `lessThan`, `greaterThan`                      | `"check":"equals"`    |
 | `action` | Which action to perform when check is successful. Possible values: `show`, `enable` | `"action":"show"`     |
 
 Example: This example alternates between two different options based on the enum choice.
