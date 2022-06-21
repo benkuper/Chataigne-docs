@@ -2,7 +2,7 @@
 
 * [Bienvenue sur la doc de Chataigne !](README.md)
 
-## Getting Started <a href="getting-started-1" id="getting-started-1"></a>
+## Getting Started <a href="#getting-started-1" id="getting-started-1"></a>
 
 * [Histoire et philosophie de Chataigne](getting-started-1/getting-started.md)
 * [L'Interface](getting-started-1/the-interface.md)
@@ -10,7 +10,7 @@
 
 ***
 
-* [La Cheat Sheet Ultime](la-cheat-sheet-ultime.md)
+* [La Feuille de Triche Ultime](la-cheat-sheet-ultime.md)
 
 ## Modules
 
