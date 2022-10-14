@@ -123,6 +123,30 @@ Certains modules ont des méthodes spécifiques qui sont utiles si vous voulez a
 | **sendPUT(**_url, param1, value1, param2, value2, ..._**)**    | Cela enverra une requête HTTP PUT. Après avoir spécifié le _**url**_, vous pouvez ajouter une paire de valeurs qui sont respectivement le nom du _**paramètre**_ et sa _**valeur**_.    | `local.sendPUT( "https://httpbin.org/anything", "myValue1", 1, "myValue2", 2);`                                       |
 | **sendPATCH(**_url, param1, value1, param2, value2, ..._**)**  | Cela enverra une requête HTTP DELETE. Après avoir spécifié le _**url**_, vous pouvez ajouter une paire de valeurs qui sont respectivement le nom du _**paramètre**_ et sa _**valeur**_. | `local.sendPATCH( "https://httpbin.org/anything", "myValue1", 1, "myValue2", 2);`                                     |
 | **sendDELETE(**_url, param1, value1, param2, value2, ..._**)** | Cela enverra une requête HTTP DELETE. Après avoir spécifié le _**url**_, vous pouvez ajouter une paire de valeurs qui sont respectivement le nom du _**paramètre**_ et sa _**valeur**_. | `local.sendDELETE( "https://httpbin.org/anything", "myValue1", 1, "myValue2", 2);`                                    |
+
+
+
+### Object arguments
+
+You can pass an object containing the parameters to send the request. All properties of the "params" object are optional. When adding all, this looks like this :
+
+```javascript
+var params = {};
+params.dataType = "json";
+params.extraHeaders = "Content-Type: application/json";
+params.arguments = ["myValue1",1,"myValue2",2];
+
+var payload = {}; //the payload can be either a simple string or an object that will be automatically stringified
+payload.super = "cool";
+payload.number = 3.2;
+params.payload = payload;
+
+local.sendGET("anything", params); //the address field will be appended to the module's base address
+local.sendPOST("anything", params);
+local.sendPUT("anything", params);
+local.sendPATCH("anything", params);
+local.sendDELETE("anything", params);
+```
 {% endtab %}
 
 {% tab title="System" %}
