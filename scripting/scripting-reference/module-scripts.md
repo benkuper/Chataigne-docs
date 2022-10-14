@@ -142,27 +142,6 @@ local.sendPOST("anything", params);
 local.sendPUT("anything", params);
 local.sendPATCH("anything", params);
 local.sendDELETE("anything", params);
-Méthode
-Description
-Exemple
-launchApp(appPath, arguments)
-Lance une application au chemin fourni avec les arguments fournis
-launchCommand(command, silentMode)
-
-Lance une commande
-local.launchCommand("myApp.exe", true);
-launchProcess(command, blocking)
-Lance un process et retourne la sortie.
-Si blocking  est false, la sortie sera envoyée dans processDataReceived(data)
-Sinon, le programme sera bloqué le temps du process, et le contenu sera directement renvoyé.
-var result = local.launchCommand("myApp.exe", true);
-getRunningProcesses()
-Liste les process en cours
-var result = local.getRunningProcesses();
-isProcessRunning(process)
-Check if un process est en cours
-var isRunning = local.isProcessRunning("MyApp.exe"
-local.launchApp("myApp.exe", "-p myOption");
 ```
 {% endtab %}
 
