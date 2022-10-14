@@ -135,13 +135,38 @@ local.sendPOST("anything", params);
 local.sendPUT("anything", params);
 local.sendPATCH("anything", params);
 local.sendDELETE("anything", params);
+Méthode
+Description
+Exemple
+launchApp(appPath, arguments)
+Lance une application au chemin fourni avec les arguments fournis
+launchCommand(command, silentMode)
+
+Lance une commande
+local.launchCommand("myApp.exe", true);
+launchProcess(command, blocking)
+Lance un process et retourne la sortie.
+Si blocking  est false, la sortie sera envoyée dans processDataReceived(data)
+Sinon, le programme sera bloqué le temps du process, et le contenu sera directement renvoyé.
+var result = local.launchCommand("myApp.exe", true);
+getRunningProcesses()
+Liste les process en cours
+var result = local.getRunningProcesses();
+isProcessRunning(process)
+Check if un process est en cours
+var isRunning = local.isProcessRunning("MyApp.exe"
+local.launchApp("myApp.exe", "-p myOption");
 ```
 {% endtab %}
 
 {% tab title="System" %}
-| Method                                  | Description                                                      | Example                                       |
-| --------------------------------------- | ---------------------------------------------------------------- | --------------------------------------------- |
-| **launchApp(**_appPath, arguments_**)** | Launches an app at the provided path with the provided arguments | `local.launchApp("myApp.exe","-p myOption");` |
+| Méthode                                                                                     | Description                                                                                                                                                                                                                                                                                   | Exemple                                                |
+| ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| **launchApp(**_appPath, arguments_**)**                                                     | Lance une application au chemin fourni avec les arguments fournis                                                                                                                                                                                                                             | `local.launchApp("myApp.exe", "-p myOption");`         |
+| <p><strong>launchCommand(</strong><em>command, silentMode</em><strong>)</strong></p><p></p> | Lance une commande                                                                                                                                                                                                                                                                            | `local.launchCommand("myApp.exe", true);`              |
+| **launchProcess(**_command, blocking_**)**                                                  | <p>Lance un process et retourne la sortie.<br>Si <em><strong>blocking</strong></em><strong>  </strong> est false, la sortie sera envoyée dans <em>processDataReceived(data)</em><br><em></em>Sinon, le programme sera bloqué le temps du process, et le contenu sera directement renvoyé.</p> | `var result = local.launchCommand("myApp.exe", true);` |
+| **getRunningProcesses()**                                                                   | Liste les process en cours                                                                                                                                                                                                                                                                    | `var result = local.getRunningProcesses();`            |
+| **isProcessRunning(**_process_**)**                                                         | Check if un process est en cours                                                                                                                                                                                                                                                              | `var isRunning = local.isProcessRunning("MyApp.exe"`   |
 {% endtab %}
 {% endtabs %}
 
