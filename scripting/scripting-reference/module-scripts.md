@@ -117,7 +117,7 @@ Certains modules ont des méthodes spécifiques qui sont utiles si vous voulez a
 | **send(**_startChannel, value1, value2, ..., valueN_**)** | Ceci enverra des **valeurs DMX** en démarrant par le **canal DMX** spécifié. Vous pouvez ajouter autant de valeurs que nécessaire, et même mélanger des tableaux de valeurs et des valeurs simples. Les valeurs vont de 0 à 255. | `local.send(32, 255);` |
 {% endtab %}
 
-{% tab title="Serial/UDP/TCP" %}
+{% tab title="Serial/UDP/TCP/Websocket" %}
 | Méthode                                                      | Description                                                                                                                                                                 | Exemple                                                           |
 | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | **send(**_message_**)**                                      | Cela enverra la chaîne passée en caractères ASCII.                                                                                                                          | `local.send("Ceci est mon message");`                             |
