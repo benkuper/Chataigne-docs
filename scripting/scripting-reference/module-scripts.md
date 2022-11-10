@@ -50,7 +50,7 @@ Some modules have specific function callbacks that are useful if you want to cus
 | **dataReceived**_**(**data_**)** | <p>This function will be called each time data has been received.</p><p>If the Module's protocol is set to <em><strong>Lines,</strong></em> then the <strong>data</strong> argument will be a string containing the line, without the ending \n.</p><p>Otherwise, the data will be an array of bytes containing the received data.</p> | <p><code>function dataReceived(data) {</code></p><p><code>script.log("Received data : "+data);</code></p><p><code>}</code></p> |
 {% endtab %}
 
-{% tab title="Untitled" %}
+{% tab title="Websocket" %}
 | Méthode                                  | Description                                                              | Exemple                                                                           |
 | ---------------------------------------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
 | **wsDataReceived**_**(**data_**)**       | This function will get called each time a binary data packet is received | `fonction wsDataReceived(data) {script.log("Data received : "+data.length);}`     |
