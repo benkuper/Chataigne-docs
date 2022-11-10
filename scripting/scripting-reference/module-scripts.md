@@ -50,6 +50,15 @@ Some modules have specific function callbacks that are useful if you want to cus
 | **dataReceived**_**(**data_**)** | <p>This function will be called each time data has been received.</p><p>If the Module's protocol is set to <em><strong>Lines,</strong></em> then the <strong>data</strong> argument will be a string containing the line, without the ending \n.</p><p>Otherwise, the data will be an array of bytes containing the received data.</p> | <p><code>function dataReceived(data) {</code></p><p><code>script.log("Received data : "+data);</code></p><p><code>}</code></p> |
 {% endtab %}
 
+{% tab title="Untitled" %}
+| Méthode                                  | Description                                                              | Exemple                                                                           |
+| ---------------------------------------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| **wsDataReceived**_**(**data_**)**       | This function will get called each time a binary data packet is received | `fonction wsDataReceived(data) {script.log("Data received : "+data.length);}`     |
+| **wsMessageReceived**_**(**message_**)** | This function will be received each time a string message is received    | `fonction wsMessageReceived(message) {script.log("Message received: "+message);}` |
+
+​
+{% endtab %}
+
 {% tab title="HTTP" %}
 | **dataEvent(**_data, requestURL_**)**This function will be called each time data has been received. | <p>This function will be called each time the module has got a response from a request.<br><em><strong>data</strong></em> is the content of the response</p><p><em><strong>requestURL</strong></em> is the url of the original request.</p> | <p><code>function dataEvent(data, requestURL) {</code><br><code>script.log("Data received, request URL :"+requestURL+"\nContent :\n" +data);</code><br><code>}</code></p> |
 | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
