@@ -57,6 +57,17 @@ Certains modules ont des rappels de fonctions spécifiques qui sont utiles si vo
 | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 {% endtab %}
 
+{% tab title="Websocket" %}
+
+
+| Méthode                                  | Description                                                                           | Exemple                                                                                                                                  |
+| ---------------------------------------- | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| **wsDataReceived**_**(**data_**)**       | Cette fonction sera appelée à chaque fois que des données binaires auront été reçues. | <p><code>fonction wsDataReceived(data) {</code></p><p><code>script.log("Données reçues : "+data.length);</code></p><p><code>}</code></p> |
+| **wsMessageReceived**_**(**message_**)** | Cette fonction sera appelée à chaque fois qu'un message aura été reçu.                | <p><code>fonction wsMessageReceived(message) {</code></p><p><code>script.log("Message reçu : "+message);</code></p><p><code>}</code></p> |
+
+
+{% endtab %}
+
 {% tab title="HTTP" %}
 | Méthode | Description | Exemple |
 | ------- | ----------- | ------- |
