@@ -4,7 +4,19 @@ description: >-
   Chataigne, hopefully making you a superpowered Chataigne user !
 ---
 
-# La Cheat Sheet Ultime
+# La Feuille de Triche Ultime
+
+## Lancer depuis le terminal / en ligne de commande
+
+`./Chataigne [-r] [-f fichier] [-headless] [-forceGL / -forceNoGL] [<fichier>]`&#x20;
+
+`-r` réinitialiser les préférences&#x20;
+
+`-f` ouvrir le fichier (fonctionne aussi en ajoutant le nom du fichier à la fin sans -f)&#x20;
+
+`-headless` exécuter sans interface graphique (pas de fenêtre)&#x20;
+
+`-forceGL / -forceNoGL` forcer le réglage de la valeur "use opengl renderer", pour utiliser l'accélération 3D ou non (forceNoGL peut être pratique en cas de problème avec les pilotes graphiques)&#x20;
 
 ## Edition de paramètres
 
