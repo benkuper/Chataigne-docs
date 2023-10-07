@@ -6,6 +6,18 @@ description: >-
 
 # The Ultimate Cheat Sheet
 
+## Launching from terminal / CLI
+
+`./Chataigne [-r] [-f file] [-headless] [-forceGL / -forceNoGL] [<file>]`
+
+`-r` reset preferences&#x20;
+
+`-f` open file (works also by adding the file name at the end without -f)&#x20;
+
+`-headless` run without gui (no window)&#x20;
+
+`-forceGL / -forceNoGL` force setting the "use opengl renderer" value, to use 3d acceleration or not (forceNoGL can be handy when having problem with graphics drivers)
+
 ## Editing Parameters
 
 Generally in the software, trying to right click and see if there are more options is a good idea.\
