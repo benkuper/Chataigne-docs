@@ -37,6 +37,6 @@ For String Parameters, it is possible to use wildcards to create a more complex 
 
 This way, something like \
 **Hello {list:names}, you're patient number {index}** \
-****would translate to\
+would translate to\
 **Hello Leon, you're patient number 5**&#x20;
 {% endhint %}
