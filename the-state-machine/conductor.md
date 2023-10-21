@@ -6,6 +6,10 @@ A conductor let's you create a cue list of sequential actions. Each cue can trig
 
 <figure><img src="../.gitbook/assets/conductor-insprector.png" alt=""><figcaption><p>Conductor inspector parameters.</p></figcaption></figure>
 
+{% hint style="info" %}
+If you set a condition on the conductor, it will be used to trigger the next cue. You could for example define to react to a key press or an OSC trigger.
+{% endhint %}
+
 ## Linking a sequence to a cue
 
 A cue can be linked to a sequence. When this cue is triggered it will automatically play the linked sequence.
