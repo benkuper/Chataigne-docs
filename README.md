@@ -6,7 +6,11 @@ description: >-
 
 # Bienvenue sur la doc de Chataigne !
 
-![](.gitbook/assets/welcome_sign.png)
+{% hint style="warning" %}
+**La documentation officielle a migré vers Notion !**
 
-Tu peux commencer par le [commencement.](getting-started-1/getting-started.md)
+**Tu peux y accéder ici :**\
+[**https://benjamin.kuperberg.fr/chataigne/docs**](https://benjamin.kuperberg.fr/chataigne/docs)
 
+
+{% endhint %}
