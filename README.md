@@ -4,9 +4,13 @@ description: >-
   you already ?)
 ---
 
-# Welcome to the Chataigne docs !
+# Welcome to the Amazing Chataigne Documentation !
 
-![](.gitbook/assets/welcome_sign.png)
+{% hint style="warning" %}
+**The official documentation has moved !**
 
-You can start by going to the[ Introduction page](getting-started-1/getting-started.md)
+**You can find it here :**\
+[**https://benjamin.kuperberg.fr/chataigne/docs**](https://benjamin.kuperberg.fr/chataigne/docs)
+{% endhint %}
 
+## &#x20;
